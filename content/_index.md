@@ -1,5 +1,5 @@
 ---
-title: "Benvenuto su Davide La Marca"
+title: "Davide La Marca"
 date: 2025-03-14T10:00:00+01:00
 ---
 

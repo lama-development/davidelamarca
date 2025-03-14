@@ -1,0 +1,85 @@
+/* static/css/styles.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'Bricolage Grotesque', sans-serif;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.title {
+    font-size: 5em;
+    line-height: 1em;
+    font-weight: 800;
+}
+
+.dynamic {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: .9em;
+    height: 1em;
+    width: 12ch;
+    overflow: hidden;
+    text-align: left;
+}  
+
+.dynamic ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    animation: slide 18s infinite;
+}
+
+.dynamic li {
+    height: 1em;
+    color: cornflowerblue;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateY(0);
+    }
+
+    20% {
+        transform: translateY(0);
+    }
+
+    25% {
+        transform: translateY(-1em);
+    }
+
+    45% {
+        transform: translateY(-1em);
+    }
+
+    50% {
+        transform: translateY(-2em);
+    }
+
+    70% {
+        transform: translateY(-2em);
+    }
+
+    75% {
+        transform: translateY(-3em);
+    }
+
+    95% {
+        transform: translateY(-3em);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}

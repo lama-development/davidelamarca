@@ -12,13 +12,14 @@
     <!-- CSS -->
     {{ $styles := resources.Get "scss/main.scss" | css.Sass | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
+    <!-- Javascript -->
+    {{ $js := resources.Get "js/navbar.js" | minify | fingerprint }}
+    <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
 </head>
 
 <body>
     {{ partial "navbar.html" . }}
     {{ block "main" . }}{{ end }}
-
-    <script src="/js/navbar.js"></script>
 </body>
 
 </html>

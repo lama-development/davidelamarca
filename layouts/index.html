@@ -1,33 +1,4 @@
-<!-- layouts/index.html -->
-
-<!DOCTYPE html>
-<html lang="it">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ .Title }}</title>
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap"
-        rel="stylesheet">
-</head>
-
-<body>
-    <div class="container">
-        <div class="title">
-            Il tuo prossimo progetto,<br>realizzato con
-            <span class="dynamic">
-                <ul>
-                    <li>cura.</li>
-                    <li>passione.</li>
-                    <li>innovazione.</li>
-                    <li>perfezione.</li>
-                </ul>
-            </span>
-        </div>
-    </div>
-</body>
-
-</html>
+{{ define "main" }}
+    <h1>Benvenuto nel mio sito!</h1>
+    <p>Questo è il contenuto della home page.</p>
+{{ end }}

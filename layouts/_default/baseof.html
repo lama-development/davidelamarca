@@ -1,3 +1,5 @@
+<!-- layouts/_default/baseof.html -->
+
 <!DOCTYPE html>
 <html lang="it">
 
@@ -14,7 +16,7 @@
     <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
     <!-- Javascript -->
     {{ $js := resources.Get "js/navbar.js" | minify | fingerprint }}
-    <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
+    <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
 </head>
 
 <body>

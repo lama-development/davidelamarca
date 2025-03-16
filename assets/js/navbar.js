@@ -1,3 +1,5 @@
+// assets/js/navbar.js
+
 const menuToggle = document.getElementById('menu-toggle');
 const mobileMenu = document.getElementById('mobile-menu');
 const navbar = document.getElementById('navbar');

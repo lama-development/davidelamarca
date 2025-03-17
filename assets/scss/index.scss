@@ -1,0 +1,57 @@
+.floating-box {
+    width: 75%;
+    /* Rimuovi o commenta la proprietà max-width se vuoi coprire quasi tutto lo schermo */
+    max-width: 1550px;
+    margin: 40px auto;
+    /* Riduce lo spazio ai bordi */
+    min-height: 85vh;
+    /* Copre quasi tutta la pagina in altezza */
+    padding: 50px;
+    border-radius: 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #5d5df7 0%, #00d4ff 100%);
+
+}
+
+/* Titolo principale */
+.main-title {
+    font-size: 6rem;
+    color: #ffffff;
+    margin: 0 0 20px;
+    font-weight: 700;
+}
+
+/* Sottotitolo */
+.subtitle {
+    font-size: 1.5rem;
+    color: #f0f0f0;
+    margin: 0 0 30px;
+}
+
+/* Contenitore dei pulsanti per allinearli */
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    /* Spaziatura orizzontale tra i pulsanti */
+}
+
+/* Pulsanti di azione */
+.action-button {
+    background-color: #ffffff;
+    color: #333333;
+    border: none;
+    border-radius: 30px;
+    padding: 15px 30px;
+    font-size: 1rem;
+    cursor: pointer;
+
+    /* Transizione per effetto hover */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Effetto hover sui pulsanti */
+.action-button:hover {
+    background-color: #333333;
+    color: #ffffff;
+}

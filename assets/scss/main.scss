@@ -2,6 +2,7 @@
 
 @import "navbar";
 @import "index";
+@import "footer";
 // @import "pages";
 
 @font-face {
@@ -27,7 +28,7 @@
     /* Light mode colors */
     --color-bg-1: #fff;
     --color-bg-2: #f9f9f9;
-    --color-navbar: rgba(255, 255, 255, 0.8);
+    --color-navbar: rgba(255, 255, 255, 0.9);
     --color-border: #ddd;
     --color-text-primary: #000;
     --color-text-secondary: #5c5c5c;
@@ -44,7 +45,6 @@
 }
 
 body {
-    font-family: 'GeistVariable';
+    font-family: 'Bricolage Grotesque', sans-serif;
     background-color: var(--bg-color-1);
-    padding: 80px 40px;
 }

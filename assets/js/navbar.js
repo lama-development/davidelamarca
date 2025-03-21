@@ -1,7 +1,7 @@
 // assets/js/navbar.js
 
-const menuToggle = document.getElementById('menu-toggle');
-const mobileMenu = document.getElementById('mobile-menu');
+const menuToggle = document.getElementById('navbar-menu-toggle');
+const mobileMenu = document.getElementById('navbar-mobile-menu');
 const navbar = document.getElementById('navbar');
 
 menuToggle.addEventListener('click', function () {

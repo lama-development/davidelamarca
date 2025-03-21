@@ -1,57 +1,151 @@
-.floating-box {
-    width: 75%;
-    /* Rimuovi o commenta la proprietà max-width se vuoi coprire quasi tutto lo schermo */
-    max-width: 1550px;
-    margin: 40px auto;
-    /* Riduce lo spazio ai bordi */
-    min-height: 85vh;
-    /* Copre quasi tutta la pagina in altezza */
-    padding: 50px;
-    border-radius: 20px;
-    text-align: center;
-    background: linear-gradient(135deg, #5d5df7 0%, #00d4ff 100%);
+/* assets/scss/index.scss */
 
+/* 
+  ---------------
+  General Styles
+  ---------------
+*/
+
+/* Optional: Use a variable for your brand color inspired by the logo’s blue */
+:root {
+    --primary-color: #1E90FF;
+    /* Adjust to match your exact logo color if needed */
 }
 
-/* Titolo principale */
-.main-title {
-    font-size: 6rem;
-    color: #ffffff;
-    margin: 0 0 20px;
-    font-weight: 700;
-}
-
-/* Sottotitolo */
-.subtitle {
-    font-size: 1.5rem;
-    color: #f0f0f0;
-    margin: 0 0 30px;
-}
-
-/* Contenitore dei pulsanti per allinearli */
-.buttons-container {
+/* 
+    ---------------
+    Hero Section
+    ---------------
+  */
+.hero {
+    height: 80vh;
+    background: linear-gradient(to bottom right,
+            var(--primary-color),
+            #3cb0ff);
     display: flex;
+    align-items: center;
     justify-content: center;
-    gap: 20px;
-    /* Spaziatura orizzontale tra i pulsanti */
+    text-align: center;
+    color: #fff;
 }
 
-/* Pulsanti di azione */
-.action-button {
-    background-color: #ffffff;
-    color: #333333;
-    border: none;
-    border-radius: 30px;
-    padding: 15px 30px;
+.hero-content {
+    max-width: 600px;
+    padding: 0 1rem;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #fff;
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #f0f0f0;
+}
+
+/* 
+    ---------------
+    Section Styles
+    ---------------
+  */
+.section {
+    padding: 4rem 2rem;
+}
+
+.section-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+}
+
+/* About Section */
+.about-section p {
     font-size: 1rem;
-    cursor: pointer;
-
-    /* Transizione per effetto hover */
-    transition: background-color 0.3s ease, color 0.3s ease;
+    line-height: 1.8;
+    color: #666;
 }
 
-/* Effetto hover sui pulsanti */
-.action-button:hover {
-    background-color: #333333;
-    color: #ffffff;
+/* Projects Section */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.project-card {
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.project-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: #333;
+}
+
+.project-card p {
+    font-size: 0.95rem;
+    color: #666;
+}
+
+/* Contact Section */
+.contact-section p {
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.contact-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+    background-color: #1a7ad1;
+    /* Slightly darker shade */
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
 }

@@ -1,0 +1,133 @@
+/* assets/scss/_footer.scss */
+
+.footer {
+    background-color: #f8f8f8;
+    color: #333;
+    padding: 2rem 0;
+    width: 100%;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center; // Center overall content on large screens
+    padding: 0 1rem;
+}
+
+.footer-top {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin-bottom: 0;
+}
+
+.footer-logo {
+    width: 36px;
+    transition: transform 0.2s ease;
+}
+
+.footer-brand:hover .footer-logo {
+    transform: rotate(360deg);
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    align-items: flex-start;
+}
+
+.footer-links-item {
+    min-width: 150px;
+}
+
+.footer-title {
+    margin-bottom: 1rem;
+    color: #1E90FF;
+    font-size: 1.1rem;
+    text-align: left;
+}
+
+.footer-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.footer-link {
+    text-decoration: none;
+    color: #555;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: #1E90FF;
+    text-decoration: underline;
+}
+
+.footer-social {
+    display: flex;
+    gap: .5rem;
+    margin-top: 0.5rem;
+}
+
+.footer-social-link {
+    color: #888;
+    font-size: 1.4rem;
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+.footer-social-link[href*="linkedin.com"]:hover i {
+    color: #0077b5;
+}
+
+.footer-social-link[href*="github.com"]:hover i {
+    color: #000;
+}
+
+.footer-social-link[href*="dribbble.com"]:hover i {
+    color: #ea4c89;
+}
+
+.footer-social-link[href^="mailto"]:hover i {
+    color: #1E90FF;
+}
+
+.footer-bottom {
+    margin-top: 2rem;
+    border-top: 1px solid #ddd;
+    padding-top: 1rem;
+    font-size: 0.8rem;
+    color: #666;
+}
+
+/* Responsive adjustments: on mobile, left-align overall footer content */
+@media (max-width: 768px) {
+    .footer-container {
+        text-align: left;
+    }
+
+    .footer-top {
+        align-items: center;
+        justify-content: flex-start;
+        gap: 2.5rem;
+    }
+
+    .footer-links {
+        gap: 2rem;
+    }
+
+    .footer-bottom {
+        padding-top: 1rem;
+    }
+}

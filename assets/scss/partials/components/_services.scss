@@ -1,4 +1,4 @@
-/* assets/scss/_landing.scss */
+/* assets/scss/partials/components/_services.scss */
 
 /* Standardize border radius */
 $border-radius-lg: 16px;
@@ -224,45 +224,97 @@ $border-radius-sm: 8px;
     animation: fadeIn 0.5s ease-out;
 }
 
-.design-element {
-    position: absolute;
-    border-radius: 8px;
-    animation: floatElement 3s ease-in-out infinite;
-}
-
-.wireframe {
+.wireframe-container {
     width: 60%;
     height: 50%;
-    background: var(--color-bg-2);
-    border: 1px solid var(--color-border);
-    border-radius: $border-radius-sm;
+    position: absolute;
     top: 25%;
     left: 20%;
     display: flex;
     flex-direction: column;
     gap: 8px;
     padding: 8px;
-    position: relative;
-    animation: floatElement 3s ease-in-out infinite;
 }
 
-.wireframe::before {
-    content: '';
-    width: 40%;
-    height: 12px;
-    background: rgba(30, 144, 255, 0.1);
-    border-radius: 4px;
-    animation: expandWidth 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+.wireframe-element {
+    background: var(--color-bg-2);
+    border: 1px solid var(--color-border);
+    border-radius: $border-radius-sm;
+    opacity: 0;
+    transform: translateY(10px);
 }
 
-.wireframe::after {
-    content: '';
-    width: 80%;
-    height: 8px;
-    background: rgba(30, 144, 255, 0.1);
-    border-radius: 4px;
-    margin-top: 4px;
-    animation: expandWidth 1s cubic-bezier(0.4, 0, 0.2, 1) 0.2s forwards;
+.wireframe-header {
+    height: 20px;
+    width: 100%;
+    animation: buildElement 0.5s ease-out forwards;
+}
+
+.wireframe-nav {
+    height: 15px;
+    width: 70%;
+    animation: buildElement 0.5s ease-out 0.2s forwards;
+}
+
+.wireframe-content {
+    height: 60px;
+    width: 100%;
+    animation: buildElement 0.5s ease-out 0.4s forwards;
+}
+
+.wireframe-sidebar {
+    height: 60px;
+    width: 20%;
+    position: absolute;
+    right: 8px;
+    top: 28px;
+    animation: buildElement 0.5s ease-out 0.6s forwards;
+}
+
+.wireframe-footer {
+    height: 15px;
+    width: 100%;
+    animation: buildElement 0.5s ease-out 0.8s forwards;
+}
+
+@keyframes buildElement {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes resetWireframe {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Add animation loop */
+.wireframe-container {
+    animation: loopWireframe 4s infinite;
+}
+
+@keyframes loopWireframe {
+    0%, 80% {
+        opacity: 1;
+    }
+    85% {
+        opacity: 0;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 .colors {
@@ -446,27 +498,6 @@ $border-radius-sm: 8px;
     font-size: 0.8rem;
 }
 
-/* Animations */
-@keyframes typingCode {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes floatElement {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-8px);
-    }
-}
-
 .landing-feature-title {
     font-size: 1.5rem;
     font-weight: 700;
@@ -484,96 +515,6 @@ $border-radius-sm: 8px;
 .landing-feature:nth-child(1) { animation-delay: 0.6s; }
 .landing-feature:nth-child(2) { animation-delay: 0.8s; }
 .landing-feature:nth-child(3) { animation-delay: 1s; }
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-@keyframes fadeInLeft {
-    from {
-        opacity: 0;
-        transform: translateX(-10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes fadeInRight {
-    from {
-        opacity: 0;
-        transform: translateX(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes popIn {
-    from {
-        opacity: 0;
-        transform: scale(0.8);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-@keyframes expandWidth {
-    from { transform: scaleX(0); }
-    to { transform: scaleX(1); }
-}
-
-@keyframes cursor {
-    from, to { opacity: 0; }
-    50% { opacity: 1; }
-}
-
-@keyframes chartAnimation {
-    0% {
-        stroke-dasharray: 1000;
-        stroke-dashoffset: 1000;
-        opacity: 0.3;
-    }
-    40% {
-        stroke-dashoffset: 0;
-        opacity: 1;
-    }
-    60% {
-        stroke-dashoffset: 0;
-        opacity: 1;
-    }
-    100% {
-        stroke-dashoffset: -1000;
-        opacity: 0.3;
-    }
-}
-
-@keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 
 @media (max-width: 1200px) {
     .landing-features {
@@ -650,7 +591,7 @@ $border-radius-sm: 8px;
         white-space: nowrap;
     }
 
-    .wireframe {
+    .wireframe-container {
         width: 55%;
         height: 45%;
         top: 27%;

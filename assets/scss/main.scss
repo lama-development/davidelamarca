@@ -3,6 +3,8 @@
 @import "navbar";
 @import "index";
 @import "footer";
+@import "loader";
+@import "landing";
 // @import "pages";
 
 @font-face {
@@ -37,6 +39,7 @@
     /* Variables */
     --navbar-height: 50px;
     /* Z-index */
+    --z-index-loading: 13;
     --z-index-navbar: 12;
     --z-index-mobile-menu: 10;
 }

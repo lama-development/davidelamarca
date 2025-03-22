@@ -3,7 +3,7 @@
 {{ define "main" }}
 <section class="landing">
     <div class="landing-content">
-        <h1 class="landing-title">Crafting Digital Experiences</h1>
+        <h1 class="landing-title">What I Do</h1>
         <div class="landing-features">
             <div class="landing-feature">
                 <div class="landing-feature-illustration">
@@ -51,7 +51,7 @@
                     </div>
                 </div>
                 <h3 class="landing-feature-title">UI/UX Design</h3>
-                <p class="landing-feature-text">Creating simple and beautiful interfaces that people love to use. Focus on clarity, ease of use, and meaningful interactions.</p>
+                <p class="landing-feature-text">Creating simple and beautiful interfaces. Focus on clarity, ease of use, and meaningful interactions.</p>
             </div>
 
             <div class="landing-feature">
@@ -59,24 +59,16 @@
                     <div class="seo-illustration">
                         <div class="analytics-dashboard">
                             <div class="chart-container">
-                                <div class="chart-grid"></div>
                                 <svg class="chart-line" viewBox="0 0 100 60" preserveAspectRatio="none">
-                                    <path d="M0,60 L20,45 L40,35 L60,25 L80,18 L100,10" vector-effect="non-scaling-stroke"/>
+                                    <g class="chart-grid">
+                                        <line class="axis-line" x1="0" y1="60" x2="100" y2="60" />
+                                        <line class="axis-line" x1="0" y1="0" x2="0" y2="60" />
+                                        <line class="grid-line" x1="0" y1="45" x2="100" y2="45" />
+                                        <line class="grid-line" x1="0" y1="30" x2="100" y2="30" />
+                                        <line class="grid-line" x1="0" y1="15" x2="100" y2="15" />
+                                    </g>
+                                    <path class="chart-path" d="M0,60 L20,45 L40,35 L60,25 L80,18 L100,10" />
                                 </svg>
-                            </div>
-                            <div class="metrics-row">
-                                <div class="metric-pill">
-                                    <i class='bx bx-trending-up'></i>
-                                    +45%
-                                </div>
-                                <div class="metric-pill">
-                                    <i class='bx bx-search'></i>
-                                    Keywords
-                                </div>
-                                <div class="metric-pill">
-                                    <i class='bx bx-link'></i>
-                                    Links
-                                </div>
                             </div>
                         </div>
                     </div>

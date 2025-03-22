@@ -30,9 +30,12 @@
     --color-bg-2: #f9f9f9;
     --color-navbar: rgba(255, 255, 255, 0.9);
     --color-border: #ddd;
+    --color-accent: #1e90ff;
     --color-text-primary: #000;
     --color-text-secondary: #5c5c5c;
     --color-text-pure: #fff;
+    /* Variables */
+    --navbar-height: 50px;
     /* Z-index */
     --z-index-navbar: 12;
     --z-index-mobile-menu: 10;
@@ -47,4 +50,5 @@
 body {
     font-family: 'Bricolage Grotesque', sans-serif;
     background-color: var(--bg-color-1);
+    margin-top: var(--navbar-height);
 }

@@ -11,7 +11,7 @@
     background: var(--color-navbar);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--color-border);
-    height: 50px;
+    height: var(--navbar-height);
     padding: 20px;
     z-index: var(--z-index-navbar);
     transition: border-bottom 0.2s ease;

@@ -10,10 +10,10 @@
     width: 100%;
     background: var(--color-navbar);
     backdrop-filter: blur(10px);
+    height: $navbar-height;
+    padding: 0 2rem;
+    z-index: $z-index-navbar;
     border-bottom: 1px solid var(--color-border);
-    height: var(--navbar-height);
-    padding: 20px;
-    z-index: var(--z-index-navbar);
     transition: border-bottom 0.2s ease;
 }
 
@@ -122,7 +122,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    z-index: var(--z-index-mobile-menu);
+    z-index: $z-index-mobile-menu;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.2s ease;

@@ -1,12 +1,7 @@
 /* assets/scss/partials/components/_services.scss */
 
-/* Standardize border radius */
-$border-radius-lg: 16px;
-$border-radius-md: 12px;
-$border-radius-sm: 8px;
-
 .landing {
-    min-height: calc(100vh - var(--navbar-height));
+    min-height: calc(100vh - $navbar-height);
     padding: 4rem 2rem;
     display: flex;
     flex-direction: column;
@@ -107,9 +102,17 @@ $border-radius-sm: 8px;
     border-radius: 50%;
 }
 
-.window-dots span:nth-child(1) { background: #ff5f56; }
-.window-dots span:nth-child(2) { background: #ffbd2e; }
-.window-dots span:nth-child(3) { background: #27c93f; }
+.window-dots span:nth-child(1) {
+    background: #ff5f56;
+}
+
+.window-dots span:nth-child(2) {
+    background: #ffbd2e;
+}
+
+.window-dots span:nth-child(3) {
+    background: #27c93f;
+}
 
 .code-content {
     font-family: monospace;
@@ -140,12 +143,25 @@ $border-radius-sm: 8px;
     animation: cursor 1s step-end infinite;
 }
 
-.code-keyword { color: #0066cc; }
-.code-comment { color: #6a737d; }
+.code-keyword {
+    color: #0066cc;
+}
 
-.code-line:nth-child(1) { animation-delay: 0.5s; }
-.code-line:nth-child(2) { animation-delay: 1s; }
-.code-line:nth-child(3) { animation-delay: 1.5s; }
+.code-comment {
+    color: #6a737d;
+}
+
+.code-line:nth-child(1) {
+    animation-delay: 0.5s;
+}
+
+.code-line:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.code-line:nth-child(3) {
+    animation-delay: 1.5s;
+}
 
 /* UI/UX Design Illustration */
 .ui-ux-illustration {
@@ -272,9 +288,17 @@ $border-radius-sm: 8px;
     animation: popIn 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) backwards;
 }
 
-.component-item:nth-child(1) { animation-delay: 0.6s; }
-.component-item:nth-child(2) { animation-delay: 0.7s; }
-.component-item:nth-child(3) { animation-delay: 0.8s; }
+.component-item:nth-child(1) {
+    animation-delay: 0.6s;
+}
+
+.component-item:nth-child(2) {
+    animation-delay: 0.7s;
+}
+
+.component-item:nth-child(3) {
+    animation-delay: 0.8s;
+}
 
 /* SEO Illustration */
 .seo-illustration {
@@ -312,11 +336,20 @@ $border-radius-sm: 8px;
 .chart-line {
     width: 100%;
     height: 100%;
+
     .chart-path {
         fill: none;
         stroke: var(--color-accent);
-        stroke-width: 2;
+        stroke-width: 2.5;
+        stroke-linecap: round;
+        stroke-linejoin: round;
         animation: drawLine 12s ease-in-out infinite;
+    }
+
+    .chart-area {
+        fill: url(#area-gradient);
+        opacity: 0;
+        animation: fadeIn 0.5s ease-out forwards;
     }
 }
 
@@ -334,7 +367,8 @@ $border-radius-sm: 8px;
 .grid-line {
     stroke: var(--color-border);
     stroke-width: 0.5;
-    opacity: 0.3;
+    opacity: 0.2;
+    stroke-dasharray: 4 4;
 }
 
 .landing-feature-title {
@@ -351,9 +385,17 @@ $border-radius-sm: 8px;
     margin-top: auto;
 }
 
-.landing-feature:nth-child(1) { animation-delay: 0.6s; }
-.landing-feature:nth-child(2) { animation-delay: 0.8s; }
-.landing-feature:nth-child(3) { animation-delay: 1s; }
+.landing-feature:nth-child(1) {
+    animation-delay: 0.6s;
+}
+
+.landing-feature:nth-child(2) {
+    animation-delay: 0.8s;
+}
+
+.landing-feature:nth-child(3) {
+    animation-delay: 1s;
+}
 
 @media (max-width: 1200px) {
     .landing-features {
@@ -448,4 +490,4 @@ $border-radius-sm: 8px;
         width: 20px;
         height: 20px;
     }
-} 
+}

@@ -21,7 +21,7 @@
     <!-- Javascript -->
     {{ $js := resources.Get "js/navbar.js" | minify | fingerprint }}
     <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
-    {{ $loading := resources.Get "js/loading.js" | minify | fingerprint }}
+    {{ $loading := resources.Get "js/loader.js" | minify | fingerprint }}
     <script src="{{ $loading.RelPermalink }}" integrity="{{ $loading.Data.Integrity }}" defer></script>
 </head>
 

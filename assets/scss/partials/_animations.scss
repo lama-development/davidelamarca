@@ -1,4 +1,4 @@
-// Logo Animation
+// Loading Logo Animation
 @keyframes logoAnimation {
     0% {
         transform: scale(1);
@@ -69,7 +69,7 @@
     }
 }
 
-// Cursor Animation
+// Blinking Cursor Animation
 @keyframes cursor {
     0%, 100% {
         opacity: 1;
@@ -79,6 +79,7 @@
     }
 }
 
+// Build Element Animation
 @keyframes buildElement {
     0% {
         opacity: 0;
@@ -97,7 +98,7 @@
         opacity: 0;
     }
     100% {
-        height: var(--bar-height);
+        height: 100%;
         opacity: 1;
     }
 }

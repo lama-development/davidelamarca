@@ -197,8 +197,8 @@
 
 .wireframe-element {
     background: var(--color-bg-2);
-    border: 1px solid var(--color-border);
-    border-radius: $border-radius-sm;
+    border: 1px dashed var(--color-border);
+    border-radius: 4px;
     opacity: 0;
     transform: translateY(10px);
 }
@@ -209,31 +209,19 @@
     animation: buildElement 0.5s ease-out forwards;
 }
 
-.wireframe-nav {
-    height: 15px;
-    width: 70%;
-    animation: buildElement 0.5s ease-out 0.2s forwards;
-}
-
 .wireframe-content {
     height: 60px;
-    width: 100%;
+    width: 70%;
     animation: buildElement 0.5s ease-out 0.4s forwards;
 }
 
 .wireframe-sidebar {
-    height: 60px;
+    height: 57px;
     width: 20%;
     position: absolute;
     right: 8px;
-    top: 28px;
+    top: 34px;
     animation: buildElement 0.5s ease-out 0.6s forwards;
-}
-
-.wireframe-footer {
-    height: 15px;
-    width: 100%;
-    animation: buildElement 0.5s ease-out 0.8s forwards;
 }
 
 .colors {
@@ -271,7 +259,7 @@
 
 .components {
     position: absolute;
-    bottom: 15%;
+    bottom: 10%;
     left: 15%;
     display: flex;
     gap: 8px;
@@ -283,6 +271,7 @@
     width: 24px;
     height: 24px;
     border: 1px dashed var(--color-border);
+    background: var(--color-bg-2);
     border-radius: $border-radius-sm;
     transform-origin: center;
     animation: popIn 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) backwards;
@@ -463,10 +452,19 @@
     }
 
     .wireframe-container {
-        width: 55%;
+        width: 45%;
         height: 45%;
         top: 27%;
-        left: 22%;
+        left: 25%;
+    }
+
+    .wireframe-element {
+        border-radius: 4px;
+    }
+
+    .wireframe-sidebar {
+        top: 28px;  
+        height: 35px;
     }
 
     .colors {
@@ -481,7 +479,7 @@
     }
 
     .components {
-        bottom: 18%;
+        bottom: 12%;
         left: 18%;
         gap: 6px;
     }

@@ -1,30 +1,42 @@
-// asstes/js/theme.js
+// assets/js/theme.js
 "use strict";
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Trova il pulsante del tema della navbar (potrebbe non esserci in tutte le pagine)
-    const themeBtn = document.querySelector('.theme-btn');
-    let themeIcon = null;
-    if (themeBtn) {
-        themeIcon = themeBtn.querySelector('i');
+    // Select all theme buttons
+    const themeBtns = document.querySelectorAll('.theme-btn');
+
+    // Function to update the icon for all theme buttons
+    function updateThemeIcon(currentTheme) {
+        themeBtns.forEach(btn => {
+            const themeIcon = btn.querySelector('i');
+            if (themeIcon) {
+                if (currentTheme === 'dark') {
+                    themeIcon.classList.remove('bx-moon');
+                    themeIcon.classList.add('bx-sun');
+                } else {
+                    themeIcon.classList.remove('bx-sun');
+                    themeIcon.classList.add('bx-moon');
+                }
+            }
+        });
     }
 
-    // Definizioni variabili colori tema chiaro/scuro
+    // Define theme colors
     const lightTheme = {
-    '--color-bg-1': '#fff',
-    '--color-bg-2': '#f9f9f9',
-    '--color-navbar': 'rgba(255, 255, 255, 0.85)',
-    '--color-border': '#ddd',
-    '--color-accent': '#1e90ff',
-    '--color-text-primary': '#000',
-    '--color-text-secondary': '#5c5c5c',
-    '--color-text-pure': '#fff'
+        '--color-bg-1': '#fff',
+        '--color-bg-2': '#f9f9f9',
+        '--color-navbar': 'rgba(249, 249, 249, 0.85)',
+        '--color-border': '#ddd',
+        '--color-accent': '#1e90ff',
+        '--color-text-primary': '#000',
+        '--color-text-secondary': '#5c5c5c',
+        '--color-text-pure': '#fff'
     };
 
     const darkTheme = {
         '--color-bg-1': '#000',
         '--color-bg-2': '#0f1117',
-        '--color-navbar': 'rgba(0, 0, 0, 0.85)',
+        '--color-navbar': 'rgba(15, 17, 23, 0.85)',
         '--color-border': '#23252c',
         '--color-accent': '#0b99ff',
         '--color-text-primary': '#fff',
@@ -38,27 +50,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    function updateThemeIcon(currentTheme) {
-        if (themeIcon) {
-            if (currentTheme === 'dark') {
-                themeIcon.classList.remove('bx-moon');
-                themeIcon.classList.add('bx-sun');
-            } else {
-                themeIcon.classList.remove('bx-sun');
-                themeIcon.classList.add('bx-moon');
-            }
-        }
-    }
-
+    // Check saved theme or fallback to preferred setting
     let currentTheme = localStorage.getItem('theme');
     if (!currentTheme) {
-        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            currentTheme = 'dark';
-        } else {
-            currentTheme = 'light';
-        }
+        currentTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
     }
 
+    // Apply the theme on load
     if (currentTheme === 'dark') {
         applyTheme(darkTheme);
     } else {
@@ -66,14 +64,10 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     updateThemeIcon(currentTheme);
 
-    // Controllo se il pulsante del tema esiste nella pagina
-    if (themeBtn) {
-        themeBtn.addEventListener('click', function() {
-            if (currentTheme === 'dark') {
-                currentTheme = 'light';
-            } else {
-                currentTheme = 'dark';
-            }
+    // Add click event listener to all theme buttons
+    themeBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
             localStorage.setItem('theme', currentTheme);
             if (currentTheme === 'dark') {
                 applyTheme(darkTheme);
@@ -82,5 +76,5 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             updateThemeIcon(currentTheme);
         });
-    }
+    });
 });

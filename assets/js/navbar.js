@@ -8,4 +8,5 @@ menuToggle.addEventListener('click', function () {
     menuToggle.classList.toggle('open');
     mobileMenu.classList.toggle('open');
     navbar.classList.toggle('menu-open');
+    document.body.classList.toggle('no-scroll'); // disable background scrolling
 });

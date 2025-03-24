@@ -27,7 +27,8 @@ document.addEventListener('DOMContentLoaded', function() {
         '--color-bg-2': '#f9f9f9',
         '--color-navbar': 'rgba(249, 249, 249, 0.85)',
         '--color-border': '#ddd',
-        '--color-accent': '#1e90ff',
+        '--color-accent': '#0b99ff',
+        '--color-accent-2': '#075c99',
         '--color-text-primary': '#000',
         '--color-text-secondary': '#5c5c5c',
         '--color-text-pure': '#fff'
@@ -39,6 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
         '--color-navbar': 'rgba(15, 17, 23, 0.85)',
         '--color-border': '#23252c',
         '--color-accent': '#0b99ff',
+        '--color-accent-2': '#075c99',
         '--color-text-primary': '#fff',
         '--color-text-secondary': '#95969e',
         '--color-text-pure': '#000'

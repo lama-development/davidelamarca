@@ -16,12 +16,44 @@ $border-radius-sm: 8px;
 @import 'partials/navbar';
 @import 'partials/footer';
 @import 'partials/loader';
+@import "partials/404";
 
-// Page components
-@import 'partials/components/services';
+// Page sections
+@import 'partials/sections/index/expertise';
 
 // Pages
 @import 'index';
+
+:root {
+    // Light theme colors
+    --color-bg-1: #fff;
+    --color-bg-2: #f9f9f9;
+    --color-navbar: rgba(249, 249, 249, 0.85);
+    --color-border: #ddd;
+    --color-accent: #0b99ff;
+    --color-accent-2: #075c99;
+    --color-text-primary: #000;
+    --color-text-secondary: #5c5c5c;
+    --color-text-pure: #fff;
+    // Font weights
+    --font-weight-regular: 400;
+    --font-weight-medium: 600;
+    --font-weight-bold: 800;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-bg-1: #000,
+        --color-bg-2: #0f1117,
+        --color-navbar: rgba(15, 17, 23, 0.85),
+        --color-border: #23252c,
+        --color-accent: #0b99ff,
+        --color-accent-2: #075c99,
+        --color-text-primary: #fff,
+        --color-text-secondary: #95969e,
+        --color-text-pure: #000
+    }
+}
 
 * {
     margin: 0;

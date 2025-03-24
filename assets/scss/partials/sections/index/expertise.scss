@@ -1,6 +1,6 @@
 /* assets/scss/partials/components/_services.scss */
 
-.landing {
+.expertise {
     min-height: calc(100vh - $navbar-height);
     padding: 4rem 2rem;
     display: flex;
@@ -10,7 +10,7 @@
     overflow: hidden;
 }
 
-.landing-content {
+.expertise-content {
     max-width: 1200px;
     margin: 0 auto;
     width: 100%;
@@ -18,20 +18,20 @@
     z-index: 1;
 }
 
-.landing-title {
+.expertise-title {
     font-size: clamp(2rem, 4vw, 3rem);
     font-weight: 800;
     line-height: 1.2;
     margin-bottom: 3rem;
     text-align: center;
-    background: linear-gradient(45deg, var(--color-text-primary), var(--color-accent));
+    background: linear-gradient(45deg, var(--color-accent), var(--color-accent-2));
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: fadeInUp 0.8s ease-out;
 }
 
-.landing-features {
+.expertise-features {
     display: grid;
     grid-template-columns: repeat(3, 350px);
     gap: 2.5rem;
@@ -41,7 +41,7 @@
     justify-content: center;
 }
 
-.landing-feature {
+.expertise-feature {
     width: 350px;
     padding: 2rem;
     background: var(--color-bg-2);
@@ -54,20 +54,36 @@
     height: 100%;
     display: flex;
     flex-direction: column;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
-.landing-feature:hover {
+.expertise-feature.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.expertise-feature:hover {
     transform: translateY(-8px);
     border-color: var(--color-accent);
 }
 
-.landing-feature-illustration {
+.expertise-feature-illustration {
     position: relative;
     height: 220px;
     margin-top: 1.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.expertise-feature.animate .expertise-feature-illustration {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Web Development Illustration */
@@ -149,6 +165,12 @@
 
 .code-comment {
     color: var(--color-text-secondary);
+}
+
+.code-line-number {
+    color: var(--color-border);
+    margin-right: 6px;
+    width: 16px;
 }
 
 .code-line:nth-child(1) {
@@ -360,54 +382,54 @@
     stroke-dasharray: 4 4;
 }
 
-.landing-feature-title {
+.expertise-feature-title {
     font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
     color: var(--color-text-primary);
 }
 
-.landing-feature-text {
+.expertise-feature-text {
     color: var(--color-text-secondary);
     line-height: 1.7;
     font-size: 1.1rem;
     margin-top: auto;
 }
 
-.landing-feature:nth-child(1) {
+.expertise-feature:nth-child(1) {
     animation-delay: 0.6s;
 }
 
-.landing-feature:nth-child(2) {
+.expertise-feature:nth-child(2) {
     animation-delay: 0.8s;
 }
 
-.landing-feature:nth-child(3) {
+.expertise-feature:nth-child(3) {
     animation-delay: 1s;
 }
 
 @media (max-width: 1200px) {
-    .landing-features {
+    .expertise-features {
         grid-template-columns: repeat(2, 350px);
     }
 }
 
 @media (max-width: 768px) {
-    .landing {
+    .expertise {
         padding: 2rem 1rem;
     }
 
-    .landing-features {
+    .expertise-features {
         grid-template-columns: 320px;
         gap: 1.5rem;
     }
 
-    .landing-feature {
+    .expertise-feature {
         width: 320px;
         padding: 1.5rem;
     }
 
-    .landing-feature-illustration {
+    .expertise-feature-illustration {
         height: 180px;
         
     }
@@ -419,26 +441,26 @@
         max-width: 260px;
     }
 
-    .landing-feature-title {
+    .expertise-feature-title {
         font-size: 1.25rem;
         margin-bottom: 0.75rem;
     }
 
-    .landing-feature-text {
+    .expertise-feature-text {
         font-size: 1rem;
         line-height: 1.6;
     }
 
-    .landing-cta {
+    .expertise-cta {
         flex-direction: column;
     }
 
-    .landing-button {
+    .expertise-button {
         width: 100%;
         text-align: center;
     }
 
-    .landing-feature-icon {
+    .expertise-feature-icon {
         opacity: 0.9;
         transform: none;
     }

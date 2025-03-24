@@ -1,0 +1,52 @@
+.error-404 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 80vh;
+    background-color: var(--color-bg-1);
+    padding: 1.5rem;
+
+    .container {
+        max-width: 600px;
+        padding: 20px;
+        z-index: 1;
+    }
+
+    .error-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: clamp(6rem, 20vw, 15rem);
+        line-height: 1;
+        font-weight: var(--font-weight-bold);
+        background: linear-gradient(45deg, var(--color-accent), var(--color-accent-2));
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .error-message {
+        font-size: 1.25rem;
+        margin: 20px;
+        color: var(--color-text-secondary);
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 15px 20px;
+        font-size: 1rem;
+        color: var(--color-text-pure);
+        background-color: var(--color-accent);
+        border: none;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background-color 0.3s;
+        margin-top: 15px;
+        font-weight: var(--font-weight-medium);
+
+        &:hover {
+            background-color: var(--color-accent-2);
+        }
+    }
+}

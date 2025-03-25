@@ -1,12 +1,9 @@
 // assets/js/navbar.js
 
-const menuToggle = document.getElementById('navbar-menu-toggle');
-const mobileMenu = document.getElementById('navbar-mobile-menu');
-const navbar = document.getElementById('navbar');
+const menuToggle = document.querySelector('.navbar__menu-toggle');
+const navbar = document.querySelector('.navbar');
 
 menuToggle.addEventListener('click', function () {
-    menuToggle.classList.toggle('open');
-    mobileMenu.classList.toggle('open');
     navbar.classList.toggle('menu-open');
     document.body.classList.toggle('no-scroll'); // disable background scrolling
 });

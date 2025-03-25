@@ -1,6 +1,6 @@
 /* assets/scss/partials/_loader.scss */
 
-.loading-screen {
+.loader {
     position: fixed;
     top: 0;
     left: 0;
@@ -13,18 +13,18 @@
     z-index: $z-index-loader;
     opacity: 1;
     transition: opacity 0.5s ease-out;
-}
 
-.loading-screen.fade-out {
-    opacity: 0;
-    pointer-events: none;
-}
+    &.fade-out {
+        opacity: 0;
+        pointer-events: none;
+    }
 
-.loading-content {
-    text-align: center;
-}
+    &__content {
+        text-align: center;
+    }
 
-.loading-logo {
-    width: 64px;
-    animation: logoAnimation 1.5s ease-in-out infinite;
+    &__logo {
+        width: 64px;
+        animation: logoAnimation 1.5s ease-in-out 2; /* Limitato a 2 iterazioni invece che infinite */
+    }
 }

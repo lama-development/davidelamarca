@@ -2,24 +2,8 @@
 "use strict";
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Select all theme buttons
-    const themeBtns = document.querySelectorAll('.theme-btn');
-
-    // Function to update the icon for all theme buttons
-    function updateThemeIcon(currentTheme) {
-        themeBtns.forEach(btn => {
-            const themeIcon = btn.querySelector('i');
-            if (themeIcon) {
-                if (currentTheme === 'dark') {
-                    themeIcon.classList.remove('bx-moon');
-                    themeIcon.classList.add('bx-sun');
-                } else {
-                    themeIcon.classList.remove('bx-sun');
-                    themeIcon.classList.add('bx-moon');
-                }
-            }
-        });
-    }
+    // Select the theme toggle input
+    const themeToggle = document.querySelector('.navbar__theme-input');
 
     // Define theme colors
     const lightTheme = {
@@ -61,22 +45,27 @@ document.addEventListener('DOMContentLoaded', function() {
     // Apply the theme on load
     if (currentTheme === 'dark') {
         applyTheme(darkTheme);
+        document.body.classList.add('dark-theme');
+        if (themeToggle) themeToggle.checked = true;
     } else {
         applyTheme(lightTheme);
+        document.body.classList.remove('dark-theme');
+        if (themeToggle) themeToggle.checked = false;
     }
-    updateThemeIcon(currentTheme);
 
-    // Add click event listener to all theme buttons
-    themeBtns.forEach(btn => {
-        btn.addEventListener('click', function() {
-            currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            localStorage.setItem('theme', currentTheme);
-            if (currentTheme === 'dark') {
+    // Add change event listener to theme toggle
+    if (themeToggle) {
+        themeToggle.addEventListener('change', function() {
+            if (this.checked) {
+                currentTheme = 'dark';
                 applyTheme(darkTheme);
+                document.body.classList.add('dark-theme');
             } else {
+                currentTheme = 'light';
                 applyTheme(lightTheme);
+                document.body.classList.remove('dark-theme');
             }
-            updateThemeIcon(currentTheme);
+            localStorage.setItem('theme', currentTheme);
         });
-    });
+    }
 });

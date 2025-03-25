@@ -1,3 +1,5 @@
+/* assets/scss/partials/_animations.scss */
+
 // Loading Logo Animation
 @keyframes logoAnimation {
     0% {
@@ -29,14 +31,39 @@
         transform: translateY(0);
     }
     50% {
-        transform: translateY(-5px);
+        transform: translateY(-10px);
     }
     100% {
         transform: translateY(0);
     }
 }
 
-// Fade Animations
+// Pop In Animation
+@keyframes popIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    80% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+// Fade In Animation
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+// Fade In Up Animation
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -48,28 +75,40 @@
     }
 }
 
-@keyframes fadeIn {
-    from {
+// Draw Line Animation
+@keyframes drawLine {
+    0% {
+        stroke-dasharray: 0 1000;
         opacity: 0;
     }
-    to {
+    10% {
         opacity: 1;
+    }
+    40% {
+        stroke-dasharray: 200 1000;
+    }
+    90% {
+        stroke-dasharray: 200 1000;
+    }
+    100% {
+        stroke-dasharray: 0 1000;
+        opacity: 0;
     }
 }
 
-// Pop In Animation
-@keyframes popIn {
+// Build Element Animation
+@keyframes buildElement {
     from {
         opacity: 0;
-        transform: scale(0.8);
+        transform: translateY(10px);
     }
     to {
         opacity: 1;
-        transform: scale(1);
+        transform: translateY(0);
     }
 }
 
-// Blinking Cursor Animation
+// Cursor Animation
 @keyframes cursor {
     0%, 100% {
         opacity: 1;
@@ -78,45 +117,3 @@
         opacity: 0;
     }
 }
-
-// Build Element Animation
-@keyframes buildElement {
-    0% {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-// Bar Chart Animation
-@keyframes growBar {
-    0% {
-        height: 0;
-        opacity: 0;
-    }
-    100% {
-        height: 100%;
-        opacity: 1;
-    }
-}
-
-// Line Chart Animation
-@keyframes drawLine {
-    0% {
-        stroke-dasharray: 0 1000;
-        opacity: 0;
-    }
-    20% {
-        opacity: 1;
-    }
-    80% {
-        opacity: 1;
-    }
-    100% {
-        stroke-dasharray: 1000 0;
-        opacity: 0;
-    }
-} 

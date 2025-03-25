@@ -1,14 +1,18 @@
 // assets/js/loader.js
 
 document.addEventListener('DOMContentLoaded', function() {
-    const loadingScreen = document.querySelector('.loading-screen');
+    const loadingScreen = document.querySelector('.loader');
 
     setTimeout(() => {
-        loadingScreen.classList.add('fade-out');
-        
-        setTimeout(() => {
-            loadingScreen.remove();
-        }, 500);
+        if (loadingScreen) {
+            loadingScreen.classList.add('fade-out');
+            
+            setTimeout(() => {
+                if (loadingScreen) {
+                    loadingScreen.remove();
+                }
+            }, 500);
+        }
     }, 1000);
 
     // Intersection Observer for animations
@@ -21,6 +25,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }, { threshold: 0.1 });
 
     // Observe all cards
-    const cards = document.querySelectorAll('.services-feature');
-    cards.forEach(card => observer.observe(card));
+    const features = document.querySelectorAll('.services__feature');
+    features.forEach(feature => observer.observe(feature));
 });

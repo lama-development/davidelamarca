@@ -10,11 +10,9 @@ $z-index-navbar: 12;
 $z-index-mobile-menu: 10;
 
 /* Border radius variables */
-$border-radius: (
-    'lg': 16px,
-    'md': 12px,
-    'sm': 8px
-);
+$border-radius-lg: 16px;
+$border-radius-md: 12px;
+$border-radius-sm: 8px;
 
 // Base styles and animations
 @import 'partials/animations';
@@ -40,7 +38,6 @@ $border-radius: (
     --color-text-primary: #000;
     --color-text-secondary: #5c5c5c;
     --color-text-pure: #fff;
-    
     // Font weights
     --font-weight-regular: 400;
     --font-weight-medium: 600;

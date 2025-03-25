@@ -2,14 +2,19 @@
 
 /* Layout variables */
 $navbar-height: 50px;
+$container-max-width: 1200px;
+
 /* Z-index variables */
 $z-index-loader: 13;
 $z-index-navbar: 12;
 $z-index-mobile-menu: 10;
+
 /* Border radius variables */
-$border-radius-lg: 16px;
-$border-radius-md: 12px;
-$border-radius-sm: 8px;
+$border-radius: (
+    'lg': 16px,
+    'md': 12px,
+    'sm': 8px
+);
 
 // Base styles and animations
 @import 'partials/animations';
@@ -35,6 +40,7 @@ $border-radius-sm: 8px;
     --color-text-primary: #000;
     --color-text-secondary: #5c5c5c;
     --color-text-pure: #fff;
+    
     // Font weights
     --font-weight-regular: 400;
     --font-weight-medium: 600;
@@ -43,15 +49,15 @@ $border-radius-sm: 8px;
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --color-bg-1: #000,
-        --color-bg-2: #0f1117,
-        --color-navbar: rgba(15, 17, 23, 0.85),
-        --color-border: #23252c,
-        --color-accent: #0b99ff,
-        --color-accent-2: #075c99,
-        --color-text-primary: #fff,
-        --color-text-secondary: #95969e,
-        --color-text-pure: #000
+        --color-bg-1: #000;
+        --color-bg-2: #0f1117;
+        --color-navbar: rgba(15, 17, 23, 0.85);
+        --color-border: #23252c;
+        --color-accent: #0b99ff;
+        --color-accent-2: #075c99;
+        --color-text-primary: #fff;
+        --color-text-secondary: #95969e;
+        --color-text-pure: #000;
     }
 }
 
@@ -62,7 +68,10 @@ $border-radius-sm: 8px;
 }
 
 body {
-    font-family: 'Bricolage Grotesque', sans-serif;
+    font-family: 'Bricolage Grotesque', system-ui, -apple-system, sans-serif;
     background-color: var(--color-bg-1);
     margin-top: $navbar-height;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }

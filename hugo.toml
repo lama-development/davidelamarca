@@ -1,3 +1,41 @@
-baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+baseURL = 'https://davidelamarca.com/'
+languageCode = 'it-IT'
+title = 'Davide La Marca - Web Development & Design'
+description = 'Professional web development and design services. Creating fast, responsive, and beautiful websites.'
+
+# Build settings
+enableRobotsTXT = true
+disableKinds = ['taxonomy', 'term']
+minify = true
+
+# Performance
+enableGitInfo = true
+pygmentsCodeFences = true
+pygmentsUseClasses = true
+
+# Cache settings
+[caches]
+  [caches.getjson]
+    maxAge = "10m"
+  [caches.getcsv]
+    maxAge = "10m"
+  [caches.images]
+    maxAge = "1h"
+  [caches.assets]
+    maxAge = "1h"
+
+# Markup settings
+[markup]
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    lineNos = false
+    noClasses = false
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[params]
+  description = "Professional web development and design services. Creating fast, responsive, and beautiful websites."
+  images = ["/img/logo-black.png"]
+  mainSections = ["blog", "projects"]

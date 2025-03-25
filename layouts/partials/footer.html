@@ -1,21 +1,19 @@
-<!-- layouts/partials/footer.html -->
-
-<footer class="footer">
+<footer class="footer" role="contentinfo">
     <div class="footer__container">
         <div class="footer__top">
-            <a href="/" class="footer__brand">
+            <a href="/" class="footer__brand" aria-label="Homepage">
                 <div class="footer__logo-container">
-                    <img src="/favicon.ico" alt="Davide La Marca Logo" class="footer__logo">
+                    <img src="/favicon.ico" alt="" class="footer__logo" aria-hidden="true" loading="lazy">
                 </div>
             </a>
             <div class="footer__links">
-                <div class="footer__links-group">
+                <div class="footer__links-group" aria-label="Navigation links">
                     <h3 class="footer__title">Navigation</h3>
                     <ul class="footer__list">
-                        <li><a href="/" class="footer__link">Home</a></li>
-                        <li><a href="/projects" class="footer__link">Projects</a></li>
-                        <li><a href="/blog" class="footer__link">Blog</a></li>
-                        <li><a href="/contact" class="footer__link">Contact</a></li>
+                        <li><a href="/" class="footer__link" {{ if .IsHome }}aria-current="page"{{ end }}>Home</a></li>
+                        <li><a href="/projects" class="footer__link" {{ if eq .RelPermalink "/projects/" }}aria-current="page"{{ end }}>Projects</a></li>
+                        <li><a href="/blog" class="footer__link" {{ if eq .RelPermalink "/blog/" }}aria-current="page"{{ end }}>Blog</a></li>
+                        <li><a href="/contact" class="footer__link" {{ if eq .RelPermalink "/contact/" }}aria-current="page"{{ end }}>Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer__links-group">
@@ -27,29 +25,25 @@
                 </div>
                 <div class="footer__links-group">
                     <h3 class="footer__title">Connect</h3>
-                    <div class="footer__social">
-                        <a href="https://www.linkedin.com/in/davide-la-marca-178241254" class="footer__social-link" target="_blank" rel="noopener" aria-label="LinkedIn">
-                            <i class="bx bxl-linkedin"></i>
+                    <div class="footer__social" role="list">
+                        <a href="https://www.linkedin.com/in/davide-la-marca-178241254" class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+                            <i class="bx bxl-linkedin" aria-hidden="true"></i>
                         </a>
-                        <a href="https://github.com/lama-development" class="footer__social-link" target="_blank" rel="noopener" aria-label="GitHub">
-                            <i class="bx bxl-github"></i>
+                        <a href="https://github.com/lama-development" class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
+                            <i class="bx bxl-github" aria-hidden="true"></i>
                         </a>
-                        <a href="https://dribbble.com/lama-designs" class="footer__social-link" target="_blank" rel="noopener" aria-label="Dribbble">
-                            <i class="bx bxl-dribbble"></i>
+                        <a href="https://dribbble.com/lama-designs" class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="Dribbble Profile">
+                            <i class="bx bxl-dribbble" aria-hidden="true"></i>
                         </a>
-                        <a href="mailto:info@davidelamarca.com" class="footer__social-link" aria-label="Email">
-                            <i class="bx bx-envelope"></i>
+                        <a href="mailto:info@davidelamarca.com" class="footer__social-link" aria-label="Send email">
+                            <i class="bx bx-envelope" aria-hidden="true"></i>
                         </a>
                     </div>
                 </div>
             </div>
         </div>
         <div class="footer__bottom">
-            <p>&copy; <span id="year"></span> Davide La Marca. All rights reserved.</p>
+            <p>&copy; <span id="year">{{ now.Format "2006" }}</span> Davide La Marca. All rights reserved.</p>
         </div>
     </div>
 </footer>
-
-<script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-</script>

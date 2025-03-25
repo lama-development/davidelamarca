@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+Sitemap: https://davidelamarca.com/sitemap.xml
+
+# Optimize crawling
+User-agent: AdsBot-Google
+Allow: /
+
+# Prevent crawling of admin and system files
+Disallow: /admin/
+Disallow: /.git/
+Disallow: /resources/
+Disallow: /*.json$

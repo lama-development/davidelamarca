@@ -1,6 +1,6 @@
 /* assets/scss/partials/components/_services.scss */
 
-.expertise {
+.services {
     min-height: calc(100vh - $navbar-height);
     padding: 4rem 2rem;
     display: flex;
@@ -10,7 +10,7 @@
     overflow: hidden;
 }
 
-.expertise-content {
+.services-content {
     max-width: 1200px;
     margin: 0 auto;
     width: 100%;
@@ -18,7 +18,7 @@
     z-index: 1;
 }
 
-.expertise-title {
+.services-title {
     font-size: clamp(2rem, 4vw, 3rem);
     font-weight: 800;
     line-height: 1.2;
@@ -31,7 +31,7 @@
     animation: fadeInUp 0.8s ease-out;
 }
 
-.expertise-features {
+.services-features {
     display: grid;
     grid-template-columns: repeat(3, 350px);
     gap: 2.5rem;
@@ -41,7 +41,7 @@
     justify-content: center;
 }
 
-.expertise-feature {
+.services-feature {
     width: 350px;
     padding: 2rem;
     background: var(--color-bg-2);
@@ -59,17 +59,17 @@
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
-.expertise-feature.animate {
+.services-feature.animate {
     opacity: 1;
     transform: translateY(0);
 }
 
-.expertise-feature:hover {
+.services-feature:hover {
     transform: translateY(-8px);
     border-color: var(--color-accent);
 }
 
-.expertise-feature-illustration {
+.services-feature-illustration {
     position: relative;
     height: 220px;
     margin-top: 1.5rem;
@@ -81,7 +81,7 @@
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
-.expertise-feature.animate .expertise-feature-illustration {
+.services-feature.animate .services-feature-illustration {
     opacity: 1;
     transform: translateY(0);
 }
@@ -382,54 +382,54 @@
     stroke-dasharray: 4 4;
 }
 
-.expertise-feature-title {
+.services-feature-title {
     font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
     color: var(--color-text-primary);
 }
 
-.expertise-feature-text {
+.services-feature-text {
     color: var(--color-text-secondary);
     line-height: 1.7;
     font-size: 1.1rem;
     margin-top: auto;
 }
 
-.expertise-feature:nth-child(1) {
+.services-feature:nth-child(1) {
     animation-delay: 0.6s;
 }
 
-.expertise-feature:nth-child(2) {
+.services-feature:nth-child(2) {
     animation-delay: 0.8s;
 }
 
-.expertise-feature:nth-child(3) {
+.services-feature:nth-child(3) {
     animation-delay: 1s;
 }
 
 @media (max-width: 1200px) {
-    .expertise-features {
+    .services-features {
         grid-template-columns: repeat(2, 350px);
     }
 }
 
 @media (max-width: 768px) {
-    .expertise {
+    .services {
         padding: 2rem 1rem;
     }
 
-    .expertise-features {
+    .services-features {
         grid-template-columns: 320px;
         gap: 1.5rem;
     }
 
-    .expertise-feature {
+    .services-feature {
         width: 320px;
         padding: 1.5rem;
     }
 
-    .expertise-feature-illustration {
+    .services-feature-illustration {
         height: 180px;
         
     }
@@ -441,26 +441,26 @@
         max-width: 260px;
     }
 
-    .expertise-feature-title {
+    .services-feature-title {
         font-size: 1.25rem;
         margin-bottom: 0.75rem;
     }
 
-    .expertise-feature-text {
+    .services-feature-text {
         font-size: 1rem;
         line-height: 1.6;
     }
 
-    .expertise-cta {
+    .services-cta {
         flex-direction: column;
     }
 
-    .expertise-button {
+    .services-button {
         width: 100%;
         text-align: center;
     }
 
-    .expertise-feature-icon {
+    .services-feature-icon {
         opacity: 0.9;
         transform: none;
     }

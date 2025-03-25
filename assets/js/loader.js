@@ -21,6 +21,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }, { threshold: 0.1 });
 
     // Observe all cards
-    const cards = document.querySelectorAll('.expertise-feature');
+    const cards = document.querySelectorAll('.services-feature');
     cards.forEach(card => observer.observe(card));
 });

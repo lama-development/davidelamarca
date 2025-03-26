@@ -13,6 +13,7 @@ $z-index-mobile-menu: 10;
 $border-radius-lg: 16px;
 $border-radius-md: 12px;
 $border-radius-sm: 8px;
+$border-radius-xs: 4px;
 
 // Base styles and animations
 @import 'partials/animations';
@@ -22,6 +23,7 @@ $border-radius-sm: 8px;
 @import "partials/404";
 
 // Page sections
+@import 'partials/sections/index/landing';
 @import 'partials/sections/index/services';
 
 // Pages
@@ -31,6 +33,7 @@ $border-radius-sm: 8px;
     // Light theme colors
     --color-bg-1: #fff;
     --color-bg-2: #f9f9f9;
+    --color-bg: #fff; /* Aggiungiamo esplicitamente questa variabile */
     --color-navbar: rgba(249, 249, 249, 0.85);
     --color-border: #ddd;
     --color-accent: #0b99ff;
@@ -42,19 +45,28 @@ $border-radius-sm: 8px;
     --font-weight-regular: 400;
     --font-weight-medium: 600;
     --font-weight-bold: 800;
+    // RGB values for transparency effects
+    --color-bg-rgb: 255, 255, 255;
+    --color-bg-2-rgb: 249, 249, 249;
+    --color-accent-rgb: 11, 153, 255;
+    --color-accent-2-rgb: 7, 92, 153;
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
         --color-bg-1: #000;
         --color-bg-2: #0f1117;
-        --color-navbar: rgba(15, 17, 23, 0.85);
+        --color-bg: #000; /* Aggiungiamo esplicitamente questa variabile */
+        --color-navbar: rgba(15, 17, 23, 0.9);
         --color-border: #23252c;
         --color-accent: #0b99ff;
         --color-accent-2: #075c99;
         --color-text-primary: #fff;
         --color-text-secondary: #95969e;
         --color-text-pure: #000;
+        // RGB values for transparency effects
+        --color-bg-rgb: 0, 0, 0;
+        --color-bg-2-rgb: 15, 17, 23;
     }
 }
 

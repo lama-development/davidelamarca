@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const darkTheme = {
         '--color-bg-1': '#000',
         '--color-bg-2': '#0f1117',
-        '--color-navbar': 'rgba(15, 17, 23, 0.85)',
+        '--color-navbar': 'rgba(15, 17, 23, 0.9)',
         '--color-border': '#23252c',
         '--color-accent': '#0b99ff',
         '--color-accent-2': '#075c99',

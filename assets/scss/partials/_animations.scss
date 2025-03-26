@@ -117,3 +117,36 @@
         opacity: 0;
     }
 }
+
+// Titolo Landing - Subtle Glow Animation
+@keyframes subtleGlow {
+    0% {
+        filter: brightness(1);
+    }
+    50% {
+        filter: brightness(1.15);
+    }
+    100% {
+        filter: brightness(1);
+    }
+}
+
+// Scroll Brands Animation
+@keyframes scrollBrands {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+// Subtle text lift animation for headline
+@keyframes subtleLift {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-3px);
+    }
+}

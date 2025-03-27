@@ -6,7 +6,6 @@
     align-items: center;
     text-align: center;
     width: 100%;
-    background-color: var(--color-bg-1);
     padding: 0;
     overflow: hidden;
     position: relative;
@@ -79,27 +78,10 @@
         transition: all 0.3s ease;
         margin-top: 15px;
         font-weight: var(--font-weight-medium);
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 
         &:hover {
             background-color: var(--color-accent-2);
             transform: translateY(-3px);
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        &:active {
-            transform: translateY(0);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-        }
-    }
-}
-
-@media screen and (max-width: $breakpoint-m) {
-    .error-404 {
-        &__content {
-            padding: 1.5rem;
-            width: 90%;
-            margin: 0 auto;
         }
     }
 }

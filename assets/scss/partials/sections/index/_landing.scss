@@ -44,6 +44,8 @@
         -webkit-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color: transparent;
+        animation: fadeInUp 1s ease-out forwards;
+        animation-delay: 0.8s;
         margin-bottom: 1rem;
         letter-spacing: -0.5px;
         line-height: 1.15; 

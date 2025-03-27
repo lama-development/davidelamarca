@@ -9,35 +9,35 @@
                 </div>
             </a>
             <div class="footer__links">
-                <div class="footer__links-group" aria-label="Navigation links">
-                    <h3 class="footer__title">Navigation</h3>
+                <div class="footer__links-group" aria-label="Link di navigazione">
+                    <h3 class="footer__title">Navigazione</h3>
                     <ul class="footer__list">
                         <li><a href="/" class="footer__link" {{ if .IsHome }}aria-current="page"{{ end }}>Home</a></li>
-                        <li><a href="/projects" class="footer__link" {{ if eq .RelPermalink "/projects/" }}aria-current="page"{{ end }}>Projects</a></li>
+                        <li><a href="/projects" class="footer__link" {{ if eq .RelPermalink "/projects/" }}aria-current="page"{{ end }}>Progetti</a></li>
                         <li><a href="/blog" class="footer__link" {{ if eq .RelPermalink "/blog/" }}aria-current="page"{{ end }}>Blog</a></li>
-                        <li><a href="/contact" class="footer__link" {{ if eq .RelPermalink "/contact/" }}aria-current="page"{{ end }}>Contact</a></li>
+                        <li><a href="/contact" class="footer__link" {{ if eq .RelPermalink "/contact/" }}aria-current="page"{{ end }}>Contatti</a></li>
                     </ul>
                 </div>
                 <div class="footer__links-group">
-                    <h3 class="footer__title">Legal</h3>
+                    <h3 class="footer__title">Legale</h3>
                     <ul class="footer__list">
                         <li><a href="/privacy-policy" class="footer__link">Privacy Policy</a></li>
-                        <li><a href="/terms-of-service" class="footer__link">Terms of Service</a></li>
+                        <li><a href="/terms-of-service" class="footer__link">Termini di Servizio</a></li>
                     </ul>
                 </div>
                 <div class="footer__links-group">
-                    <h3 class="footer__title">Connect</h3>
+                    <h3 class="footer__title">Connettiti</h3>
                     <div class="footer__social" role="list">
-                        <a href="https://www.linkedin.com/in/davide-la-marca-178241254" class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+                        <a href="https://www.linkedin.com/in/davide-la-marca-178241254" class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="Profilo LinkedIn">
                             <i class="bx bxl-linkedin" aria-hidden="true"></i>
                         </a>
-                        <a href="https://github.com/lama-development" class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
+                        <a href="https://github.com/lama-development" class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="Profilo GitHub">
                             <i class="bx bxl-github" aria-hidden="true"></i>
                         </a>
-                        <a href="https://dribbble.com/lama-designs" class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="Dribbble Profile">
+                        <a href="https://dribbble.com/lama-designs" class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="Profilo Dribbble">
                             <i class="bx bxl-dribbble" aria-hidden="true"></i>
                         </a>
-                        <a href="mailto:info@davidelamarca.com" class="footer__social-link" aria-label="Send email">
+                        <a href="mailto:info@davidelamarca.com" class="footer__social-link" aria-label="Invia email">
                             <i class="bx bx-envelope" aria-hidden="true"></i>
                         </a>
                     </div>
@@ -45,7 +45,7 @@
             </div>
         </div>
         <div class="footer__bottom">
-            <p>&copy; <span id="year">{{ now.Format "2006" }}</span> Davide La Marca. All rights reserved.</p>
+            <p>&copy; <span id="year">{{ now.Format "2006" }}</span> Davide La Marca. Tutti i diritti riservati.</p>
         </div>
     </div>
 </footer>

@@ -1,4 +1,5 @@
 // assets/js/navbar.js
+"use strict";
 
 const menuToggle = document.querySelector('.navbar__menu-toggle');
 const navbar = document.querySelector('.navbar');

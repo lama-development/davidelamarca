@@ -19,12 +19,13 @@
     <!-- Boxicons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- Javascript -->
-    {{ $loading := resources.Get "js/loader.js" | js.Build | minify | fingerprint }}
-    <script defer src="{{ $loading.RelPermalink }}" integrity="{{ $loading.Data.Integrity }}"></script>
+    {{ $loader := resources.Get "js/loader.js" | js.Build | minify | fingerprint }}
+    <script defer src="{{ $loader.RelPermalink }}" integrity="{{ $loader.Data.Integrity }}"></script>
     {{ $navbar := resources.Get "js/navbar.js" | js.Build | minify | fingerprint }}
     <script defer src="{{ $navbar.RelPermalink }}" integrity="{{ $navbar.Data.Integrity }}"></script>
     {{ $theme := resources.Get "js/theme.js" | js.Build | minify | fingerprint }}
     <script defer src="{{ $theme.RelPermalink }}" integrity="{{ $theme.Data.Integrity }}"></script>
+    {{ block "head_scripts" . }}{{ end }}
 </head>
 
 <body>

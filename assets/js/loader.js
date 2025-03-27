@@ -1,4 +1,5 @@
 // assets/js/loader.js
+"use strict";
 
 document.addEventListener('DOMContentLoaded', function() {
     const loadingScreen = document.querySelector('.loader');

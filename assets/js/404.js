@@ -1,22 +1,18 @@
 // assets/js/404.js
+"use strict";
 
 document.addEventListener('DOMContentLoaded', function () {
-    // Elementi del DOM
     const bounceLogo = document.getElementById('bounce-logo');
     const container = document.getElementById('bounce-container');
     const contentElement = document.querySelector('.error-404__content');
-    // Ottieni il bottone separatamente per escluderlo dalle collisioni
-    const buttonElement = document.querySelector('.error-404__button');
 
-    // Valori iniziali
     let x = 0;
     let y = 0;
     let dirX = 1;
     let dirY = 1;
     const speed = 2;
 
-    // Palette di colori (usare variabili CSS se possibile)
-    const pallete = [
+    const palette = [
         "linear-gradient(45deg, #e124ff, #a01bb6)",
         "linear-gradient(45deg, #ff8800, #e67300)",
         "linear-gradient(45deg, #6a19ff, #4c12b3)",
@@ -27,91 +23,85 @@ document.addEventListener('DOMContentLoaded', function () {
         "linear-gradient(45deg, #009688, #00796b)"
     ];
 
-    // Indice colore precedente per non ripetere lo stesso colore
+    // Previous color index to avoid repeating the same color
     let prevColorChoiceIndex = 0;
 
-    // Dimensioni iniziali
+    // Initial dimensions
     let logoWidth = bounceLogo.offsetWidth;
     let logoHeight = bounceLogo.offsetHeight;
 
-    // Funzione per ottenere un nuovo colore casuale
+    // Function to get a new random color
     function getNewRandomColor() {
-        const currentPallete = [...pallete];
-        currentPallete.splice(prevColorChoiceIndex, 1);
-        const colorChoiceIndex = Math.floor(Math.random() * currentPallete.length);
-        prevColorChoiceIndex = colorChoiceIndex < prevColorChoiceIndex ?
-            colorChoiceIndex : colorChoiceIndex + 1;
-        const colorChoice = currentPallete[colorChoiceIndex];
+        const currentPalette = [...palette];
+        currentPalette.splice(prevColorChoiceIndex, 1);
+        const colorChoiceIndex = Math.floor(Math.random() * currentPalette.length);
+        prevColorChoiceIndex = colorChoiceIndex < prevColorChoiceIndex ? colorChoiceIndex : colorChoiceIndex + 1;
+        const colorChoice = currentPalette[colorChoiceIndex];
         return colorChoice;
     }
 
-    // Imposta il colore iniziale
-    bounceLogo.style.background = pallete[0];
+    // Set the initial color
+    bounceLogo.style.background = palette[0];
     bounceLogo.style.webkitBackgroundClip = "text";
     bounceLogo.style.backgroundClip = "text";
     bounceLogo.style.webkitTextFillColor = "transparent";
 
-    // Calcola quanto il logo è dentro al contenuto centrale (0-1)
+    // Calculate how much the logo overlaps with the central content (0-1)
     function getOverlapPercentage() {
         if (!contentElement) return 0;
         
         const contentRect = contentElement.getBoundingClientRect();
         const logoRect = bounceLogo.getBoundingClientRect();
         
-        // Trova l'area di sovrapposizione
+        // Find the overlap area
         const overlapLeft = Math.max(contentRect.left, logoRect.left);
         const overlapRight = Math.min(contentRect.right, logoRect.right);
         const overlapTop = Math.max(contentRect.top, logoRect.top);
         const overlapBottom = Math.min(contentRect.bottom, logoRect.bottom);
         
-        // Se non c'è sovrapposizione, ritorna 0
+        // If there's no overlap, return 0
         if (overlapLeft > overlapRight || overlapTop > overlapBottom) {
             return 0;
         }
         
-        // Calcola l'area della sovrapposizione
+        // Calculate the overlap area
         const overlapArea = (overlapRight - overlapLeft) * (overlapBottom - overlapTop);
         const logoArea = logoRect.width * logoRect.height;
         
-        // Ritorna la percentuale di sovrapposizione (capped a 1)
+        // Return the overlap percentage (capped at 1)
         return Math.min(overlapArea / logoArea, 1);
     }
 
-    // Funzione di animazione
+    // Animation function
     function animate() {
-        // Ottieni dimensioni aggiornate del container e del logo
+        // Get updated dimensions of the container and logo
         const screenHeight = container.clientHeight;
         const screenWidth = container.clientWidth;
         logoWidth = bounceLogo.offsetWidth;
         logoHeight = bounceLogo.offsetHeight;
 
-        // Controlla sovrapposizione con contenuto centrale e applica SOLO effetto dissolvenza
-        // NESSUNA collisione con il contenuto centrale
+        // Check overlap with central content and apply fade effect
         const overlapPercentage = getOverlapPercentage();
         if (overlapPercentage > 0) {
-            // Calcola l'opacità in base alla sovrapposizione - minimo 0.05 (ancora più trasparente)
-            const opacity = Math.max(0.05, 1 - (overlapPercentage * 0.95));
+            // Calculate opacity based on overlap - minimum 0.25
+            const opacity = Math.max(0.25, 1 - (overlapPercentage * 0.95));
             
-            // Applica l'effetto di dissolvenza
+            // Apply fade effect
             bounceLogo.style.opacity = opacity.toString();
             
-            // Aggiungi un filtro sfocatura più intenso
+            // Add blur filter
             if (overlapPercentage > 0.2) {
                 bounceLogo.style.filter = `blur(${overlapPercentage * 4}px)`;
             } else {
                 bounceLogo.style.filter = 'none';
             }
-            
-            // NON cambiare direzione quando c'è sovrapposizione
-            // Rimuoviamo il codice che cambia direzione in base alla sovrapposizione
         } else {
-            // Riporta l'opacità al massimo quando non c'è sovrapposizione
+            // Restore maximum opacity when there's no overlap
             bounceLogo.style.opacity = "1";
             bounceLogo.style.filter = 'none';
         }
 
-        // Logica di rimbalzo SOLO sui bordi dello schermo
-        // Rimbalzo verticale
+        // Vertical bounce
         if (y + logoHeight >= screenHeight || y < 0) {
             dirY *= -1;
             bounceLogo.style.background = getNewRandomColor();
@@ -119,7 +109,7 @@ document.addEventListener('DOMContentLoaded', function () {
             bounceLogo.style.backgroundClip = "text";
         }
 
-        // Rimbalzo orizzontale
+        // Horizontal bounce
         if (x + logoWidth >= screenWidth || x < 0) {
             dirX *= -1;
             bounceLogo.style.background = getNewRandomColor();
@@ -127,25 +117,25 @@ document.addEventListener('DOMContentLoaded', function () {
             bounceLogo.style.backgroundClip = "text";
         }
 
-        // Aggiorna la posizione
+        // Update position
         x += dirX * speed;
         y += dirY * speed;
 
-        // Applica la nuova posizione
+        // Apply new position
         bounceLogo.style.left = x + "px";
         bounceLogo.style.top = y + "px";
 
-        // Continua l'animazione
+        // Continue animation
         window.requestAnimationFrame(animate);
     }
 
-    // Gestisci il ridimensionamento della finestra
+    // Handle window resize
     window.addEventListener('resize', function () {
-        // Assicurati che il logo rimanga all'interno del container
+        // Ensure the logo stays within the container
         const screenHeight = container.clientHeight;
         const screenWidth = container.clientWidth;
 
-        // Correggi la posizione se necessario
+        // Correct position if necessary
         if (x + logoWidth > screenWidth) {
             x = screenWidth - logoWidth;
         }
@@ -155,6 +145,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    // Avvia l'animazione
+    // Start animation
     window.requestAnimationFrame(animate);
 });

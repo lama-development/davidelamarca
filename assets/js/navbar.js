@@ -6,5 +6,5 @@ const navbar = document.querySelector('.navbar');
 
 menuToggle.addEventListener('click', function () {
     navbar.classList.toggle('menu-open');
-    document.body.classList.toggle('no-scroll'); // disable background scrolling
+    document.body.classList.toggle('no-scroll'); // Disable background scrolling
 });

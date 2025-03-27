@@ -216,7 +216,7 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: $breakpoint-m) {
     .landing {
         padding: 1.5rem;
         
@@ -255,7 +255,7 @@
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: $breakpoint-s) {
     .landing {
         min-height: 90vh;
         justify-content: flex-start;

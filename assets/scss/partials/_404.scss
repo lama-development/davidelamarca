@@ -1,10 +1,10 @@
 .error-404 {
+    min-height: calc(100vh - #{$navbar-height});
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    min-height: calc(100vh - 50px); 
     width: 100%;
     background-color: var(--color-bg-1);
     padding: 0;
@@ -94,7 +94,7 @@
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: $breakpoint-m) {
     .error-404 {
         &__content {
             padding: 1.5rem;

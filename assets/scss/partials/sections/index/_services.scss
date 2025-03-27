@@ -1,7 +1,6 @@
 /* assets/scss/partials/components/_services.scss */
 
 .services {
-    min-height: calc(100vh - $navbar-height);
     padding: 4rem 2rem;
     display: flex;
     flex-direction: column;
@@ -19,7 +18,7 @@
 
     &__title {
         font-size: clamp(2rem, 4vw, 3rem);
-        font-weight: 800;
+        font-weight: var(--font-weight-bold);
         line-height: 1.2;
         margin-bottom: 3rem;
         text-align: center;
@@ -99,7 +98,7 @@
 
     &__feature-title {
         font-size: 1.5rem;
-        font-weight: 700;
+        font-weight: var(--font-weight-bold);
         margin-bottom: 1rem;
         color: var(--color-text-primary);
     }
@@ -408,7 +407,7 @@
     }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: $breakpoint-l) {
     .services {
         &__features {
             grid-template-columns: repeat(2, 350px);
@@ -416,7 +415,7 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: $breakpoint-m) {
     .services {
         padding: 2rem 1rem;
 

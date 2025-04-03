@@ -1,0 +1,70 @@
+// assets/scss/main.scss
+
+/* Layout variables */
+$navbar-height: 50px;
+$font-weight-regular: 400;
+$font-weight-medium: 600;
+$font-weight-bold: 800;
+
+/* Z-index variables */
+$z-index-loader: 13;
+$z-index-navbar: 12;
+$z-index-mobile-menu: 10;
+
+/* Responsive breakpoints */
+$breakpoint-s: 480px;   // Phones
+$breakpoint-m: 768px;   // Tablets
+$breakpoint-l: 1200px;  // Desktops
+
+// Base styles
+// @import 'partials/loader';
+
+// Page sections
+// @import 'partials/sections/index/landing';
+
+// Pages
+// @import 'index';
+
+:root {
+    // Light theme colors
+    --color-bg-1: #fff;
+    --color-bg-2: #f6f8fa;
+    --color-navbar: rgba(255, 255, 255, 0.9);
+    --color-border: #d2d9e0;
+    --color-accent: #0b99ff;
+    --color-accent-2: #075c99;
+    --color-text-primary: #000;
+    --color-text-secondary: #59636e;
+    --color-text-white: #fff;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        // Dark theme colors
+        --color-bg-1: #000;
+        --color-bg-2: #0d1116;
+        --color-navbar: rgba(0, 0, 0, 0.9);
+        --color-border: #333a41;
+        --color-text-primary: #fff;
+        --color-text-secondary: #95969e;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Bricolage Grotesque', system-ui, -apple-system, sans-serif;
+    background-color: var(--color-bg-1);
+    margin-top: $navbar-height;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}

@@ -20,7 +20,7 @@ $breakpoint-l: 1200px;  // Desktops
 // @import 'partials/loader';
 
 // Page sections
-// @import 'partials/sections/index/landing';
+@import 'partials/sections/index/_landing';
 
 // Pages
 // @import 'index';
@@ -61,7 +61,7 @@ html {
 }
 
 body {
-    font-family: 'Bricolage Grotesque', system-ui, -apple-system, sans-serif;
+    font-family: 'Host Grotesk', system-ui, -apple-system, sans-serif;
     background-color: var(--color-bg-1);
     margin-top: $navbar-height;
     text-rendering: optimizeLegibility;

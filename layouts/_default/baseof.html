@@ -17,12 +17,15 @@
     <!-- CSS -->
     {{ $styles := resources.Get "scss/main.scss" | css.Sass | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
-    <!-- Boxicons -->
     <!-- Javascript -->
+    {{ $js := resources.Get "js/main.js" | minify | fingerprint }}
+    <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
 </head>
 
 <body>
+    {{ partial "_navbar.html" . }}
     {{ block "main" . }}{{ end }}
+    {{ partial "_footer.html" . }}
 </body>
 
 </html>

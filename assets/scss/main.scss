@@ -18,6 +18,8 @@ $breakpoint-l: 1200px;  // Desktops
 
 // Base styles
 // @import 'partials/loader';
+@import 'partials/navbar';
+@import 'partials/footer';
 
 // Page sections
 @import 'partials/sections/index/_landing';

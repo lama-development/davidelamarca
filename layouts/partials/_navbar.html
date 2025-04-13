@@ -1,30 +1,21 @@
-<!-- layouts/partials/_navbar.html -->
 <nav class="navbar">
-    <div class="navbar-container">
-        <a href="/" class="navbar-logo">
-            <img src="/favicon.ico" alt="DLM Logo" class="navbar-logo-img">
-            <span>DLM</span>
+    <div class="navbar__container">
+        <a href="/" class="navbar__brand">
+            <img src="favicon.ico" alt="Logo" class="navbar__logo">
+            <span class="navbar__brand-name">davidelamarca</span>
         </a>
-        
-        <div class="navbar-menu">
-            <a href="#" class="navbar-item active">Home</a>
-            <a href="#about" class="navbar-item">About</a>
-            <a href="#work" class="navbar-item">Work</a>
-            <a href="#contact" class="navbar-item">Contact</a>
+
+        <div class="navbar__menu-toggle" id="menu-toggle">
+            <div class="navbar__bar"></div>
+            <div class="navbar__bar"></div>
         </div>
-        
-        <button class="navbar-toggle" aria-label="Toggle menu">
-            <span class="navbar-toggle-bar"></span>
-            <span class="navbar-toggle-bar"></span>
-        </button>
-        
-        <div class="navbar-mobile">
-            <div class="navbar-mobile-items">
-                <a href="#" class="navbar-mobile-item active">Home</a>
-                <a href="#about" class="navbar-mobile-item">About</a>
-                <a href="#work" class="navbar-mobile-item">Work</a>
-                <a href="#contact" class="navbar-mobile-item">Contact</a>
-            </div>
+
+        <div class="navbar__menu">
+            <ul class="navbar__list">
+                <li class="navbar__item"><a href="/" class="navbar__link" {{ if .IsHome }}aria-current="page"{{ end }}>Home</a></li>
+                <li class="navbar__item"><a href="/projects" class="navbar__link" {{ if eq .RelPermalink "/projects/" }}aria-current="page"{{ end }}>Progetti</a></li>
+                <li class="navbar__item"><a href="/blog" class="navbar__link" {{ if eq .RelPermalink "/blog/" }}aria-current="page"{{ end }}>Blog</a></li>
+            </ul>
         </div>
     </div>
 </nav>

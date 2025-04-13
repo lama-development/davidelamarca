@@ -16,7 +16,7 @@
     justify-content: space-between;
     margin-bottom: 3rem;
     
-    @media (max-width: $breakpoint-m) {
+    @media (max-width: $breakpoint-l) {
       flex-direction: column;
       gap: 3rem;
     }

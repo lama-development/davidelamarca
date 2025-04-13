@@ -1,1 +1,21 @@
-<!-- layouts/partials/_navbar.html -->
+<nav class="navbar">
+    <div class="navbar__container">
+        <a href="/" class="navbar__brand">
+            <img src="favicon.ico" alt="Logo" class="navbar__logo">
+            <span class="navbar__brand-name">davidelamarca</span>
+        </a>
+
+        <div class="navbar__menu-toggle" id="menu-toggle">
+            <div class="navbar__bar"></div>
+            <div class="navbar__bar"></div>
+        </div>
+
+        <div class="navbar__menu">
+            <ul class="navbar__list">
+                <li class="navbar__item"><a href="/" class="navbar__link" {{ if .IsHome }}aria-current="page"{{ end }}>Home</a></li>
+                <li class="navbar__item"><a href="/projects" class="navbar__link" {{ if eq .RelPermalink "/projects/" }}aria-current="page"{{ end }}>Progetti</a></li>
+                <li class="navbar__item"><a href="/blog" class="navbar__link" {{ if eq .RelPermalink "/blog/" }}aria-current="page"{{ end }}>Blog</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>

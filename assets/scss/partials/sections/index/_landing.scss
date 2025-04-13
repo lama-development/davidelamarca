@@ -1,0 +1,85 @@
+.landing {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+    text-align: center;
+
+    &__icon-container {
+        background-color: var(--color-bg-1);
+        border: 1px solid var(--color-border);
+        border-radius: 100px;
+        width: 80px;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1.5rem;
+
+        img {
+            width: 50px;
+            height: auto;
+        }
+    }
+
+    &__subtitle {
+        color: var(--color-accent);
+        font-weight: $font-weight-bold;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        letter-spacing: -.01rem;
+
+        @media (max-width: $breakpoint-l) {
+            font-size: 1.1rem;
+        }
+
+        @media (max-width: $breakpoint-s) {
+            font-size: 1rem;
+        }
+    }
+
+    &__title {
+        color: var(--color-text-primary);
+        font-size: 4.5rem;
+        font-weight: $font-weight-bold;
+        margin-bottom: 2rem;
+        line-height: 1.1;
+        letter-spacing: -.1rem;
+
+        @media (max-width: $breakpoint-l) {
+            font-size: 3.25rem;
+        }
+
+        @media (max-width: $breakpoint-s) {
+            font-size: 2.5rem;
+        }
+    }
+
+    &__button {
+        background-color: var(--color-accent);
+        color: var(--color-text-button);
+        font-weight: $font-weight-medium;
+        font-size: 1.1rem;
+        padding: 1rem 1.6rem;
+        border-radius: 2rem;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+        text-decoration: none;
+        display: inline-block;
+
+        &:hover {
+            background-color: var(--color-accent-2)
+        }
+
+        @media (max-width: $breakpoint-l) {
+            padding: .8rem 1.4rem;
+        }
+
+        @media (max-width: $breakpoint-s) {
+            padding: .6rem 1.2rem;
+        }
+    }
+}

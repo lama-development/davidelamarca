@@ -12,16 +12,18 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap" rel="stylesheet"> -->
-    <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
     <!-- CSS -->
     {{ $styles := resources.Get "scss/main.scss" | css.Sass | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
     <!-- Boxicons -->
     <!-- Javascript -->
+    {{ $navbar := resources.Get "js/navbar.js" | js.Build | minify | fingerprint }}
+    <script defer src="{{ $navbar.RelPermalink }}" integrity="{{ $navbar.Data.Integrity }}"></script>
 </head>
 
 <body>
+    {{ partial "partials/_navbar.html" . }}
     {{ block "main" . }}{{ end }}
 </body>
 

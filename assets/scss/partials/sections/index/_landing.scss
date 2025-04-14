@@ -46,7 +46,8 @@
         font-weight: $font-weight-bold;
         margin-bottom: 2rem;
         line-height: 1.1;
-        letter-spacing: -.1rem;
+        letter-spacing: -0.1rem;
+        max-width: 14ch;
 
         @media (max-width: $breakpoint-l) {
             font-size: 3.25rem;
@@ -54,6 +55,7 @@
 
         @media (max-width: $breakpoint-s) {
             font-size: 2.5rem;
+            max-width: 9.5ch;
         }
     }
 

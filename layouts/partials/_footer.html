@@ -1,33 +1,111 @@
-<!-- layouts/partials/_footer.html -->
+<!-- Footer partial with breadcrumb, links, socials, copyright, language toggle and theme switcher -->
 <footer class="footer">
-    <div class="footer-container">
-        <div class="footer-content">
-            <div class="footer-logo">DLM</div>
-            <div class="footer-links">
-                <div class="footer-column">
-                    <h3>Navigation</h3>
-                    <a href="#" class="footer-link">Home</a>
-                    <a href="#about" class="footer-link">About</a>
-                    <a href="#work" class="footer-link">Work</a>
-                    <a href="#contact" class="footer-link">Contact</a>
+    <div class="footer__container">
+        <!-- Breadcrumb navigation -->
+        <div class="footer__breadcrumb">
+            <a href="/" class="footer__breadcrumb-home">
+                <img src="/img/logo.svg" alt="Logo" class="footer__breadcrumb-logo">
+            </a>
+            <span class="footer__breadcrumb-separator">></span>
+            <span class="footer__breadcrumb-current">{{ .Title }}</span>
+        </div>
+
+        <div class="footer__content">
+            <!-- Main navigation -->
+            <div class="footer__nav">
+                <h3 class="footer__heading">Navigazione</h3>
+                <ul class="footer__list">
+                    <li class="footer__list-item"><a href="/" class="footer__link">Home</a></li>
+                    <li class="footer__list-item"><a href="/progetti" class="footer__link">Progetti</a></li>
+                    <li class="footer__list-item"><a href="/blog" class="footer__link">Blog</a></li>
+                    <li class="footer__list-item"><a href="/contattami" class="footer__link">Contattami</a></li>
+                </ul>
+            </div>
+
+            <!-- Legal links -->
+            <div class="footer__legal">
+                <h3 class="footer__heading">Legale</h3>
+                <ul class="footer__list">
+                    <li class="footer__list-item"><a href="/privacy-policy" class="footer__link">Privacy Policy</a></li>
+                    <li class="footer__list-item"><a href="/cookie-policy" class="footer__link">Cookie Policy</a></li>
+                </ul>
+            </div>
+
+            <!-- Social links -->
+            <div class="footer__social">
+                <h3 class="footer__heading">Social</h3>
+                <ul class="footer__list">
+                    <li class="footer__list-item">
+                        <a href="https://linkedin.com/in/your-linkedin" target="_blank" rel="noopener noreferrer" class="footer__link footer__link--external">
+                            LinkedIn
+                        </a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="https://github.com/your-github" target="_blank" rel="noopener noreferrer" class="footer__link footer__link--external">
+                            GitHub
+                        </a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="mailto:your-email@example.com" class="footer__link footer__link--external">
+                            Email
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <!-- Copyright notice -->
+            <div class="footer__copyright">
+                &copy; {{ now.Format "2006" }} Davide La Marca. Tutti i diritti riservati.
+            </div>
+
+            <!-- Preferences section for language and theme -->
+            <div class="footer__preferences">
+                <!-- Language toggle -->
+                <div class="footer__language">
+                    <a href="#" class="footer__language-option footer__language-option--active" data-lang="it">IT</a>
+                    <span class="footer__language-separator">|</span>
+                    <a href="#" class="footer__language-option" data-lang="en">EN</a>
                 </div>
-                <div class="footer-column">
-                    <h3>Connect</h3>
-                    <a href="#" class="footer-link external-link">LinkedIn<svg class="external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="12" height="12"><path fill="none" d="M0 0h24v24H0z"/><path d="M10 6v2H5v11h11v-5h2v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6zm11-3v9h-2V6.413l-7.793 7.794-1.414-1.414L17.585 5H13V3h8z"/></svg></a>
-                    <a href="#" class="footer-link external-link">GitHub<svg class="external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="12" height="12"><path fill="none" d="M0 0h24v24H0z"/><path d="M10 6v2H5v11h11v-5h2v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6zm11-3v9h-2V6.413l-7.793 7.794-1.414-1.414L17.585 5H13V3h8z"/></svg></a>
-                    <a href="#" class="footer-link external-link">Twitter<svg class="external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="12" height="12"><path fill="none" d="M0 0h24v24H0z"/><path d="M10 6v2H5v11h11v-5h2v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6zm11-3v9h-2V6.413l-7.793 7.794-1.414-1.414L17.585 5H13V3h8z"/></svg></a>
-                    <a href="#" class="footer-link external-link">Email<svg class="external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="12" height="12"><path fill="none" d="M0 0h24v24H0z"/><path d="M10 6v2H5v11h11v-5h2v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6zm11-3v9h-2V6.413l-7.793 7.794-1.414-1.414L17.585 5H13V3h8z"/></svg></a>
-                </div>
-                <div class="footer-column">
-                    <h3>Legal</h3>
-                    <a href="#" class="footer-link">Privacy Policy</a>
-                    <a href="#" class="footer-link">Terms of Use</a>
-                    <a href="#" class="footer-link">Cookie Policy</a>
+
+                <!-- Theme switcher -->
+                <div class="footer__theme">
+                    <button class="footer__theme-option" data-theme="light" title="Tema chiaro">
+                        <span class="footer__theme-icon footer__theme-icon--light"></span>
+                    </button>
+                    <button class="footer__theme-option" data-theme="dark" title="Tema scuro">
+                        <span class="footer__theme-icon footer__theme-icon--dark"></span>
+                    </button>
+                    <button class="footer__theme-option" data-theme="auto" title="Tema automatico">
+                        <span class="footer__theme-icon footer__theme-icon--auto"></span>
+                    </button>
                 </div>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; {{ now.Format "2006" }} Davide La Marca. All rights reserved.</p>
-        </div>
     </div>
 </footer>
+
+<!-- Minimal script for toggling active state on language and theme buttons (without actual theme changing) -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Language toggle
+        const langOptions = document.querySelectorAll('.footer__language-option');
+        langOptions.forEach(option => {
+            option.addEventListener('click', function(e) {
+                e.preventDefault();
+                langOptions.forEach(opt => opt.classList.remove('footer__language-option--active'));
+                this.classList.add('footer__language-option--active');
+            });
+        });
+        
+        // Theme toggle - just for UI feedback, no actual theme change
+        const themeOptions = document.querySelectorAll('.footer__theme-option');
+        themeOptions.forEach(option => {
+            option.addEventListener('click', function() {
+                themeOptions.forEach(opt => opt.classList.remove('footer__theme-option--active'));
+                this.classList.add('footer__theme-option--active');
+            });
+        });
+    });
+</script>

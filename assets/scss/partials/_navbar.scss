@@ -14,7 +14,6 @@
     padding: 0 1rem;
     z-index: $z-index-navbar;
     border-bottom: 1px solid var(--color-border);
-    transition: border-bottom 0.2s ease, background 0.2s ease;
 
     &.menu-open {
         border-bottom-color: transparent;
@@ -26,7 +25,7 @@
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        max-width: 1200px;
+        max-width: 1000px;
         margin: 0 auto;
     }
 
@@ -34,7 +33,7 @@
         display: flex;
         align-items: center;
         font-size: 1.1rem;
-        font-weight: var(--font-weight-medium);
+        font-weight: $font-weight-medium;
         letter-spacing: -0.3px;
         text-decoration: none;
         color: var(--color-text-primary);
@@ -43,8 +42,7 @@
     &__logo {
         width: 24px;
         margin-right: 8px;
-        transition: opacity 0.3s ease;
-    }
+    }   
 
     &__menu {
         display: flex;
@@ -70,45 +68,26 @@
         color: var(--color-text-primary);
         font-size: 1em;
         padding: 5px 0;
-        transition: all 0.2s ease;
         position: relative;
         display: inline-block;
 
-        &::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 1px;
-            bottom: 2px;
-            left: 0;
-            background: var(--color-accent);
-            transition: width 0.2s ease;
-        }
-
         &:hover {
-            color: var(--color-accent);
-        }
-
-        &:hover::after {
-            width: 100%;
+            text-decoration: underline;
         }
 
         &[aria-current="page"] {
             color: var(--color-accent);
-        }
-        
-        &[aria-current="page"]::after {
-            width: 100%;
+            font-weight: $font-weight-bold;
         }
     }
     
     &__menu-toggle {
         display: none;
         position: relative;
-        width: 25px;
+        width: 20px;
         height: 25px;
         cursor: pointer;
-        z-index: $z-index-navbar + 1;
+        z-index: $z-index-menu-toggle;
 
         &::before {
             content: "";
@@ -123,18 +102,17 @@
     &__bar {
         position: absolute;
         height: 2px;
+        border-radius: 2px;
         width: 100%;
         background: var(--color-text-secondary);
         left: 0;
-        transition: all 0.3s ease;
 
         &:nth-child(1) {
-            top: 5px;
+            top: 8px;
         }
 
         &:nth-child(2) {
-            top: 50%;
-            transform: translateY(-50%);
+            top: 16px;
         }
     }
 
@@ -158,8 +136,6 @@
 
 @media (max-width: $breakpoint-s) {
     .navbar {
-        padding: 0 1.5rem;
-
         &__menu {
             position: fixed;
             top: 0;
@@ -189,17 +165,13 @@
 
         &__list {
             flex-direction: column;
-            gap: 1.5rem;
+            gap: 1rem;
             text-align: center;
         }
 
         &__link {
             font-size: 1.5rem;
             padding: 0.5rem;
-
-            &::after {
-                bottom: 0;
-            }
         }
     }
 }

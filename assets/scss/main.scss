@@ -8,6 +8,7 @@ $font-weight-bold: 600;
 
 /* Z-index variables */
 $z-index-navbar: 10;
+$z-index-menu-toggle: 11;
 
 /* Responsive breakpoints */
 $breakpoint-s: 734px;  
@@ -17,9 +18,6 @@ $breakpoint-l: 1068px;
 // @import 'partials/loader';
 @import 'partials/navbar';
 @import 'partials/footer';
-
-// Components
-@import 'partials/navbar';
 
 // Page sections
 @import 'partials/sections/index/_landing';

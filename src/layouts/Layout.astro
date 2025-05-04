@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import Loader from "../components/global/Loader.astro";
 ---
 
 <!doctype html>
@@ -20,11 +21,13 @@ import "../styles/global.css";
 		</script>
 	</head>
 	<body class="bg-white dark:bg-gray-900">
+		<Loader />
 		<slot />	
 	</body>
 </html>
 
 <script is:inline src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+<script src="../scripts/pageLoader.js"></script>
 
 <style>
 	html,

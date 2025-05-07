@@ -3,95 +3,73 @@ import TechStack from './TechStack.astro';
 ---
 
 <section class="bg-gray-50 dark:bg-gray-900 antialiased">
-    <div class="py-12 px-3 mx-auto max-w-screen-xl sm:py-24 sm:px-4 lg:px-6">
-        <div class="mx-auto max-w-screen-md text-center mb-4 sm:mb-6">
-            <h2 class="mb-3 sm:mb-4 text-3xl sm:text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">I miei servizi</h2>
-            <p class="font-normal text-gray-500 dark:text-gray-400 text-sm sm:text-base lg:text-xl mb-5">Mi concentro su soluzioni web innovative e di qualità che garantiscono risultati concreti per la tua attività.</p>
-            <a href="#contatti" class="inline-flex items-center font-medium text-primary-600 dark:text-primary-500 hover:underline">
-                Scopri come posso aiutare la tua attività
-                <svg class="ml-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
-            </a>
+    <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
+        <div class="max-w-screen-md mb-8 lg:mb-16">
+            <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Secure platform, secure data</h2>
+            <p class="font-light text-gray-500 dark:text-gray-400 sm:text-xl">Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
         </div>
-        <div class="grid grid-cols-1 gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3 mt-8 sm:mt-10">
-            <div class="group h-full p-4 sm:p-6 bg-white rounded-xl sm:rounded-2xl dark:bg-gray-800 border border-gray-200 dark:border-gray-700 transition-all duration-300 hover:border-blue-200 dark:hover:border-blue-800">
-                <div class="flex justify-center items-center mb-3 sm:mb-5 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-blue-100 lg:h-14 lg:w-14 dark:bg-blue-900/30 group-hover:bg-blue-600 transition-all duration-300">
-                    <svg class="w-5 h-5 sm:w-6 sm:h-6 text-blue-600 lg:w-7 lg:h-7 dark:text-blue-300 group-hover:text-white dark:group-hover:text-white transition-colors duration-300" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m8 8-4 4 4 4m8 0 4-4-4-4m-2-3-4 14"></path></svg>
+        <div class="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-8 xl:gap-12 md:space-y-0">
+            <div class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-6">
+                <div class="flex justify-center items-center mb-4 w-10 h-10 bg-primary-100 rounded dark:bg-primary-900 lg:h-16 lg:w-16">
+                    <svg class="w-5 h-5 text-blue-600 dark:text-blue-300 lg:w-8 lg:h-8" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m8 8-4 4 4 4m8 0 4-4-4-4m-2-3-4 14"></path></svg>
                 </div>
-                <h3 class="mb-3 sm:mb-4 text-lg sm:text-xl font-bold dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">Web Development</h3>
-                <ul class="space-y-1.5 sm:space-y-2 text-sm sm:text-base text-gray-500 dark:text-gray-400">
-                    <li class="flex items-center">
-                        <svg class="w-3 h-3 sm:w-3.5 sm:h-3.5 mr-1.5 sm:mr-2 text-blue-500 dark:text-blue-400 flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-                        </svg>
-                        Sviluppo frontend e backend
+                <h3 class="mb-2 text-xl font-bold dark:text-white text-gray-900">Web Development</h3>
+                <ul role="list" class="my-6 lg:mb-0 space-y-4">
+                    <li class="flex space-x-2.5">
+                        <svg class="flex-shrink-0 w-5 h-5 text-primary-600 dark:text-primary-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                        <span class="leading-tight text-gray-500 dark:text-gray-400">Sviluppo frontend e backend</span>
                     </li>
-                    <li class="flex items-center">
-                        <svg class="w-3 h-3 sm:w-3.5 sm:h-3.5 mr-1.5 sm:mr-2 text-blue-500 dark:text-blue-400 flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-                        </svg>
-                        Soluzioni personalizzate
+                    <li class="flex space-x-2.5">
+                        <svg class="flex-shrink-0 w-5 h-5 text-primary-600 dark:text-primary-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                        <span class="leading-tight text-gray-500 dark:text-gray-400">Soluzioni personalizzate</span>
                     </li>
-                    <li class="flex items-center">
-                        <svg class="w-3 h-3 sm:w-3.5 sm:h-3.5 mr-1.5 sm:mr-2 text-blue-500 dark:text-blue-400 flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-                        </svg>
-                        Tecnologie moderne ed efficienti
+                    <li class="flex space-x-2.5">
+                        <svg class="flex-shrink-0 w-5 h-5 text-primary-600 dark:text-primary-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                        <span class="leading-tight text-gray-500 dark:text-gray-400">Tecnologie moderne ed efficienti</span>
                     </li>
                 </ul>
             </div>
-            <div class="group h-full p-4 sm:p-6 bg-white rounded-xl sm:rounded-2xl dark:bg-gray-800 border border-gray-200 dark:border-gray-700 transition-all duration-300 hover:border-purple-200 dark:hover:border-purple-800">
-                <div class="flex justify-center items-center mb-3 sm:mb-5 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-purple-100 lg:h-14 lg:w-14 dark:bg-purple-900/30 group-hover:bg-purple-600 transition-all duration-300">
-                    <svg class="w-5 h-5 sm:w-6 sm:h-6 text-purple-600 lg:w-7 lg:h-7 dark:text-purple-300 group-hover:text-white dark:group-hover:text-white transition-colors duration-300" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.005 10.19a1 1 0 0 1 1 1v.233l5.998 3.464L18 11.423v-.232a1 1 0 1 1 2 0V12a1 1 0 0 1-.5.866l-6.997 4.042a1 1 0 0 1-1 0l-6.998-4.042a1 1 0 0 1-.5-.866v-.81a1 1 0 0 1 1-1ZM5 15.15a1 1 0 0 1 1 1v.232l5.997 3.464 5.998-3.464v-.232a1 1 0 1 1 2 0v.81a1 1 0 0 1-.5.865l-6.998 4.042a1 1 0 0 1-1 0L4.5 17.824a1 1 0 0 1-.5-.866v-.81a1 1 0 0 1 1-1Z" clip-rule="evenodd"/><path d="M12.503 2.134a1 1 0 0 0-1 0L4.501 6.17A1 1 0 0 0 4.5 7.902l7.002 4.047a1 1 0 0 0 1 0l6.998-4.04a1 1 0 0 0 0-1.732l-6.997-4.042Z"/></svg>
+            <div class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-6">
+                <div class="flex justify-center items-center mb-4 w-10 h-10 bg-purple-100 rounded dark:bg-purple-900 lg:h-16 lg:w-16">
+                    <svg class="w-5 h-5 text-purple-600 dark:text-purple-300 lg:w-8 lg:h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.005 10.19a1 1 0 0 1 1 1v.233l5.998 3.464L18 11.423v-.232a1 1 0 1 1 2 0V12a1 1 0 0 1-.5.866l-6.997 4.042a1 1 0 0 1-1 0l-6.998-4.042a1 1 0 0 1-.5-.866v-.81a1 1 0 0 1 1-1ZM5 15.15a1 1 0 0 1 1 1v.232l5.997 3.464 5.998-3.464v-.232a1 1 0 1 1 2 0v.81a1 1 0 0 1-.5.865l-6.998 4.042a1 1 0 0 1-1 0L4.5 17.824a1 1 0 0 1-.5-.866v-.81a1 1 0 0 1 1-1Z" clip-rule="evenodd"/><path d="M12.503 2.134a1 1 0 0 0-1 0L4.501 6.17A1 1 0 0 0 4.5 7.902l7.002 4.047a1 1 0 0 0 1 0l6.998-4.04a1 1 0 0 0 0-1.732l-6.997-4.042Z"/></svg>
                 </div>
-                <h3 class="mb-3 sm:mb-4 text-lg sm:text-xl font-bold dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors duration-300">UI/UX Design</h3>
-                <ul class="space-y-1.5 sm:space-y-2 text-sm sm:text-base text-gray-500 dark:text-gray-400">
-                    <li class="flex items-center">
-                        <svg class="w-3 h-3 sm:w-3.5 sm:h-3.5 mr-1.5 sm:mr-2 text-purple-500 dark:text-purple-400 flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-                        </svg>
-                        Interfacce intuitive e moderne
+                <h3 class="mb-2 text-xl font-bold dark:text-white text-gray-900">UI/UX Design</h3>
+                <ul role="list" class="my-6 lg:mb-0 space-y-4">
+                    <li class="flex space-x-2.5">
+                        <svg class="flex-shrink-0 w-5 h-5 text-purple-600 dark:text-purple-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                        <span class="leading-tight text-gray-500 dark:text-gray-400">Interfacce intuitive e moderne</span>
                     </li>
-                    <li class="flex items-center">
-                        <svg class="w-3 h-3 sm:w-3.5 sm:h-3.5 mr-1.5 sm:mr-2 text-purple-500 dark:text-purple-400 flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-                        </svg>
-                        Design responsive per tutti i dispositivi
+                    <li class="flex space-x-2.5">
+                        <svg class="flex-shrink-0 w-5 h-5 text-purple-600 dark:text-purple-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                        <span class="leading-tight text-gray-500 dark:text-gray-400">Design responsive per tutti i dispositivi</span>
                     </li>
-                    <li class="flex items-center">
-                        <svg class="w-3 h-3 sm:w-3.5 sm:h-3.5 mr-1.5 sm:mr-2 text-purple-500 dark:text-purple-400 flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-                        </svg>
-                        Focus su accessibilità e usabilità
+                    <li class="flex space-x-2.5">
+                        <svg class="flex-shrink-0 w-5 h-5 text-purple-600 dark:text-purple-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                        <span class="leading-tight text-gray-500 dark:text-gray-400">Focus su accessibilità e usabilità</span>
                     </li>
                 </ul>
             </div>
-            <div class="group h-full p-4 sm:p-6 bg-white rounded-xl sm:rounded-2xl dark:bg-gray-800 border border-gray-200 dark:border-gray-700 transition-all duration-300 hover:border-green-200 dark:hover:border-green-800">
-                <div class="flex justify-center items-center mb-3 sm:mb-5 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-green-100 lg:h-14 lg:w-14 dark:bg-green-900/30 group-hover:bg-green-600 transition-all duration-300">
-                    <svg class="w-5 h-5 sm:w-6 sm:h-6 text-green-600 lg:w-7 lg:h-7 dark:text-green-300 group-hover:text-white dark:group-hover:text-white transition-colors duration-300" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4.5V19a1 1 0 0 0 1 1h15M7 14l4-4 4 4 5-5m0 0h-3.207M20 9v3.207"/></svg>
+            <div class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-6">
+                <div class="flex justify-center items-center mb-4 w-10 h-10 bg-teal-100 rounded dark:bg-teal-900 lg:h-16 lg:w-16">
+                    <svg class="w-5 h-5 text-green-600 dark:text-green-300 lg:w-8 lg:h-8" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4.5V19a1 1 0 0 0 1 1h15M7 14l4-4 4 4 5-5m0 0h-3.207M20 9v3.207"/></svg>
                 </div>
-                <h3 class="mb-3 sm:mb-4 text-lg sm:text-xl font-bold dark:text-white group-hover:text-green-600 dark:group-hover:text-green-400 transition-colors duration-300">SEO & Best Practices</h3>
-                <ul class="space-y-1.5 sm:space-y-2 text-sm sm:text-base text-gray-500 dark:text-gray-400">
-                    <li class="flex items-center">
-                        <svg class="w-3 h-3 sm:w-3.5 sm:h-3.5 mr-1.5 sm:mr-2 text-green-500 dark:text-green-400 flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-                        </svg>
-                        Ottimizzazione per i motori di ricerca
+                <h3 class="mb-2 text-xl font-bold dark:text-white text-gray-900">SEO & Best Practices</h3>
+                <ul role="list" class="my-6 lg:mb-0 space-y-4">
+                    <li class="flex space-x-2.5">
+                        <svg class="flex-shrink-0 w-5 h-5 text-teal-500 dark:text-teal-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                        <span class="leading-tight text-gray-500 dark:text-gray-400">Ottimizzazione per i motori di ricerca</span>
                     </li>
-                    <li class="flex items-center">
-                        <svg class="w-3 h-3 sm:w-3.5 sm:h-3.5 mr-1.5 sm:mr-2 text-green-500 dark:text-green-400 flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-                        </svg>
-                        Performance e velocità di caricamento
+                    <li class="flex space-x-2.5">
+                        <svg class="flex-shrink-0 w-5 h-5 text-teal-500 dark:text-teal-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                        <span class="leading-tight text-gray-500 dark:text-gray-400">Performance e velocità di caricamento</span>
                     </li>
-                    <li class="flex items-center">
-                        <svg class="w-3 h-3 sm:w-3.5 sm:h-3.5 mr-1.5 sm:mr-2 text-green-500 dark:text-green-400 flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-                        </svg>
-                        Conformità agli standard web
+                    <li class="flex space-x-2.5">
+                        <svg class="flex-shrink-0 w-5 h-5 text-teal-500 dark:text-teal-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                        <span class="leading-tight text-gray-500 dark:text-gray-400">Conformità agli standard web</span>
                     </li>
                 </ul>
             </div>
         </div>
-        <TechStack/>
+        <TechStack />
     </div>
 </section>

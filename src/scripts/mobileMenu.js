@@ -1,8 +1,7 @@
-/**
- * Mobile menu functionality
- * Handles toggling the mobile menu open and closed
- * and switches between hamburger and X icons
- */
+/*
+Handles toggling the mobile menu open and closed and switches between hamburger and X icons
+*/
+
 document.addEventListener('DOMContentLoaded', function() {
     const mobileMenuButton = document.getElementById('mobile-menu-button');
     const navbar = document.getElementById('navbar-menu-mobile');

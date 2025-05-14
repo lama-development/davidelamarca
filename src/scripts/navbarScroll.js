@@ -1,7 +1,7 @@
-/**
- * Navbar scroll functionality
- * Shows/hides the navbar bottom border based on scroll position
- */
+/*
+Shows/hides the navbar bottom border based on scroll position
+*/
+
 document.addEventListener('DOMContentLoaded', function() {
     const navbar = document.getElementById('main-navbar');
     

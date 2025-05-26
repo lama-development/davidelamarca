@@ -7,6 +7,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const navbar = document.getElementById('navbar-menu-mobile');
     const hamburgerIcon = document.querySelector('.hamburger-icon');
     const xIcon = document.querySelector('.x-icon');
+    
+    // Custom event to notify other scripts about mobile menu state changes
+    const menuToggleEvent = new CustomEvent('mobileMenuToggle', {
+        bubbles: true
+    });
 
     // Check if the elements exist before adding event listeners
     if (mobileMenuButton && navbar && hamburgerIcon && xIcon) {
@@ -14,6 +19,9 @@ document.addEventListener('DOMContentLoaded', function() {
             navbar.classList.toggle('hidden');
             hamburgerIcon.classList.toggle('hidden');
             xIcon.classList.toggle('hidden');
+            
+            // Dispatch the event to notify other scripts
+            document.dispatchEvent(menuToggleEvent);
         });
     }
 });

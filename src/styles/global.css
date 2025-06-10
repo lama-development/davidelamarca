@@ -76,7 +76,6 @@ html.dark .loader-container {
 .tech-scroll-wrapper {
     display: flex;
     width: max-content;
-    animation: seamless-scroll 30s linear infinite;
 }
 .tech-row {
     display: flex;
@@ -88,7 +87,78 @@ html.dark .loader-container {
         mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
         -webkit-mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
     }
-    .tech-scroll-wrapper {
-        animation: seamless-scroll 40s linear infinite;
-    }
+}
+
+/* Glassmorphism Utilities */
+.glass {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.glass-dark {
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Enhanced scrollbar styling */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #0096ff, #078cff);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #078cff, #0766b3);
+}
+
+/* Dark mode scrollbar */
+.dark ::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* Smooth transitions for all interactive elements */
+a, button, input, textarea, select {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Enhanced focus styles */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid rgba(0, 150, 255, 0.5);
+    outline-offset: 2px;
+}
+
+/* Enhanced hover animations */
+.hover-scale {
+    transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+    transform: scale(1.05);
+}
+
+/* Better shadow utilities */
+.shadow-glass {
+    box-shadow: 
+        0 8px 32px 0 rgba(31, 38, 135, 0.37),
+        0 0 0 1px rgba(255, 255, 255, 0.18) inset;
+}
+
+.shadow-glass-dark {
+    box-shadow: 
+        0 8px 32px 0 rgba(0, 0, 0, 0.37),
+        0 0 0 1px rgba(255, 255, 255, 0.1) inset;
 }

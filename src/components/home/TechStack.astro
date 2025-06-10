@@ -20,16 +20,17 @@ const techs = [
 const repeatedTechs = [...techs, ...techs];
 ---
 
-<section class="my-8">
-    <div class="relative overflow-hidden w-full py-4">
-        <!-- Dissolvenza sinistra -->
-        <div class="pointer-events-none absolute left-0 top-0 h-full w-16 bg-gradient-to-r from-gray-50 dark:from-gray-900 to-transparent z-10"></div>
-        <!-- Dissolvenza destra -->
-        <div class="pointer-events-none absolute right-0 top-0 h-full w-16 bg-gradient-to-l from-gray-50 dark:from-gray-900 to-transparent z-10"></div>
-        <!-- Contenuto scorrevole -->
-        <div class="whitespace-nowrap flex animate-scroll relative" style="animation: scroll-left 40s linear infinite; width: max-content;">
-            {repeatedTechs.map((tech, index) => (
-            <div class="flex items-center gap-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-800 dark:text-white px-5 py-3 mx-3 rounded-lg text-base font-medium">
+<section class="py-8">
+    <div class="text-center mb-8">
+        <h3 class="text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white mb-4">Tecnologie che utilizzo</h3>
+        <p class="text-gray-600 dark:text-gray-300 text-lg max-w-2xl mx-auto">Strumenti moderni e affidabili per creare esperienze digitali di qualità</p>
+    </div>
+    <div class="relative overflow-hidden w-full py-6">        <!-- Dissolvenza sinistra con glassmorphism -->
+        <div class="pointer-events-none absolute left-0 top-0 h-full w-20 bg-gradient-to-r from-white/90 dark:from-gray-900/90 to-transparent z-10 backdrop-blur-sm"></div>
+        <!-- Dissolvenza destra con glassmorphism -->
+        <div class="pointer-events-none absolute right-0 top-0 h-full w-20 bg-gradient-to-l from-white/90 dark:from-gray-900/90 to-transparent z-10 backdrop-blur-sm"></div><!-- Contenuto scorrevole -->
+        <div class="whitespace-nowrap flex relative" style="width: max-content;">
+            {repeatedTechs.map((tech, index) => (            <div class="flex items-center gap-3 bg-white/90 dark:bg-gray-800/90 backdrop-blur-md border border-white/40 dark:border-gray-700/40 text-gray-800 dark:text-white px-6 py-4 mx-3 rounded-xl text-base font-medium shadow-lg">
                 <img src={tech.icon} alt={tech.name} class={`w-6 h-6 ${tech.darkInvert ? 'dark:invert' : ''}`} />
                 <span>{tech.name}</span>
             </div>

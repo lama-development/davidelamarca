@@ -2,74 +2,73 @@
 import TechStack from './TechStack.astro';
 ---
 
-<section class="bg-gray-50 dark:bg-gray-900 antialiased">
-    <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
-        <div class="max-w-screen-md mb-8 lg:mb-16">
-            <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Cosa offro</h2>
-            <p class="font-light text-gray-500 dark:text-gray-400 sm:text-xl">Design, sviluppo e ottimizzazione: i miei ingredienti per esperienze digitali fatte come si deve.</p>
+<section class="bg-gradient-to-br from-gray-50/80 via-white/60 to-blue-50/40 dark:from-gray-900/90 dark:via-gray-800/80 dark:to-indigo-900/70 antialiased relative overflow-hidden py-20 lg:py-32">
+    <!-- Glassmorphism background elements -->
+    <div class="absolute inset-0 bg-white/20 dark:bg-gray-900/30 backdrop-blur-sm"></div>
+    <div class="absolute top-10 right-1/4 w-64 h-64 bg-indigo-200/20 dark:bg-indigo-500/10 rounded-full blur-2xl"></div>
+    <div class="absolute bottom-10 left-1/4 w-80 h-80 bg-blue-200/15 dark:bg-blue-500/8 rounded-full blur-3xl"></div>
+    <div class="px-4 mx-auto max-w-screen-xl lg:px-6 relative z-10">
+        <div class="max-w-screen-md mb-12 lg:mb-20">
+            <h2 class="mb-6 text-4xl lg:text-5xl tracking-tight font-extrabold text-gray-900 dark:text-white">Cosa offro</h2>
+            <p class="font-light text-gray-600 dark:text-gray-300 text-lg sm:text-xl leading-relaxed">Design, sviluppo e ottimizzazione: i miei ingredienti per esperienze digitali fatte come si deve.</p>
         </div>
-        <div class="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-8 xl:gap-12 md:space-y-0">
-            <div class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-6">
-                <div class="flex justify-center items-center mb-4 w-10 h-10 bg-primary-100 rounded dark:bg-primary-900 lg:h-16 lg:w-16">
-                    <svg class="w-5 h-5 text-primary-600 dark:text-primary-300 lg:w-8 lg:h-8" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m8 8-4 4 4 4m8 0 4-4-4-4m-2-3-4 14"></path></svg>
+        <div class="space-y-12 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-8 xl:gap-12 md:space-y-0 mb-16">            <div class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-lg border border-white/30 dark:border-gray-700/40 rounded-2xl p-8 shadow-xl">
+                <div class="flex justify-center items-center mb-6 w-14 h-14 bg-gradient-to-br from-primary-100 to-primary-200 dark:from-primary-900 dark:to-primary-800 rounded-xl shadow-lg">
+                    <svg class="w-7 h-7 text-primary-600 dark:text-primary-300" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m8 8-4 4 4 4m8 0 4-4-4-4m-2-3-4 14"></path></svg>
                 </div>
-                <h3 class="mb-2 text-xl font-bold dark:text-white text-gray-900">Web Development</h3>
+                <h3 class="mb-4 text-xl font-bold dark:text-white text-gray-900">Web Development</h3>
                 <ul role="list" class="my-6 lg:mb-0 space-y-4">
                     <li class="flex space-x-2.5">
                         <svg class="flex-shrink-0 w-5 h-5 text-primary-600 dark:text-primary-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                        <span class="leading-tight text-gray-500 dark:text-gray-400">Sviluppo frontend e backend</span>
+                        <span class="leading-tight text-gray-600 dark:text-gray-300">Sviluppo frontend e backend</span>
                     </li>
                     <li class="flex space-x-2.5">
                         <svg class="flex-shrink-0 w-5 h-5 text-primary-600 dark:text-primary-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                        <span class="leading-tight text-gray-500 dark:text-gray-400">Soluzioni personalizzate</span>
+                        <span class="leading-tight text-gray-600 dark:text-gray-300">Soluzioni personalizzate</span>
                     </li>
                     <li class="flex space-x-2.5">
                         <svg class="flex-shrink-0 w-5 h-5 text-primary-600 dark:text-primary-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                        <span class="leading-tight text-gray-500 dark:text-gray-400">Tecnologie moderne ed efficienti</span>
+                        <span class="leading-tight text-gray-600 dark:text-gray-300">Tecnologie moderne ed efficienti</span>
                     </li>
-                </ul>
-            </div>
-            <div class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-6">
-                <div class="flex justify-center items-center mb-4 w-10 h-10 bg-purple-100 rounded dark:bg-purple-900 lg:h-16 lg:w-16">
-                    <svg class="w-5 h-5 text-purple-600 dark:text-purple-300 lg:w-8 lg:h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.005 10.19a1 1 0 0 1 1 1v.233l5.998 3.464L18 11.423v-.232a1 1 0 1 1 2 0V12a1 1 0 0 1-.5.866l-6.997 4.042a1 1 0 0 1-1 0l-6.998-4.042a1 1 0 0 1-.5-.866v-.81a1 1 0 0 1 1-1ZM5 15.15a1 1 0 0 1 1 1v.232l5.997 3.464 5.998-3.464v-.232a1 1 0 1 1 2 0v.81a1 1 0 0 1-.5.865l-6.998 4.042a1 1 0 0 1-1 0L4.5 17.824a1 1 0 0 1-.5-.866v-.81a1 1 0 0 1 1-1Z" clip-rule="evenodd"/><path d="M12.503 2.134a1 1 0 0 0-1 0L4.501 6.17A1 1 0 0 0 4.5 7.902l7.002 4.047a1 1 0 0 0 1 0l6.998-4.04a1 1 0 0 0 0-1.732l-6.997-4.042Z"/></svg>
+                </ul>            </div>            <div class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-lg border border-white/30 dark:border-gray-700/40 rounded-2xl p-8 shadow-xl">
+                <div class="flex justify-center items-center mb-6 w-14 h-14 bg-gradient-to-br from-purple-100 to-purple-200 dark:from-purple-900 dark:to-purple-800 rounded-xl shadow-lg">
+                    <svg class="w-7 h-7 text-purple-600 dark:text-purple-300" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.005 10.19a1 1 0 0 1 1 1v.233l5.998 3.464L18 11.423v-.232a1 1 0 1 1 2 0V12a1 1 0 0 1-.5.866l-6.997 4.042a1 1 0 0 1-1 0l-6.998-4.042a1 1 0 0 1-.5-.866v-.81a1 1 0 0 1 1-1ZM5 15.15a1 1 0 0 1 1 1v.232l5.997 3.464 5.998-3.464v-.232a1 1 0 1 1 2 0v.81a1 1 0 0 1-.5.865l-6.998 4.042a1 1 0 0 1-1 0L4.5 17.824a1 1 0 0 1-.5-.866v-.81a1 1 0 0 1 1-1Z" clip-rule="evenodd"/><path d="M12.503 2.134a1 1 0 0 0-1 0L4.501 6.17A1 1 0 0 0 4.5 7.902l7.002 4.047a1 1 0 0 0 1 0l6.998-4.04a1 1 0 0 0 0-1.732l-6.997-4.042Z"/></svg>
                 </div>
-                <h3 class="mb-2 text-xl font-bold dark:text-white text-gray-900">UI/UX Design</h3>
+                <h3 class="mb-4 text-xl font-bold dark:text-white text-gray-900">UI/UX Design</h3>
+                <ul role="list" class="my-6 lg:mb-0 space-y-4">                    <li class="flex space-x-2.5">
+                        <svg class="flex-shrink-0 w-5 h-5 text-purple-600 dark:text-purple-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                        <span class="leading-tight text-gray-600 dark:text-gray-300">Interfacce intuitive e moderne</span>
+                    </li>
+                    <li class="flex space-x-2.5">
+                        <svg class="flex-shrink-0 w-5 h-5 text-purple-600 dark:text-purple-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                        <span class="leading-tight text-gray-600 dark:text-gray-300">Design responsive per tutti i dispositivi</span>
+                    </li>
+                    <li class="flex space-x-2.5">
+                        <svg class="flex-shrink-0 w-5 h-5 text-purple-600 dark:text-purple-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                        <span class="leading-tight text-gray-600 dark:text-gray-300">Focus su accessibilità e usabilità</span>
+                    </li>
+                </ul>            </div>            <div class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-lg border border-white/30 dark:border-gray-700/40 rounded-2xl p-8 shadow-xl">
+                <div class="flex justify-center items-center mb-6 w-14 h-14 bg-gradient-to-br from-teal-100 to-green-200 dark:from-teal-900 dark:to-green-800 rounded-xl shadow-lg">
+                    <svg class="w-7 h-7 text-green-600 dark:text-green-300" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4.5V19a1 1 0 0 0 1 1h15M7 14l4-4 4 4 5-5m0 0h-3.207M20 9v3.207"/></svg>
+                </div>
+                <h3 class="mb-4 text-xl font-bold dark:text-white text-gray-900">SEO & Best Practices</h3>
                 <ul role="list" class="my-6 lg:mb-0 space-y-4">
                     <li class="flex space-x-2.5">
-                        <svg class="flex-shrink-0 w-5 h-5 text-purple-600 dark:text-purple-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                        <span class="leading-tight text-gray-500 dark:text-gray-400">Interfacce intuitive e moderne</span>
+                        <svg class="flex-shrink-0 w-5 h-5 text-green-600 dark:text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                        <span class="leading-tight text-gray-600 dark:text-gray-300">Ottimizzazione per motori di ricerca</span>
                     </li>
                     <li class="flex space-x-2.5">
-                        <svg class="flex-shrink-0 w-5 h-5 text-purple-600 dark:text-purple-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                        <span class="leading-tight text-gray-500 dark:text-gray-400">Design responsive per tutti i dispositivi</span>
+                        <svg class="flex-shrink-0 w-5 h-5 text-green-600 dark:text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                        <span class="leading-tight text-gray-600 dark:text-gray-300">Performance e velocità ottimizzate</span>
                     </li>
                     <li class="flex space-x-2.5">
-                        <svg class="flex-shrink-0 w-5 h-5 text-purple-600 dark:text-purple-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                        <span class="leading-tight text-gray-500 dark:text-gray-400">Focus su accessibilità e usabilità</span>
+                        <svg class="flex-shrink-0 w-5 h-5 text-green-600 dark:text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                        <span class="leading-tight text-gray-600 dark:text-gray-300">Codice pulito e manutenibile</span>
                     </li>
                 </ul>
-            </div>
-            <div class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-6">
-                <div class="flex justify-center items-center mb-4 w-10 h-10 bg-teal-100 rounded dark:bg-teal-900 lg:h-16 lg:w-16">
-                    <svg class="w-5 h-5 text-green-600 dark:text-green-300 lg:w-8 lg:h-8" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4.5V19a1 1 0 0 0 1 1h15M7 14l4-4 4 4 5-5m0 0h-3.207M20 9v3.207"/></svg>
-                </div>
-                <h3 class="mb-2 text-xl font-bold dark:text-white text-gray-900">SEO & Best Practices</h3>
-                <ul role="list" class="my-6 lg:mb-0 space-y-4">
-                    <li class="flex space-x-2.5">
-                        <svg class="flex-shrink-0 w-5 h-5 text-teal-500 dark:text-teal-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                        <span class="leading-tight text-gray-500 dark:text-gray-400">Ottimizzazione per i motori di ricerca</span>
-                    </li>
-                    <li class="flex space-x-2.5">
-                        <svg class="flex-shrink-0 w-5 h-5 text-teal-500 dark:text-teal-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                        <span class="leading-tight text-gray-500 dark:text-gray-400">Performance e velocità di caricamento</span>
-                    </li>
-                    <li class="flex space-x-2.5">
-                        <svg class="flex-shrink-0 w-5 h-5 text-teal-500 dark:text-teal-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                        <span class="leading-tight text-gray-500 dark:text-gray-400">Conformità agli standard web</span>
-                    </li>
-                </ul>
-            </div>
+            </div>        </div>
+        <div class="mt-16 lg:mt-20">
+            <TechStack />
         </div>
-        <TechStack />
     </div>
 </section>

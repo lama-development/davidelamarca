@@ -11,8 +11,31 @@ import Navbar from "../components/Navbar.astro";
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Davide La Marca</title>
+		<script is:inline>
+			// Inizializza il tema prima che la pagina venga renderizzata per evitare il flash
+			(function() {
+				const savedTheme = localStorage.getItem('theme');
+				let theme;
+				
+				if (savedTheme) {
+					// Se l'utente ha fatto una scelta esplicita, usa quella
+					theme = savedTheme;
+				} else {
+					// Solo se non c'è una scelta salvata, usa le preferenze del sistema
+					theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+				}
+				
+				if (theme === 'dark') {
+					document.documentElement.classList.add('dark');
+				} else {
+					document.documentElement.classList.remove('dark');
+				}
+				
+				console.log('Layout script - Applied theme:', theme, 'HTML has dark class:', document.documentElement.classList.contains('dark'));
+			})();
+		</script>
 	</head>
-	<body>
+	<body class="bg-white dark:bg-gray-900 text-black dark:text-white transition-colors duration-300">
 		<Navbar />
 		<slot />	
 	</body>

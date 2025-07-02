@@ -1,55 +1,69 @@
-<nav class="bg-white fixed top-0 left-0 right-0 z-[1000] border-b border-gray-100">
-    <div class="w-full px-8 h-20 flex items-center justify-between relative">
+<nav class="bg-white dark:bg-gray-900 fixed top-0 left-0 right-0 z-[1000] border-b border-gray-100 dark:border-gray-800 transition-colors duration-300">
+    <div class="w-full px-4 md:px-8 h-12 md:h-20 flex items-center justify-between relative">
         <!-- Logo -->
         <div class="flex-shrink-0 relative z-[1002]">
-            <a href="/" class="block">
-                <img src="/favicon.svg" alt="Logo" class="h-10 w-auto">
+            <a href="/" class="flex items-center space-x-2 md:space-x-3">
+                <img src="/favicon.svg" alt="Logo" class="h-6 md:h-8 w-auto">
+                <span class="text-black dark:text-white font-medium text-md md:text-xl tracking-tight transition-colors duration-300">davidelamarca</span>
             </a>
         </div>
-        <!-- Hamburger Menu -->
-        <div class="flex items-center relative z-[1002]">
-            <button id="menu-toggle" class="relative flex flex-col justify-center items-center w-10 h-10 space-y-1.5 group cursor-pointer rounded-full transition-all duration-300 hover:bg-black" aria-label="Toggle menu">
-                <span class="block w-6 h-0.5 bg-black transition-all duration-300 group-hover:bg-white z-10" id="hamburger-line-1"></span>
-                <span class="block w-6 h-0.5 bg-black transition-all duration-300 group-hover:bg-white z-10" id="hamburger-line-2"></span>
+        <!-- Dark Mode Toggle & Hamburger Menu -->
+        <div class="flex items-center space-x-2 md:space-x-4 relative z-[1002]">
+            <!-- Dark/Light Mode Toggle -->
+            <button id="theme-toggle" class="relative flex justify-center items-center w-10 h-10 group cursor-pointer rounded-full transition-all duration-300 hover:bg-black dark:hover:bg-white hover:bg-opacity-10 dark:hover:bg-opacity-10" aria-label="Toggle theme">
+                <!-- Sun Icon (Light Mode) -->
+                <svg id="sun-icon" class="w-5 h-5 text-black dark:text-white transition-all duration-300 group-hover:text-black dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path>
+                </svg>
+                <!-- Moon Icon (Dark Mode) -->
+                <svg id="moon-icon" class="w-5 h-5 text-black dark:text-white transition-all duration-300 group-hover:text-black dark:group-hover:text-white hidden" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                </svg>
+            </button>
+            
+            <!-- Hamburger Menu -->
+            <button id="menu-toggle" class="relative flex flex-col justify-center items-center w-10 h-10 space-y-1.5 group cursor-pointer rounded-full transition-all duration-300 hover:bg-black dark:hover:bg-white hover:bg-opacity-10 dark:hover:bg-opacity-10" aria-label="Toggle menu">
+                <span class="block w-6 h-0.5 bg-black dark:bg-white transition-all duration-300 group-hover:bg-black dark:group-hover:bg-white z-10" id="hamburger-line-1"></span>
+                <span class="block w-6 h-0.5 bg-black dark:bg-white transition-all duration-300 group-hover:bg-black dark:group-hover:bg-white z-10" id="hamburger-line-2"></span>
             </button>
         </div>
     </div>
 
     <!-- Full Screen Menu -->
-    <div id="fullscreen-menu" class="fixed inset-0 bg-white z-[999] opacity-0 invisible transition-all duration-500 ease-in-out">        
+    <div id="fullscreen-menu" class="fixed inset-0 bg-white dark:bg-gray-900 z-[999] opacity-0 invisible transition-all duration-500 ease-in-out">        
         <div class="flex flex-col items-center justify-center h-full space-y-8">
-            <a href="/" class="text-black font-bold text-4xl md:text-6xl uppercase relative group overflow-hidden">
+            <a href="/" class="text-black dark:text-white font-bold text-4xl md:text-6xl uppercase relative group overflow-hidden transition-colors duration-300">
                 <span class="relative z-10">Home</span>
-                <span class="absolute bottom-0 left-0 w-full h-1 bg-black transform scale-x-0 origin-left transition-transform duration-300 ease-in-out group-hover:scale-x-100"></span>
+                <span class="absolute bottom-0 left-0 w-full h-1 bg-black dark:bg-white transform scale-x-0 origin-left transition-transform duration-300 ease-in-out group-hover:scale-x-100"></span>
             </a>
-            <a href="/progetti" class="text-black font-bold text-4xl md:text-6xl uppercase relative group overflow-hidden hover:text-[#119AFC]">
+            <a href="/progetti" class="text-black dark:text-white font-bold text-4xl md:text-6xl uppercase relative group overflow-hidden hover:text-[#119AFC] dark:hover:text-[#119AFC] transition-colors duration-300">
                 <span class="relative z-10">Progetti</span>
                 <span class="absolute bottom-0 left-0 w-full h-1 bg-[#119AFC] transform scale-x-0 origin-left transition-transform duration-300 ease-in-out group-hover:scale-x-100"></span>
             </a>
-            <a href="/progetti" class="text-black font-bold text-4xl md:text-6xl uppercase relative group overflow-hidden">
+            <a href="/progetti" class="text-black dark:text-white font-bold text-4xl md:text-6xl uppercase relative group overflow-hidden transition-colors duration-300">
                 <span class="relative z-10">Inizia Ora</span>
-                <span class="absolute bottom-0 left-0 w-full h-1 bg-black transform scale-x-0 origin-left transition-transform duration-300 ease-in-out group-hover:scale-x-100"></span>
+                <span class="absolute bottom-0 left-0 w-full h-1 bg-black dark:bg-white transform scale-x-0 origin-left transition-transform duration-300 ease-in-out group-hover:scale-x-100"></span>
             </a>
         </div>
         
         <!-- Social Icons - Fixed at bottom -->
         <div class="absolute bottom-8 left-0 right-0 flex items-center justify-center space-x-8">
             <!-- LinkedIn -->
-            <a href="https://linkedin.com/in/davidelamarca" target="_blank" rel="noopener noreferrer" class="text-black hover:text-gray-600 transition-colors duration-200">
+            <a href="https://linkedin.com/in/davidelamarca" target="_blank" rel="noopener noreferrer" class="text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-400 transition-colors duration-200">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                     <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
                 </svg>
             </a>
             
             <!-- GitHub -->
-            <a href="https://github.com/davidelamarca" target="_blank" rel="noopener noreferrer" class="text-black hover:text-gray-600 transition-colors duration-200">
+            <a href="https://github.com/davidelamarca" target="_blank" rel="noopener noreferrer" class="text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-400 transition-colors duration-200">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                     <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                 </svg>
             </a>
             
             <!-- Email -->
-            <a href="mailto:davide@lamarca.dev" class="text-black hover:text-gray-600 transition-colors duration-200">
+            <a href="mailto:davide@lamarca.dev" class="text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-400 transition-colors duration-200">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                     <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-.904.732-1.636 1.636-1.636h.273L12 9.866l10.091-6.045h.273A1.636 1.636 0 0 1 24 5.457z"/>
                 </svg>
@@ -59,60 +73,118 @@
 </nav>
 
 <script>
-    // Menu toggle functionality
-    const menuToggle = document.getElementById('menu-toggle');
-    const fullscreenMenu = document.getElementById('fullscreen-menu');
-    const hamburgerLine1 = document.getElementById('hamburger-line-1');
-    const hamburgerLine2 = document.getElementById('hamburger-line-2');
-    let isMenuOpen = false;
-
-    function toggleMenu() {
-        isMenuOpen = !isMenuOpen;
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log('Script loaded'); // Debug
         
-        if (isMenuOpen) {
-            // Apri menu con dissolvenza
-            fullscreenMenu?.classList.remove('opacity-0', 'invisible');
-            fullscreenMenu?.classList.add('opacity-100', 'visible');
+        // Menu toggle functionality
+        const menuToggle = document.getElementById('menu-toggle');
+        const fullscreenMenu = document.getElementById('fullscreen-menu');
+        const hamburgerLine1 = document.getElementById('hamburger-line-1');
+        const hamburgerLine2 = document.getElementById('hamburger-line-2');
+        let isMenuOpen = false;
+
+        function toggleMenu() {
+            isMenuOpen = !isMenuOpen;
             
-            // Trasforma hamburger in X
-            if (hamburgerLine1) hamburgerLine1.style.transform = 'rotate(45deg) translate(3px, 3px)';
-            if (hamburgerLine2) hamburgerLine2.style.transform = 'rotate(-45deg) translate(3px, -3px)';
-            
-            // Previeni scroll
-            document.body.style.overflow = 'hidden';
-        } else {
-            // Chiudi menu con dissolvenza
-            fullscreenMenu?.classList.remove('opacity-100', 'visible');
-            fullscreenMenu?.classList.add('opacity-0', 'invisible');
-            
-            // Ripristina hamburger
-            if (hamburgerLine1) hamburgerLine1.style.transform = 'none';
-            if (hamburgerLine2) hamburgerLine2.style.transform = 'none';
-            
-            // Ripristina scroll
-            document.body.style.overflow = 'auto';
+            if (isMenuOpen) {
+                // Apri menu con dissolvenza
+                fullscreenMenu?.classList.remove('opacity-0', 'invisible');
+                fullscreenMenu?.classList.add('opacity-100', 'visible');
+                
+                // Trasforma hamburger in X
+                if (hamburgerLine1) hamburgerLine1.style.transform = 'rotate(45deg) translate(3px, 3px)';
+                if (hamburgerLine2) hamburgerLine2.style.transform = 'rotate(-45deg) translate(3px, -3px)';
+                
+                // Previeni scroll
+                document.body.style.overflow = 'hidden';
+            } else {
+                // Chiudi menu con dissolvenza
+                fullscreenMenu?.classList.remove('opacity-100', 'visible');
+                fullscreenMenu?.classList.add('opacity-0', 'invisible');
+                
+                // Ripristina hamburger
+                if (hamburgerLine1) hamburgerLine1.style.transform = 'none';
+                if (hamburgerLine2) hamburgerLine2.style.transform = 'none';
+                
+                // Ripristina scroll
+                document.body.style.overflow = 'auto';
+            }
         }
-    }
 
-    // Event listener per toggle del menu
-    menuToggle?.addEventListener('click', toggleMenu);
+        // Event listener per toggle del menu
+        menuToggle?.addEventListener('click', toggleMenu);
 
-    // Chiudi menu quando si clicca su un link
-    if (fullscreenMenu) {
-        const menuLinks = fullscreenMenu.querySelectorAll('a');
-        menuLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                if (isMenuOpen) {
-                    toggleMenu();
-                }
+        // Chiudi menu quando si clicca su un link
+        if (fullscreenMenu) {
+            const menuLinks = fullscreenMenu.querySelectorAll('a');
+            menuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (isMenuOpen) {
+                        toggleMenu();
+                    }
+                });
             });
-        });
-    }
-
-    // Chiudi menu con ESC
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && isMenuOpen) {
-            toggleMenu();
         }
+
+        // Chiudi menu con ESC
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && isMenuOpen) {
+                toggleMenu();
+            }
+        });
+
+        // Theme toggle functionality
+        const themeToggle = document.getElementById('theme-toggle');
+        const sunIcon = document.getElementById('sun-icon');
+        const moonIcon = document.getElementById('moon-icon');
+
+        console.log('Theme elements:', { themeToggle, sunIcon, moonIcon }); // Debug
+
+        if (!themeToggle || !sunIcon || !moonIcon) {
+            console.error('Theme elements not found!');
+            return;
+        }
+
+        // Inizializza lo stato del tema basandosi sulla classe presente nell'HTML
+        let isDarkMode = document.documentElement.classList.contains('dark');
+        console.log('Initial dark mode:', isDarkMode); // Debug
+
+        // Aggiorna l'icona basandosi sullo stato attuale
+        function updateThemeIcon() {
+            console.log('Updating theme icon, isDarkMode:', isDarkMode); // Debug
+            if (isDarkMode) {
+                sunIcon?.classList.add('hidden');
+                moonIcon?.classList.remove('hidden');
+            } else {
+                sunIcon?.classList.remove('hidden');
+                moonIcon?.classList.add('hidden');
+            }
+        }
+
+        // Inizializza l'icona corretta
+        updateThemeIcon();
+
+        function toggleTheme() {
+            console.log('Toggle theme clicked, current isDarkMode:', isDarkMode); // Debug
+            isDarkMode = !isDarkMode;
+            
+            if (isDarkMode) {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+                console.log('Switched to dark mode'); // Debug
+            } else {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+                console.log('Switched to light mode'); // Debug
+            }
+            
+            updateThemeIcon();
+        }
+
+        themeToggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            console.log('Theme toggle button clicked'); // Debug
+            toggleTheme();
+        });
     });
 </script>

@@ -29,32 +29,17 @@ body {
     color-scheme: dark;
 }
 
-/* Scrollbar personalizzate per dark mode */
+/* Nascondere la scrollbar in tutte le pagine */
 ::-webkit-scrollbar {
-    width: 8px;
+    display: none;
 }
 
-::-webkit-scrollbar-track {
-    background-color: #f3f4f6;
+/* Per Firefox */
+html {
+    scrollbar-width: none;
 }
 
-.dark ::-webkit-scrollbar-track {
-    background-color: #1f2937;
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: #d1d5db;
-    border-radius: 6px;
-}
-
-.dark ::-webkit-scrollbar-thumb {
-    background-color: #4b5563;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background-color: #9ca3af;
-}
-
-.dark ::-webkit-scrollbar-thumb:hover {
-    background-color: #6b7280;
+/* Per IE e Edge */
+body {
+    -ms-overflow-style: none;
 }

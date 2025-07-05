@@ -1,11 +1,13 @@
 module.exports = {
     content: [
-        "./src/**/*.{html,js,jsx,ts,tsx,astro}",
+        "./src/**/*.{js,astro}",
         "./public/**/*.html",
     ],
-    darkMode: 'class',
     theme: {
-        extend: {},
+        extend: {
+            fontFamily: {
+                'title': ['ClashDisplay', 'system-ui', '-apple-system', 'sans-serif']
+            },
+        },
     },
-    plugins: [],
 }

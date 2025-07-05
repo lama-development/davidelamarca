@@ -2,44 +2,27 @@
 
 @font-face {
     font-family: 'ClashDisplay';
-    src: url('../../fonts/ClashDisplay.woff2') format('woff2'),
-        url('../../fonts/ClashDisplay.woff') format('woff'),
-        url('../../fonts/ClashDisplay.ttf') format('truetype');
+    src: url('/fonts/ClashDisplay.woff2') format('woff2'),
+        url('/fonts/ClashDisplay.woff') format('woff');
     font-weight: 200 700;
     font-display: swap;
     font-style: normal;
 }
 
-* {
-    font-family: 'ClashDisplay', system-ui, -apple-system, sans-serif;
+@font-face {
+    font-family: 'GeneralSans';
+    src: url('/fonts/GeneralSans.woff2') format('woff2'),
+        url('/fonts/GeneralSans.woff') format('woff');
+    font-weight: 200 700;
+    font-display: swap;
+    font-style: normal;
 }
 
 body {
     padding-top: 4rem;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    font-family: 'GeneralSans', system-ui, -apple-system, sans-serif;
 }
 
-/* Supporto per transizioni smooth */
-*, *::before, *::after {
-    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
-}
-
-/* Personalizzazioni per il dark mode */
-.dark {
-    color-scheme: dark;
-}
-
-/* Nascondere la scrollbar in tutte le pagine */
-::-webkit-scrollbar {
-    display: none;
-}
-
-/* Per Firefox */
-html {
-    scrollbar-width: none;
-}
-
-/* Per IE e Edge */
-body {
-    -ms-overflow-style: none;
+.font-title {
+    font-family: 'ClashDisplay', system-ui, -apple-system, sans-serif !important;
 }

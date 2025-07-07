@@ -1,60 +1,47 @@
+// Mobile menu toggle functionality
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('Navbar script loaded');
+    const menuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const chevronIcon = document.getElementById('chevron-icon');
+    const overlay = document.getElementById('mobile-menu-overlay');
     
-    // Menu toggle functionality
-    const menuToggle = document.getElementById('menu-toggle');
-    const fullscreenMenu = document.getElementById('fullscreen-menu');
-    const hamburgerLine1 = document.getElementById('hamburger-line-1');
-    const hamburgerLine2 = document.getElementById('hamburger-line-2');
-    let isMenuOpen = false;
-
-    function toggleMenu() {
-        isMenuOpen = !isMenuOpen;
+    if (menuButton && mobileMenu && chevronIcon && overlay) {
+    menuButton.addEventListener('click', function(e) {
+        e.stopPropagation();
+        const isHidden = mobileMenu.classList.contains('hidden');
+        mobileMenu.classList.toggle('hidden');
+        overlay.classList.toggle('hidden');
         
-        if (isMenuOpen) {
-            // Apri menu con dissolvenza
-            fullscreenMenu?.classList.remove('opacity-0', 'invisible');
-            fullscreenMenu?.classList.add('opacity-100', 'visible');
-            
-            // Trasforma hamburger in X
-            if (hamburgerLine1) hamburgerLine1.style.transform = 'rotate(45deg) translate(3px, 3px)';
-            if (hamburgerLine2) hamburgerLine2.style.transform = 'rotate(-45deg) translate(3px, -3px)';
-            
-            // Previeni scroll
-            document.body.style.overflow = 'hidden';
+        // Rotate chevron and toggle active state based on menu state
+        if (isHidden) {
+        chevronIcon.style.transform = 'rotate(180deg)';
+        menuButton.classList.add('bg-gray-100', 'dark:bg-gray-900');
         } else {
-            // Chiudi menu con dissolvenza
-            fullscreenMenu?.classList.remove('opacity-100', 'visible');
-            fullscreenMenu?.classList.add('opacity-0', 'invisible');
-            
-            // Ripristina hamburger
-            if (hamburgerLine1) hamburgerLine1.style.transform = 'none';
-            if (hamburgerLine2) hamburgerLine2.style.transform = 'none';
-            
-            // Ripristina scroll
-            document.body.style.overflow = 'auto';
-        }
-    }
-
-    // Event listener per toggle del menu
-    menuToggle?.addEventListener('click', toggleMenu);
-
-    // Chiudi menu quando si clicca su un link
-    if (fullscreenMenu) {
-        const menuLinks = fullscreenMenu.querySelectorAll('a');
-        menuLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                if (isMenuOpen) {
-                    toggleMenu();
-                }
-            });
-        });
-    }
-
-    // Chiudi menu con ESC
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && isMenuOpen) {
-            toggleMenu();
+        chevronIcon.style.transform = 'rotate(0deg)';
+        menuButton.classList.remove('bg-gray-100', 'dark:bg-gray-900');
         }
     });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', function(e) {
+        const target = e.target;
+        if (!mobileMenu.contains(target) && !menuButton.contains(target)) {
+        mobileMenu.classList.add('hidden');
+        overlay.classList.add('hidden');
+        chevronIcon.style.transform = 'rotate(0deg)';
+        menuButton.classList.remove('bg-gray-100', 'dark:bg-gray-900');
+        }
+    });
+
+    // Close menu when clicking on a link
+    const mobileLinks = mobileMenu.querySelectorAll('a');
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', function() {
+        mobileMenu.classList.add('hidden');
+        overlay.classList.add('hidden');
+        chevronIcon.style.transform = 'rotate(0deg)';
+        menuButton.classList.remove('bg-gray-100', 'dark:bg-gray-900');
+        });
+    });
+    }
 });

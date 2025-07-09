@@ -5,6 +5,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const chevronIcon = document.getElementById('chevron-icon');
     const overlay = document.getElementById('mobile-menu-overlay');
     
+    // Set active navigation link based on current page
+    setActiveNavLink();
+    
     if (menuButton && mobileMenu && chevronIcon && overlay) {
     menuButton.addEventListener('click', function(e) {
         e.stopPropagation();
@@ -45,3 +48,30 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     }
 });
+
+// Function to set active navigation link based on current page
+function setActiveNavLink() {
+    const currentPath = window.location.pathname;
+    const navLinks = document.querySelectorAll('.nav-link');
+    const mobileLinks = document.querySelectorAll('#mobile-menu a');
+    
+    // Define route mappings
+    const routes = {
+        '/': '/',
+        '/projects': '/projects',
+        '/contact': '/contact'
+    };
+    
+    // Remove active classes from all links first
+    [...navLinks, ...mobileLinks].forEach(link => {
+        link.classList.remove('bg-gray-100', 'dark:bg-gray-900');
+    });
+    
+    // Add active classes to current page links
+    [...navLinks, ...mobileLinks].forEach(link => {
+        const href = link.getAttribute('href');
+        if (href === currentPath || (currentPath === '/' && href === '/')) {
+            link.classList.add('bg-gray-100', 'dark:bg-gray-900');
+        }
+    });
+}

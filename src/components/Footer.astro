@@ -35,7 +35,7 @@
 
                 <!-- Social Media Links -->
                 <div class="flex flex-col items-center md:items-end justify-end">
-                    <div class="flex space-x-4">
+                    <div class="flex space-x-2">
                         <a href="https://linkedin.com/in/davide-la-marca-178241254" target="_blank" class="p-2 text-gray-600 dark:text-gray-400 hover:text-blue-600 hover:bg-blue-50 dark:hover:bg-blue-950 rounded-full transition-all duration-200">
                             <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M3 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H3Zm1.102 4.297a1.195 1.195 0 1 0 0-2.39a1.195 1.195 0 0 0 0 2.39Zm1 7.516V6.234h-2v6.579h2ZM6.43 6.234h2v.881c.295-.462.943-1.084 2.148-1.084c1.438 0 2.219.953 2.219 2.766c0 .087.008.484.008.484v3.531h-2v-3.53c0-.485-.102-1.438-1.18-1.438c-1.079 0-1.17 1.198-1.195 1.982v2.986h-2V6.234Z" clip-rule="evenodd"/>
@@ -70,13 +70,14 @@
                 <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
                     <div class="text-center md:text-left">
                         <p class="text-sm text-gray-600 dark:text-gray-400">
-                        © 2025 Davide La Marca. Tutti i diritti riservati.
+                        © {new Date().getFullYear()} Davide La Marca
                         </p>
                     </div>
-                    <div class="flex space-x-6">
+                    <div class="flex items-center space-x-3">
                         <a href="/terms-of-service" class="text-sm text-gray-600 dark:text-gray-400 hover:underline transition-colors duration-200">
                             Termini di Servizio
                         </a>
+                        <span class="text-gray-400 dark:text-gray-600">•</span>
                         <a href="/privacy-policy" class="text-sm text-gray-600 dark:text-gray-400 hover:underline transition-colors duration-200">
                             Privacy Policy
                         </a>
@@ -86,57 +87,3 @@
         </div>
     </div>
 </footer>
-
-<script>
-// Theme toggle functionality
-document.addEventListener('DOMContentLoaded', function() {
-    const themeButtons = document.querySelectorAll('.theme-btn');
-    const html = document.documentElement;
-    
-    // Get current theme from localStorage or default to 'system'
-    let currentTheme = localStorage.getItem('theme') || 'system';
-    
-    // Apply theme on page load
-    applyTheme(currentTheme);
-    updateActiveButton(currentTheme);
-    
-    // Add click event listeners to theme buttons
-    themeButtons.forEach(button => {
-    button.addEventListener('click', function() {
-        const theme = this.id.replace('theme-', '');
-        currentTheme = theme;
-        localStorage.setItem('theme', theme);
-        applyTheme(theme);
-        updateActiveButton(theme);
-    });
-    });
-    
-    // Listen for system theme changes
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function() {
-    if (currentTheme === 'system') {
-        applyTheme('system');
-    }
-    });
-    
-    function applyTheme(theme) {
-    if (theme === 'dark' || (theme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-        html.classList.add('dark');
-    } else {
-        html.classList.remove('dark');
-    }
-    }
-    
-    function updateActiveButton(theme) {
-    themeButtons.forEach(button => {
-        button.classList.remove('bg-white', 'dark:bg-gray-800', 'text-black', 'dark:text-white', 'shadow-sm');
-        button.classList.add('text-gray-600', 'dark:text-gray-400', 'hover:text-black', 'dark:hover:text-white');
-    });
-    
-    const activeButton = document.getElementById(`theme-${theme}`);
-    if (activeButton) {
-        activeButton.classList.remove('text-gray-600', 'dark:text-gray-400', 'hover:text-black', 'dark:hover:text-white');
-        activeButton.classList.add('bg-white', 'dark:bg-gray-800', 'text-black', 'dark:text-white', 'shadow-sm');
-    }
-    }
-});
-</script>

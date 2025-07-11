@@ -1,52 +1,39 @@
-<nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 dark:bg-black/90 backdrop-blur-md border-b border-gray-100 dark:border-gray-900 h-12 md:h-16">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex items-center justify-between h-12 md:h-16">
-      <!-- Logo -->
-      <a href="/" class="flex items-center space-x-2 hover:opacity-75 transition-opacity duration-200">
+<nav class="fixed top-0 right-0 left-0 z-50 h-12 border-b border-gray-100 bg-white/90 backdrop-blur-md md:h-16 dark:border-gray-900 dark:bg-black/90">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="flex h-12 items-center justify-between md:h-16">
+      <a href="/" class="flex items-center space-x-2 transition-opacity duration-200 hover:opacity-75">
         <svg class="h-6 w-6 text-sky-500" viewBox="0 0 675 750" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" clip-rule="evenodd" d="M675 562.506L337.5 750L149.996 645.846V275.763L243.748 223.686L337.5 171.609L525.004 275.763V474.248L337.5 578.391L300.004 557.556V364.009L337.5 343.218L374.996 364.02V471.762L450 430.114V319.874L337.5 257.358L225 319.874V601.679L337.5 664.195L599.996 518.371V231.629L337.5 85.8046L75.0038 231.629V604.176L0 562.506V187.494L337.5 0L675 187.494V562.506Z"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M675 562.506L337.5 750L149.996 645.846V275.763L243.748 223.686L337.5 171.609L525.004 275.763V474.248L337.5 578.391L300.004 557.556V364.009L337.5 343.218L374.996 364.02V471.762L450 430.114V319.874L337.5 257.358L225 319.874V601.679L337.5 664.195L599.996 518.371V231.629L337.5 85.8046L75.0038 231.629V604.176L0 562.506V187.494L337.5 0L675 187.494V562.506Z"></path>
         </svg>
         <span class="text-md font-medium text-black dark:text-white">davidelamarca</span>
       </a>
-
-      <!-- Desktop navigation -->
-      <div class="hidden md:flex items-center space-x-1">
-        <a href="/" class="nav-link px-4 py-2 text-md font-normal text-black dark:text-white hover:bg-gray-100 dark:hover:bg-gray-900 rounded-full transition-colors duration-200">
-          Home
-        </a>
-        <a href="/projects" class="nav-link px-4 py-2 text-md font-normal text-black dark:text-white hover:bg-gray-100 dark:hover:bg-gray-900 rounded-full transition-colors duration-200">
-          Progetti
-        </a>
-        <a href="/contact" class="nav-link px-4 py-2 text-md font-normal text-black dark:text-white hover:bg-gray-100 dark:hover:bg-gray-900 rounded-full transition-colors duration-200">
-          Contattami
-        </a>
+      <div class="hidden items-center space-x-1 md:flex">
+        <a href="/" class="nav-link text-md rounded-full px-4 py-2 font-normal text-black transition-colors duration-200 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-900"> Home </a>
+        <a href="/projects" class="nav-link text-md rounded-full px-4 py-2 font-normal text-black transition-colors duration-200 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-900"> Progetti </a>
+        <a href="/contact" class="nav-link text-md rounded-full px-4 py-2 font-normal text-black transition-colors duration-200 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-900"> Contattami </a>
       </div>
-
-      <!-- Mobile menu button -->
       <div class="md:hidden">
-        <button id="mobile-menu-button" class="mobile-menu-btn p-2 rounded-md text-black dark:text-white hover:bg-gray-100 dark:hover:bg-gray-900 transition-colors duration-200">
+        <button id="mobile-menu-button" class="mobile-menu-btn rounded-md p-2 text-black transition-colors duration-200 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-900">
           <svg id="chevron-icon" class="h-4 w-4 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
           </svg>
         </button>
-
-        <!-- Mobile menu dropdown -->
-        <div id="mobile-menu" class="mobile-menu absolute right-4 top-14 md:top-18 w-48 bg-white dark:bg-black border border-gray-100 dark:border-gray-900 rounded-3xl py-2 hidden z-50">
-          <a href="/" class="flex items-center space-x-2 mx-2 px-3 py-2 text-sm font-medium text-black dark:text-white hover:bg-gray-100 dark:hover:bg-gray-900 rounded-full transition-colors duration-200">
+        <div id="mobile-menu" class="mobile-menu absolute top-14 right-4 z-50 hidden w-48 rounded-3xl border border-gray-100 bg-white py-2 md:top-18 dark:border-gray-900 dark:bg-black">
+          <a href="/" class="mx-2 flex items-center space-x-2 rounded-full px-3 py-2 text-sm font-medium text-black transition-colors duration-200 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-900">
             <svg class="h-4 w-4 text-sky-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
             </svg>
             <span>Home</span>
           </a>
-          <a href="/projects" class="flex items-center space-x-2 mx-2 px-3 py-2 text-sm font-medium text-black dark:text-white hover:bg-gray-100 dark:hover:bg-gray-900 rounded-full transition-colors duration-200">
+          <a href="/projects" class="mx-2 flex items-center space-x-2 rounded-full px-3 py-2 text-sm font-medium text-black transition-colors duration-200 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-900">
             <svg class="h-4 w-4 text-sky-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
             </svg>
             <span>Progetti</span>
           </a>
-          <a href="/contact" class="flex items-center space-x-2 mx-2 px-3 py-2 text-sm font-medium text-black dark:text-white hover:bg-gray-100 dark:hover:bg-gray-900 rounded-full transition-colors duration-200">
+          <a href="/contact" class="mx-2 flex items-center space-x-2 rounded-full px-3 py-2 text-sm font-medium text-black transition-colors duration-200 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-900">
             <svg class="h-4 w-4 text-sky-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
             </svg>
             <span>Contattami</span>
           </a>
@@ -55,6 +42,4 @@
     </div>
   </div>
 </nav>
-
-<!-- Mobile menu overlay -->
-<div id="mobile-menu-overlay" class="fixed inset-0 bg-white dark:bg-black z-40 hidden transition-all duration-200" style="opacity: 0.75;"></div>
+<div id="mobile-menu-overlay" class="fixed inset-0 z-40 hidden bg-white/75 backdrop-blur-xs transition-all duration-200 dark:bg-black/75"></div>

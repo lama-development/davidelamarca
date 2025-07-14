@@ -1,12 +1,6 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
 
-@layer components {
-  section h1 {
-    @apply text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[10rem];
-  }
-}
-
 html {
   scroll-behavior: smooth;
 }

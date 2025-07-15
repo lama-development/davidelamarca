@@ -6,8 +6,7 @@
     "dev": "astro dev --host 0.0.0.0",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro",
-    "sort:tailwind": "prettier --write \"src/**/*.{astro,html,js,ts,jsx,tsx}\""
+    "astro": "astro"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.10",

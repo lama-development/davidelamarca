@@ -1,3 +1,7 @@
+---
+const { badge, title, subtitle, project1, project2, button } = Astro.props;
+---
+
 <section id="projects" class="bg-white px-6 py-24 dark:bg-black">
   <div class="mx-auto max-w-7xl">
     <div class="mb-16 text-center">
@@ -5,29 +9,29 @@
         <svg class="h-4 w-4 text-sky-600 dark:text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
         </svg>
-        <span class="text-xs font-medium text-sky-600 sm:text-sm dark:text-sky-400">Progetti</span>
+        <span class="text-xs font-medium text-sky-600 sm:text-sm dark:text-sky-400">{badge}</span>
       </div>
-      <h2 class="mb-4 text-5xl leading-[0.8] font-bold tracking-tight text-neutral-900 md:text-5xl dark:text-neutral-100">Progetti concreti, risultati reali</h2>
-      <p class="mx-auto max-w-xs leading-[1.1] text-neutral-700 md:max-w-xl dark:text-neutral-300">Alcuni dei lavori che ho realizzato per i miei clienti.</p>
+      <h2 class="mb-4 text-5xl leading-[0.8] font-bold tracking-tight text-neutral-900 md:text-5xl dark:text-neutral-100">{title}</h2>
+      <p class="mx-auto max-w-xs leading-[1.1] text-neutral-700 md:max-w-xl dark:text-neutral-300">{subtitle}</p>
     </div>
     <div class="grid gap-8 md:grid-cols-2">
       <div class="overflow-hidden rounded-4xl border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-900">
         <div class="flex aspect-video items-center justify-center bg-neutral-200 dark:bg-neutral-800">
-          <img src="caprice-bleu.png" alt="" />
+          <img src="img/caprice-bleu.png" alt="" />
         </div>
         <div class="p-6">
           <div class="mb-3 flex flex-wrap items-center gap-3">
-            <h3 class="text-xl font-bold text-neutral-900 dark:text-neutral-100">Sorrento Boat Trips</h3>
-            <span class="rounded-full bg-neutral-100 px-3 py-1 text-xs font-medium text-neutral-700 dark:bg-neutral-800 dark:text-neutral-300">Sito web</span>
+            <h3 class="text-xl font-bold text-neutral-900 dark:text-neutral-100">{project1.title}</h3>
+            <span class="rounded-full bg-neutral-100 px-3 py-1 text-xs font-medium text-neutral-700 dark:bg-neutral-800 dark:text-neutral-300">{project1.type}</span>
           </div>
-          <p class="mb-6 text-neutral-700 dark:text-neutral-400">E-commerce completo per boutique di moda con sistema di pagamenti integrato, gestione inventario e dashboard amministrativa.</p>
+          <p class="mb-6 text-neutral-700 dark:text-neutral-400">{project1.description}</p>
           <div class="mb-8 flex flex-wrap gap-2">
             <span class="rounded-full bg-sky-100 px-3 py-1 text-xs font-medium text-sky-800 dark:bg-sky-900/30 dark:text-sky-300">Squarespace</span>
             <span class="rounded-full bg-sky-100 px-3 py-1 text-xs font-medium text-sky-800 dark:bg-sky-900/30 dark:text-sky-300">SEO</span>
           </div>
           <div>
             <a href="#" class="neutral-900 inline-flex items-center gap-2 rounded-full border border-neutral-300 bg-transparent px-6 py-3 text-sm font-medium text-neutral-600 hover:bg-neutral-300 hover:text-black dark:border-neutral-600 dark:text-neutral-400 dark:hover:bg-neutral-600 dark:hover:text-white">
-              Vedi progetto
+              {project1.button}
               <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
               </svg>
@@ -36,23 +40,24 @@
         </div>
       </div>
       <div class="overflow-hidden rounded-4xl border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-900">
-        <div class="flex aspect-video items-center justify-center bg-neutral-200 dark:bg-neutral-800"></div>
+        <div class="flex aspect-video items-center justify-center bg-neutral-200 dark:bg-neutral-800">
+          <img src="img/caprice-bleu.png" alt="" />
+        </div>
         <div class="p-6">
           <div class="mb-3 flex flex-wrap items-center gap-3">
-            <h3 class="text-xl font-bold text-neutral-900 dark:text-neutral-100">SkillBridge</h3>
-            <span class="rounded-full bg-neutral-100 px-3 py-1 text-xs font-medium text-neutral-700 dark:bg-neutral-800 dark:text-neutral-300">Web app</span>
+            <h3 class="text-xl font-bold text-neutral-900 dark:text-neutral-100">{project2.title}</h3>
+            <span class="rounded-full bg-neutral-100 px-3 py-1 text-xs font-medium text-neutral-700 dark:bg-neutral-800 dark:text-neutral-300">{project2.type}</span>
           </div>
-          <p class="mb-6 text-neutral-700 dark:text-neutral-400">Dashboard di analytics per catena di ristoranti con KPI in tempo reale, gestione menu e sistema di prenotazioni integrato.</p>
+          <p class="mb-6 text-neutral-700 dark:text-neutral-400">{project2.description}</p>
           <div class="mb-8 flex flex-wrap gap-2">
             <span class="rounded-full bg-sky-100 px-3 py-1 text-xs font-medium text-sky-800 dark:bg-sky-900/30 dark:text-sky-300">HTML</span>
             <span class="rounded-full bg-sky-100 px-3 py-1 text-xs font-medium text-sky-800 dark:bg-sky-900/30 dark:text-sky-300">CSS</span>
             <span class="rounded-full bg-sky-100 px-3 py-1 text-xs font-medium text-sky-800 dark:bg-sky-900/30 dark:text-sky-300">Javascript</span>
-            <span class="rounded-full bg-sky-100 px-3 py-1 text-xs font-medium text-sky-800 dark:bg-sky-900/30 dark:text-sky-300">Bootstrap</span>
             <span class="rounded-full bg-sky-100 px-3 py-1 text-xs font-medium text-sky-800 dark:bg-sky-900/30 dark:text-sky-300">SQLite</span>
           </div>
           <div>
             <a href="#" class="neutral-900 inline-flex items-center gap-2 rounded-full border border-neutral-300 bg-transparent px-6 py-3 text-sm font-medium text-neutral-600 hover:bg-neutral-300 hover:text-black dark:border-neutral-600 dark:text-neutral-400 dark:hover:bg-neutral-600 dark:hover:text-white">
-              Vedi progetto
+              {project2.button}
               <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
               </svg>
@@ -63,7 +68,7 @@
     </div>
     <div class="mt-12 text-center">
       <a href="/projects" class="inline-flex items-center gap-2 rounded-full border border-sky-600 bg-sky-500 px-8 py-4 text-lg font-semibold tracking-tight text-white hover:bg-sky-600 dark:text-black">
-        Vedi tutti i progetti
+        {button}
         <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
         </svg>

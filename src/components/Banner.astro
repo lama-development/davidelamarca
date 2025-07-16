@@ -1,15 +1,18 @@
+---
+const { title, subtitle, button } = Astro.props;
+---
+
 <section id="banner" class="bg-white px-6 py-20 md:py-32 dark:bg-black">
   <div class="mx-auto max-w-5xl">
     <div class="relative overflow-hidden rounded-3xl bg-sky-500 p-8 md:p-16 lg:p-20">
       <div class="relative text-left md:text-center">
-        <h2 class="mb-6 text-5xl leading-[0.8] font-black tracking-tight text-white md:mb-10 md:text-7xl lg:text-8xl dark:text-black">
-          <span class="block">Il tuo sito web?</span>
-          <span class="block">Inizia da qui.</span>
+        <h2 class="mb-6 text-5xl leading-[0.8] font-semibold tracking-tight text-white md:mb-10 md:text-7xl lg:text-8xl dark:text-black">
+          <span class="block">{title}</span>
         </h2>
-        <p class="text-md mb-12 max-w-md leading-[1.1] text-white/90 md:mx-auto md:max-w-xl md:text-lg lg:text-xl dark:text-black/80">Il tuo business merita una presenza digitale che faccia davvero la differenza. Realizzo siti moderni, veloci e su misura per realtà ambiziose come la tua.</p>
+        <p class="mb-12 max-w-md text-lg leading-[1.1] text-white/90 md:mx-auto md:max-w-xl md:text-lg lg:text-xl dark:text-black/80">{subtitle}</p>
         <div class="flex justify-start md:justify-center">
           <a href="/contact" class="group inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white px-8 py-4 text-lg font-semibold tracking-tight text-sky-600 transition-all duration-300 hover:bg-gray-200 dark:border-gray-800 dark:bg-black dark:text-sky-400 dark:hover:bg-gray-800">
-            Inizia Ora
+            {button}
             <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
             </svg>

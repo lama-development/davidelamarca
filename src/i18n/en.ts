@@ -33,8 +33,29 @@ export default {
     serviceSubtitle2: "Intuitive interfaces that enhance navigation and turn visitors into customers.",
     serviceSubtitle3: "SEO optimization and development following best practices for visibility and performance."
   },
-  projects: {},
-  banner: {},
+  projects: {
+    badge: "Projects",
+    title: "Real projects, actual results",
+    subtitle: "Some of the work I’ve delivered for my clients.",
+    button: "View all projects",
+    project1 : {
+      title: "Sorrento Boat Trips",
+      type: "Website",
+      description: "Website for a private boat tour agency in Sorrento, featuring an online booking system.",
+      button: "View Project"
+    },
+    project2 : {
+      title: "SkillBridge",
+      type: "Web app",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.",
+      button: "View Project"
+    }
+  },
+  banner: {
+    title: "Power up your online presence",
+    subtitle: "Your business deserves a digital presence that truly makes a difference. I create fast and modern websites for ambitious businesses like yours.",
+    button: "Get Started"
+  },
   footer: {
     brand: "davidelamarca",
     page1: "Terms of Service",

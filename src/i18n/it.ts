@@ -35,7 +35,7 @@ export default {
   },
   projects: {
     badge: "Progetti",
-    title: "Progetti concreti, risultati reali",
+    title: "Progetti reali, risultati concreti",
     subtitle: "Alcuni dei lavori che ho realizzato per i miei clienti.",
     button: "Vedi tutti i progetti",
     project1 : {

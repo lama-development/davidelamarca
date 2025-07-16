@@ -1,3 +1,7 @@
+---
+const { badge, title, subtitle, serviceTitle1, serviceTitle2, serviceTitle3, serviceSubtitle1, serviceSubtitle2, serviceSubtitle3 } = Astro.props;
+---
+
 <section id="services" class="bg-neutral-50 px-6 py-24 dark:bg-neutral-900">
   <div class="mx-auto max-w-7xl">
     <div class="mb-16 text-center">
@@ -5,10 +9,10 @@
         <svg class="h-4 w-4 text-sky-600 dark:text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
         </svg>
-        <span class="text-xs font-medium text-sky-600 sm:text-sm dark:text-sky-400">Servizi</span>
+        <span class="text-xs font-medium text-sky-600 sm:text-sm dark:text-sky-400">{badge}</span>
       </div>
-      <h2 class="mb-4 text-5xl leading-[0.8] font-bold tracking-tight text-neutral-900 md:text-5xl dark:text-neutral-100">Il tuo sito, fatto come si deve</h2>
-      <p class="mx-auto max-w-xs leading-[1.1] text-neutral-700 md:max-w-xl dark:text-neutral-300">Soluzioni complete per portare il tuo business online, nel modo giusto.</p>
+      <h2 class="mb-4 text-5xl leading-[0.8] font-bold tracking-tight text-neutral-900 md:text-5xl dark:text-neutral-100">{title}</h2>
+      <p class="mx-auto max-w-xs leading-[1.1] text-neutral-700 md:max-w-xl dark:text-neutral-300">{subtitle}</p>
     </div>
     <div class="flex flex-wrap justify-center gap-8">
       <div class="max-w-md min-w-[280px] flex-1 basis-full rounded-xl border border-neutral-200 bg-white p-8 md:basis-[calc(50%-1rem)] lg:basis-[calc(33.33%-1.5rem)] dark:border-neutral-700 dark:bg-neutral-800">
@@ -17,8 +21,8 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
           </svg>
         </div>
-        <h3 class="mb-3 text-xl font-bold text-neutral-900 dark:text-neutral-100">Sviluppo Web</h3>
-        <p class="tracking-tight text-neutral-700 dark:text-neutral-400">Siti web moderni, veloci e responsive, pensati per offrire la migliore esperienza utente.</p>
+        <h3 class="mb-3 text-xl font-bold text-neutral-900 dark:text-neutral-100">{serviceTitle1}</h3>
+        <p class="tracking-tight text-neutral-700 dark:text-neutral-400">{serviceSubtitle1}</p>
       </div>
       <div class="max-w-md min-w-[280px] flex-1 basis-full rounded-xl border border-neutral-200 bg-white p-8 md:basis-[calc(50%-1rem)] lg:basis-[calc(33.33%-1.5rem)] dark:border-neutral-700 dark:bg-neutral-800">
         <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-sky-500/10">
@@ -26,8 +30,8 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path>
           </svg>
         </div>
-        <h3 class="mb-3 text-xl font-bold text-neutral-900 dark:text-neutral-100">Design UI/UX</h3>
-        <p class="tracking-tight text-neutral-700 dark:text-neutral-400">Interfacce intuitive che migliorano la navigazione e convertono i visitatori in clienti.</p>
+        <h3 class="mb-3 text-xl font-bold text-neutral-900 dark:text-neutral-100">{serviceTitle2}</h3>
+        <p class="tracking-tight text-neutral-700 dark:text-neutral-400">{serviceSubtitle2}</p>
       </div>
       <div class="max-w-md min-w-[280px] flex-1 basis-full rounded-xl border border-neutral-200 bg-white p-8 md:basis-[calc(50%-1rem)] lg:basis-[calc(33.33%-1.5rem)] dark:border-neutral-700 dark:bg-neutral-800">
         <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-sky-500/10">
@@ -35,8 +39,8 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
           </svg>
         </div>
-        <h3 class="mb-3 text-xl font-bold text-neutral-900 dark:text-neutral-100">SEO & Best Practices</h3>
-        <p class="tracking-tight text-neutral-700 dark:text-neutral-400">Ottimizzazione SEO e sviluppo secondo best practice per visibilità e performance.</p>
+        <h3 class="mb-3 text-xl font-bold text-neutral-900 dark:text-neutral-100">{serviceTitle3}</h3>
+        <p class="tracking-tight text-neutral-700 dark:text-neutral-400">{serviceSubtitle3}</p>
       </div>
     </div>
   </div>

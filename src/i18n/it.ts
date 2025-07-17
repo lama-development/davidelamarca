@@ -38,13 +38,13 @@ export default {
     title: "Progetti reali, risultati concreti",
     subtitle: "Alcuni dei lavori che ho realizzato per i miei clienti.",
     button: "Vedi tutti i progetti",
-    project1 : {
+    project1: {
       title: "Sorrento Boat Trips",
       type: "Sito web",
       description: "Sito web per un'agenzia di tour in barca privati a Sorrento, con sistema di prenotazioni online.",
       button: "Vedi progetto"
     },
-    project2 : {
+    project2: {
       title: "SkillBridge",
       type: "Web app",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.",
@@ -53,7 +53,7 @@ export default {
   },
   banner: {
     title: "Potenzia la tua presenza online",
-    subtitle: "Il tuo business merita una presenza digitale che faccia davvero la differenza. Realizzo siti veloci e moderni per realtà ambiziose come la tua.", 
+    subtitle: "Il tuo business merita una presenza digitale che faccia davvero la differenza. Realizzo siti veloci e moderni per realtà ambiziose come la tua.",
     button: "Inizia Ora"
   },
   footer: {
@@ -61,6 +61,7 @@ export default {
     page1: "Termini di Servizio",
     page2: "Privacy Policy",
     copyright: "Davide La Marca",
+    vat: "P. IVA: 02804090039",
     aria: {
       system: "Usa il tema di sistema",
       light: "Usa il tema chiaro",

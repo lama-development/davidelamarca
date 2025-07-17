@@ -15,14 +15,18 @@ body {
     sans-serif;
 }
 
-.mobile-menu {
-  animation: popupIn 0.2s ease-out;
+#mobile-menu {
+  animation: popupIn 0.1s ease-out;
+}
+
+#lang-dropdown {
+  animation: popupIn 0.1s ease-out;
 }
 
 @keyframes popupIn {
   from {
     opacity: 0;
-    transform: translateY(-5px) scale(0.9);
+    transform: translateY(-5px) scale(0.8);
   }
   to {
     opacity: 1;

@@ -38,13 +38,13 @@ export default {
     title: "Real projects, actual results",
     subtitle: "Some of the work I’ve delivered for my clients.",
     button: "View all projects",
-    project1 : {
+    project1: {
       title: "Sorrento Boat Trips",
       type: "Website",
       description: "Website for a private boat tour agency in Sorrento, featuring an online booking system.",
       button: "View Project"
     },
-    project2 : {
+    project2: {
       title: "SkillBridge",
       type: "Web app",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.",
@@ -61,6 +61,7 @@ export default {
     page1: "Terms of Service",
     page2: "Privacy Policy",
     copyright: "Davide La Marca",
+    vat: "VAT: 02804090039",
     aria: {
       system: "Use system theme",
       light: "Use light theme",

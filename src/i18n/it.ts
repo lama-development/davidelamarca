@@ -56,6 +56,11 @@ export default {
     subtitle: "Il tuo business merita una presenza digitale che faccia davvero la differenza. Realizzo siti veloci e moderni per realtà ambiziose come la tua.",
     button: "Inizia Ora"
   },
+  pageNotFound: {
+    title: "404",
+    description: "La pagina che stai cercando non esiste o è stata spostata.",
+    button: "Torna alla Home"
+  },
   footer: {
     brand: "davidelamarca",
     page1: "Termini di Servizio",

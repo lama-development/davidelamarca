@@ -56,6 +56,11 @@ export default {
     subtitle: "Your business deserves a digital presence that truly makes a difference. I create fast and modern websites for ambitious businesses like yours.",
     button: "Get Started"
   },
+  pageNotFound: {
+    title: "404",
+    description: "The page you are looking for does not exist or has been moved.",
+    button: "Go back Home"
+  },
   footer: {
     brand: "davidelamarca",
     page1: "Terms of Service",

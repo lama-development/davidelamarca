@@ -1,0 +1,20 @@
+---
+const { title, description, button } = Astro.props;
+---
+
+<section id="pageNotFound" class="relative flex min-h-screen w-full items-center justify-center bg-white px-6 dark:bg-black">
+  <div class="relative z-10 mx-auto max-w-7xl text-center">
+    <h1 class="mb-8 text-[9rem] leading-[0.8] font-black tracking-tight text-neutral-900 md:text-[12rem] lg:text-[18rem] dark:text-neutral-100">
+      <span class="block">{title}</span>
+    </h1>
+    <p class="mx-auto mb-12 max-w-xs text-base leading-[1.1] font-normal tracking-tight text-neutral-700 opacity-80 md:max-w-xl md:text-xl dark:text-neutral-300">{description}</p>
+    <div class="mb-16">
+      <a href="/contact" class="inline-flex items-center gap-2 rounded-full border border-sky-600 bg-sky-500 px-8 py-4 text-lg font-semibold tracking-tight text-white transition-colors duration-200 hover:bg-sky-600 dark:text-black">
+        {button}
+        <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>

@@ -51,6 +51,33 @@ export default {
       button: "View Project"
     }
   },
+  faq: {
+    badge: "FAQ",
+    title: "Questions? Answers!",
+    subtitle: "Here are the answers to the most frequently asked questions about my work.",
+    questions: [
+      {
+        question: "How much does a professional website cost?",
+        answer: "The cost of a website depends on many factors: complexity, required features, timelines, and goals. Each project is evaluated individually based on your needs. <a href='/contact' class='text-sky-600 hover:underline dark:text-sky-400'>Contact me</a> to receive a personalized quote."
+      },
+      {
+        question: "How long does it take to build a website?",
+        answer: "Development time varies depending on the complexity of the project. A showcase website may take 3-4 weeks, while more complex projects with advanced features can take 2-3 months or more. I'll always provide you with a clear timeline at the start of the project. You can see examples of completed work in the <a href='/#projects' class='text-sky-600 hover:underline dark:text-sky-400'>Projects</a> section."
+      },
+      {
+        question: "Do you offer maintenance services after launch?",
+        answer: "Yes, I offer a maintenance service to ensure your website remains secure, up-to-date, and performant over time. This includes security updates, regular backups, and technical support. <a href='/contact' class='text-sky-600 hover:underline dark:text-sky-400'>Contact me</a> for more details."
+      },
+      {
+        question: "Will the website be optimized for search engines?",
+        answer: "All the websites I build follow basic SEO best practices. This includes semantic structure, image optimization, loading speed, and mobile compatibility."
+      },
+      {
+        question: "Which platforms do you use to build websites?",
+        answer: 'I specialize in creating websites with <a href="https://squarespace.com" target="_blank" rel="noopener" class="text-sky-600 hover:underline dark:text-sky-400">Squarespace</a> and <a href="https://framer.com" target="_blank" rel="noopener" class="text-sky-600 hover:underline dark:text-sky-400">Framer</a>, both excellent for modern design and simple content management. I can also develop fully custom-coded websites for specific needs, though this requires more time and a higher budget.'
+      }
+    ]
+  },
   banner: {
     title: "Power up your online presence",
     subtitle: "Your business deserves a digital presence that truly makes a difference. I create fast and modern websites for ambitious businesses like yours.",

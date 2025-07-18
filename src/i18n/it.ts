@@ -51,6 +51,33 @@ export default {
       button: "Vedi progetto"
     }
   },
+  faq: {
+    badge: "FAQ",
+    title: "Domande? Risposte!",
+    subtitle: "Ecco le risposte alle domande più frequenti sul mio lavoro.",
+    questions: [
+      {
+        question: "Quanto costa un sito web professionale?",
+        answer: "Il costo di un sito web dipende da molti fattori: complessità, funzionalità richieste, tempistiche e obiettivi. Ogni progetto viene valutato individualmente in base alle tue esigenze. <a href='/contact' class='text-sky-600 hover:underline dark:text-sky-400'>Contattami</a> per ricevere un preventivo personalizzato."
+      },
+      {
+        question: "Quanto tempo serve per realizzare un sito web?",
+        answer: "I tempi di realizzazione variano in base alla complessità del progetto. Un sito vetrina può richiedere 3-4 settimane, mentre progetti più complessi con funzionalità avanzate possono richiedere 2-3 mesi o più. Ti fornirò sempre una tempistica chiara all'inizio del progetto. Puoi vedere esempi di lavori già completati nella sezione <a href='/#projects' class='text-sky-600 hover:underline dark:text-sky-400'>Progetti</a>."
+      },
+      {
+        question: "Offri servizi di manutenzione dopo il lancio?",
+        answer: "Sì, offro un servizio di manutenzione per garantire che il tuo sito rimanga sicuro, aggiornato e performante nel tempo. Questo include aggiornamenti di sicurezza, backup regolari, e assistenza tecnica. <a href='/contact' class='text-sky-600 hover:underline dark:text-sky-400'>Contattami</a> per maggiori dettagli."
+      },
+      {
+        question: "Il sito sarà ottimizzato per i motori di ricerca?",
+        answer: "Tutti i siti che sviluppo seguono le migliori pratiche SEO di base. Questo include struttura semantica, ottimizzazione delle immagini, velocità di caricamento e compatibilità mobile."
+      },
+      {
+        question: "Quali piattaforme usi per creare siti web?",
+        answer: 'Mi specializzo nella realizzazione di siti con <a href="https://squarespace.com" target="_blank" rel="noopener" class="text-sky-600 hover:underline dark:text-sky-400">Squarespace</a> e <a href="https://framer.com" target="_blank" rel="noopener" class="text-sky-600 hover:underline dark:text-sky-400">Framer</a>, entrambe ottime per design moderni e gestione contenuti semplice. Posso anche sviluppare siti completamente da codice per esigenze specifiche, ma questo richiede tempi e costi maggiori.'
+      }
+    ]
+  },
   banner: {
     title: "Potenzia la tua presenza online",
     subtitle: "Il tuo business merita una presenza digitale che faccia davvero la differenza. Realizzo siti veloci e moderni per realtà ambiziose come la tua.",

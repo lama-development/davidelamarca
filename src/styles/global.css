@@ -15,6 +15,10 @@ body {
     sans-serif;
 }
 
+details summary::-webkit-details-marker {
+  display: none;
+}
+
 #mobile-menu {
   animation: popupIn 0.1s ease-out;
 }

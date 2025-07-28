@@ -36,7 +36,7 @@ export default {
   projects: {
     badge: "Projects",
     title: "Real projects, actual results",
-    subtitle: "Some of the work I’ve delivered for my clients.",
+    subtitle: "Some of the work I've delivered for my clients.",
     button: "View all projects",
     project1: {
       title: "Sorrento Boat Trips",
@@ -58,15 +58,15 @@ export default {
     questions: [
       {
         question: "How much does a professional website cost?",
-        answer: "The cost of a website depends on many factors: complexity, required features, timelines, and goals. Each project is evaluated individually based on your needs. <a href='/contact' class='text-sky-600 hover:underline dark:text-sky-400'>Contact me</a> to receive a personalized quote."
+        answer: "The cost of a website depends on many factors: complexity, required features, timelines, and goals. Each project is evaluated individually based on your needs. <a href='/contact' aria-label='Open contact page' class='text-sky-600 hover:underline dark:text-sky-400'>Contact me</a> to receive a personalized quote."
       },
       {
         question: "How long does it take to build a website?",
-        answer: "Development time varies depending on the complexity of the project. A showcase website may take 3-4 weeks, while more complex projects with advanced features can take 2-3 months or more. I'll always provide you with a clear timeline at the start of the project. You can see examples of completed work in the <a href='/#projects' class='text-sky-600 hover:underline dark:text-sky-400'>Projects</a> section."
+        answer: "Development time varies depending on the complexity of the project. A showcase website may take 3-4 weeks, while more complex projects with advanced features can take 2-3 months or more. I'll always provide you with a clear timeline at the start of the project. You can see examples of completed work in the <a href='/#projects' aria-label='Go to projects section' class='text-sky-600 hover:underline dark:text-sky-400'>Projects</a> section."
       },
       {
         question: "Do you offer maintenance services after launch?",
-        answer: "Yes, I offer a maintenance service to ensure your website remains secure, up-to-date, and performant over time. This includes security updates, regular backups, and technical support. <a href='/contact' class='text-sky-600 hover:underline dark:text-sky-400'>Contact me</a> for more details."
+        answer: "Yes, I offer a maintenance service to ensure your website remains secure, up-to-date, and performant over time. This includes security updates, regular backups, and technical support. <a href='/contact' aria-label='Open contact page' class='text-sky-600 hover:underline dark:text-sky-400'>Contact me</a> for more details."
       },
       {
         question: "Will the website be optimized for search engines?",
@@ -74,7 +74,7 @@ export default {
       },
       {
         question: "Which platforms do you use to build websites?",
-        answer: 'I specialize in creating websites with <a href="https://squarespace.com" target="_blank" rel="noopener" class="text-sky-600 hover:underline dark:text-sky-400">Squarespace</a> and <a href="https://framer.com" target="_blank" rel="noopener" class="text-sky-600 hover:underline dark:text-sky-400">Framer</a>, both excellent for modern design and simple content management. I can also develop fully custom-coded websites for specific needs, though this requires more time and a higher budget.'
+        answer: "I specialize in creating websites with <a href='https://squarespace.com' aria-label='Open Squarespace website' target='_blank' rel='noopener noreferrer' class='text-sky-600 hover:underline dark:text-sky-400'>Squarespace</a> and <a href='https://framer.com' aria-label='Open Framer website' target='_blank' rel='noopener noreferrer' class='text-sky-600 hover:underline dark:text-sky-400'>Framer</a>, both excellent for modern design and simple content management. I can also develop fully custom-coded websites for specific needs, though this requires more time and a higher budget."
       }
     ]
   },

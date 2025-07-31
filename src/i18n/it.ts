@@ -17,7 +17,7 @@ export default {
     title1: "Nuovo sito,",
     title2: "nuova storia",
     subtitle: "Essere online non basta. Serve esserci nel modo giusto. Scopri come posso creare o rinnovare il sito web che meriti.",
-    button: "Inizia Ora",
+    button: "Inizia ora",
     aria: {
       scroll: "Scorri in basso"
     }
@@ -81,12 +81,12 @@ export default {
   banner: {
     title: "Potenzia la tua presenza online",
     subtitle: "Il tuo business merita una presenza digitale che faccia davvero la differenza. Realizzo siti veloci e moderni per realtà ambiziose come la tua.",
-    button: "Inizia Ora"
+    button: "Inizia ora"
   },
   pageNotFound: {
     title: "404",
     description: "La pagina che stai cercando non esiste o è stata spostata.",
-    button: "Torna alla Home"
+    button: "Torna alla home"
   },
   footer: {
     brand: "davidelamarca",

@@ -2,7 +2,7 @@
 import "../styles/global.css";
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
-const { t } = Astro.props;
+const { t, hideFooter = false } = Astro.props;
 ---
 
 <!doctype html>
@@ -23,6 +23,6 @@ const { t } = Astro.props;
   <body class="bg-white dark:bg-black">
     <Navbar {...t.navbar} />
     <slot />
-    <Footer {...t.footer} />
+    {!hideFooter && <Footer {...t.footer} />}
   </body>
 </html>

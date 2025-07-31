@@ -17,7 +17,7 @@ export default {
     title1: "New website,",
     title2: "new chapter",
     subtitle: "Being online isn't enough. What matters is being there the right way. Discover how I can create or refresh the website you truly deserve.",
-    button: "Get Started",
+    button: "Get started",
     aria: {
       scroll: "Scroll down"
     }
@@ -42,13 +42,13 @@ export default {
       title: "Sorrento Boat Trips",
       type: "Website",
       description: "Website for a private boat tour agency in Sorrento, featuring an online booking system.",
-      button: "View Project"
+      button: "View project"
     },
     project2: {
       title: "SkillBridge",
       type: "Web app",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.",
-      button: "View Project"
+      button: "View project"
     }
   },
   faq: {
@@ -81,12 +81,12 @@ export default {
   banner: {
     title: "Power up your online presence",
     subtitle: "Your business deserves a digital presence that truly makes a difference. I create fast and modern websites for ambitious businesses like yours.",
-    button: "Get Started"
+    button: "Get started"
   },
   pageNotFound: {
     title: "404",
     description: "The page you are looking for does not exist or has been moved.",
-    button: "Go back Home"
+    button: "Return home"
   },
   footer: {
     brand: "davidelamarca",

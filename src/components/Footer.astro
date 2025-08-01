@@ -86,7 +86,7 @@ const { brand, aria, page1, page2, copyright, vat } = Astro.props;
             <div class="flex items-center justify-center space-x-2 md:justify-start">
               <span class="text-sm text-gray-600 dark:text-gray-400">
                 &copy; {new Date().getFullYear()}
-                <a href="https://davidelamarca.com" target="_blank" class="text-sm text-gray-600 hover:underline dark:text-gray-400">{copyright}</a>
+                {copyright}
               </span>
               <span class="text-gray-400 dark:text-gray-600">•</span>
               <span class="text-sm text-gray-600 dark:text-gray-400">{vat}</span>

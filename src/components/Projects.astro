@@ -1,7 +1,7 @@
 ---
 import { Image } from "astro:assets";
-import projectImg1 from "../img/caprice-bleu.png";
-import projectImg2 from "../img/sbt.png";
+import projectImg1 from "../img/sbt.png";
+import projectImg2 from "../img/skillbridge.png";
 const { badge, title, subtitle, project1, project2, button } = Astro.props;
 ---
 
@@ -20,7 +20,9 @@ const { badge, title, subtitle, project1, project2, button } = Astro.props;
     <div class="grid gap-8 md:grid-cols-2">
       <div class="overflow-hidden rounded-4xl border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-900">
         <div class="flex aspect-video items-center justify-center bg-neutral-200 dark:bg-neutral-800">
-          <Image src={projectImg1} alt="" />
+          <a href="/">
+            <Image src={projectImg1} alt="" />
+          </a>
         </div>
         <div class="p-6">
           <div class="mb-3 flex flex-wrap items-center gap-3">
@@ -29,8 +31,8 @@ const { badge, title, subtitle, project1, project2, button } = Astro.props;
           </div>
           <p class="mb-6 text-neutral-700 dark:text-neutral-400">{project1.description}</p>
           <div class="mb-8 flex flex-wrap gap-2">
-            <span class="rounded-full bg-sky-100 px-3 py-1 text-xs font-medium text-sky-800 dark:bg-sky-900/30 dark:text-sky-300">Squarespace</span>
-            <span class="rounded-full bg-sky-100 px-3 py-1 text-xs font-medium text-sky-800 dark:bg-sky-900/30 dark:text-sky-300">SEO</span>
+            <span class="rounded-full bg-sky-100 px-3 py-1 text-xs font-medium text-sky-600 dark:bg-sky-900/30 dark:text-sky-400">Squarespace</span>
+            <span class="rounded-full bg-sky-100 px-3 py-1 text-xs font-medium text-sky-600 dark:bg-sky-900/30 dark:text-sky-400">SEO</span>
           </div>
           <div>
             <a href="/" class="neutral-900 inline-flex items-center gap-2 rounded-full border border-neutral-300 bg-transparent px-6 py-3 text-sm font-medium text-neutral-600 hover:bg-neutral-300 hover:text-black dark:border-neutral-600 dark:text-neutral-400 dark:hover:bg-neutral-600 dark:hover:text-white">
@@ -44,7 +46,9 @@ const { badge, title, subtitle, project1, project2, button } = Astro.props;
       </div>
       <div class="overflow-hidden rounded-4xl border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-900">
         <div class="flex aspect-video items-center justify-center bg-neutral-200 dark:bg-neutral-800">
-          <Image src={projectImg2} alt="" />
+          <a href="/">
+            <Image src={projectImg2} alt="" />
+          </a>
         </div>
         <div class="p-6">
           <div class="mb-3 flex flex-wrap items-center gap-3">
@@ -53,10 +57,10 @@ const { badge, title, subtitle, project1, project2, button } = Astro.props;
           </div>
           <p class="mb-6 text-neutral-700 dark:text-neutral-400">{project2.description}</p>
           <div class="mb-8 flex flex-wrap gap-2">
-            <span class="rounded-full bg-sky-100 px-3 py-1 text-xs font-medium text-sky-800 dark:bg-sky-900/30 dark:text-sky-300">HTML</span>
-            <span class="rounded-full bg-sky-100 px-3 py-1 text-xs font-medium text-sky-800 dark:bg-sky-900/30 dark:text-sky-300">CSS</span>
-            <span class="rounded-full bg-sky-100 px-3 py-1 text-xs font-medium text-sky-800 dark:bg-sky-900/30 dark:text-sky-300">Javascript</span>
-            <span class="rounded-full bg-sky-100 px-3 py-1 text-xs font-medium text-sky-800 dark:bg-sky-900/30 dark:text-sky-300">SQLite</span>
+            <span class="rounded-full bg-sky-100 px-3 py-1 text-xs font-medium text-sky-600 dark:bg-sky-900/30 dark:text-sky-400">HTML</span>
+            <span class="rounded-full bg-sky-100 px-3 py-1 text-xs font-medium text-sky-600 dark:bg-sky-900/30 dark:text-sky-400">CSS</span>
+            <span class="rounded-full bg-sky-100 px-3 py-1 text-xs font-medium text-sky-600 dark:bg-sky-900/30 dark:text-sky-400">Javascript</span>
+            <span class="rounded-full bg-sky-100 px-3 py-1 text-xs font-medium text-sky-600 dark:bg-sky-900/30 dark:text-sky-400">SQLite</span>
           </div>
           <div>
             <a href="/" class="neutral-900 inline-flex items-center gap-2 rounded-full border border-neutral-300 bg-transparent px-6 py-3 text-sm font-medium text-neutral-600 hover:bg-neutral-300 hover:text-black dark:border-neutral-600 dark:text-neutral-400 dark:hover:bg-neutral-600 dark:hover:text-white">
@@ -70,11 +74,8 @@ const { badge, title, subtitle, project1, project2, button } = Astro.props;
       </div>
     </div>
     <div class="mt-12 text-center">
-      <a href="/projects" class="inline-flex items-center gap-2 rounded-full border border-sky-600 bg-sky-500 px-8 py-4 text-lg font-semibold tracking-tight text-white hover:bg-sky-600 dark:text-black">
+      <a href="/projects" class="inline-flex items-center gap-2 rounded-full bg-sky-500 px-8 py-4 text-lg font-semibold tracking-tight text-white hover:bg-sky-600 dark:text-black">
         {button}
-        <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
-        </svg>
       </a>
     </div>
   </div>

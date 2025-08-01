@@ -41,13 +41,13 @@ export default {
     project1: {
       title: "Sorrento Boat Trips",
       type: "Sito web",
-      description: "Sito web per un'agenzia di tour in barca privati a Sorrento, con sistema di prenotazioni online.",
+      description: "Sito web moderno per un'agenzia di tour privati a Sorrento, con sistema di prenotazione online integrato tramite FareHarbor.",
       button: "Vedi progetto"
     },
     project2: {
       title: "SkillBridge",
       type: "Web app",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.",
+      description: "Web app completa che connette freelancer e aziende: post di lavoro, ricerca avanzata, chat in tempo reale e profili personalizzati.",
       button: "Vedi progetto"
     }
   },
@@ -85,7 +85,7 @@ export default {
   },
   pageNotFound: {
     title: "404",
-    description: "La pagina che stai cercando non esiste o è stata spostata.",
+    description: "La pagina che stai cercando non esiste o si è verificato un altro errore.",
     button: "Torna alla home"
   },
   footer: {

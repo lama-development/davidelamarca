@@ -41,13 +41,13 @@ export default {
     project1: {
       title: "Sorrento Boat Trips",
       type: "Website",
-      description: "Website for a private boat tour agency in Sorrento, featuring an online booking system.",
+      description: "Modern website for a private boat tour agency in Sorrento, featuring an online booking system integrated with FareHarbor.",
       button: "View project"
     },
     project2: {
       title: "SkillBridge",
       type: "Web app",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.",
+      description: "Fully functional web app connecting freelancers and companies: job posts, advanced search, real-time chat, and customizable profiles.",
       button: "View project"
     }
   },
@@ -85,7 +85,7 @@ export default {
   },
   pageNotFound: {
     title: "404",
-    description: "The page you are looking for does not exist or has been moved.",
+    description: "The page you're looking for doesn't exist or another error occurred.",
     button: "Return home"
   },
   footer: {

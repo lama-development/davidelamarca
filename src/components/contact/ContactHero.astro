@@ -1,0 +1,20 @@
+---
+const { badge, title, subtitle } = Astro.props;
+---
+
+<section class="bg-neutral px-6 py-24 dark:bg-neutral-900">
+  <div class="mx-auto max-w-4xl text-center">
+    <div class="mx-auto mb-6 inline-flex items-center gap-2 rounded-full border border-sky-500/20 bg-sky-500/10 px-4 py-2 text-sm font-medium text-sky-600 sm:mb-8 dark:text-sky-400">
+      <svg class="h-4 w-4 text-sky-600 dark:text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+      </svg>
+      <span>{badge}</span>
+    </div>
+    <h1 class="mb-6 text-5xl font-bold tracking-tight text-neutral-900 md:text-6xl lg:text-7xl dark:text-neutral-100">
+      {title}
+    </h1>
+    <p class="mx-auto max-w-2xl text-lg leading-relaxed text-neutral-600 md:text-xl dark:text-neutral-400">
+      {subtitle}
+    </p>
+  </div>
+</section>

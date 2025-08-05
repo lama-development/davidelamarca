@@ -83,6 +83,103 @@ export default {
     subtitle: "Il tuo business merita una presenza digitale che faccia davvero la differenza. Realizzo siti veloci e moderni per realtà ambiziose come la tua.",
     button: "Inizia ora"
   },
+  contact: {
+    badge: "Contatti",
+    title: "Lavoriamo insieme",
+    subtitle: "Prima di iniziare, è importante capire se siamo la coppia giusta per collaborare.",
+    formTitle: "Richiesta di Collaborazione",
+    formSubtitle: "Compila il modulo per valutare se possiamo lavorare insieme",
+    rulesButton: "Leggi le Regole di Collaborazione",
+    rulesRequired: "Devi leggere e accettare le regole prima di procedere",
+    startButton: "Inizia la Richiesta",
+    contacts: {
+      title: "Altri Modi per Contattarmi",
+      subtitle: "Per richieste di lavoro, utilizza esclusivamente il modulo sopra. Per tutto il resto:",
+      email: "Email generale",
+      social: "Social network"
+    },
+    rules: {
+      title: "🤝 Regole di Collaborazione",
+      subtitle: "Per lavorare insieme nel modo migliore, è fondamentale che entrambi rispettiamo alcune regole base.",
+      sections: [
+        {
+          title: "💰 Pagamenti e Budget",
+          rules: ["Acconto del 50% richiesto prima di iniziare qualsiasi progetto", "Budget minimo di €1.500 per progetti web completi", "Pagamenti puntuali secondo le scadenze concordate", "Nessuna modifica al prezzo una volta firmato il contratto"]
+        },
+        {
+          title: "📅 Tempistiche e Deadline",
+          rules: ["Le tempistiche vengono concordate all'inizio e rispettate da entrambe le parti", "Ritardi nei feedback del cliente comportano slittamento delle deadline", "Modifiche sostanziali al progetto possono comportare costi aggiuntivi", "Revisioni illimitate solo per quanto concordato nel brief iniziale"]
+        },
+        {
+          title: "🗣️ Comunicazione",
+          rules: ["Comunicazione professionale e rispettosa sempre", "Risposte entro 48 ore lavorative massimo", "Feedback specifici e costruttivi, non generici", "Un solo canale di comunicazione concordato (email, WhatsApp, etc.)"]
+        },
+        {
+          title: "🎯 Obiettivi e Aspettative",
+          rules: ["Brief dettagliato e obiettivi chiari fin dall'inizio", "Niente 'facciamo come viene' o 'vedi tu cosa va bene'", "Aspettative realistiche su tempi e risultati", "Collaborazione attiva, non delega totale"]
+        }
+      ],
+      agreement: "Accetto le regole di collaborazione e mi impegno a rispettarle",
+      close: "Chiudi"
+    },
+    form: {
+      steps: {
+        personal: "Info Personali",
+        project: "Il Progetto",
+        budget: "Budget & Tempi",
+        rules: "Regole"
+      },
+      step1: {
+        title: "Parlami di te",
+        name: "Nome e Cognome",
+        email: "Email",
+        company: "Azienda (opzionale)",
+        role: "Il tuo ruolo"
+      },
+      step2: {
+        title: "Il tuo progetto",
+        type: "Tipo di progetto",
+        typeOptions: {
+          new: "Nuovo sito web",
+          redesign: "Redesign sito esistente",
+          maintenance: "Manutenzione/Aggiornamenti",
+          seo: "Solo SEO",
+          other: "Altro"
+        },
+        description: "Descrivi il progetto",
+        goals: "Obiettivi principali"
+      },
+      step3: {
+        title: "Budget e tempistiche",
+        budget: "Budget disponibile",
+        budgetOptions: {
+          under1500: "Sotto €1.500",
+          range1500: "€1.500 - €3.000",
+          range3000: "€3.000 - €5.000",
+          over5000: "Oltre €5.000",
+          discuss: "Da discutere"
+        },
+        timeline: "Quando ti serve il progetto?",
+        timelineOptions: {
+          asap: "Il prima possibile",
+          month1: "Entro 1 mese",
+          month3: "Entro 3 mesi",
+          flexible: "Flessibile"
+        }
+      },
+      step4: {
+        title: "Conferma finale",
+        rulesAccepted: "Ho letto e accetto le regole di collaborazione",
+        dataProcessing: "Acconsento al trattamento dei dati personali per la valutazione della richiesta",
+        submit: "Invia Richiesta"
+      },
+      navigation: {
+        next: "Avanti",
+        prev: "Indietro",
+        submit: "Invia"
+      }
+    }
+  },
   pageNotFound: {
     title: "404",
     description: "La pagina che stai cercando non esiste o si è verificato un altro errore.",

@@ -83,107 +83,134 @@ export default {
     subtitle: "Il tuo business merita una presenza digitale che faccia davvero la differenza. Realizzo siti veloci e moderni per realtà ambiziose come la tua.",
     button: "Inizia ora"
   },
-  contact: {
-    badge: "Contatti",
-    title: "Lavoriamo insieme",
-    subtitle: "Prima di iniziare, è importante capire se siamo la coppia giusta per collaborare.",
-    formTitle: "Richiesta di Collaborazione",
-    formSubtitle: "Compila il modulo per valutare se possiamo lavorare insieme",
-    rulesButton: "Leggi le Regole di Collaborazione",
-    rulesRequired: "Devi leggere e accettare le regole prima di procedere",
-    startButton: "Inizia la Richiesta",
-    contacts: {
-      title: "Altri Modi per Contattarmi",
-      subtitle: "Per richieste di lavoro, utilizza esclusivamente il modulo sopra. Per tutto il resto:",
-      email: "Email generale",
-      social: "Social network"
-    },
-    rules: {
-      title: "🤝 Regole di Collaborazione",
-      subtitle: "Per lavorare insieme nel modo migliore, è fondamentale che entrambi rispettiamo alcune regole base.",
-      sections: [
-        {
-          title: "💰 Pagamenti e Budget",
-          rules: ["Acconto del 50% richiesto prima di iniziare qualsiasi progetto", "Budget minimo di €1.500 per progetti web completi", "Pagamenti puntuali secondo le scadenze concordate", "Nessuna modifica al prezzo una volta firmato il contratto"]
-        },
-        {
-          title: "📅 Tempistiche e Deadline",
-          rules: ["Le tempistiche vengono concordate all'inizio e rispettate da entrambe le parti", "Ritardi nei feedback del cliente comportano slittamento delle deadline", "Modifiche sostanziali al progetto possono comportare costi aggiuntivi", "Revisioni illimitate solo per quanto concordato nel brief iniziale"]
-        },
-        {
-          title: "🗣️ Comunicazione",
-          rules: ["Comunicazione professionale e rispettosa sempre", "Risposte entro 48 ore lavorative massimo", "Feedback specifici e costruttivi, non generici", "Un solo canale di comunicazione concordato (email, WhatsApp, etc.)"]
-        },
-        {
-          title: "🎯 Obiettivi e Aspettative",
-          rules: ["Brief dettagliato e obiettivi chiari fin dall'inizio", "Niente 'facciamo come viene' o 'vedi tu cosa va bene'", "Aspettative realistiche su tempi e risultati", "Collaborazione attiva, non delega totale"]
-        }
-      ],
-      agreement: "Accetto le regole di collaborazione e mi impegno a rispettarle",
-      close: "Chiudi"
-    },
-    form: {
-      steps: {
-        personal: "Info Personali",
-        project: "Il Progetto",
-        budget: "Budget & Tempi",
-        rules: "Regole"
-      },
-      step1: {
-        title: "Parlami di te",
-        name: "Nome e Cognome",
-        email: "Email",
-        company: "Azienda (opzionale)",
-        role: "Il tuo ruolo"
-      },
-      step2: {
-        title: "Il tuo progetto",
-        type: "Tipo di progetto",
-        typeOptions: {
-          new: "Nuovo sito web",
-          redesign: "Redesign sito esistente",
-          maintenance: "Manutenzione/Aggiornamenti",
-          seo: "Solo SEO",
-          other: "Altro"
-        },
-        description: "Descrivi il progetto",
-        goals: "Obiettivi principali"
-      },
-      step3: {
-        title: "Budget e tempistiche",
-        budget: "Budget disponibile",
-        budgetOptions: {
-          under1500: "Sotto €1.500",
-          range1500: "€1.500 - €3.000",
-          range3000: "€3.000 - €5.000",
-          over5000: "Oltre €5.000",
-          discuss: "Da discutere"
-        },
-        timeline: "Quando ti serve il progetto?",
-        timelineOptions: {
-          asap: "Il prima possibile",
-          month1: "Entro 1 mese",
-          month3: "Entro 3 mesi",
-          flexible: "Flessibile"
-        }
-      },
-      step4: {
-        title: "Conferma finale",
-        rulesAccepted: "Ho letto e accetto le regole di collaborazione",
-        dataProcessing: "Acconsento al trattamento dei dati personali per la valutazione della richiesta",
-        submit: "Invia Richiesta"
-      },
-      navigation: {
-        next: "Avanti",
-        prev: "Indietro",
-        submit: "Invia"
-      }
-    }
-  },
   pageNotFound: {
     title: "404",
     description: "La pagina che stai cercando non esiste o si è verificato un altro errore.",
     button: "Torna alla home"
+  },
+  contact: {
+    landing: {
+      badge: "Contattami",
+      title: "Iniziamo a lavorare insieme",
+      subtitle: "Raccontami il tuo progetto e troviamo insieme la soluzione ideale per il tuo business."
+    },
+    rules: {
+      button: "Leggi le condizioni",
+      modalTitle: "Regole di collaborazione",
+      sections: [
+        {
+          title: "Comunicazione professionale",
+          rules: ["Rispetto reciproco e comunicazione cortese", "Risposta alle email entro 48 ore lavorative", "Briefing dettagliato con obiettivi chiari", "Feedback costruttivo e specifico"]
+        },
+        {
+          title: "Gestione del progetto",
+          rules: ["Tempistiche realistiche concordate insieme", "Massimo 3 revisioni per ogni fase del progetto", "Pagamento di un acconto del 50% prima dell'inizio", "Saldo finale prima della consegna"]
+        },
+        {
+          title: "Aspettative allineate",
+          rules: ["Budget definito fin dall'inizio", "Modifiche sostanziali comportano costi aggiuntivi", "I contenuti sono responsabilità del cliente", "Il codice sorgente rimane di proprietà del cliente"]
+        }
+      ],
+      checkbox: "Ho letto e accetto le regole di collaborazione",
+      continue: "Continua",
+      close: "Chiudi"
+    },
+    form: {
+      introBox: {
+        title: "Modulo richiesta progetto",
+        description: "Tutte le richieste di progetto devono essere inviate tramite questo modulo. Non accetto progetti tramite email o altri canali per garantire una gestione efficiente e trasparente.",
+        important: "Importante:",
+        requirements: "È necessario leggere e accettare le condizioni prima di compilare il modulo."
+      },
+      steps: {
+        project: "1. Progetto",
+        details: "2. Dettagli",
+        budget: "3. Budget e Tempistiche",
+        contact: "4. Contatti",
+        terms: "5. Condizioni"
+      },
+      step1: {
+        title: "Che tipo di progetto hai in mente?",
+        options: ["Nuovo sito web", "Redesign di un sito esistente", "E-commerce", "Web app", "Landing page", "SEO e ottimizzazione", "Altro"]
+      },
+      step2: {
+        title: "Raccontami di più sul tuo progetto",
+        description: {
+          label: "Descrizione del progetto",
+          placeholder: "Descrivi il tuo progetto, i tuoi obiettivi e cosa ti aspetti..."
+        },
+        domain: {
+          label: "Hai già un dominio?",
+          options: ["Sì", "No", "Non so cosa sia"]
+        },
+        content: {
+          label: "Hai già pronti i contenuti (testi, immagini, logo)?",
+          options: ["Sì, tutto pronto", "In parte", "No, devo ancora prepararli"]
+        },
+        style: {
+          label: "Hai in mente un riferimento estetico o uno stile preciso?",
+          placeholder: "Link o descrizione..."
+        }
+      },
+      step3: {
+        title: "Budget e Tempistiche",
+        budget: {
+          label: "Budget indicativo per il progetto:",
+          options: ["< 500€", "500€ - 1000€", "1000€ - 2000€", "Oltre 2000€"]
+        },
+        timeline: {
+          label: "Tempistiche desiderate:",
+          options: ["Flessibili", "Entro 30 giorni", "Urgente (si applicano maggiorazioni)"]
+        }
+      },
+      step4: {
+        title: "Contatti",
+        name: {
+          label: "Nome e Cognome / Nome Azienda",
+          placeholder: "Mario Rossi / Azienda XYZ"
+        },
+        email: {
+          label: "Email di contatto",
+          placeholder: "mario@example.com"
+        },
+        phone: {
+          label: "Telefono (facoltativo)",
+          placeholder: "+39 123 456 7890"
+        }
+      },
+      step5: {
+        title: "Condizioni",
+        terms: {
+          label: "Hai letto e accettato i miei Termini di Collaborazione?",
+          options: ["Sì, e li rispetto", "No (in tal caso, non procederò con il progetto)"]
+        },
+        expectations: {
+          label: "Cosa ti aspetti da questa collaborazione?",
+          placeholder: "Campo libero per far emergere eventuali rischi o illusioni..."
+        },
+        notes: {
+          label: "Altre note facoltative",
+          placeholder: "Aggiungi eventuali note o richieste specifiche..."
+        }
+      },
+      buttons: {
+        next: "Continua",
+        previous: "Indietro",
+        submit: "Invia richiesta"
+      }
+    },
+    sidebar: {
+      progress: "Progresso",
+      email: {
+        title: "Email",
+        subtitle: "Hai dubbi o domande?",
+        button: "Scrivimi"
+      },
+      social: {
+        title: "Social",
+        subtitle: "Seguimi sui social network"
+      }
+    }
   },
   footer: {
     brand: "davidelamarca",

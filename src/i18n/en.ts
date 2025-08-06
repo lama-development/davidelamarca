@@ -83,107 +83,134 @@ export default {
     subtitle: "Your business deserves a digital presence that truly makes a difference. I create fast and modern websites for ambitious businesses like yours.",
     button: "Get started"
   },
-  contact: {
-    badge: "Contact",
-    title: "Let's work together",
-    subtitle: "Before we start, it's important to understand if we're the right match for collaboration.",
-    formTitle: "Collaboration Request",
-    formSubtitle: "Fill out the form to assess if we can work together",
-    rulesButton: "Read Collaboration Rules",
-    rulesRequired: "You must read and accept the rules before proceeding",
-    startButton: "Start Request",
-    contacts: {
-      title: "Other Ways to Contact Me",
-      subtitle: "For work requests, use exclusively the form above. For everything else:",
-      email: "General email",
-      social: "Social networks"
-    },
-    rules: {
-      title: "🤝 Collaboration Rules",
-      subtitle: "To work together in the best way, it's essential that we both respect some basic rules.",
-      sections: [
-        {
-          title: "💰 Payments and Budget",
-          rules: ["50% down payment required before starting any project", "Minimum budget of €1,500 for complete web projects", "Timely payments according to agreed deadlines", "No price changes once the contract is signed"]
-        },
-        {
-          title: "📅 Timelines and Deadlines",
-          rules: ["Timelines are agreed upon at the beginning and respected by both parties", "Delays in client feedback result in deadline extensions", "Substantial project changes may incur additional costs", "Unlimited revisions only for what's agreed in the initial brief"]
-        },
-        {
-          title: "🗣️ Communication",
-          rules: ["Professional and respectful communication always", "Responses within 48 business hours maximum", "Specific and constructive feedback, not generic", "One agreed communication channel only (email, WhatsApp, etc.)"]
-        },
-        {
-          title: "🎯 Goals and Expectations",
-          rules: ["Detailed brief and clear objectives from the start", "No 'let's see how it goes' or 'you decide what's good'", "Realistic expectations about timing and results", "Active collaboration, not total delegation"]
-        }
-      ],
-      agreement: "I accept the collaboration rules and commit to respecting them",
-      close: "Close"
-    },
-    form: {
-      steps: {
-        personal: "Personal Info",
-        project: "The Project",
-        budget: "Budget & Timing",
-        rules: "Rules"
-      },
-      step1: {
-        title: "Tell me about yourself",
-        name: "Full Name",
-        email: "Email",
-        company: "Company (optional)",
-        role: "Your role"
-      },
-      step2: {
-        title: "Your project",
-        type: "Project type",
-        typeOptions: {
-          new: "New website",
-          redesign: "Website redesign",
-          maintenance: "Maintenance/Updates",
-          seo: "SEO only",
-          other: "Other"
-        },
-        description: "Describe the project",
-        goals: "Main objectives"
-      },
-      step3: {
-        title: "Budget and timelines",
-        budget: "Available budget",
-        budgetOptions: {
-          under1500: "Under €1,500",
-          range1500: "€1,500 - €3,000",
-          range3000: "€3,000 - €5,000",
-          over5000: "Over €5,000",
-          discuss: "To discuss"
-        },
-        timeline: "When do you need the project?",
-        timelineOptions: {
-          asap: "As soon as possible",
-          month1: "Within 1 month",
-          month3: "Within 3 months",
-          flexible: "Flexible"
-        }
-      },
-      step4: {
-        title: "Final confirmation",
-        rulesAccepted: "I have read and accept the collaboration rules",
-        dataProcessing: "I consent to the processing of personal data for request evaluation",
-        submit: "Send Request"
-      },
-      navigation: {
-        next: "Next",
-        prev: "Back",
-        submit: "Send"
-      }
-    }
-  },
   pageNotFound: {
     title: "404",
     description: "The page you're looking for doesn't exist or another error occurred.",
     button: "Return home"
+  },
+  contact: {
+    landing: {
+      badge: "Contact",
+      title: "Let's work together",
+      subtitle: "Tell me about your project and let's find the perfect solution for your business."
+    },
+    rules: {
+      button: "Read the conditions",
+      modalTitle: "Collaboration rules",
+      sections: [
+        {
+          title: "Professional communication",
+          rules: ["Mutual respect and courteous communication", "Email response within 48 business hours", "Detailed briefing with clear objectives", "Constructive and specific feedback"]
+        },
+        {
+          title: "Project management",
+          rules: ["Realistic timelines agreed together", "Maximum 3 revisions per project phase", "50% down payment before starting", "Final payment before delivery"]
+        },
+        {
+          title: "Aligned expectations",
+          rules: ["Budget defined from the beginning", "Substantial changes incur additional costs", "Content is the client's responsibility", "Source code remains client property"]
+        }
+      ],
+      checkbox: "I have read and agree to the collaboration rules",
+      continue: "Continue",
+      close: "Close"
+    },
+    form: {
+      introBox: {
+        title: "Project request form",
+        description: "All project requests must be submitted through this form. I don't accept projects via email or other channels to ensure efficient and transparent management.",
+        important: "Important:",
+        requirements: "You must read and accept the conditions before filling out the form."
+      },
+      steps: {
+        project: "1. Project",
+        details: "2. Details",
+        budget: "3. Budget & Timeline",
+        contact: "4. Contact",
+        terms: "5. Terms"
+      },
+      step1: {
+        title: "What type of project do you have in mind?",
+        options: ["New website", "Redesign existing site", "E-commerce", "Web app", "Landing page", "SEO & optimization", "Other"]
+      },
+      step2: {
+        title: "Tell me more about your project",
+        description: {
+          label: "Project description",
+          placeholder: "Describe your project, your goals and what you expect..."
+        },
+        domain: {
+          label: "Do you already have a domain?",
+          options: ["Yes", "No", "I don't know what it is"]
+        },
+        content: {
+          label: "Do you already have content ready (texts, images, logo)?",
+          options: ["Yes, everything ready", "Partially", "No, I still need to prepare them"]
+        },
+        style: {
+          label: "Do you have an aesthetic reference or specific style in mind?",
+          placeholder: "Link or description..."
+        }
+      },
+      step3: {
+        title: "Budget & Timeline",
+        budget: {
+          label: "Indicative project budget:",
+          options: ["< 500€", "500€ – 1000€", "1000€ – 2000€", "Over 2000€"]
+        },
+        timeline: {
+          label: "Desired timeline:",
+          options: ["Flexible", "Within 30 days", "Urgent (surcharges apply)"]
+        }
+      },
+      step4: {
+        title: "Contact",
+        name: {
+          label: "Full Name / Company Name",
+          placeholder: "John Doe / XYZ Company"
+        },
+        email: {
+          label: "Contact email",
+          placeholder: "john@example.com"
+        },
+        phone: {
+          label: "Phone (optional)",
+          placeholder: "+1 123 456 7890"
+        }
+      },
+      step5: {
+        title: "Terms",
+        terms: {
+          label: "Have you read and accepted my Collaboration Terms?",
+          options: ["Yes, and I respect them", "No (in this case, I won't proceed with the project)"]
+        },
+        expectations: {
+          label: "What do you expect from this collaboration?",
+          placeholder: "Free field to highlight any risks or illusions..."
+        },
+        notes: {
+          label: "Other optional notes",
+          placeholder: "Add any notes or specific requests..."
+        }
+      },
+      buttons: {
+        next: "Continue",
+        previous: "Back",
+        submit: "Send request"
+      }
+    },
+    sidebar: {
+      progress: "Progress",
+      email: {
+        title: "Email",
+        subtitle: "Prefer a direct email?",
+        button: "Email me"
+      },
+      social: {
+        title: "Social",
+        subtitle: "Follow me on social media"
+      }
+    }
   },
   footer: {
     brand: "davidelamarca",

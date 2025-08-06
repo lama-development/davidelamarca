@@ -1,17 +1,23 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import ContactHero from "../components/contact/ContactHero.astro";
-import ContactForm from "../components/contact/ContactForm.astro";
-import ContactInfo from "../components/contact/ContactInfo.astro";
-import WorkProcess from "../components/contact/WorkProcess.astro";
-import ContactCTA from "../components/contact/ContactCTA.astro";
+import Landing from "../components/contact/Landing.astro";
+import Form from "../components/contact/Form.astro";
+import Sidebar from "../components/contact/Sidebar.astro";
 import t from "../i18n/it";
 ---
 
 <Layout t={t}>
-  <ContactHero badge={t.contact.badge} title={t.contact.title} subtitle={t.contact.subtitle} />
-  <ContactForm formTitle={t.contact.formTitle} formSubtitle={t.contact.formSubtitle} rulesButton={t.contact.rulesButton} rulesRequired={t.contact.rulesRequired} startButton={t.contact.startButton} form={t.contact.form} rules={t.contact.rules} />
-  <ContactInfo contacts={t.contact.contacts} />
-  <WorkProcess />
-  <ContactCTA />
+  <Landing {...t.contact.landing} />
+  <section class="px-6">
+    <div class="mx-auto max-w-7xl">
+      <div class="grid gap-12 lg:grid-cols-3">
+        <div class="lg:col-span-2">
+          <Form {...t.contact} />
+        </div>
+        <div class="lg:col-span-1">
+          <Sidebar {...t.contact.sidebar} form={t.contact.form} />
+        </div>
+      </div>
+    </div>
+  </section>
 </Layout>

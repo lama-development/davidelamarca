@@ -1,4 +1,4 @@
-export default {
+export default (langPrefix = "") => ({
   lang: "it",
   meta: {
     title: "Davide La Marca - Siti Web & SEO"
@@ -59,15 +59,15 @@ export default {
       questions: [
         {
           question: "Quanto costa un sito web professionale?",
-          answer: "Il costo di un sito web dipende da molti fattori: complessità, funzionalità richieste, tempistiche e obiettivi. Ogni progetto viene valutato individualmente in base alle tue esigenze. <a href='/contact' aria-label='Apri pagina contatti' class='text-sky-600 hover:underline dark:text-sky-400'>Contattami</a> per ricevere un preventivo personalizzato."
+          answer: `Il costo di un sito web dipende da molti fattori: complessità, funzionalità richieste, tempistiche e obiettivi. Ogni progetto viene valutato individualmente in base alle tue esigenze. <a href='${langPrefix}/contact' aria-label='Apri pagina contatti' class='text-sky-600 hover:underline dark:text-sky-400'>Contattami</a> per ricevere un preventivo personalizzato.`
         },
         {
           question: "Quanto tempo serve per realizzare un sito web?",
-          answer: "I tempi di realizzazione variano in base alla complessità del progetto. Un sito vetrina può richiedere 3-4 settimane, mentre progetti più complessi con funzionalità avanzate possono richiedere 2-3 mesi o più. Ti fornirò sempre una tempistica chiara all'inizio del progetto. Puoi vedere esempi di lavori già completati nella sezione <a href='/#projects' aria-label='Vai alla sezione progetti' class='text-sky-600 hover:underline dark:text-sky-400'>Progetti</a>."
+          answer: `I tempi di realizzazione variano in base alla complessità del progetto. Un sito vetrina può richiedere 3-4 settimane, mentre progetti più complessi con funzionalità avanzate possono richiedere 2-3 mesi o più. Ti fornirò sempre una tempistica chiara all'inizio del progetto. Puoi vedere esempi di lavori già completati nella pagina <a href='${langPrefix}/projects' aria-label='Vai alla pagina progetti' class='text-sky-600 hover:underline dark:text-sky-400'>Progetti</a>.`
         },
         {
           question: "Offri servizi di manutenzione dopo il lancio?",
-          answer: "Sì, offro un servizio di manutenzione per garantire che il tuo sito rimanga sicuro, aggiornato e performante nel tempo. Questo include aggiornamenti di sicurezza, backup regolari, e assistenza tecnica. <a href='/contact' aria-label='Apri pagina contatti' class='text-sky-600 hover:underline dark:text-sky-400'>Contattami</a> per maggiori dettagli."
+          answer: `Sì, offro un servizio di manutenzione per garantire che il tuo sito rimanga sicuro, aggiornato e performante nel tempo. Questo include aggiornamenti di sicurezza, backup regolari, e assistenza tecnica. <a href='${langPrefix}/contact' aria-label='Apri pagina contatti' class='text-sky-600 hover:underline dark:text-sky-400'>Contattami</a> per maggiori dettagli.`
         },
         {
           question: "Il sito sarà ottimizzato per i motori di ricerca?",
@@ -251,4 +251,4 @@ export default {
       email: "Invia email"
     }
   }
-};
+});

@@ -2,7 +2,7 @@
 import { Image } from "astro:assets";
 import projectImg1 from "../../img/sorrento-boat-trips.png";
 import projectImg2 from "../../img/skillbridge.png";
-const { badge, title, subtitle, project1, project2, button } = Astro.props;
+const { badge, title, subtitle, button, project1, project2, aria } = Astro.props;
 const langPrefix = Astro.url.pathname.startsWith("/en") ? "/en" : "";
 ---
 
@@ -21,7 +21,7 @@ const langPrefix = Astro.url.pathname.startsWith("/en") ? "/en" : "";
     <div class="grid gap-8 md:grid-cols-2">
       <div class="overflow-hidden rounded-4xl border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-900">
         <div class="flex aspect-video items-center justify-center bg-neutral-200 dark:bg-neutral-800">
-          <a href="/">
+          <a href="/" aria-label={aria.image1}>
             <Image src={projectImg1} alt="" />
           </a>
         </div>
@@ -47,7 +47,7 @@ const langPrefix = Astro.url.pathname.startsWith("/en") ? "/en" : "";
       </div>
       <div class="overflow-hidden rounded-4xl border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-900">
         <div class="flex aspect-video items-center justify-center bg-neutral-200 dark:bg-neutral-800">
-          <a href="/">
+          <a href="/" aria-label={aria.image2}>
             <Image src={projectImg2} alt="" />
           </a>
         </div>

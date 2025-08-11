@@ -2,7 +2,7 @@
 import "../styles/global.css";
 import Navbar from "../components/common/Navbar.astro";
 import Footer from "../components/common/Footer.astro";
-const { t, hideFooter = false } = Astro.props;
+const { t, meta, hideFooter = false } = Astro.props;
 ---
 
 <!doctype html>
@@ -12,7 +12,8 @@ const { t, hideFooter = false } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>{t.meta.title}</title>
+    <title>{meta.title}</title>
+    <meta name="description" content={meta.description} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet" />

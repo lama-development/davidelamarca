@@ -5,6 +5,6 @@ import translation from "../../i18n/en";
 const t = translation("/en");
 ---
 
-<Layout t={t} hideFooter={true}>
+<Layout t={t} meta={t.pageNotFound.meta} hideFooter={true}>
   <PageNotFound {...t.pageNotFound} />
 </Layout>

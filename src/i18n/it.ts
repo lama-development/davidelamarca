@@ -1,8 +1,5 @@
 export default (langPrefix = "") => ({
   lang: "it",
-  meta: {
-    title: "Davide La Marca - Siti Web & SEO"
-  },
   navbar: {
     brand: "davidelamarca",
     page1: "Home",
@@ -13,6 +10,10 @@ export default (langPrefix = "") => ({
     }
   },
   home: {
+    meta: {
+      title: "Davide La Marca - Siti Web & SEO",
+      description: "Sviluppo siti web moderni, veloci e ottimizzati SEO per far crescere la tua presenza online."
+    },
     hero: {
       badge: "Freelance Web Developer",
       title1: "Nuovo sito,",
@@ -50,6 +51,10 @@ export default (langPrefix = "") => ({
         type: "Web app",
         description: "Web app completa che connette freelancer e aziende: post di lavoro, ricerca avanzata, chat in tempo reale e profili personalizzati.",
         button: "Vedi progetto"
+      },
+      aria: {
+        image1: "Screenshot del sito web Sorrento Boat Trips, mostrando l'homepage con design moderno e sistema di prenotazione",
+        image2: "Screenshot della web app SkillBridge, mostrando l'interfaccia per freelancer con ricerca lavori e chat"
       }
     },
     faq: {
@@ -86,6 +91,10 @@ export default (langPrefix = "") => ({
     }
   },
   contact: {
+    meta: {
+      title: "Contattami - Davide La Marca",
+      description: "Raccontami il tuo progetto e scopri come possiamo lavorare insieme per realizzare il sito che meriti."
+    },
     landing: {
       badge: "Contattami",
       title: "Iniziamo a lavorare insieme",
@@ -230,6 +239,10 @@ export default (langPrefix = "") => ({
     }
   },
   pageNotFound: {
+    meta: {
+      title: "Pagina Non Trovata - Davide La Marca",
+      description: "La pagina che stai cercando non esiste o si è verificato un altro errore. Torna alla home per continuare la navigazione."
+    },
     title: "404",
     description: "La pagina che stai cercando non esiste o si è verificato un altro errore.",
     button: "Torna alla home"

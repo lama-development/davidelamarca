@@ -1,8 +1,5 @@
 export default (langPrefix = "") => ({
   lang: "en",
-  meta: {
-    title: "Davide La Marca - Websites & SEO"
-  },
   navbar: {
     brand: "davidelamarca",
     page1: "Home",
@@ -13,6 +10,10 @@ export default (langPrefix = "") => ({
     }
   },
   home: {
+    meta: {
+      title: "Davide La Marca - Websites & SEO",
+      description: "I build modern, fast, and SEO-optimized websites to grow your online presence."
+    },
     hero: {
       badge: "Freelance Web Developer",
       title1: "New website,",
@@ -50,6 +51,10 @@ export default (langPrefix = "") => ({
         type: "Web app",
         description: "Fully functional web app connecting freelancers and companies: job posts, advanced search, real-time chat, and customizable profiles.",
         button: "View project"
+      },
+      aria: {
+        image1: "Screenshot of Sorrento Boat Trips website showing homepage with modern design and booking system",
+        image2: "Screenshot of SkillBridge web app showing freelancer interface with job search and chat features"
       }
     },
     faq: {
@@ -86,6 +91,10 @@ export default (langPrefix = "") => ({
     }
   },
   contact: {
+    meta: {
+      title: "Get in Touch - Davide La Marca",
+      description: "Tell me about your project and let's work together to create the website you deserve."
+    },
     landing: {
       badge: "Contact",
       title: "Let's work together",
@@ -230,6 +239,10 @@ export default (langPrefix = "") => ({
     }
   },
   pageNotFound: {
+    meta: {
+      title: "Page Not Found - Davide La Marca",
+      description: "The page you're looking for doesn't exist or another error occurred. Return to the homepage to keep browsing."
+    },
     title: "404",
     description: "The page you're looking for doesn't exist or another error occurred.",
     button: "Return home"

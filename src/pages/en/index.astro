@@ -9,7 +9,7 @@ import translation from "../../i18n/en";
 const t = translation("/en");
 ---
 
-<Layout t={t}>
+<Layout t={t} meta={t.home.meta}>
   <Hero {...t.home.hero} />
   <Services {...t.home.services} />
   <Projects {...t.home.projects} />

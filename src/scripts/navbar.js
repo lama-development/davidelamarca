@@ -17,10 +17,10 @@ document.addEventListener("DOMContentLoaded", function () {
       // Rotate chevron and toggle active state based on menu state
       if (isHidden) {
         chevronIcon.style.transform = "rotate(180deg)";
-        menuButton.classList.add("bg-gray-100", "dark:bg-gray-900");
+        menuButton.classList.add("bg-neutral-100", "dark:bg-neutral-800");
       } else {
         chevronIcon.style.transform = "rotate(0deg)";
-        menuButton.classList.remove("bg-gray-100", "dark:bg-gray-900");
+        menuButton.classList.remove("bg-neutral-100", "dark:bg-neutral-800");
       }
     });
 
@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
         mobileMenu.classList.add("hidden");
         overlay.classList.add("hidden");
         chevronIcon.style.transform = "rotate(0deg)";
-        menuButton.classList.remove("bg-gray-100", "dark:bg-gray-900");
+        menuButton.classList.remove("bg-neutral-100", "dark:bg-neutral-800");
       }
     });
 
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
         mobileMenu.classList.add("hidden");
         overlay.classList.add("hidden");
         chevronIcon.style.transform = "rotate(0deg)";
-        menuButton.classList.remove("bg-gray-100", "dark:bg-gray-900");
+        menuButton.classList.remove("bg-neutral-100", "dark:bg-neutral-800");
       });
     });
   }
@@ -63,14 +63,14 @@ function setActiveNavLink() {
 
   // Remove active classes from all links first
   [...navLinks, ...mobileLinks].forEach((link) => {
-    link.classList.remove("bg-gray-100", "dark:bg-gray-900");
+    link.classList.remove("bg-neutral-100", "dark:bg-neutral-800");
   });
 
   // Add active classes to current page links
   [...navLinks, ...mobileLinks].forEach((link) => {
     const href = link.getAttribute("href");
     if (href === currentPath || (currentPath === "/" && href === "/")) {
-      link.classList.add("bg-gray-100", "dark:bg-gray-900");
+      link.classList.add("bg-neutral-100", "dark:bg-neutral-800");
     }
   });
 }

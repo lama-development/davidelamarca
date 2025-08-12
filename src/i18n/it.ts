@@ -42,13 +42,11 @@ export default (langPrefix = "") => ({
       button: "Vedi tutti i progetti",
       project1: {
         title: "Sorrento Boat Trips",
-        type: "Sito web",
         description: "Sito web moderno per un'agenzia di tour privati a Sorrento, con sistema di prenotazione online integrato tramite FareHarbor.",
         button: "Vedi progetto"
       },
       project2: {
         title: "SkillBridge",
-        type: "Web app",
         description: "Web app completa che connette freelancer e aziende: post di lavoro, ricerca avanzata, chat in tempo reale e profili personalizzati.",
         button: "Vedi progetto"
       },

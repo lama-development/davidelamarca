@@ -2,7 +2,7 @@
 import "../styles/global.css";
 import Navbar from "../components/common/Navbar.astro";
 import Footer from "../components/common/Footer.astro";
-const { t, meta, hideFooter = false } = Astro.props;
+const { t, meta = false, scripts = [] } = Astro.props;
 ---
 
 <!doctype html>
@@ -21,10 +21,11 @@ const { t, meta, hideFooter = false } = Astro.props;
     <script src="/src/scripts/theme.js"></script>
     <script src="/src/scripts/language.js"></script>
     <script src="/src/scripts/contact.js"></script>
+    <script src="/src/scripts/faq.js"></script>
   </head>
   <body class="bg-white dark:bg-black">
     <Navbar {...t.navbar} />
     <slot />
-    {!hideFooter && <Footer {...t.footer} />}
+    <Footer {...t.footer} />
   </body>
 </html>

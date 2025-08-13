@@ -93,146 +93,94 @@ export default (langPrefix = "") => ({
       title: "Contattami - Davide La Marca",
       description: "Raccontami il tuo progetto e scopri come possiamo lavorare insieme per realizzare il sito che meriti."
     },
-    landing: {
-      badge: "Contattami",
-      title: "Iniziamo a lavorare insieme",
-      subtitle: "Raccontami il tuo progetto e troviamo insieme la soluzione ideale per il tuo business."
-    },
-    rules: {
-      button: "Leggi le condizioni",
-      modalTitle: "Regole di collaborazione",
-      sections: [
-        {
-          title: "Comunicazione professionale",
-          rules: ["Rispetto reciproco e comunicazione cortese", "Risposta alle email entro 48 ore lavorative", "Briefing dettagliato con obiettivi chiari", "Feedback costruttivo e specifico"]
-        },
-        {
-          title: "Gestione del progetto",
-          rules: ["Tempistiche realistiche concordate insieme", "Massimo 3 revisioni per ogni fase del progetto", "Pagamento di un acconto del 50% prima dell'inizio", "Saldo finale prima della consegna"]
-        },
-        {
-          title: "Aspettative allineate",
-          rules: ["Budget definito fin dall'inizio", "Modifiche sostanziali comportano costi aggiuntivi", "I contenuti sono responsabilità del cliente", "Il codice sorgente rimane di proprietà del cliente"]
-        }
-      ],
-      checkbox: "Ho letto e accetto le regole di collaborazione",
-      continue: "Continua"
-    },
+    badge: "Contattami",
+    title: "Iniziamo il tuo progetto",
+    description: "Raccontami la tua idea e scopriamo insieme come realizzare il sito web che meriti. Compilare questo modulo è il primo passo verso il tuo nuovo sito web.",
     form: {
-      introBox: {
-        title: "Modulo richiesta progetto",
-        description: "Tutte le richieste di progetto devono essere inviate tramite questo modulo. Non accetto progetti tramite email o altri canali per garantire una gestione efficiente e trasparente.",
-        important: "Importante:",
-        requirements: "È necessario leggere e accettare le condizioni prima di compilare il modulo."
-      },
-      steps: {
-        project: "Progetto",
-        details: "Dettagli",
-        budget: "Termini",
-        contact: "Contatti"
-      },
+      stepText: "Passo {current} di {total}",
       step1: {
-        title: "Che tipo di progetto hai in mente?",
-        options: ["Nuovo sito web", "Redesign di un sito esistente", "E-commerce", "Web app", "SEO e ottimizzazione", "Altro"]
+        title: "Regole del Progetto",
+        description: "Prima di procedere, è importante che tu legga e accetti le regole per iniziare un progetto insieme.",
+        rules: ["Tutti i progetti richiedono un deposito iniziale del 50% per iniziare i lavori", "I tempi di consegna sono concordati all'inizio e possono variare in base alla complessità", "Le modifiche sostanziali al progetto originale possono comportare costi aggiuntivi", "La comunicazione avverrà principalmente via email e chiamate programmate", "Il saldo finale è richiesto prima della consegna e pubblicazione del sito"],
+        accept: "Ho letto e accetto le regole del progetto",
+        termsText: "Ti suggerisco di leggere anche i",
+        termsLink: "Termini di Servizio completi",
+        nextButton: "Continua"
       },
       step2: {
-        title: "Raccontami di più sul tuo progetto",
-        description: {
-          label: "Descrizione del progetto",
-          placeholder: "Descrivi il tuo progetto, cosa ti aspetti ed eventuali stili di ispirazione..."
-        },
-        domain: {
-          label: "Hai già un dominio?",
-          options: ["Sì", "No", "Non so cosa sia"]
-        },
-        content: {
-          label: "Hai già pronti i contenuti (testi, immagini, logo)?",
-          options: ["Sì, tutto pronto", "In parte", "No, devo ancora prepararli"]
-        }
-      },
-      step3: {
-        title: "Budget e Tempistiche",
-        budget: {
-          label: "Budget indicativo per il progetto",
-          options: ["< 1000€", "1000€ - 2000€", "2000€ - 3000€", "Oltre 3000€"]
-        },
-        timeline: {
-          label: "Tempistiche desiderate",
-          options: ["Flessibili", "Urgente (si applicano maggiorazioni)"]
-        }
-      },
-      step4: {
-        title: "Contatti",
+        title: "Informazioni di Base",
         name: {
-          label: "Nome e Cognome",
+          label: "Nome e Cognome*",
           placeholder: "Mario Rossi"
         },
         email: {
-          label: "Email di contatto",
-          placeholder: "mario@example.com"
+          label: "Email*",
+          placeholder: "mariorossi@example.com"
+        },
+        company: {
+          label: "Azienda (opzionale)",
+          placeholder: "Nome dell'azienda"
         },
         phone: {
-          label: "Telefono (facoltativo)",
-          placeholder: "+39 123 456 7890"
-        },
-        notes: {
-          label: "Note (facoltativo)",
-          placeholder: "Aggiungi eventuali note o richieste specifiche..."
+          label: "Telefono (opzionale)",
+          placeholder: "+39 123 4567890"
         }
       },
-      buttons: {
-        next: "Continua",
-        previous: "Indietro",
-        submit: "Invia richiesta"
+      step3: {
+        title: "Il Tuo Progetto",
+        projectType: {
+          label: "Che tipo di progetto hai in mente?*",
+          options: ["Nuovo sito web", "Redesign di un sito esistente", "E-commerce", "Web app", "SEO e ottimizzazione", "Altro"]
+        },
+        budget: {
+          label: "Budget indicativo*",
+          options: ["< 1000€", "1000€ - 2000€", "2000€ - 3000€", "Oltre 3000€"]
+        },
+        timeline: {
+          label: "Tempistiche desiderate*",
+          options: ["Urgente (si applicano maggiorazioni)", "Flessibii"]
+        }
       },
-      confirmation: {
-        title: "Conferma invio richiesta",
-        message: "Sei sicuro di voler inviare questa richiesta di progetto? Una volta inviata non sarà più possibile modificarla.",
-        confirm: "Sì, invia",
-        cancel: "Annulla"
+      step4: {
+        title: "Dettagli del Progetto",
+        message: {
+          label: "Descrivi il tuo progetto*",
+          placeholder: "Raccontami della tua idea, cosa vorresti ottenere, quale è il tuo settore di business, hai già un sito esistente da rinnovare, esempi di siti che ti piacciono, funzionalità specifiche che desideri, ecc."
+        },
+        inspiration: {
+          label: "Siti web che ti ispirano (opzionale)",
+          placeholder: "Link a siti che ti piacciono o che rappresentano lo stile che vorresti"
+        },
+        hasDesign: {
+          label: "Hai già un design o logo?",
+          options: ["Sì, ho già tutto", "Ho solo il logo", "Ho alcune idee", "No, serve tutto da zero"]
+        }
+      },
+      navigation: {
+        next: "Avanti",
+        submit: "Invia"
+      },
+      validation: {
+        required: "Questo campo è obbligatorio",
+        email: "Inserisci un indirizzo email valido",
+        acceptTerms: "Devi accettare le regole del progetto per continuare"
       },
       success: {
-        title: "Richiesta inviata con successo!",
-        message: "Grazie per aver inviato la tua richiesta di progetto. Se accetterò la proposta, ti contatterò tramite l'email fornita.",
-        backButton: "Torna alla home"
-      },
-      errors: {
-        title: "Errore nella compilazione del modulo",
-        step1: "Seleziona il tipo di progetto",
-        step2: {
-          description: "La descrizione del progetto è obbligatoria",
-          domain: "Indica se hai già un dominio",
-          content: "Indica la disponibilità dei contenuti"
-        },
-        step3: {
-          budget: "Seleziona un budget indicativo",
-          timeline: "Indica le tempistiche desiderate"
-        },
-        step4: {
-          name: "Il nome è obbligatorio",
-          email: "Inserisci un'email valida",
-          phone: "Il numero di telefono non è valido",
-          notes: "Le note sono obbligatorie"
-        }
+        title: "Richiesta Inviata!",
+        message: "Grazie per la tua richiesta. Ti risponderò entro 24 ore con maggiori dettagli e possibili domande di approfondimento.",
+        backHome: "Torna alla home",
+        sendEmail: "Invia Email Diretta"
       }
     },
-    sidebar: {
-      progress: "Progresso",
+    alternative: {
+      title: "Altri modi per contattarmi",
       email: {
-        title: "Email",
-        subtitle: "Hai dubbi o domande?",
-        button: "Scrivimi"
+        title: "Email per domande generali",
+        description: "Solo per domande generali, non per richieste di progetto",
+        address: "ciao@davidelamarca.it"
       },
       social: {
-        title: "Social",
-        subtitle: "Seguimi sui social network"
-      },
-      aria: {
-        email: "Invia email",
-        linkedin: "Apri profilo LinkedIn",
-        github: "Apri profilo GitHub",
-        dribbble: "Apri profilo Dribbble",
-        resume: "Vedi CV Online"
+        title: "I miei social"
       }
     }
   },
@@ -249,8 +197,8 @@ export default (langPrefix = "") => ({
     brand: "davidelamarca",
     page1: "Termini di Servizio",
     page2: "Privacy Policy",
-    copyright: "Davide La Marca",
-    vat: "P. IVA: 02804090039",
+    copyright: "Davide La Marca.",
+    vat: "P.I. 02804090039",
     aria: {
       system: "Usa il tema di sistema",
       light: "Usa il tema chiaro",

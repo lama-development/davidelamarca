@@ -1,293 +1,220 @@
 ---
-const { rules, form } = Astro.props;
-const langPrefix = Astro.url.pathname.startsWith("/en") ? "/en" : "";
+const { formData } = Astro.props;
 ---
 
-<div class="contact-form-container">
-  <!-- Error Display Box -->
-  <div id="error-display" class="mb-8 hidden rounded-xl border border-red-200 bg-red-50 p-6 dark:border-red-800/50 dark:bg-red-900/20">
-    <div class="flex">
-      <div class="flex-shrink-0">
-        <svg class="h-5 w-5 text-red-500" viewBox="0 0 20 20" fill="currentColor">
-          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path>
-        </svg>
-      </div>
-      <div class="ml-3">
-        <h3 id="error-title" class="text-sm font-semibold text-red-800 dark:text-red-200">Errore nella compilazione del modulo</h3>
-        <div id="error-messages" class="mt-2 text-sm text-red-800 dark:text-red-200">
-          <!-- Error messages will be inserted here by JavaScript -->
-        </div>
-      </div>
-    </div>
-  </div>
-  <div id="form-intro" class="mb-8 rounded-xl border border-neutral-200 bg-white p-6 dark:border-neutral-700 dark:bg-neutral-800">
-    <h3 class="mb-3 text-xl font-semibold tracking-tight text-neutral-900 dark:text-neutral-100">{form.introBox.title}</h3>
-    <p class="mb-6 text-base text-neutral-600 dark:text-neutral-400">{form.introBox.description}</p>
-    <div class="rounded-lg border border-amber-200 bg-amber-50 p-4 dark:border-amber-800/50 dark:bg-amber-900/20">
-      <div class="flex">
-        <div class="flex-shrink-0">
-          <svg class="h-5 w-5 text-amber-500" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"></path>
-          </svg>
-        </div>
-        <div class="ml-3">
-          <p class="text-sm text-amber-800 dark:text-amber-200">
-            <strong>{form.introBox.important}</strong>
-            {form.introBox.requirements}
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="mt-6">
-      <button id="rules-modal-trigger" class="inline-flex cursor-pointer items-center gap-2 rounded-full bg-sky-500 px-6 py-3 text-sm font-semibold tracking-tight text-white transition-colors duration-200 hover:bg-sky-600 sm:px-8 sm:py-4 sm:text-lg dark:text-black">
-        <span>{rules.button}</span>
-      </button>
-    </div>
-  </div>
-  <div id="contact-form" class="mb-8 hidden rounded-xl border border-neutral-200 bg-white p-4 sm:p-6 lg:p-8 dark:border-neutral-700 dark:bg-neutral-800">
-    <form class="space-y-6">
-      <!-- Step 1: Project -->
-      <div class="form-step [&>div+div]:mt-8" id="step-1">
-        <div class="mb-4 sm:mb-6">
-          <h2 class="mb-4 text-xl font-bold tracking-tight text-neutral-900 sm:text-2xl dark:text-neutral-100">{form.step1.title}</h2>
-        </div>
-        <div class="grid gap-3 sm:grid-cols-2">
-          {
-            form.step1.options.map((option) => (
-              <label class="group relative cursor-pointer">
-                <input type="radio" name="project-type" value={option} class="sr-only" />
-                <div class="rounded-xl border border-neutral-200 p-3 transition-all duration-200 group-hover:border-neutral-300 sm:p-4 dark:border-neutral-700 dark:group-hover:border-neutral-600">
-                  <div class="flex items-center space-x-3">
-                    <div class="radio-indicator flex h-5 w-5 items-center justify-center rounded-full border border-neutral-300 transition-all duration-200 dark:border-neutral-600">
-                      <div class="radio-dot h-2 w-2 rounded-full bg-white opacity-0 transition-opacity duration-200 dark:bg-black" />
-                    </div>
-                    <span class="text-sm font-medium text-neutral-900 dark:text-neutral-100">{option}</span>
-                  </div>
-                </div>
-              </label>
-            ))
-          }
-        </div>
-      </div>
-      <!-- Step 2: Details -->
-      <div class="form-step hidden [&>div+div]:mt-6 sm:[&>div+div]:mt-8" id="step-2">
-        <div class="mb-4 sm:mb-6">
-          <h2 class="mb-4 text-xl font-bold tracking-tight text-neutral-900 sm:text-2xl dark:text-neutral-100">{form.step2.title}</h2>
-        </div>
-        <div>
-          <label for="description" class="mb-2 block text-sm font-medium text-neutral-900 dark:text-neutral-100">{form.step2.description.label}</label>
-          <textarea id="description" name="description" rows="4" placeholder={form.step2.description.placeholder} required class="w-full resize-none rounded-xl border border-neutral-200 px-3 py-2 text-neutral-900 placeholder-neutral-500 focus:border-sky-500 focus:ring-1 focus:ring-sky-500 focus:outline-none sm:px-4 sm:py-3 dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-100 dark:placeholder-neutral-400 dark:focus:border-sky-400 dark:focus:ring-sky-400"></textarea>
-        </div>
-        <div>
-          <label class="mb-2 block text-sm font-medium text-neutral-900 dark:text-neutral-100">{form.step2.domain.label}</label>
-          <div class="grid gap-2">
-            {
-              form.step2.domain.options.map((option) => (
-                <label class="group relative cursor-pointer">
-                  <input type="radio" name="domain" value={option} class="sr-only" />
-                  <div class="rounded-lg border border-neutral-200 p-2 transition-all duration-200 group-hover:border-neutral-300 sm:p-3 dark:border-neutral-700 dark:group-hover:border-neutral-600">
-                    <div class="flex items-center space-x-3">
-                      <div class="radio-indicator flex h-4 w-4 items-center justify-center rounded-full border border-neutral-300 transition-all duration-200 dark:border-neutral-600">
-                        <div class="radio-dot h-1.5 w-1.5 rounded-full bg-white opacity-0 transition-opacity duration-200 dark:bg-black" />
-                      </div>
-                      <span class="text-sm font-medium text-neutral-900 dark:text-neutral-100">{option}</span>
-                    </div>
-                  </div>
-                </label>
-              ))
-            }
+<section class="w-full border-b border-neutral-200 bg-neutral-50 px-6 pt-6 pb-16 sm:py-20 dark:border-neutral-800 dark:bg-neutral-950">
+  <div class="mx-auto max-w-4xl">
+    <div id="multi-step-form" class="rounded-2xl border border-neutral-200 bg-white p-6 sm:p-8 md:p-10 dark:border-neutral-800 dark:bg-neutral-900">
+      <form id="contact-form" action="/api/contact" method="POST" data-step-text={formData.stepText} data-submit-text={formData.navigation.submit}>
+        <!-- Step 1: Rules and Terms -->
+        <div id="step-1" class="step-content">
+          <div class="mb-8">
+            <h2 class="mb-4 text-2xl font-bold text-neutral-900 dark:text-neutral-100">{formData.step1.title}</h2>
+            <p class="mb-6 text-neutral-700 dark:text-neutral-300">{formData.step1.description}</p>
           </div>
-        </div>
-        <div>
-          <label class="mb-2 block text-sm font-medium text-neutral-900 dark:text-neutral-100">{form.step2.content.label}</label>
-          <div class="grid gap-2">
-            {
-              form.step2.content.options.map((option) => (
-                <label class="group relative cursor-pointer">
-                  <input type="radio" name="content" value={option} class="sr-only" />
-                  <div class="rounded-lg border border-neutral-200 p-2 transition-all duration-200 group-hover:border-neutral-300 sm:p-3 dark:border-neutral-700 dark:group-hover:border-neutral-600">
-                    <div class="flex items-center space-x-3">
-                      <div class="radio-indicator flex h-4 w-4 items-center justify-center rounded-full border border-neutral-300 transition-all duration-200 dark:border-neutral-600">
-                        <div class="radio-dot h-1.5 w-1.5 rounded-full bg-white opacity-0 transition-opacity duration-200 dark:bg-black" />
-                      </div>
-                      <span class="text-sm font-medium text-neutral-900 dark:text-neutral-100">{option}</span>
-                    </div>
-                  </div>
-                </label>
-              ))
-            }
-          </div>
-        </div>
-      </div>
-      <!-- Step 3: Budget & Timeline -->
-      <div class="form-step hidden [&>div+div]:mt-6 sm:[&>div+div]:mt-8" id="step-3">
-        <div class="mb-4 sm:mb-6">
-          <h2 class="mb-5 text-xl font-bold tracking-tight text-neutral-900 sm:text-2xl dark:text-neutral-100">{form.step3.title}</h2>
-        </div>
-        <div class="space-y-4 sm:space-y-6">
-          <div>
-            <label class="mb-2 block text-sm font-medium text-neutral-900 dark:text-neutral-100">{form.step3.budget.label}</label>
-            <div class="grid gap-2 sm:grid-cols-2">
-              {
-                form.step3.budget.options.map((option) => (
-                  <label class="group relative cursor-pointer">
-                    <input type="radio" name="budget" value={option} class="sr-only" />
-                    <div class="rounded-lg border border-neutral-200 p-2 transition-all duration-200 group-hover:border-neutral-300 sm:p-3 dark:border-neutral-700 dark:group-hover:border-neutral-600">
-                      <div class="flex items-center space-x-3">
-                        <div class="radio-indicator flex h-4 w-4 items-center justify-center rounded-full border border-neutral-300 transition-all duration-200 dark:border-neutral-600">
-                          <div class="radio-dot h-1.5 w-1.5 rounded-full bg-white opacity-0 transition-opacity duration-200 dark:bg-black" />
-                        </div>
-                        <span class="text-sm font-medium text-neutral-900 dark:text-neutral-100">{option}</span>
-                      </div>
-                    </div>
-                  </label>
-                ))
-              }
-            </div>
-          </div>
-          <div>
-            <label class="mb-2 block text-sm font-medium text-neutral-900 dark:text-neutral-100">{form.step3.timeline.label}</label>
-            <div class="grid gap-2">
-              {
-                form.step3.timeline.options.map((option) => (
-                  <label class="group relative cursor-pointer">
-                    <input type="radio" name="timeline" value={option} class="sr-only" />
-                    <div class="rounded-lg border border-neutral-200 p-2 transition-all duration-200 group-hover:border-neutral-300 sm:p-3 dark:border-neutral-700 dark:group-hover:border-neutral-600">
-                      <div class="flex items-center space-x-3">
-                        <div class="radio-indicator flex h-4 w-4 items-center justify-center rounded-full border border-neutral-300 transition-all duration-200 dark:border-neutral-600">
-                          <div class="radio-dot h-1.5 w-1.5 rounded-full bg-white opacity-0 transition-opacity duration-200 dark:bg-black" />
-                        </div>
-                        <span class="text-sm font-medium text-neutral-900 dark:text-neutral-100">{option}</span>
-                      </div>
-                    </div>
-                  </label>
-                ))
-              }
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Step 4: Contact -->
-      <div class="form-step hidden [&>div+div]:mt-6 sm:[&>div+div]:mt-8" id="step-4">
-        <div class="mb-4 sm:mb-6">
-          <h2 class="mb-4 text-xl font-bold tracking-tight text-neutral-900 sm:text-2xl dark:text-neutral-100">{form.step4.title}</h2>
-        </div>
-        <div class="space-y-4 sm:space-y-6">
-          <div>
-            <label for="name" class="mb-2 block text-sm font-medium text-neutral-900 dark:text-neutral-100">{form.step4.name.label}</label>
-            <input type="text" id="name" name="name" placeholder={form.step4.name.placeholder} class="w-full rounded-xl border border-neutral-200 px-3 py-2 text-neutral-900 placeholder-neutral-500 focus:border-sky-500 focus:ring-1 focus:ring-sky-500 focus:outline-none sm:px-4 sm:py-3 dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-100 dark:placeholder-neutral-400 dark:focus:border-sky-400 dark:focus:ring-sky-400" />
-          </div>
-          <div>
-            <label for="email" class="mb-2 block text-sm font-medium text-neutral-900 dark:text-neutral-100">{form.step4.email.label}</label>
-            <input type="email" id="email" name="email" placeholder={form.step4.email.placeholder} class="w-full rounded-xl border border-neutral-200 px-3 py-2 text-neutral-900 placeholder-neutral-500 focus:border-sky-500 focus:ring-1 focus:ring-sky-500 focus:outline-none sm:px-4 sm:py-3 dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-100 dark:placeholder-neutral-400 dark:focus:border-sky-400 dark:focus:ring-sky-400" />
-          </div>
-          <div>
-            <label for="phone" class="mb-2 block text-sm font-medium text-neutral-900 dark:text-neutral-100">{form.step4.phone.label}</label>
-            <input type="tel" id="phone" name="phone" placeholder={form.step4.phone.placeholder} class="w-full rounded-xl border border-neutral-200 px-3 py-2 text-neutral-900 placeholder-neutral-500 focus:border-sky-500 focus:ring-1 focus:ring-sky-500 focus:outline-none sm:px-4 sm:py-3 dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-100 dark:placeholder-neutral-400 dark:focus:border-sky-400 dark:focus:ring-sky-400" />
-          </div>
-        </div>
-        <div>
-          <label for="notes" class="mb-2 block text-sm font-medium text-neutral-900 dark:text-neutral-100">{form.step4.notes.label}</label>
-          <textarea id="notes" name="notes" rows="3" placeholder={form.step4.notes.placeholder} class="w-full resize-none rounded-xl border border-neutral-200 px-3 py-2 text-neutral-900 placeholder-neutral-500 focus:border-sky-500 focus:ring-1 focus:ring-sky-500 focus:outline-none sm:px-4 sm:py-3 dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-100 dark:placeholder-neutral-400 dark:focus:border-sky-400 dark:focus:ring-sky-400"></textarea>
-        </div>
-      </div>
-    </form>
-  </div>
-  <!-- Form Navigation -->
-  <div id="form-navigation" class="flex hidden items-center gap-4 border-t border-neutral-200 pt-4 sm:justify-end sm:pt-6 dark:border-neutral-700">
-    <button type="button" id="prev-btn" class="order-2 hidden w-full cursor-pointer rounded-full border border-neutral-300 bg-transparent px-4 py-2 font-medium text-neutral-600 transition-colors duration-200 hover:bg-neutral-100 hover:text-neutral-900 sm:order-1 sm:w-auto sm:px-6 sm:py-3 dark:border-neutral-600 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-100">
-      {form.buttons.previous}
-    </button>
-    <button type="button" id="next-btn" class="order-3 w-full cursor-pointer rounded-full bg-sky-500 px-4 py-2 font-medium text-white transition-colors duration-200 hover:bg-sky-600 sm:w-auto sm:px-6 sm:py-3 dark:text-black" disabled>
-      {form.buttons.next}
-    </button>
-    <button type="submit" id="submit-btn" class="order-3 hidden w-full cursor-pointer rounded-full bg-sky-500 px-4 py-2 font-medium text-white transition-colors duration-200 hover:bg-sky-600 sm:w-auto sm:px-6 sm:py-3 dark:text-black">
-      {form.buttons.submit}
-    </button>
-  </div>
-</div>
-<!-- Rules Modal -->
-<div id="rules-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/50 backdrop-blur-xs">
-  <div class="mx-4 max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-2xl bg-white p-6 dark:bg-neutral-900">
-    <div class="mb-6 flex items-center justify-between">
-      <h2 class="text-2xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100">{rules.modalTitle}</h2>
-      <button id="modal-close" class="flex h-8 w-8 cursor-pointer items-center justify-center rounded-full text-neutral-500 hover:bg-neutral-100 dark:hover:bg-neutral-800">
-        <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-        </svg>
-      </button>
-    </div>
-    <div class="space-y-8">
-      {
-        rules.sections.map((section) => (
-          <div>
-            <h3 class="mb-4 text-lg font-semibold text-neutral-900 dark:text-neutral-100">{section.title}</h3>
-            <ul class="space-y-2">
-              {section.rules.map((rule) => (
-                <li class="flex items-start space-x-3">
-                  <div class="mt-1 flex h-5 w-5 items-center justify-center rounded-full bg-sky-500/10">
-                    <svg class="h-3 w-3 text-sky-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
-                  <span class="text-sm text-neutral-700 dark:text-neutral-300">{rule}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))
-      }
-    </div>
-    <div class="mt-8 border-t border-neutral-200 pt-6 dark:border-neutral-700">
-      <label class="mb-4 flex cursor-pointer items-start space-x-3">
-        <input type="checkbox" id="rules-checkbox" class="mt-1 rounded border-neutral-300 text-sky-500 focus:ring-sky-500 dark:border-neutral-600 dark:bg-neutral-800" />
-        <span class="text-sm text-neutral-700 dark:text-neutral-300">{rules.checkbox}</span>
-      </label>
-      <div class="flex space-x-3">
-        <button id="modal-continue" class="flex-1 cursor-pointer rounded-full bg-sky-500 px-6 py-3 font-medium text-white transition-colors duration-200 hover:bg-sky-600 disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:bg-sky-500 dark:text-black" disabled>
-          {rules.continue}
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Confirmation Modal -->
-<div id="confirmation-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/50 backdrop-blur-xs">
-  <div class="mx-4 max-h-[90vh] w-full max-w-md overflow-y-auto rounded-2xl bg-white p-6 dark:bg-neutral-900">
-    <div class="mb-6 text-center">
-      <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-amber-100 dark:bg-amber-900/30">
-        <svg class="h-6 w-6 text-amber-600 dark:text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z"></path>
-        </svg>
-      </div>
-      <h2 class="text-xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100">{form.confirmation.title}</h2>
-      <p class="mt-2 text-sm text-neutral-600 dark:text-neutral-400">{form.confirmation.message}</p>
-    </div>
-    <div class="flex space-x-3">
-      <button id="confirmation-cancel" class="flex-1 cursor-pointer rounded-full border border-neutral-300 bg-transparent px-6 py-3 font-medium text-neutral-600 transition-colors duration-200 hover:bg-neutral-100 hover:text-neutral-900 dark:border-neutral-600 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-100">
-        {form.confirmation.cancel}
-      </button>
-      <button id="confirmation-confirm" class="flex-1 cursor-pointer rounded-full bg-sky-500 px-6 py-3 font-medium text-white transition-colors duration-200 hover:bg-sky-600 dark:text-black">
-        {form.confirmation.confirm}
-      </button>
-    </div>
-  </div>
-</div>
-<!-- Success Message -->
-<div id="success-message" class="hidden rounded-xl border border-neutral-200 bg-white p-8 text-center dark:border-neutral-700 dark:bg-neutral-800">
-  <div class="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-green-100 dark:bg-green-900/30">
-    <svg class="h-8 w-8 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-    </svg>
-  </div>
-  <h2 class="mb-4 text-2xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100">{form.success.title}</h2>
-  <p class="mb-6 text-base text-neutral-600 dark:text-neutral-400">{form.success.message}</p>
-  <a href={`${langPrefix}/`} class="inline-flex rounded-full bg-sky-500 px-8 py-3 font-medium text-white transition-colors duration-200 hover:bg-sky-600 dark:text-black">
-    {form.success.backButton}
-  </a>
-</div>
 
-<!-- Pass form data to JavaScript -->
-<script define:vars={{ formErrors: form.errors }}>
-  window.formErrorMessages = formErrors;
-</script>
+          <div class="mb-8 space-y-4">
+            {
+              formData.step1.rules.map((rule, index) => (
+                <div class="flex items-start space-x-3">
+                  <div class="mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-sky-500" />
+                  <p class="text-neutral-700 dark:text-neutral-300">{rule}</p>
+                </div>
+              ))
+            }
+          </div>
+
+          <div class="mb-6">
+            <label class="flex cursor-pointer items-start space-x-3">
+              <input type="checkbox" id="accept-rules" required class="mt-1 h-4 w-4 rounded border-neutral-300 text-sky-600 focus:ring-sky-500 dark:border-neutral-600 dark:bg-neutral-800" />
+              <span class="text-neutral-700 dark:text-neutral-300">{formData.step1.accept}</span>
+            </label>
+            <div class="error-message mt-1 ml-7 hidden text-sm text-red-600 dark:text-red-400" data-field="accept-rules">
+              {formData.validation.acceptTerms}
+            </div>
+          </div>
+
+          <div class="mb-8 text-sm text-neutral-600 dark:text-neutral-400">
+            {formData.step1.termsText}
+            <a href="/terms-of-service" class="text-sky-600 hover:underline dark:text-sky-400">{formData.step1.termsLink}</a>.
+          </div>
+        </div>
+
+        <!-- Step 2: Basic Information -->
+        <div id="step-2" class="step-content hidden">
+          <div class="mb-8">
+            <h2 class="mb-4 text-2xl font-bold text-neutral-900 dark:text-neutral-100">{formData.step2.title}</h2>
+          </div>
+
+          <div class="grid gap-6 md:grid-cols-2">
+            <div>
+              <label for="name" class="mb-2 block text-sm font-medium text-neutral-700 dark:text-neutral-300">{formData.step2.name.label}</label>
+              <input type="text" id="name" name="name" required placeholder={formData.step2.name.placeholder} class="w-full rounded-lg border border-neutral-200 px-4 py-3 text-neutral-900 placeholder-neutral-400 focus:border-sky-500 dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-100" />
+              <div class="error-message mt-1 hidden text-sm text-red-600 dark:text-red-400" data-field="name">
+                {formData.validation.required}
+              </div>
+            </div>
+            <div>
+              <label for="email" class="mb-2 block text-sm font-medium text-neutral-700 dark:text-neutral-300">{formData.step2.email.label}</label>
+              <input type="email" id="email" name="email" required placeholder={formData.step2.email.placeholder} class="w-full rounded-lg border border-neutral-200 px-4 py-3 text-neutral-900 placeholder-neutral-400 focus:border-sky-500 dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-100" />
+              <div class="error-message mt-1 hidden text-sm text-red-600 dark:text-red-400" data-field="email">
+                {formData.validation.email}
+              </div>
+            </div>
+            <div>
+              <label for="company" class="mb-2 block text-sm font-medium text-neutral-700 dark:text-neutral-300">{formData.step2.company.label}</label>
+              <input type="text" id="company" name="company" placeholder={formData.step2.company.placeholder} class="w-full rounded-lg border border-neutral-200 px-4 py-3 text-neutral-900 placeholder-neutral-400 focus:border-sky-500 dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-100" />
+            </div>
+            <div>
+              <label for="phone" class="mb-2 block text-sm font-medium text-neutral-700 dark:text-neutral-300">{formData.step2.phone.label}</label>
+              <input type="tel" id="phone" name="phone" placeholder={formData.step2.phone.placeholder} class="w-full rounded-lg border border-neutral-200 px-4 py-3 text-neutral-900 placeholder-neutral-400 focus:border-sky-500 dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-100" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 3: Project Information -->
+        <div id="step-3" class="step-content hidden">
+          <div class="mb-8">
+            <h2 class="mb-4 text-2xl font-bold text-neutral-900 dark:text-neutral-100">{formData.step3.title}</h2>
+          </div>
+
+          <div class="space-y-6">
+            <div>
+              <label class="mb-3 block text-sm font-medium text-neutral-700 dark:text-neutral-300">{formData.step3.projectType.label}</label>
+              <div class="grid gap-3 sm:grid-cols-2">
+                {
+                  formData.step3.projectType.options.map((option, index) => (
+                    <label class="flex cursor-pointer items-center space-x-3 rounded-lg border border-neutral-300 p-3 hover:bg-neutral-50 dark:border-neutral-600 dark:hover:bg-neutral-800">
+                      <input type="radio" name="projectType" value={option} required class="h-4 w-4 border-neutral-300 text-sky-600 focus:ring-sky-500 dark:border-neutral-600" />
+                      <span class="text-neutral-700 dark:text-neutral-300">{option}</span>
+                    </label>
+                  ))
+                }
+              </div>
+              <div class="error-message mt-1 hidden text-sm text-red-600 dark:text-red-400" data-field="projectType">
+                {formData.validation.required}
+              </div>
+            </div>
+
+            <div>
+              <label class="mb-3 block text-sm font-medium text-neutral-700 dark:text-neutral-300">{formData.step3.budget.label}</label>
+              <div class="grid gap-3 sm:grid-cols-2">
+                {
+                  formData.step3.budget.options.map((option, index) => (
+                    <label class="flex cursor-pointer items-center space-x-3 rounded-lg border border-neutral-300 p-3 hover:bg-neutral-50 dark:border-neutral-600 dark:hover:bg-neutral-800">
+                      <input type="radio" name="budget" value={option} required class="h-4 w-4 border-neutral-300 text-sky-600 focus:ring-sky-500 dark:border-neutral-600" />
+                      <span class="text-neutral-700 dark:text-neutral-300">{option}</span>
+                    </label>
+                  ))
+                }
+              </div>
+              <div class="error-message mt-1 hidden text-sm text-red-600 dark:text-red-400" data-field="budget">
+                {formData.validation.required}
+              </div>
+            </div>
+
+            <div>
+              <label class="mb-3 block text-sm font-medium text-neutral-700 dark:text-neutral-300">{formData.step3.timeline.label}</label>
+              <div class="grid gap-3 sm:grid-cols-2">
+                {
+                  formData.step3.timeline.options.map((option, index) => (
+                    <label class="flex cursor-pointer items-center space-x-3 rounded-lg border border-neutral-300 p-3 hover:bg-neutral-50 dark:border-neutral-600 dark:hover:bg-neutral-800">
+                      <input type="radio" name="timeline" value={option} required class="h-4 w-4 border-neutral-300 text-sky-600 focus:ring-sky-500 dark:border-neutral-600" />
+                      <span class="text-neutral-700 dark:text-neutral-300">{option}</span>
+                    </label>
+                  ))
+                }
+              </div>
+              <div class="error-message mt-1 hidden text-sm text-red-600 dark:text-red-400" data-field="timeline">
+                {formData.validation.required}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 4: Project Details -->
+        <div id="step-4" class="step-content hidden">
+          <div class="mb-8">
+            <h2 class="mb-4 text-2xl font-bold text-neutral-900 dark:text-neutral-100">{formData.step4.title}</h2>
+          </div>
+
+          <div class="space-y-6">
+            <div>
+              <label for="message" class="mb-2 block text-sm font-medium text-neutral-700 dark:text-neutral-300">{formData.step4.message.label}</label>
+              <textarea id="message" name="message" required rows="6" placeholder={formData.step4.message.placeholder} class="w-full rounded-lg border border-neutral-300 px-4 py-3 text-neutral-900 placeholder-neutral-500 focus:border-sky-500 focus:ring-2 focus:ring-sky-500/20 dark:border-neutral-600 dark:bg-neutral-800 dark:text-neutral-100 dark:placeholder-neutral-400"></textarea>
+              <div class="error-message mt-1 hidden text-sm text-red-600 dark:text-red-400" data-field="message">
+                {formData.validation.required}
+              </div>
+            </div>
+
+            <div>
+              <label for="inspiration" class="mb-2 block text-sm font-medium text-neutral-700 dark:text-neutral-300">{formData.step4.inspiration.label}</label>
+              <textarea id="inspiration" name="inspiration" rows="3" placeholder={formData.step4.inspiration.placeholder} class="w-full rounded-lg border border-neutral-300 px-4 py-3 text-neutral-900 placeholder-neutral-500 focus:border-sky-500 focus:ring-2 focus:ring-sky-500/20 dark:border-neutral-600 dark:bg-neutral-800 dark:text-neutral-100 dark:placeholder-neutral-400"></textarea>
+            </div>
+
+            <div>
+              <label class="mb-3 block text-sm font-medium text-neutral-700 dark:text-neutral-300">{formData.step4.hasDesign.label}</label>
+              <div class="grid gap-3 sm:grid-cols-2">
+                {
+                  formData.step4.hasDesign.options.map((option, index) => (
+                    <label class="flex cursor-pointer items-center space-x-3 rounded-lg border border-neutral-300 p-3 hover:bg-neutral-50 dark:border-neutral-600 dark:hover:bg-neutral-800">
+                      <input type="radio" name="hasDesign" value={option} class="h-4 w-4 border-neutral-300 text-sky-600 focus:ring-sky-500 dark:border-neutral-600" />
+                      <span class="text-neutral-700 dark:text-neutral-300">{option}</span>
+                    </label>
+                  ))
+                }
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Success Message -->
+        <div id="success-message" class="hidden py-12 text-center">
+          <div class="mb-8">
+            <div class="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-green-100 dark:bg-green-900/20">
+              <svg class="h-10 w-10 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+            </div>
+            <h2 class="mb-4 text-3xl font-bold text-neutral-900 dark:text-neutral-100">{formData.success.title}</h2>
+            <p class="mx-auto mb-8 max-w-md text-lg text-neutral-700 dark:text-neutral-300">{formData.success.message}</p>
+            <div class="space-y-4 sm:flex sm:justify-center sm:space-y-0 sm:space-x-4">
+              <a href="/" class="inline-flex w-full items-center justify-center gap-2 rounded-full bg-sky-500 px-8 py-4 font-semibold text-white transition-colors hover:bg-sky-600 sm:w-auto">
+                {formData.success.backHome}
+              </a>
+              <a href="mailto:ciao@davidelamarca.it" class="inline-flex w-full items-center justify-center gap-2 rounded-full border border-neutral-300 bg-white px-8 py-4 font-semibold text-neutral-700 transition-colors hover:bg-neutral-50 sm:w-auto dark:border-neutral-600 dark:bg-neutral-800 dark:text-neutral-300 dark:hover:bg-neutral-700">
+                <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                </svg>
+                {formData.success.sendEmail}
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div id="form-navigation" class="relative mt-10 flex items-center justify-between">
+          <button type="button" id="prev-btn" class="cursor-pointer rounded-full border border-neutral-200 bg-white p-3 text-neutral-700 hover:bg-neutral-50 disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:bg-white dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-300 dark:hover:bg-neutral-700 dark:disabled:hover:bg-neutral-800" aria-label="Torna al passo precedente" disabled>
+            <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+            </svg>
+          </button>
+
+          <!-- Carousel-style Progress Indicators - Absolutely Centered -->
+          <div class="absolute top-1/2 left-1/2 flex -translate-x-1/2 -translate-y-1/2 transform items-center justify-center space-x-3">
+            <div id="step-dot-1" class="step-dot h-3 w-3 rounded-full bg-sky-500 transition-all duration-300"></div>
+            <div id="step-dot-2" class="step-dot h-3 w-3 rounded-full bg-neutral-300 transition-all duration-300 dark:bg-neutral-600"></div>
+            <div id="step-dot-3" class="step-dot h-3 w-3 rounded-full bg-neutral-300 transition-all duration-300 dark:bg-neutral-600"></div>
+            <div id="step-dot-4" class="step-dot h-3 w-3 rounded-full bg-neutral-300 transition-all duration-300 dark:bg-neutral-600"></div>
+          </div>
+
+          <button type="button" id="next-btn" class="cursor-pointer rounded-full bg-sky-500 p-3 text-white transition-colors hover:bg-sky-600 disabled:cursor-not-allowed disabled:opacity-50" aria-label="Continua al passo successivo">
+            <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

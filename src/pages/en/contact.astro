@@ -1,26 +1,14 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import Landing from "../../components/contact/Landing.astro";
+import Header from "../../components/contact/Header.astro";
 import Form from "../../components/contact/Form.astro";
-import Progress from "../../components/contact/Progress.astro";
-import Sidebar from "../../components/contact/Sidebar.astro";
+import Contacts from "../../components/contact/Contacts.astro";
 import translation from "../../i18n/en";
 const t = translation("/en");
 ---
 
 <Layout t={t} meta={t.contact.meta}>
-  <Landing {...t.contact.landing} />
-  <section class="bg-neutral-50 px-6 py-24 dark:bg-neutral-900">
-    <div class="mx-auto max-w-7xl">
-      <div class="grid gap-8 lg:grid-cols-3 lg:gap-12">
-        <div class="lg:col-span-2">
-          <Progress progress={t.contact.sidebar.progress} form={t.contact.form} />
-          <Form {...t.contact} />
-        </div>
-        <div class="lg:col-span-1">
-          <Sidebar {...t.contact.sidebar} />
-        </div>
-      </div>
-    </div>
-  </section>
+  <Header badge={t.contact.badge} title={t.contact.title} description={t.contact.description} />
+  <Form formData={t.contact.form} />
+  <Contacts alternativeData={t.contact.alternative} />
 </Layout>

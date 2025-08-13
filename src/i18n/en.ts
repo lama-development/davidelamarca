@@ -93,146 +93,94 @@ export default (langPrefix = "") => ({
       title: "Get in Touch - Davide La Marca",
       description: "Tell me about your project and let's work together to create the website you deserve."
     },
-    landing: {
-      badge: "Contact",
-      title: "Let's work together",
-      subtitle: "Tell me about your project and let's find the perfect solution for your business."
-    },
-    rules: {
-      button: "Read the conditions",
-      modalTitle: "Collaboration rules",
-      sections: [
-        {
-          title: "Professional communication",
-          rules: ["Mutual respect and courteous communication", "Email response within 48 business hours", "Detailed briefing with clear objectives", "Constructive and specific feedback"]
-        },
-        {
-          title: "Project management",
-          rules: ["Realistic timelines agreed together", "Maximum 3 revisions per project phase", "50% down payment before starting", "Final payment before delivery"]
-        },
-        {
-          title: "Aligned expectations",
-          rules: ["Budget defined from the beginning", "Substantial changes incur additional costs", "Content is the client's responsibility", "Source code remains client property"]
-        }
-      ],
-      checkbox: "I have read and agree to the collaboration rules",
-      continue: "Continue"
-    },
+    badge: "Get in Touch",
+    title: "Let's start your project",
+    description: "Tell me about your idea and let's discover together how to create the website you deserve. Filling out this form is the first step towards your new website.",
     form: {
-      introBox: {
-        title: "Project request form",
-        description: "All project requests must be submitted through this form. I don't accept projects via email or other channels to ensure efficient and transparent management.",
-        important: "Important:",
-        requirements: "You must read and accept the conditions before filling out the form."
-      },
-      steps: {
-        project: "Project",
-        details: "Details",
-        budget: "Terms",
-        contact: "Contact"
-      },
+      stepText: "Step {current} of {total}",
       step1: {
-        title: "What type of project do you have in mind?",
-        options: ["New website", "Redesign existing site", "E-commerce", "Web app", "SEO & optimization", "Other"]
+        title: "Project Rules",
+        description: "Before proceeding, it's important that you read and accept the rules for starting a project together.",
+        rules: ["All projects require a 50% initial deposit to begin work", "Delivery times are agreed at the beginning and may vary based on complexity", "Substantial changes to the original project may incur additional costs", "Communication will primarily be via email and scheduled calls", "Final payment is required before delivery and publication of the site"],
+        accept: "I have read and accept the project rules",
+        termsText: "I also suggest you read the complete",
+        termsLink: "Terms of Service",
+        nextButton: "Continue"
       },
       step2: {
-        title: "Tell me more about your project",
-        description: {
-          label: "Project description",
-          placeholder: "Describe your project, what you expect and any inspiration styles..."
-        },
-        domain: {
-          label: "Do you already have a domain?",
-          options: ["Yes", "No", "I don't know what that is"]
-        },
-        content: {
-          label: "Do you already have content ready (texts, images, logo)?",
-          options: ["Yes, everything ready", "Partially", "No, I still need to prepare them"]
-        }
-      },
-      step3: {
-        title: "Budget & Timeline",
-        budget: {
-          label: "Indicative project budget",
-          options: ["< 1000€", "1000€ - 2000€", "2000€ - 3000€", "Over 3000€"]
-        },
-        timeline: {
-          label: "Desired timeline",
-          options: ["Flexible", "Urgent (surcharges apply)"]
-        }
-      },
-      step4: {
-        title: "Contact",
+        title: "Basic Information",
         name: {
-          label: "Full Name",
+          label: "Full Name*",
           placeholder: "John Doe"
         },
         email: {
-          label: "Contact email",
-          placeholder: "john@example.com"
+          label: "Email*",
+          placeholder: "johndoe@example.com"
+        },
+        company: {
+          label: "Company (optional)",
+          placeholder: "Your company name"
         },
         phone: {
           label: "Phone (optional)",
-          placeholder: "+1 123 456 7890"
-        },
-        notes: {
-          label: "Notes (optional)",
-          placeholder: "Add any notes or specific requests..."
+          placeholder: "+1 123 4567890"
         }
       },
-      buttons: {
-        next: "Continue",
-        previous: "Back",
-        submit: "Send request"
+      step3: {
+        title: "Your Project",
+        projectType: {
+          label: "What type of project do you have in mind?*",
+          options: ["New website", "Redesign existing site", "E-commerce", "Web app", "SEO & optimization", "Other"]
+        },
+        budget: {
+          label: "Indicative budget*",
+          options: ["< 1000€", "1000€ - 2000€", "2000€ - 3000€", "Oltre 3000€"]
+        },
+        timeline: {
+          label: "Desired timeline*",
+          options: ["Urgent (surcharges apply)", "Flexible"]
+        }
       },
-      confirmation: {
-        title: "Confirm request submission",
-        message: "Are you sure you want to send this project request? Once sent, it will no longer be possible to modify it.",
-        confirm: "Yes, send",
-        cancel: "Cancel"
+      step4: {
+        title: "Project Details",
+        message: {
+          label: "Describe your project*",
+          placeholder: "Tell me about your idea, what you'd like to achieve, your business sector, if you have an existing site to renovate, examples of sites you like, specific features you want, etc."
+        },
+        inspiration: {
+          label: "Websites that inspire you (optional)",
+          placeholder: "Links to sites you like or that represent the style you'd want"
+        },
+        hasDesign: {
+          label: "Do you already have a design or logo?",
+          options: ["Yes, I have everything", "I only have the logo", "I have some ideas", "No, everything needed from scratch"]
+        }
+      },
+      navigation: {
+        next: "Next",
+        submit: "Send"
+      },
+      validation: {
+        required: "This field is required",
+        email: "Please enter a valid email address",
+        acceptTerms: "You must accept the project rules to continue"
       },
       success: {
-        title: "Request sent successfully!",
-        message: "Thank you for submitting your project request. If I accept the proposal, I will contact you via the provided email.",
-        backButton: "Return home"
-      },
-      errors: {
-        title: "Form validation error",
-        step1: "Select project type",
-        step2: {
-          description: "Project description is required",
-          domain: "Please indicate if you have a domain",
-          content: "Please indicate content availability"
-        },
-        step3: {
-          budget: "Select an indicative budget",
-          timeline: "Indicate desired timeline"
-        },
-        step4: {
-          name: "Name is required",
-          email: "Please enter a valid email",
-          phone: "Phone number is not valid",
-          notes: "Notes are required"
-        }
+        title: "Request Sent!",
+        message: "Thank you for your request. I'll get back to you within 24 hours with more details and possible follow-up questions.",
+        backHome: "Back to home",
+        sendEmail: "Send Direct Email"
       }
     },
-    sidebar: {
-      progress: "Progress",
+    alternative: {
+      title: "Other ways to contact me",
       email: {
-        title: "Email",
-        subtitle: "Prefer a direct email?",
-        button: "Email me"
+        title: "Email for general questions",
+        description: "Only for general questions, not for project requests",
+        address: "hello@davidelamarca.com"
       },
       social: {
-        title: "Social",
-        subtitle: "Follow me on social media"
-      },
-      aria: {
-        email: "Send email",
-        linkedin: "Open LinkedIn profile",
-        github: "Open GitHub profile",
-        dribbble: "Open Dribbble profile",
-        resume: "View online CV"
+        title: "My socials"
       }
     }
   },
@@ -249,8 +197,8 @@ export default (langPrefix = "") => ({
     brand: "davidelamarca",
     page1: "Terms of Service",
     page2: "Privacy Policy",
-    copyright: "Davide La Marca",
-    vat: "VAT: 02804090039",
+    copyright: "Davide La Marca.",
+    vat: "VAT 02804090039",
     aria: {
       system: "Use system theme",
       light: "Use light theme",

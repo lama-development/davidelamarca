@@ -15,8 +15,8 @@ const langPrefix = Astro.url.pathname.startsWith("/en") ? "/en" : "";
             <span class="text-base font-medium text-neutral-900 dark:text-neutral-100">{brand}</span>
           </a>
           <div class="flex items-center space-x-3 md:self-start">
-            <div id="theme-toggle" class="relative flex rounded-full bg-white p-1 ring-1 ring-neutral-300 ring-inset dark:bg-neutral-800 dark:ring-neutral-700">
-              <div id="theme-indicator" class="absolute top-1 left-1 h-8 w-8 rounded-full bg-neutral-100 transition-transform duration-300 ease-out dark:bg-neutral-700"></div>
+            <div id="theme-toggle" class="relative flex rounded-full border border-neutral-200 bg-neutral-100 p-1 dark:border-neutral-800 dark:bg-neutral-900">
+              <div id="theme-indicator" class="absolute top-1 left-1 h-8 w-8 rounded-full border border-neutral-200 bg-neutral-50 transition-transform duration-300 ease-out dark:border-neutral-800 dark:bg-neutral-950"></div>
               <button id="theme-system" aria-label={aria.system} class="theme-btn relative z-10 cursor-pointer rounded-full p-2 text-neutral-600 transition-colors duration-200 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100">
                 <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
@@ -35,17 +35,17 @@ const langPrefix = Astro.url.pathname.startsWith("/en") ? "/en" : "";
             </div>
             <div class="relative inline-block text-left">
               <div>
-                <button id="lang-menu-button" type="button" aria-expanded="false" aria-haspopup="true" class="inline-flex w-full cursor-pointer items-center justify-center gap-x-1 rounded-full bg-white px-4 py-2.5 text-sm font-medium text-neutral-900 ring-1 ring-neutral-300 ring-inset hover:bg-neutral-50 dark:bg-neutral-800 dark:text-neutral-100 dark:ring-neutral-700 dark:hover:bg-neutral-700">
+                <button id="lang-menu-button" type="button" aria-expanded="false" aria-haspopup="true" class="inline-flex w-full cursor-pointer items-center justify-center gap-x-1 rounded-full border border-neutral-200 bg-neutral-100 px-4 py-2.5 text-sm font-medium text-neutral-600 hover:text-neutral-900 dark:border-neutral-800 dark:bg-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100">
                   {Astro.url.pathname.startsWith("/en") ? "EN" : "IT"}
                   <svg id="lang-chevron-icon" viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="-mr-1 size-5 text-neutral-400 transition-transform duration-200 dark:text-neutral-500">
                     <path d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" fill-rule="evenodd"></path>
                   </svg>
                 </button>
               </div>
-              <div id="lang-dropdown" role="menu" tabindex="-1" aria-labelledby="lang-menu-button" aria-orientation="vertical" class="absolute left-1/2 z-10 mt-2 hidden w-40 origin-top -translate-x-1/2 transform rounded-3xl bg-white ring-1 ring-neutral-300 ring-inset focus:outline-hidden dark:bg-neutral-800 dark:text-neutral-100 dark:ring-neutral-700">
+              <div id="lang-dropdown" role="menu" tabindex="-1" aria-labelledby="lang-menu-button" aria-orientation="vertical" class="absolute left-1/2 z-10 mt-2 hidden w-40 origin-top -translate-x-1/2 transform rounded-3xl border border-neutral-200 bg-neutral-50 focus:outline-hidden dark:border-neutral-800 dark:bg-neutral-950 dark:text-neutral-100">
                 <div role="none" class="px-1.5 py-1">
-                  <a id="lang-it" role="menuitem" href="/" tabindex="-1" class={`flex items-center rounded-full my-1 px-4 py-2 text-sm font-medium text-neutral-900 hover:bg-neutral-100 dark:text-neutral-100 dark:hover:bg-neutral-700 ${!Astro.url.pathname.startsWith("/en") ? "bg-neutral-100 dark:bg-neutral-700" : ""}`}> Italiano </a>
-                  <a id="lang-en" role="menuitem" href="/en" tabindex="-1" class={`flex items-center rounded-full my-1 px-4 py-2 text-sm font-medium text-neutral-900 hover:bg-neutral-100 dark:text-neutral-100 dark:hover:bg-neutral-700 ${Astro.url.pathname.startsWith("/en") ? "bg-neutral-100 dark:bg-neutral-700" : ""}`}> English </a>
+                  <a id="lang-it" role="menuitem" href="/" tabindex="-1" class={`flex items-center rounded-full my-1 px-4 py-2 text-sm font-medium text-neutral-900 hover:bg-neutral-200 dark:text-neutral-100 dark:hover:bg-neutral-800 ${!Astro.url.pathname.startsWith("/en") ? "bg-neutral-100 border border-neutral-200 dark:border-neutral-800 dark:bg-neutral-900" : ""}`}> Italiano </a>
+                  <a id="lang-en" role="menuitem" href="/en" tabindex="-1" class={`flex items-center rounded-full my-1 px-4 py-2 text-sm font-medium text-neutral-900 hover:bg-neutral-200 dark:text-neutral-100 dark:hover:bg-neutral-800 ${Astro.url.pathname.startsWith("/en") ? "bg-neutral-100 border border-neutral-200 dark:border-neutral-800 dark:bg-neutral-900" : ""}`}> English </a>
                 </div>
               </div>
             </div>

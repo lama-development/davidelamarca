@@ -99,22 +99,22 @@ export default (langPrefix = "") => ({
     form: {
       stepText: "Step {current} of {total}",
       step1: {
-        title: "Project Rules",
-        description: "Before proceeding, it's important that you read and accept the rules for starting a project together.",
-        rules: ["All projects require a 50% initial deposit to begin work", "Delivery times are agreed at the beginning and may vary based on complexity", "Substantial changes to the original project may incur additional costs", "Communication will primarily be via email and scheduled calls", "Final payment is required before delivery and publication of the site"],
-        accept: "I have read and accept the project rules",
-        termsText: "I also suggest you read the complete",
+        title: "Collaboration Rules",
+        description: "Before proceeding, it's important that you read and accept these rules for a professional and transparent collaboration. You can read the complete rules on the <a href='" + langPrefix + "/terms-of-service' class='text-sky-600 hover:underline dark:text-sky-400'>Terms of Service</a> page.",
+        rules: ["We define goals, style, and content at the beginning; substantial changes must be agreed upon separately.", "Feedback is welcome, but the creative and technical direction is mine.", "Texts, images, and materials must be provided within the agreed timelines.", "Payment is made in 2 or 3 installments, depending on the project.", "Revisions are limited; I do not accept requests that completely change an already approved structure.", "Post-launch support covers only bug fixes and minor adjustments.", "I reserve the right to showcase the work on my channels, without disclosing confidential data.", "If the collaboration becomes toxic or lacks transparency, I reserve the right to terminate it."],
+        accept: "I have read and accept the collaboration rules",
+        termsText: "By checking this box, you also fully accept the ",
         termsLink: "Terms of Service",
         nextButton: "Continue"
       },
       step2: {
         title: "Basic Information",
         name: {
-          label: "Full Name*",
+          label: "Full Name",
           placeholder: "John Doe"
         },
         email: {
-          label: "Email*",
+          label: "Email",
           placeholder: "johndoe@example.com"
         },
         company: {
@@ -129,22 +129,22 @@ export default (langPrefix = "") => ({
       step3: {
         title: "Your Project",
         projectType: {
-          label: "What type of project do you have in mind?*",
+          label: "What type of project do you have in mind?",
           options: ["New website", "Redesign existing site", "E-commerce", "Web app", "SEO & optimization", "Other"]
         },
         budget: {
-          label: "Indicative budget*",
+          label: "Indicative budget",
           options: ["< 1000€", "1000€ - 2000€", "2000€ - 3000€", "Oltre 3000€"]
         },
         timeline: {
-          label: "Desired timeline*",
+          label: "Desired timeline",
           options: ["Urgent (surcharges apply)", "Flexible"]
         }
       },
       step4: {
         title: "Project Details",
         message: {
-          label: "Describe your project*",
+          label: "Describe your project",
           placeholder: "Tell me about your idea, what you'd like to achieve, your business sector, if you have an existing site to renovate, examples of sites you like, specific features you want, etc."
         },
         inspiration: {
@@ -152,8 +152,8 @@ export default (langPrefix = "") => ({
           placeholder: "Links to sites you like or that represent the style you'd want"
         },
         hasDesign: {
-          label: "Do you already have a design or logo?",
-          options: ["Yes, I have everything", "I only have the logo", "I have some ideas", "No, everything needed from scratch"]
+          label: "Do you already have your own branding (colors, logo, design)?",
+          options: ["Yes, I have complete branding", "Partially, some elements need defining", "No, I need to create it"]
         }
       },
       navigation: {

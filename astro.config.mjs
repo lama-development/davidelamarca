@@ -8,7 +8,11 @@ export default defineConfig({
     plugins: [tailwindcss()]
   },
   i18n: {
+    defaultLocale: "it",
     locales: ["it", "en"],
-    defaultLocale: "it"
+    routing: {
+      prefixDefaultLocale: false,
+      fallbackType: "redirect"
+    }
   }
 });

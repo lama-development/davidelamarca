@@ -99,22 +99,22 @@ export default (langPrefix = "") => ({
     form: {
       stepText: "Passo {current} di {total}",
       step1: {
-        title: "Regole del Progetto",
-        description: "Prima di procedere, è importante che tu legga e accetti le regole per iniziare un progetto insieme.",
-        rules: ["Tutti i progetti richiedono un deposito iniziale del 50% per iniziare i lavori", "I tempi di consegna sono concordati all'inizio e possono variare in base alla complessità", "Le modifiche sostanziali al progetto originale possono comportare costi aggiuntivi", "La comunicazione avverrà principalmente via email e chiamate programmate", "Il saldo finale è richiesto prima della consegna e pubblicazione del sito"],
-        accept: "Ho letto e accetto le regole del progetto",
-        termsText: "Ti suggerisco di leggere anche i",
-        termsLink: "Termini di Servizio completi",
+        title: "Regole di Collaborazione",
+        description: `Prima di procedere, è importante che tu legga e accetti queste regole per una collaborazione professionale e trasparente. Puoi consultare le regole complete nella pagina dei <a href='${langPrefix}/terms-of-service' class='text-sky-600 hover:underline dark:text-sky-400'>Termini di Servizio</a>.`,
+        rules: ["Definiamo obiettivi, stile e contenuti all'inizio; modifiche sostanziali vanno concordate a parte.", "I feedback sono benvenuti, ma la direzione creativa e tecnica è mia.", "Testi, immagini e materiali devono essere forniti nei tempi concordati.", "Il pagamento avviene in 2 o 3 tranche, a seconda del progetto.", "Le revisioni sono limitate, non accetto richieste che cambiano completamente la struttura già approvata.", "L'assistenza post-lancio copre solo la risoluzione di errori e ritocchi minimi.", "Mi riservo il diritto di mostrare il lavoro sui miei canali, senza divulgare dati riservati.", "Qualora la collaborazione risulti tossica o poco trasparente, mi riservo il diritto di interromperla."],
+        accept: "Ho letto e accetto le regole di collaborazione",
+        termsText: "Spuntando la casella, accetti integralmente anche i ",
+        termsLink: "Termini di Servizio",
         nextButton: "Continua"
       },
       step2: {
         title: "Informazioni di Base",
         name: {
-          label: "Nome e Cognome*",
+          label: "Nome e Cognome",
           placeholder: "Mario Rossi"
         },
         email: {
-          label: "Email*",
+          label: "Email",
           placeholder: "mariorossi@example.com"
         },
         company: {
@@ -129,31 +129,31 @@ export default (langPrefix = "") => ({
       step3: {
         title: "Il Tuo Progetto",
         projectType: {
-          label: "Che tipo di progetto hai in mente?*",
+          label: "Che tipo di progetto hai in mente?",
           options: ["Nuovo sito web", "Redesign di un sito esistente", "E-commerce", "Web app", "SEO e ottimizzazione", "Altro"]
         },
         budget: {
-          label: "Budget indicativo*",
+          label: "Budget indicativo",
           options: ["< 1000€", "1000€ - 2000€", "2000€ - 3000€", "Oltre 3000€"]
         },
         timeline: {
-          label: "Tempistiche desiderate*",
+          label: "Tempistiche desiderate",
           options: ["Urgente (si applicano maggiorazioni)", "Flessibii"]
         }
       },
       step4: {
         title: "Dettagli del Progetto",
         message: {
-          label: "Descrivi il tuo progetto*",
-          placeholder: "Raccontami della tua idea, cosa vorresti ottenere, quale è il tuo settore di business, hai già un sito esistente da rinnovare, esempi di siti che ti piacciono, funzionalità specifiche che desideri, ecc."
+          label: "Descrivi il tuo progetto",
+          placeholder: "Raccontami cosa vorresti ottenere, quale è il tuo settore di business, se hai già un sito esistente, funzionalità specifiche che desideri, ecc."
         },
         inspiration: {
           label: "Siti web che ti ispirano (opzionale)",
-          placeholder: "Link a siti che ti piacciono o che rappresentano lo stile che vorresti"
+          placeholder: "Link a siti o risorse che ti piacciono o che rappresentano lo stile che vorresti"
         },
         hasDesign: {
-          label: "Hai già un design o logo?",
-          options: ["Sì, ho già tutto", "Ho solo il logo", "Ho alcune idee", "No, serve tutto da zero"]
+          label: "Hai già un branding (colori, logo, stile grafico)?",
+          options: ["Sì, ho già un branding completo", "In parte, devo definire alcuni elementi", "No, devo crearne uno"]
         }
       },
       navigation: {

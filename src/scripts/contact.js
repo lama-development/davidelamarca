@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const fields = document.querySelectorAll("input, textarea");
     fields.forEach((field) => {
       field.classList.remove("border-red-500", "dark:border-red-500");
-      field.classList.add("border-neutral-300", "dark:border-neutral-600");
+      field.classList.add("border-neutral-200", "dark:border-neutral-800");
     });
   }
 
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     if (field) {
-      field.classList.remove("border-neutral-300", "dark:border-neutral-600");
+      field.classList.remove("border-neutral-200", "dark:border-neutral-800");
       field.classList.add("border-red-500", "dark:border-red-500");
     }
   }

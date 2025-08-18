@@ -1,8 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import PageNotFound from "../components/common/PageNotFound.astro";
-import translation from "../i18n/it";
-const t = translation();
+import it from "../i18n/it";
+import en from "../i18n/en";
+const url = Astro.url.pathname;
+const isEnglish = url.startsWith("/en");
+const t = isEnglish ? en("/en") : it("");
 ---
 
 <Layout t={t} meta={t.pageNotFound.meta}>

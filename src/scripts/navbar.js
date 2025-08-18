@@ -54,13 +54,6 @@ function setActiveNavLink() {
   const navLinks = document.querySelectorAll(".nav-link");
   const mobileLinks = document.querySelectorAll("#mobile-menu a");
 
-  // Define route mappings
-  const routes = {
-    "/": "/",
-    "/projects": "/projects",
-    "/contact": "/contact"
-  };
-
   // Remove active classes from all links first
   [...navLinks, ...mobileLinks].forEach((link) => {
     link.classList.remove("bg-neutral-100", "dark:bg-neutral-900", "border", "border-neutral-200", "dark:border-neutral-800");
@@ -69,7 +62,26 @@ function setActiveNavLink() {
   // Add active classes to current page links
   [...navLinks, ...mobileLinks].forEach((link) => {
     const href = link.getAttribute("href");
-    if (href === currentPath || (currentPath === "/" && href === "/")) {
+    
+    // Check for exact match first
+    if (href === currentPath) {
+      link.classList.add("bg-neutral-100", "dark:bg-neutral-900", "border", "border-neutral-200", "dark:border-neutral-800");
+      return;
+    }
+    
+    // Handle home page cases
+    if ((currentPath === "/" || currentPath === "/en") && (href === "/" || href === "/en")) {
+      link.classList.add("bg-neutral-100", "dark:bg-neutral-900", "border", "border-neutral-200", "dark:border-neutral-800");
+      return;
+    }
+    
+    // Handle language-prefixed routes
+    // Extract the base route from both current path and href
+    const currentBase = currentPath.replace(/^\/en/, "") || "/";
+    const hrefBase = href.replace(/^\/en/, "") || "/";
+    
+    // Check if we're on the same page regardless of language prefix
+    if (currentBase === hrefBase && currentBase !== "/") {
       link.classList.add("bg-neutral-100", "dark:bg-neutral-900", "border", "border-neutral-200", "dark:border-neutral-800");
     }
   });

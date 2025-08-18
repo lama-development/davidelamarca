@@ -3,8 +3,10 @@ import Layout from "../layouts/Layout.astro";
 import PageNotFound from "../components/common/PageNotFound.astro";
 import it from "../i18n/it";
 import en from "../i18n/en";
+
+// Get the current URL and check for language
 const url = Astro.url.pathname;
-const isEnglish = url.startsWith("/en");
+const isEnglish = url.startsWith("/en/") || url === "/en" || url.match(/^\/en(?:\/|$)/) !== null;
 const t = isEnglish ? en("/en") : it("");
 ---
 

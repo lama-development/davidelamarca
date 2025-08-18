@@ -99,8 +99,8 @@ export default (langPrefix = "") => ({
     form: {
       stepText: "Step {current} of {total}",
       step1: {
-        title: "Collaboration Rules",
-        description: "Before proceeding, it's important that you read and accept these rules for a professional and transparent collaboration. You can read the complete rules on the <a href='" + langPrefix + "/terms-of-service' class='text-sky-600 hover:underline dark:text-sky-400'>Terms of Service</a> page.",
+        title: "Step 1: Rules",
+        description: "For a transparent collaboration",
         rules: ["We define goals, style, and content at the beginning; substantial changes must be agreed upon separately.", "Feedback is welcome, but the creative and technical direction is mine.", "Texts, images, and materials must be provided within the agreed timelines.", "Payment is made in 2 or 3 installments, depending on the project.", "Revisions are limited; I do not accept requests that completely change an already approved structure.", "Post-launch support covers only bug fixes and minor adjustments.", "I reserve the right to showcase the work on my channels, without disclosing confidential data.", "If the collaboration becomes toxic or lacks transparency, I reserve the right to terminate it."],
         accept: "I have read and accept the collaboration rules",
         termsText: "By checking this box, you also fully accept the ",
@@ -108,7 +108,8 @@ export default (langPrefix = "") => ({
         nextButton: "Continue"
       },
       step2: {
-        title: "Basic Information",
+        title: "Step 2: Contact",
+        description: "Enter your contact information",
         name: {
           label: "Full Name",
           placeholder: "John Doe"
@@ -127,14 +128,15 @@ export default (langPrefix = "") => ({
         }
       },
       step3: {
-        title: "Your Project",
+        title: "Step 3: Project",
+        description: "Tell me about your project",
         projectType: {
           label: "What type of project do you have in mind?",
           options: ["New website", "Redesign existing site", "E-commerce", "Web app", "SEO & optimization", "Other"]
         },
         budget: {
           label: "Indicative budget",
-          options: ["< 1000€", "1000€ - 2000€", "2000€ - 3000€", "Oltre 3000€"]
+          options: ["< 1000€", "1000€ - 2000€", "2000€ - 3000€", "Over 3000€"]
         },
         timeline: {
           label: "Desired timeline",
@@ -142,7 +144,8 @@ export default (langPrefix = "") => ({
         }
       },
       step4: {
-        title: "Project Details",
+        title: "Step 4: Details",
+        description: "Describe your project in more detail",
         message: {
           label: "Describe your project",
           placeholder: "Tell me about your idea, what you'd like to achieve, your business sector, if you have an existing site to renovate, examples of sites you like, specific features you want, etc."
@@ -166,22 +169,12 @@ export default (langPrefix = "") => ({
         acceptTerms: "You must accept the project rules to continue"
       },
       success: {
-        title: "Request Sent!",
-        message: "Thank you for your request. I'll get back to you within 24 hours with more details and possible follow-up questions.",
-        backHome: "Back to home",
-        sendEmail: "Send Direct Email"
+        title: "Request sent",
+        message: "Thank you! Your request has been sent successfully. If accepted, you will be contacted as soon as possible.",
+        backHome: "Back to home"
       }
     },
     alternative: {
-      title: "Other ways to contact me",
-      email: {
-        title: "Email for general questions",
-        description: "Only for general questions, not for project requests",
-        address: "hello@davidelamarca.com"
-      },
-      social: {
-        title: "My socials"
-      }
     }
   },
   pageNotFound: {

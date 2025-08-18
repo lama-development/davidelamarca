@@ -99,8 +99,8 @@ export default (langPrefix = "") => ({
     form: {
       stepText: "Passo {current} di {total}",
       step1: {
-        title: "Regole di Collaborazione",
-        description: `Prima di procedere, è importante che tu legga e accetti queste regole per una collaborazione professionale e trasparente. Puoi consultare le regole complete nella pagina dei <a href='${langPrefix}/terms-of-service' class='text-sky-600 hover:underline dark:text-sky-400'>Termini di Servizio</a>.`,
+        title: "Step 1: Regole",
+        description: "Per una collaborazione trasparente",
         rules: ["Definiamo obiettivi, stile e contenuti all'inizio; modifiche sostanziali vanno concordate a parte.", "I feedback sono benvenuti, ma la direzione creativa e tecnica è mia.", "Testi, immagini e materiali devono essere forniti nei tempi concordati.", "Il pagamento avviene in 2 o 3 tranche, a seconda del progetto.", "Le revisioni sono limitate, non accetto richieste che cambiano completamente la struttura già approvata.", "L'assistenza post-lancio copre solo la risoluzione di errori e ritocchi minimi.", "Mi riservo il diritto di mostrare il lavoro sui miei canali, senza divulgare dati riservati.", "Qualora la collaborazione risulti tossica o poco trasparente, mi riservo il diritto di interromperla."],
         accept: "Ho letto e accetto le regole di collaborazione",
         termsText: "Spuntando la casella, accetti integralmente anche i ",
@@ -108,7 +108,8 @@ export default (langPrefix = "") => ({
         nextButton: "Continua"
       },
       step2: {
-        title: "Informazioni di Base",
+        title: "Step 2: Contatti",
+        description: "Inserisci i tuoi dati per essere contattato",
         name: {
           label: "Nome e Cognome",
           placeholder: "Mario Rossi"
@@ -127,7 +128,8 @@ export default (langPrefix = "") => ({
         }
       },
       step3: {
-        title: "Il Tuo Progetto",
+        title: "Step 3: Progetto",
+        description: "Raccontami di cosa si tratta il progetto",
         projectType: {
           label: "Che tipo di progetto hai in mente?",
           options: ["Nuovo sito web", "Redesign di un sito esistente", "E-commerce", "Web app", "SEO e ottimizzazione", "Altro"]
@@ -138,13 +140,14 @@ export default (langPrefix = "") => ({
         },
         timeline: {
           label: "Tempistiche desiderate",
-          options: ["Urgente (si applicano maggiorazioni)", "Flessibii"]
+          options: ["Urgente (si applicano maggiorazioni)", "Flessibiii"]
         }
       },
       step4: {
-        title: "Dettagli del Progetto",
+        title: "Step 4: Dettagli",
+        description: "Descrivi meglio il progetto",
         message: {
-          label: "Descrivi il tuo progetto",
+          label: "Descrivi il progetto nei dettagli",
           placeholder: "Raccontami cosa vorresti ottenere, quale è il tuo settore di business, se hai già un sito esistente, funzionalità specifiche che desideri, ecc."
         },
         inspiration: {
@@ -166,22 +169,12 @@ export default (langPrefix = "") => ({
         acceptTerms: "Devi accettare le regole del progetto per continuare"
       },
       success: {
-        title: "Richiesta Inviata!",
-        message: "Grazie per la tua richiesta. Ti risponderò entro 24 ore con maggiori dettagli e possibili domande di approfondimento.",
-        backHome: "Torna alla home",
-        sendEmail: "Invia Email Diretta"
+        title: "Richiesta inviata",
+        message: "Grazie! La tua richiesta è stata inviata con successo. Se accettata, verrai ricontattato al più presto.",
+        backHome: "Torna alla home"
       }
     },
     alternative: {
-      title: "Altri modi per contattarmi",
-      email: {
-        title: "Email per domande generali",
-        description: "Solo per domande generali, non per richieste di progetto",
-        address: "ciao@davidelamarca.it"
-      },
-      social: {
-        title: "I miei social"
-      }
     }
   },
   pageNotFound: {

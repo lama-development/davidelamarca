@@ -84,7 +84,7 @@ export default (langPrefix = "") => ({
     },
     banner: {
       title: "Potenzia la tua presenza online",
-      subtitle: "Il tuo business merita una presenza digitale che faccia davvero la differenza. Realizzo siti veloci e moderni per realtà ambiziose come la tua.",
+      subtitle: "Il tuo business merita una presenza digitale che faccia davvero la differenza. ",
       button: "Inizia ora"
     }
   },
@@ -95,7 +95,7 @@ export default (langPrefix = "") => ({
     },
     badge: "Contattami",
     title: "Iniziamo il tuo progetto",
-    description: "Raccontami la tua idea e scopriamo insieme come realizzare il sito web che meriti. Compilare questo modulo è il primo passo verso il tuo nuovo sito web.",
+    description: "Raccontami la tua idea e scopriamo insieme come realizzare il sito web che meriti. ",
     form: {
       stepText: "Passo {current} di {total}",
       step1: {
@@ -174,8 +174,7 @@ export default (langPrefix = "") => ({
         backHome: "Torna alla home"
       }
     },
-    alternative: {
-    }
+    alternative: {}
   },
   pageNotFound: {
     meta: {

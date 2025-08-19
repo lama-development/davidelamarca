@@ -4,13 +4,13 @@ const { badge, title, description } = Astro.props;
 
 <section class="w-full bg-neutral-50 px-6 pt-24 pb-6 md:pt-32 dark:bg-neutral-950">
   <div class="mx-auto max-w-4xl text-center">
-    <div class="mx-auto mb-6 inline-flex items-center gap-1.5 rounded-full border border-sky-500/20 bg-sky-500/10 px-3 py-1.5 text-xs font-medium whitespace-nowrap text-sky-600 sm:mb-8 sm:text-sm dark:text-sky-400">
-      {badge}
+    <div class="mx-auto mb-6 inline-flex items-center gap-2 rounded-full border border-sky-500/20 bg-sky-500/10 px-3 py-1.5 text-xs font-medium whitespace-nowrap text-sky-600 sm:mb-8 sm:text-sm dark:text-sky-400">
+      <span class="text-xs font-medium text-sky-600 sm:text-sm dark:text-sky-400">{badge}</span>
     </div>
     <h1 class="mb-6 text-5xl leading-[0.8] font-bold tracking-tight text-neutral-900 md:text-5xl dark:text-neutral-100">
       {title}
     </h1>
-    <p class="mx-auto max-w-2xl text-base leading-[1.1] text-neutral-700 opacity-80 md:text-lg dark:text-neutral-300">
+    <p class="mx-auto max-w-xs text-base leading-[1.1] text-neutral-700 md:max-w-xl md:text-lg dark:text-neutral-300">
       {description}
     </p>
   </div>

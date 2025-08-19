@@ -6,7 +6,7 @@ import en from "../i18n/en";
 
 // Get the current URL and check for language
 const url = Astro.url.pathname;
-const isEnglish = url.startsWith("/en/") || url === "/en" || url.match(/^\/en(?:\/|$)/) !== null;
+const isEnglish = url.startsWith("/en");
 const t = isEnglish ? en("/en") : it("");
 ---
 

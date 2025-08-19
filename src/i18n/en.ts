@@ -84,7 +84,7 @@ export default (langPrefix = "") => ({
     },
     banner: {
       title: "Power up your online presence",
-      subtitle: "Your business deserves a digital presence that truly makes a difference. I create fast and modern websites for ambitious businesses like yours.",
+      subtitle: "Your business deserves a digital presence that truly makes a difference.",
       button: "Get started"
     }
   },
@@ -95,7 +95,7 @@ export default (langPrefix = "") => ({
     },
     badge: "Get in Touch",
     title: "Let's start your project",
-    description: "Tell me about your idea and let's discover together how to create the website you deserve. Filling out this form is the first step towards your new website.",
+    description: "Tell me about your idea and let's discover together how to create the website you deserve.",
     form: {
       stepText: "Step {current} of {total}",
       step1: {
@@ -174,8 +174,7 @@ export default (langPrefix = "") => ({
         backHome: "Back to home"
       }
     },
-    alternative: {
-    }
+    alternative: {}
   },
   pageNotFound: {
     meta: {

@@ -98,6 +98,29 @@ export default (langPrefix = "") => ({
       title: "Let's start your project",
       description: "Tell me about your idea and let's discover together how to create the website you deserve."
     },
+    statistics: {
+      badge: "Statistics",
+      title: "Trusted by clients worldwide",
+      description: "Numbers that speak to the quality of my work and commitment to every project.",
+      stats: [
+        {
+          value: "10+",
+          label: "Projects completed"
+        },
+        {
+          value: "100%",
+          label: "Client satisfaction"
+        },
+        {
+          value: "5+",
+          label: "Online websites"
+        },
+        {
+          value: "5★",
+          label: "Average rating"
+        }
+      ]
+    },
     form: {
       stepText: "Step {current} of {total}",
       step1: {
@@ -194,7 +217,7 @@ export default (langPrefix = "") => ({
       title: "Page Not Found - Davide La Marca",
       description: "The page you're looking for doesn't exist or another error occurred. Return to the homepage to keep browsing."
     },
-    title: "404",
+    title: "Page not found",
     description: "The page you're looking for doesn't exist or another error occurred.",
     button: "Return home"
   },

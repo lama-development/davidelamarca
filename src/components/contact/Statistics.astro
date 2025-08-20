@@ -1,0 +1,30 @@
+---
+const { statistics } = Astro.props;
+---
+
+<section class="w-full border-b border-neutral-200 bg-neutral-100 px-6 py-16 md:py-24 dark:border-neutral-800 dark:bg-neutral-900">
+  <div class="mx-auto max-w-6xl">
+    <div class="mb-12 text-center">
+      <div class="mx-auto mb-6 inline-flex items-center gap-2 rounded-full border border-sky-500/20 bg-sky-500/10 px-3 py-1.5 text-xs font-medium whitespace-nowrap text-sky-500 sm:mb-8 sm:text-sm">
+        <span class="text-xs font-medium text-sky-500 sm:text-sm">{statistics.badge}</span>
+      </div>
+      <h2 class="mb-6 text-5xl leading-[0.8] font-bold tracking-tight text-neutral-900 dark:text-neutral-100">
+        {statistics.title}
+      </h2>
+      <p class="mx-auto max-w-xs text-base leading-[1.1] text-neutral-700 md:max-w-xl md:text-lg dark:text-neutral-300">
+        {statistics.description}
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+      {
+        statistics.stats.map((stat) => (
+          <div class="rounded-lg border border-neutral-200 bg-neutral-50 p-6 text-center dark:border-neutral-800 dark:bg-neutral-950">
+            <div class="mb-2 text-3xl font-bold text-black md:text-4xl dark:text-white">{stat.value}</div>
+            <div class="text-sm text-neutral-700 md:text-base dark:text-neutral-400">{stat.label}</div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

@@ -98,6 +98,29 @@ export default (langPrefix = "") => ({
       title: "Iniziamo il tuo progetto",
       description: "Raccontami la tua idea e scopriamo insieme come realizzare il sito web che meriti. "
     },
+    statistics: {
+      badge: "Statistiche",
+      title: "La fiducia dei miei clienti",
+      description: "Numeri che parlano della qualità del mio lavoro e dell'impegno verso ogni progetto.",
+      stats: [
+        {
+          value: "10+",
+          label: "Progetti completati"
+        },
+        {
+          value: "100%",
+          label: "Clienti soddisfatti"
+        },
+        {
+          value: "5+",
+          label: "Siti online"
+        },
+        {
+          value: "5★",
+          label: "Valutazione media"
+        }
+      ]
+    },
     form: {
       stepText: "Passo {current} di {total}",
       step1: {
@@ -194,7 +217,7 @@ export default (langPrefix = "") => ({
       title: "Pagina Non Trovata - Davide La Marca",
       description: "La pagina che stai cercando non esiste o si è verificato un altro errore. Torna alla home per continuare la navigazione."
     },
-    title: "404",
+    title: "Pagina non trovata",
     description: "La pagina che stai cercando non esiste o si è verificato un altro errore.",
     button: "Torna alla home"
   },

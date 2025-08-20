@@ -1,5 +1,5 @@
 ---
-const { brand, page1, page2, page3, aria } = Astro.props;
+const { navbar } = Astro.props;
 const langPrefix = Astro.url.pathname.startsWith("/en") ? "/en" : "";
 ---
 
@@ -10,15 +10,15 @@ const langPrefix = Astro.url.pathname.startsWith("/en") ? "/en" : "";
         <svg class="h-6 w-6 text-sky-500" viewBox="0 0 675 750" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" clip-rule="evenodd" d="M675 562.506L337.5 750L149.996 645.846V275.763L243.748 223.686L337.5 171.609L525.004 275.763V474.248L337.5 578.391L300.004 557.556V364.009L337.5 343.218L374.996 364.02V471.762L450 430.114V319.874L337.5 257.358L225 319.874V601.679L337.5 664.195L599.996 518.371V231.629L337.5 85.8046L75.0038 231.629V604.176L0 562.506V187.494L337.5 0L675 187.494V562.506Z"></path>
         </svg>
-        <span class="text-base font-medium text-neutral-900 dark:text-neutral-100">{brand}</span>
+        <span class="text-base font-medium text-neutral-900 dark:text-neutral-100">{navbar.brand}</span>
       </a>
       <div class="hidden items-center space-x-1 md:flex">
-        <a href={`${langPrefix}/`} class="nav-link rounded-full px-4 py-2 text-base font-normal text-neutral-900 transition-colors duration-200 hover:bg-neutral-200 dark:text-neutral-100 dark:hover:bg-neutral-800">{page1}</a>
-        <a href={`${langPrefix}/projects`} class="nav-link rounded-full px-4 py-2 text-base font-normal text-neutral-900 transition-colors duration-200 hover:bg-neutral-200 dark:text-neutral-100 dark:hover:bg-neutral-800">{page2}</a>
-        <a href={`${langPrefix}/contact`} class="nav-link rounded-full px-4 py-2 text-base font-normal text-neutral-900 transition-colors duration-200 hover:bg-neutral-200 dark:text-neutral-100 dark:hover:bg-neutral-800">{page3}</a>
+        <a href={`${langPrefix}/`} class="nav-link rounded-full px-4 py-2 text-base font-normal text-neutral-900 transition-colors duration-200 hover:bg-neutral-200 dark:text-neutral-100 dark:hover:bg-neutral-800">{navbar.page1}</a>
+        <a href={`${langPrefix}/projects`} class="nav-link rounded-full px-4 py-2 text-base font-normal text-neutral-900 transition-colors duration-200 hover:bg-neutral-200 dark:text-neutral-100 dark:hover:bg-neutral-800">{navbar.page2}</a>
+        <a href={`${langPrefix}/contact`} class="nav-link rounded-full px-4 py-2 text-base font-normal text-neutral-900 transition-colors duration-200 hover:bg-neutral-200 dark:text-neutral-100 dark:hover:bg-neutral-800">{navbar.page3}</a>
       </div>
       <div class="md:hidden">
-        <button id="mobile-menu-button" aria-label={aria.menu} class="mobile-menu-btn cursor-pointer rounded-full p-2 text-neutral-900 transition-colors duration-200 hover:bg-neutral-200 dark:text-neutral-100 dark:hover:bg-neutral-800">
+        <button id="mobile-menu-button" aria-label={navbar.aria.menu} class="mobile-menu-btn cursor-pointer rounded-full p-2 text-neutral-900 transition-colors duration-200 hover:bg-neutral-200 dark:text-neutral-100 dark:hover:bg-neutral-800">
           <svg id="chevron-icon" class="h-4 w-4 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
           </svg>
@@ -28,19 +28,19 @@ const langPrefix = Astro.url.pathname.startsWith("/en") ? "/en" : "";
             <svg class="h-4 w-4 text-sky-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
             </svg>
-            <span>{page1}</span>
+            <span>{navbar.page1}</span>
           </a>
           <a href={`${langPrefix}/projects`} class="mx-2 my-1 flex items-center space-x-2 rounded-full px-3 py-2 text-sm font-medium text-neutral-900 transition-colors duration-200 hover:bg-neutral-200 dark:text-neutral-100 dark:hover:bg-neutral-800">
             <svg class="h-4 w-4 text-sky-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
             </svg>
-            <span>{page2}</span>
+            <span>{navbar.page2}</span>
           </a>
           <a href={`${langPrefix}/contact`} class="mx-2 my-1 flex items-center space-x-2 rounded-full px-3 py-2 text-sm font-medium text-neutral-900 transition-colors duration-200 hover:bg-neutral-200 dark:text-neutral-100 dark:hover:bg-neutral-800">
             <svg class="h-4 w-4 text-sky-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
             </svg>
-            <span>{page3}</span>
+            <span>{navbar.page3}</span>
           </a>
         </div>
       </div>

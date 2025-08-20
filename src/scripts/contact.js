@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Reset field border colors
     const fields = document.querySelectorAll("input, textarea");
     fields.forEach((field) => {
-      field.classList.remove("border-red-500", "dark:border-red-500");
+      field.classList.remove("border-red-600", "dark:border-red-400");
       field.classList.add("border-neutral-200", "dark:border-neutral-800");
     });
   }
@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (field) {
       field.classList.remove("border-neutral-200", "dark:border-neutral-800");
-      field.classList.add("border-red-500", "dark:border-red-500");
+      field.classList.add("border-red-600", "dark:border-red-400");
     }
   }
 
@@ -201,6 +201,36 @@ document.addEventListener("DOMContentLoaded", function () {
     acceptRulesCheckbox.addEventListener("change", updateNextButton);
   }
 
+  // Handle radio button selection styling
+  function updateRadioStyles() {
+    const radioInputs = document.querySelectorAll('input[type="radio"]');
+    
+    radioInputs.forEach(radio => {
+      radio.addEventListener('change', function() {
+        // Remove sky-500 border from all radio labels in the same group
+        const groupName = this.name;
+        const groupRadios = document.querySelectorAll(`input[name="${groupName}"]`);
+        
+        groupRadios.forEach(groupRadio => {
+          const label = groupRadio.closest('label');
+          if (label) {
+            // Reset to default border
+            label.classList.remove('border-sky-500');
+            label.classList.add('border-neutral-200', 'dark:border-neutral-800');
+          }
+        });
+        
+        // Add sky-500 border to the selected radio's label
+        const selectedLabel = this.closest('label');
+        if (selectedLabel && this.checked) {
+          selectedLabel.classList.remove('border-neutral-200', 'dark:border-neutral-800');
+          selectedLabel.classList.add('border-sky-500');
+        }
+      });
+    });
+  }
+
   // Initialize the form
   showStep(currentStep);
+  updateRadioStyles();
 });

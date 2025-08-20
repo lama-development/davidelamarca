@@ -156,7 +156,7 @@ export default (langPrefix = "") => ({
           label: "Websites that inspire you (optional)",
           placeholder: "Links to resources you like or that represent the style you'd want"
         },
-        hasDesign: {
+        hasBranding: {
           label: "Do you already have your own branding (colors, logo, design)?",
           options: ["Yes, I have complete branding", "Partially, some elements need defining", "No, I need to create it"]
         }
@@ -182,9 +182,8 @@ export default (langPrefix = "") => ({
     },
     email: {
       badge: "Email",
-      title: "Contact me via Email",
-      description: "You can contact me directly via email for questions or general information. For project requests, please use the dedicated form.",
-      address: "info@davidelamarca.com",
+      title: "Searching for an Email?",
+      description: "You can contact me directly via email for general information. For project requests, however, use the form above.",
       aria: {
         email: "Send email"
       }

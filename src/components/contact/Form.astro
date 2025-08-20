@@ -3,7 +3,7 @@ const { form } = Astro.props;
 const langPrefix = Astro.url.pathname.startsWith("/en") ? "/en" : "";
 ---
 
-<section class="w-full border-b border-neutral-200 bg-neutral-50 px-6 pt-6 pb-16 sm:py-20 dark:border-neutral-800 dark:bg-neutral-950">
+<section class="w-full bg-neutral-50 px-6 py-6 sm:py-12 dark:border-neutral-800 dark:bg-neutral-950">
   <div class="mx-auto max-w-4xl">
     <div id="multi-step-form" class="rounded-2xl border border-neutral-200 bg-neutral-100 p-6 sm:p-8 md:p-10 dark:border-neutral-800 dark:bg-neutral-900">
       <form id="contact-form" action="/api/contact" method="POST" data-step-text={form.stepText} data-submit-text={form.navigation.submit}>
@@ -173,16 +173,19 @@ const langPrefix = Astro.url.pathname.startsWith("/en") ? "/en" : "";
               <textarea id="inspiration" name="inspiration" rows="3" placeholder={form.step4.inspiration.placeholder} class="w-full resize-none rounded-lg border border-neutral-200 bg-neutral-50 px-4 py-3 text-neutral-900 placeholder-neutral-500 dark:border-neutral-800 dark:bg-neutral-950 dark:text-neutral-100 dark:placeholder-neutral-400"></textarea>
             </div>
             <div>
-              <label class="mb-3 block text-sm font-medium text-neutral-800 dark:text-neutral-200">{form.step4.hasDesign.label}</label>
-              <div class="grid gap-3 sm:grid-cols-2">
+              <label class="mb-3 block text-sm font-medium text-neutral-800 dark:text-neutral-200">{form.step4.hasBranding.label}</label>
+              <div class="grid gap-3 sm:grid-cols-1">
                 {
-                  form.step4.hasDesign.options.map((option) => (
+                  form.step4.hasBranding.options.map((option) => (
                     <label class="flex cursor-pointer items-center space-x-3 rounded-lg border border-neutral-200 bg-neutral-50 p-3 hover:bg-neutral-200 dark:border-neutral-800 dark:bg-neutral-950 dark:hover:bg-neutral-800">
-                      <input type="radio" name="hasDesign" value={option} class="h-4 w-4 border-neutral-200 dark:border-neutral-800" />
+                      <input type="radio" name="hasBranding" value={option} required class="h-4 w-4 border-neutral-200 dark:border-neutral-800" />
                       <span class="text-neutral-800 dark:text-neutral-200">{option}</span>
                     </label>
                   ))
                 }
+              </div>
+              <div class="error-message mt-1 hidden text-sm text-red-600 dark:text-red-400" data-field="hasBranding">
+                {form.validation.required}
               </div>
             </div>
           </div>
@@ -203,7 +206,7 @@ const langPrefix = Astro.url.pathname.startsWith("/en") ? "/en" : "";
           </div>
         </div>
         <!-- Navigation Buttons -->
-        <div id="form-navigation" class="relative mt-10 flex items-center justify-between">
+        <div id="form-navigation" class="relative mt-12 flex items-center justify-between">
           <button type="button" id="prev-btn" class="cursor-pointer rounded-full border border-neutral-200 bg-white p-3 text-neutral-700 hover:bg-neutral-50 disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:bg-white dark:border-neutral-800 dark:bg-neutral-800 dark:text-neutral-300 dark:hover:bg-neutral-700 dark:disabled:hover:bg-neutral-800" aria-label={form.aria.prev} disabled>
             <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>

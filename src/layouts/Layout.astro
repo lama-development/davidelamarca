@@ -24,8 +24,8 @@ const { t, meta } = Astro.props;
     <script src="/src/scripts/faq.js"></script>
   </head>
   <body class="bg-neutral-50 dark:bg-neutral-950">
-    <Navbar {...t.navbar} />
+    <Navbar navbar={t.navbar} />
     <slot />
-    <Footer {...t.footer} />
+    <Footer footer={t.footer} />
   </body>
 </html>

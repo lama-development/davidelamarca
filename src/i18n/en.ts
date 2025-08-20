@@ -28,12 +28,12 @@ export default (langPrefix = "") => ({
       badge: "Services",
       title: "Your website, done right",
       subtitle: "Complete solutions to bring your business online — the right way.",
-      serviceTitle1: "Web Development",
-      serviceTitle2: "Web Design",
-      serviceTitle3: "SEO & Best Practices",
-      serviceSubtitle1: "Modern, fast, and responsive websites designed to deliver the best user experience.",
-      serviceSubtitle2: "Intuitive interfaces that enhance navigation and turn visitors into customers.",
-      serviceSubtitle3: "SEO optimization and development following best practices for visibility and performance."
+      title1: "Web Development",
+      title2: "Web Design",
+      title3: "SEO & Best Practices",
+      subtitle1: "Modern, fast, and responsive websites designed to deliver the best user experience.",
+      subtitle2: "Intuitive interfaces that enhance navigation and turn visitors into customers.",
+      subtitle3: "SEO optimization and development following best practices for visibility and performance."
     },
     projects: {
       badge: "Projects",
@@ -62,15 +62,15 @@ export default (langPrefix = "") => ({
       questions: [
         {
           question: "How much does a professional website cost?",
-          answer: `The cost of a website depends on many factors: complexity, required features, timelines, and goals. Each project is evaluated individually based on your needs. <a href='${langPrefix}/contact' aria-label='Open contact page' class='text-sky-600 hover:underline dark:text-sky-400'>Contact me</a> to receive a personalized quote.`
+          answer: `The cost of a website depends on many factors: complexity, required features, timelines, and goals. Each project is evaluated individually based on your needs. <a href='${langPrefix}/contact' aria-label='Open contact page' class='text-sky-500 hover:underline '>Contact me</a> to receive a personalized quote.`
         },
         {
           question: "How long does it take to build a website?",
-          answer: `Development time varies depending on the complexity of the project. A showcase website may take 3-4 weeks, while more complex projects with advanced features can take 2-3 months or more. I'll always provide you with a clear timeline at the start of the project. You can see examples of completed work in the <a href='${langPrefix}/projects' aria-label='Open projects page' class='text-sky-600 hover:underline dark:text-sky-400'>Projects</a> page  .`
+          answer: `Development time varies depending on the complexity of the project. A showcase website may take 3-4 weeks, while more complex projects with advanced features can take 2-3 months or more. I'll always provide you with a clear timeline at the start of the project. You can see examples of completed work in the <a href='${langPrefix}/projects' aria-label='Open projects page' class='text-sky-500 hover:underline '>Projects</a> page  .`
         },
         {
           question: "Do you offer maintenance services after launch?",
-          answer: `Yes, I offer a maintenance service to ensure your website remains secure, up-to-date, and performant over time. This includes security updates, regular backups, and technical support. <a href='${langPrefix}/contact' aria-label='Open contact page' class='text-sky-600 hover:underline dark:text-sky-400'>Contact me</a> for more details.`
+          answer: `Yes, I offer a maintenance service to ensure your website remains secure, up-to-date, and performant over time. This includes security updates, regular backups, and technical support. <a href='${langPrefix}/contact' aria-label='Open contact page' class='text-sky-500 hover:underline '>Contact me</a> for more details.`
         },
         {
           question: "Will the website be optimized for search engines?",
@@ -78,7 +78,7 @@ export default (langPrefix = "") => ({
         },
         {
           question: "Which platforms do you use to build websites?",
-          answer: "I specialize in creating websites with <a href='https://squarespace.com' aria-label='Open Squarespace website' target='_blank' rel='noopener noreferrer' class='text-sky-600 hover:underline dark:text-sky-400'>Squarespace</a> and <a href='https://framer.com' aria-label='Open Framer website' target='_blank' rel='noopener noreferrer' class='text-sky-600 hover:underline dark:text-sky-400'>Framer</a>, both excellent for modern design and simple content management. I can also develop fully custom-coded websites for specific needs, though this requires more time and a higher budget."
+          answer: "I specialize in creating websites with <a href='https://squarespace.com' aria-label='Open Squarespace website' target='_blank' rel='noopener noreferrer' class='text-sky-500 hover:underline '>Squarespace</a> and <a href='https://framer.com' aria-label='Open Framer website' target='_blank' rel='noopener noreferrer' class='text-sky-500 hover:underline '>Framer</a>, both excellent for modern design and simple content management. I can also develop fully custom-coded websites for specific needs, though this requires more time and a higher budget."
         }
       ]
     },
@@ -93,9 +93,11 @@ export default (langPrefix = "") => ({
       title: "Get in Touch - Davide La Marca",
       description: "Tell me about your project and let's work together to create the website you deserve."
     },
-    badge: "Get in Touch",
-    title: "Let's start your project",
-    description: "Tell me about your idea and let's discover together how to create the website you deserve.",
+    header: {
+      badge: "Form",
+      title: "Let's start your project",
+      description: "Tell me about your idea and let's discover together how to create the website you deserve."
+    },
     form: {
       stepText: "Step {current} of {total}",
       step1: {
@@ -148,11 +150,11 @@ export default (langPrefix = "") => ({
         description: "Describe your project in more detail",
         message: {
           label: "Describe your project",
-          placeholder: "Tell me about your idea, what you'd like to achieve, your business sector, if you have an existing site to renovate, examples of sites you like, specific features you want, etc."
+          placeholder: "Tell me what you'd like to achieve, your business sector, specific features you want, etc."
         },
         inspiration: {
           label: "Websites that inspire you (optional)",
-          placeholder: "Links to sites you like or that represent the style you'd want"
+          placeholder: "Links to resources you like or that represent the style you'd want"
         },
         hasDesign: {
           label: "Do you already have your own branding (colors, logo, design)?",
@@ -172,9 +174,21 @@ export default (langPrefix = "") => ({
         title: "Request sent",
         message: "Thank you! Your request has been sent successfully. If accepted, you will be contacted as soon as possible.",
         backHome: "Back to home"
+      },
+      aria: {
+        prev: "Go back to previous step",
+        next: "Go to next step"
       }
     },
-    alternative: {}
+    email: {
+      badge: "Email",
+      title: "Contact me via Email",
+      description: "You can contact me directly via email for questions or general information. For project requests, please use the dedicated form.",
+      address: "info@davidelamarca.com",
+      aria: {
+        email: "Send email"
+      }
+    }
   },
   pageNotFound: {
     meta: {

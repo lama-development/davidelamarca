@@ -2,13 +2,13 @@
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/contact/Header.astro";
 import Form from "../components/contact/Form.astro";
-import Contacts from "../components/contact/Contacts.astro";
-import translation from "../i18n/it";
-const t = translation();
+import Email from "../components/contact/Email.astro";
+import language from "../i18n/it";
+const t = language();
 ---
 
 <Layout t={t} meta={t.contact.meta}>
-  <Header badge={t.contact.badge} title={t.contact.title} description={t.contact.description} />
-  <Form formData={t.contact.form} />
-  <Contacts alternativeData={t.contact.alternative} />
+  <Header header={t.contact.header} />
+  <Form form={t.contact.form} />
+  <Email email={t.contact.email} />
 </Layout>

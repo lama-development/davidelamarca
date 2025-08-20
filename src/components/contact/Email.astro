@@ -1,0 +1,19 @@
+---
+const { email } = Astro.props;
+---
+
+<section class="w-full border-b border-neutral-200 bg-neutral-100 px-6 py-16 dark:border-neutral-800 dark:bg-neutral-900">
+  <div class="text-center">
+    <div class="mx-auto mb-6 inline-flex items-center gap-2 rounded-full border border-sky-500/20 bg-sky-500/10 px-3 py-1.5 text-xs font-medium whitespace-nowrap text-sky-500 sm:mb-8 sm:text-sm">
+      <span class="text-xs font-medium text-sky-500 sm:text-sm">{email.badge}</span>
+    </div>
+    <h2 class="mb-6 text-5xl leading-[0.8] font-bold tracking-tight text-neutral-900 dark:text-neutral-100">{email.title}</h2>
+    <p class="mx-auto mb-6 max-w-xs text-base leading-[1.1] text-neutral-700 md:max-w-xl md:text-lg dark:text-neutral-300">{email.description}</p>
+    <a href="mailto:info@davidelamarca.com" class="inline-flex items-center gap-2 text-sky-500 hover:underline" aria-label={email.aria.email}>
+      <span class="text-lg font-medium">{email.address}</span>
+      <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+      </svg>
+    </a>
+  </div>
+</section>

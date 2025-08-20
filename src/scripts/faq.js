@@ -29,7 +29,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function toggleFaq(item, content) {
     const isOpening = !item.hasAttribute("open");
-
     if (isOpening) {
       // Close all other FAQs first
       faqItems.forEach((otherItem) => {
@@ -37,7 +36,6 @@ document.addEventListener("DOMContentLoaded", function () {
           closeFaq(otherItem);
         }
       });
-
       // Open current FAQ
       openFaq(item, content);
     } else {

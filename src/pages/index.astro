@@ -5,14 +5,14 @@ import Services from "../components/home/Services.astro";
 import Projects from "../components/home/Projects.astro";
 import FAQ from "../components/home/FAQ.astro";
 import Banner from "../components/home/Banner.astro";
-import translation from "../i18n/it";
-const t = translation();
+import language from "../i18n/it";
+const t = language();
 ---
 
 <Layout t={t} meta={t.home.meta}>
-  <Hero {...t.home.hero} />
-  <Services {...t.home.services} />
-  <Projects {...t.home.projects} />
-  <FAQ {...t.home.faq} />
-  <Banner {...t.home.banner} />
+  <Hero hero={t.home.hero} />
+  <Services services={t.home.services} />
+  <Projects projects={t.home.projects} />
+  <FAQ faq={t.home.faq} />
+  <Banner banner={t.home.banner} />
 </Layout>

@@ -28,12 +28,12 @@ export default (langPrefix = "") => ({
       badge: "Servizi",
       title: "Il tuo sito, fatto come si deve",
       subtitle: "Soluzioni complete per portare il tuo business online, nel modo giusto.",
-      serviceTitle1: "Sviluppo Web",
-      serviceTitle2: "Web Design",
-      serviceTitle3: "SEO & Best Practice",
-      serviceSubtitle1: "Siti web moderni, veloci e responsive, pensati per offrire la migliore esperienza utente.",
-      serviceSubtitle2: "Interfacce intuitive che migliorano la navigazione e convertono i visitatori in clienti.",
-      serviceSubtitle3: "Ottimizzazione SEO e sviluppo secondo best practice per visibilità e performance."
+      title1: "Sviluppo Web",
+      title2: "Web Design",
+      title3: "SEO & Best Practice",
+      subtitle1: "Siti web moderni, veloci e responsive, pensati per offrire la migliore esperienza utente.",
+      subtitle2: "Interfacce intuitive che migliorano la navigazione e convertono i visitatori in clienti.",
+      subtitle3: "Ottimizzazione SEO e sviluppo secondo best practice per visibilità e performance."
     },
     projects: {
       badge: "Progetti",
@@ -62,15 +62,15 @@ export default (langPrefix = "") => ({
       questions: [
         {
           question: "Quanto costa un sito web professionale?",
-          answer: `Il costo di un sito web dipende da molti fattori: complessità, funzionalità richieste, tempistiche e obiettivi. Ogni progetto viene valutato individualmente in base alle tue esigenze. <a href='${langPrefix}/contact' aria-label='Apri pagina contatti' class='text-sky-600 hover:underline dark:text-sky-400'>Contattami</a> per ricevere un preventivo personalizzato.`
+          answer: `Il costo di un sito web dipende da molti fattori: complessità, funzionalità richieste, tempistiche e obiettivi. Ogni progetto viene valutato individualmente in base alle tue esigenze. <a href='${langPrefix}/contact' aria-label='Apri pagina contatti' class='text-sky-500 hover:underline '>Contattami</a> per ricevere un preventivo personalizzato.`
         },
         {
           question: "Quanto tempo serve per realizzare un sito web?",
-          answer: `I tempi di realizzazione variano in base alla complessità del progetto. Un sito vetrina può richiedere 3-4 settimane, mentre progetti più complessi con funzionalità avanzate possono richiedere 2-3 mesi o più. Ti fornirò sempre una tempistica chiara all'inizio del progetto. Puoi vedere esempi di lavori già completati nella pagina <a href='${langPrefix}/projects' aria-label='Vai alla pagina progetti' class='text-sky-600 hover:underline dark:text-sky-400'>Progetti</a>.`
+          answer: `I tempi di realizzazione variano in base alla complessità del progetto. Un sito vetrina può richiedere 3-4 settimane, mentre progetti più complessi con funzionalità avanzate possono richiedere 2-3 mesi o più. Ti fornirò sempre una tempistica chiara all'inizio del progetto. Puoi vedere esempi di lavori già completati nella pagina <a href='${langPrefix}/projects' aria-label='Vai alla pagina progetti' class='text-sky-500 hover:underline '>Progetti</a>.`
         },
         {
           question: "Offri servizi di manutenzione dopo il lancio?",
-          answer: `Sì, offro un servizio di manutenzione per garantire che il tuo sito rimanga sicuro, aggiornato e performante nel tempo. Questo include aggiornamenti di sicurezza, backup regolari, e assistenza tecnica. <a href='${langPrefix}/contact' aria-label='Apri pagina contatti' class='text-sky-600 hover:underline dark:text-sky-400'>Contattami</a> per maggiori dettagli.`
+          answer: `Sì, offro un servizio di manutenzione per garantire che il tuo sito rimanga sicuro, aggiornato e performante nel tempo. Questo include aggiornamenti di sicurezza, backup regolari, e assistenza tecnica. <a href='${langPrefix}/contact' aria-label='Apri pagina contatti' class='text-sky-500 hover:underline '>Contattami</a> per maggiori dettagli.`
         },
         {
           question: "Il sito sarà ottimizzato per i motori di ricerca?",
@@ -78,7 +78,7 @@ export default (langPrefix = "") => ({
         },
         {
           question: "Quali piattaforme usi per creare siti web?",
-          answer: "Mi specializzo nella realizzazione di siti con <a href='https://squarespace.com' aria-label='Apri sito Squarespace' target='_blank' rel='noopener noreferrer' class='text-sky-600 hover:underline dark:text-sky-400'>Squarespace</a> e <a href='https://framer.com' aria-label='Apri sito Framer' target='_blank' rel='noopener noreferrer' class='text-sky-600 hover:underline dark:text-sky-400'>Framer</a>, entrambe ottime per design moderni e gestione contenuti semplice. Posso anche sviluppare siti completamente da codice per esigenze specifiche, ma questo richiede tempi e costi maggiori."
+          answer: "Mi specializzo nella realizzazione di siti con <a href='https://squarespace.com' aria-label='Apri sito Squarespace' target='_blank' rel='noopener noreferrer' class='text-sky-500 hover:underline '>Squarespace</a> e <a href='https://framer.com' aria-label='Apri sito Framer' target='_blank' rel='noopener noreferrer' class='text-sky-500 hover:underline '>Framer</a>, entrambe ottime per design moderni e gestione contenuti semplice. Posso anche sviluppare siti completamente da codice per esigenze specifiche, ma questo richiede tempi e costi maggiori."
         }
       ]
     },
@@ -93,9 +93,11 @@ export default (langPrefix = "") => ({
       title: "Contattami - Davide La Marca",
       description: "Raccontami il tuo progetto e scopri come possiamo lavorare insieme per realizzare il sito che meriti."
     },
-    badge: "Contattami",
-    title: "Iniziamo il tuo progetto",
-    description: "Raccontami la tua idea e scopriamo insieme come realizzare il sito web che meriti. ",
+    header: {
+      badge: "Form",
+      title: "Iniziamo il tuo progetto",
+      description: "Raccontami la tua idea e scopriamo insieme come realizzare il sito web che meriti. "
+    },
     form: {
       stepText: "Passo {current} di {total}",
       step1: {
@@ -140,7 +142,7 @@ export default (langPrefix = "") => ({
         },
         timeline: {
           label: "Tempistiche desiderate",
-          options: ["Urgente (si applicano maggiorazioni)", "Flessibiii"]
+          options: ["Urgente (si applicano maggiorazioni)", "Flessibili"]
         }
       },
       step4: {
@@ -148,7 +150,7 @@ export default (langPrefix = "") => ({
         description: "Descrivi meglio il progetto",
         message: {
           label: "Descrivi il progetto nei dettagli",
-          placeholder: "Raccontami cosa vorresti ottenere, quale è il tuo settore di business, se hai già un sito esistente, funzionalità specifiche che desideri, ecc."
+          placeholder: "Raccontami cosa vorresti ottenere, qual è il tuo settore di business, funzionalità specifiche che desideri, ecc."
         },
         inspiration: {
           label: "Siti web che ti ispirano (opzionale)",
@@ -172,9 +174,21 @@ export default (langPrefix = "") => ({
         title: "Richiesta inviata",
         message: "Grazie! La tua richiesta è stata inviata con successo. Se accettata, verrai ricontattato al più presto.",
         backHome: "Torna alla home"
+      },
+      aria: {
+        prev: "Torna al passo precedente",
+        next: "Vai al passo successivo"
       }
     },
-    alternative: {}
+    email: {
+      badge: "Email",
+      title: "Contattami via Email",
+      description: "Puoi contattarmi direttamente via email per domande o informazioni generali. Per le richieste di progetto, usa il form apposito.",
+      address: "info@davidelamarca.com",
+      aria: {
+        email: "Invia email"
+      }
+    }
   },
   pageNotFound: {
     meta: {

@@ -1,22 +1,22 @@
 ---
-const { badge, title1, title2, subtitle, button, aria } = Astro.props;
+const { hero } = Astro.props;
 const langPrefix = Astro.url.pathname.startsWith("/en") ? "/en" : "";
 ---
 
 <section id="hero" class="relative flex min-h-screen w-full items-center justify-center border-b border-neutral-200 bg-neutral-50 px-6 dark:border-neutral-800 dark:bg-neutral-950">
   <div class="relative z-10 mx-auto max-w-7xl text-center">
-    <div class="mx-auto mb-6 inline-flex items-center gap-2 rounded-full border border-sky-500/20 bg-sky-500/10 px-3 py-1.5 text-xs font-medium whitespace-nowrap text-sky-600 sm:mb-8 sm:text-sm dark:text-sky-400">
-      <div class="h-1.5 w-1.5 animate-pulse rounded-full bg-sky-600 sm:h-2 sm:w-2 dark:bg-sky-400"></div>
-      <span class="text-xs font-medium text-sky-600 sm:text-sm dark:text-sky-400">{badge}</span>
+    <div class="mx-auto mb-6 inline-flex items-center gap-2 rounded-full border border-sky-500/20 bg-sky-500/10 px-3 py-1.5 text-xs font-medium whitespace-nowrap text-sky-500 sm:mb-8 sm:text-sm">
+      <div class="h-1.5 w-1.5 animate-pulse rounded-full bg-sky-500 sm:h-2 sm:w-2"></div>
+      <span class="text-xs font-medium text-sky-500 sm:text-sm">{hero.badge}</span>
     </div>
     <h1 class="mb-8 text-6xl leading-[0.8] font-bold tracking-tight text-neutral-900 sm:text-7xl md:text-8xl lg:text-9xl xl:text-[10rem] dark:text-neutral-100">
-      <span class="block">{title1}</span>
-      <span class="block">{title2}</span>
+      <span class="block">{hero.title1}</span>
+      <span class="block">{hero.title2}</span>
     </h1>
-    <p class="mx-auto mb-12 max-w-xs text-base leading-[1.1] text-neutral-700 md:max-w-xl md:text-lg dark:text-neutral-300">{subtitle}</p>
+    <p class="mx-auto mb-12 max-w-xs text-base leading-[1.1] text-neutral-700 md:max-w-xl md:text-lg dark:text-neutral-300">{hero.subtitle}</p>
     <div class="mb-16">
       <a href={`${langPrefix}/contact`} class="inline-flex items-center gap-2 rounded-full bg-sky-500 px-8 py-4 text-lg font-semibold tracking-tight text-white transition-colors duration-200 hover:bg-sky-600 dark:text-black">
-        {button}
+        {hero.button}
         <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
         </svg>
@@ -24,7 +24,7 @@ const langPrefix = Astro.url.pathname.startsWith("/en") ? "/en" : "";
     </div>
   </div>
   <div class="absolute bottom-6 left-1/2 z-10 -translate-x-1/2 transform animate-bounce">
-    <a href="#services" aria-label={aria.scroll} class="cursor-pointer">
+    <a href="#services" aria-label={hero.aria.scroll} class="cursor-pointer">
       <svg class="h-6 w-6 text-neutral-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
       </svg>

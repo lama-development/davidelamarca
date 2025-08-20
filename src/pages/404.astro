@@ -11,5 +11,5 @@ const t = isEnglish ? en("/en") : it("");
 ---
 
 <Layout t={t} meta={t.pageNotFound.meta}>
-  <PageNotFound {...t.pageNotFound} />
+  <PageNotFound pageNotFound={t.pageNotFound} />
 </Layout>

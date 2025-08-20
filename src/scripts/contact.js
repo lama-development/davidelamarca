@@ -50,10 +50,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (stepNumber <= currentStep) {
         // Active or completed step - blue dot
-        dot.className = "step-dot h-3 w-3 rounded-full bg-sky-500 transition-all duration-300";
+        dot.className = "step-dot h-3 w-3 rounded-full bg-sky-500 transition-all duration-200";
       } else {
         // Inactive step - gray dot
-        dot.className = "step-dot h-3 w-3 rounded-full bg-neutral-300 dark:bg-neutral-600 transition-all duration-300";
+        dot.className = "step-dot h-3 w-3 rounded-full bg-neutral-300 dark:bg-neutral-600 transition-all duration-200";
       }
     });
   }

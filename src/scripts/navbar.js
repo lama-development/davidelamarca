@@ -62,7 +62,10 @@ function setActiveNavLink() {
   // Add active classes to current page links
   [...navLinks, ...mobileLinks].forEach((link) => {
     const href = link.getAttribute("href");
-    if (href === currentPath || (currentPath === "/" && href === "/")) {
+    const normalizedHref = href.endsWith('/') ? href.slice(0, -1) : href;
+    const normalizedPath = currentPath.endsWith('/') && currentPath !== '/' ? currentPath.slice(0, -1) : currentPath;
+    
+    if (normalizedHref === normalizedPath || (normalizedPath === "/" && normalizedHref === "")) {
       link.classList.add("bg-neutral-100", "dark:bg-neutral-900", "border", "border-neutral-200", "dark:border-neutral-800");
     }
   });

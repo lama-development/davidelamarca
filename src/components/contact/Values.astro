@@ -1,0 +1,30 @@
+---
+const { values } = Astro.props;
+---
+
+<section class="border-b border-neutral-200 bg-neutral-100 px-6 py-24 dark:border-neutral-800 dark:bg-neutral-900">
+  <div class="mx-auto max-w-7xl">
+    <div class="mb-16 text-center">
+      <div class="mx-auto mb-6 inline-flex items-center gap-2 rounded-full border border-sky-500/20 bg-sky-500/10 px-3 py-1.5 text-xs font-medium whitespace-nowrap sm:mb-8 sm:text-sm">
+        <span class="text-xs font-medium text-sky-500 sm:text-sm">{values.badge}</span>
+      </div>
+      <h2 class="mb-4 text-5xl leading-[0.8] font-bold tracking-tight text-neutral-900 dark:text-neutral-100">{values.title}</h2>
+      <p class="mx-auto max-w-xs text-base leading-[1.1] text-neutral-700 md:max-w-xl md:text-lg dark:text-neutral-300">{values.description}</p>
+    </div>
+    <div class="mx-auto grid max-w-3xl grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-2">
+      {
+        values.coreValues.map((value) => (
+          <div class="flex flex-col items-center justify-center rounded-xl border border-neutral-200 bg-neutral-50 p-8 text-center dark:border-neutral-800 dark:bg-neutral-950">
+            <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl border border-sky-500/20 bg-sky-500/10">
+              <svg class="h-6 w-6 text-sky-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d={value.icon} />
+              </svg>
+            </div>
+            <h3 class="mb-2 text-xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100">{value.title}</h3>
+            <p class="text-base tracking-tight text-neutral-700 dark:text-neutral-400">{value.description}</p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

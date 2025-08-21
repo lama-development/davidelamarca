@@ -98,29 +98,6 @@ export default (langPrefix = "") => ({
       title: "Iniziamo il tuo progetto",
       description: "Raccontami la tua idea e scopriamo insieme come realizzare il sito web che meriti. "
     },
-    statistics: {
-      badge: "Statistiche",
-      title: "La fiducia dei miei clienti",
-      description: "Numeri che parlano della qualità del mio lavoro e dell'impegno verso ogni progetto.",
-      stats: [
-        {
-          value: "10+",
-          label: "Progetti completati"
-        },
-        {
-          value: "100%",
-          label: "Clienti soddisfatti"
-        },
-        {
-          value: "5+",
-          label: "Siti online"
-        },
-        {
-          value: "5★",
-          label: "Valutazione media"
-        }
-      ]
-    },
     form: {
       stepText: "Passo {current} di {total}",
       step1: {
@@ -202,6 +179,33 @@ export default (langPrefix = "") => ({
         prev: "Torna al passo precedente",
         next: "Vai al passo successivo"
       }
+    },
+    values: {
+      badge: "Valori",
+      title: "Ciò che guida il mio lavoro",
+      description: "I principi che orientano ogni progetto e relazione con i clienti che costruisco.",
+      coreValues: [
+        {
+          title: "Qualità Prima di Tutto",
+          description: "Ogni riga di codice realizzata con attenzione ai dettagli e best practices.",
+          icon: "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+        },
+        {
+          title: "Comunicazione Chiara",
+          description: "Aggiornamenti trasparenti e dialogo aperto durante tutto il progetto.",
+          icon: "M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+        },
+        {
+          title: "Apprendimento Continuo",
+          description: "Sempre aggiornato con le ultime tecnologie per soluzioni moderne.",
+          icon: "M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+        },
+        {
+          title: "Successo del Cliente",
+          description: "Il tuo successo è il mio successo. Impegnato a fornire risultati concreti.",
+          icon: "M13 10V3L4 14h7v7l9-11h-7z"
+        }
+      ]
     },
     email: {
       badge: "Email",

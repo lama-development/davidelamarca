@@ -2,7 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/contact/Header.astro";
 import Form from "../components/contact/Form.astro";
-import Statistics from "../components/contact/Statistics.astro";
+import Values from "../components/contact/Values.astro";
 import Email from "../components/contact/Email.astro";
 import language from "../i18n/it";
 const t = language();
@@ -11,6 +11,6 @@ const t = language();
 <Layout t={t} meta={t.contact.meta}>
   <Header header={t.contact.header} />
   <Form form={t.contact.form} />
-  <Statistics statistics={t.contact.statistics} />
+  <Values values={t.contact.values} />
   <Email email={t.contact.email} />
 </Layout>

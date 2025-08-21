@@ -203,6 +203,33 @@ export default (langPrefix = "") => ({
         next: "Go to next step"
       }
     },
+    values: {
+      badge: "Values",
+      title: "What drives my work",
+      description: "The principles that guide every project and client relationship I build.",
+      coreValues: [
+        {
+          title: "Quality First",
+          description: "Every line of code crafted with attention to detail and best practices.",
+          icon: "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+        },
+        {
+          title: "Clear Communication",
+          description: "Transparent updates and open dialogue throughout the project.",
+          icon: "M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+        },
+        {
+          title: "Continuous Learning",
+          description: "Always updated with latest technologies for modern solutions.",
+          icon: "M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+        },
+        {
+          title: "Client Success",
+          description: "Your success is my success. Committed to delivering real results.",
+          icon: "M13 10V3L4 14h7v7l9-11h-7z"
+        }
+      ]
+    },
     email: {
       badge: "Email",
       title: "Searching for an Email?",

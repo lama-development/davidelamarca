@@ -1,0 +1,17 @@
+---
+const { header } = Astro.props;
+---
+
+<section class="w-full bg-neutral-50 px-6 pt-24 md:pt-32 dark:bg-neutral-950">
+  <div class="mx-auto max-w-4xl text-center">
+    <div class="mx-auto mb-6 inline-flex items-center gap-2 rounded-full border border-sky-500/20 bg-sky-500/10 px-3 py-1.5 text-xs font-medium whitespace-nowrap text-sky-500 sm:mb-8 sm:text-sm">
+      <span class="text-xs font-medium text-sky-500 sm:text-sm">{header.badge}</span>
+    </div>
+    <h1 class="mb-6 text-5xl leading-[0.8] font-bold tracking-tight text-neutral-900 dark:text-neutral-100">
+      {header.title}
+    </h1>
+    <p class="mx-auto max-w-xs text-base leading-[1.1] text-neutral-700 md:max-w-xl md:text-lg dark:text-neutral-300">
+      {header.description}
+    </p>
+  </div>
+</section>

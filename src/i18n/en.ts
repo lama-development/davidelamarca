@@ -28,12 +28,23 @@ export default (langPrefix = "") => ({
       badge: "Services",
       title: "Your website, done right",
       subtitle: "Complete solutions to bring your business online — the right way.",
-      title1: "Web Development",
-      title2: "Web Design",
-      title3: "SEO & Best Practices",
-      subtitle1: "Modern, fast, and responsive websites designed to deliver the best user experience.",
-      subtitle2: "Intuitive interfaces that enhance navigation and turn visitors into customers.",
-      subtitle3: "SEO optimization and development following best practices for visibility and performance."
+      servicesList: [
+        {
+          title: "Web Development",
+          description: "Modern, fast, and responsive websites designed to deliver the best user experience.",
+          icon: "M7 8l-4 4l4 4M17 8l4 4l-4 4M14 4l-4 16"
+        },
+        {
+          title: "Web Design",
+          description: "Intuitive interfaces that enhance navigation and turn visitors into customers.",
+          icon: "M12 7h.01m3.486 1.513h.01m-6.978 0h.01M6.99 12H7m9 4h2.706a1.957 1.957 0 0 0 1.883-1.325A9 9 0 1 0 3.043 12.89 9.1 9.1 0 0 0 8.2 20.1a8.62 8.62 0 0 0 3.769.9 2.013 2.013 0 0 0 2.03-2v-.857A2.036 2.036 0 0 1 16 16Z"
+        },
+        {
+          title: "SEO & Best Practices",
+          description: "SEO optimization and development following best practices for visibility and performance.",
+          icon: "M3 17l6 -6l4 4l8 -8M14 7l7 0l0 7"
+        }
+      ]
     },
     projects: {
       badge: "Projects",
@@ -88,6 +99,17 @@ export default (langPrefix = "") => ({
       button: "Get started"
     }
   },
+  projects: {
+    meta: {
+      title: "Progetti - Davide La Marca",
+      description: ""
+    },
+    header: {
+      badge: "Portfolio",
+      title: "Lorem Ipsum",
+      description: "Lorem ipsum."
+    }
+  },
   contact: {
     meta: {
       title: "Get in Touch - Davide La Marca",
@@ -123,18 +145,9 @@ export default (langPrefix = "") => ({
     },
     form: {
       stepText: "Step {current} of {total}",
-      step1: {
-        title: "Step 1: Rules",
-        description: "For a transparent collaboration",
-        rules: ["We define goals, style, and content at the beginning; substantial changes must be agreed upon separately.", "Feedback is welcome, but the creative and technical direction is mine.", "Texts, images, and materials must be provided within the agreed timelines.", "Payment is made in 2 or 3 installments, depending on the project.", "Revisions are limited; I do not accept requests that completely change an already approved structure.", "Post-launch support covers only bug fixes and minor adjustments.", "I reserve the right to showcase the work on my channels, without disclosing confidential data.", "If the collaboration becomes toxic or lacks transparency, I reserve the right to terminate it."],
-        accept: "I have read and accept the collaboration rules",
-        termsText: "By checking this box, you also fully accept the ",
-        termsLink: "Terms of Service",
-        nextButton: "Continue"
-      },
-      step2: {
-        title: "Step 2: Contact",
-        description: "Enter your contact information",
+      contacts: {
+        title: "Contact",
+        description: "Enter your contact details",
         name: {
           label: "Full Name",
           placeholder: "John Doe"
@@ -152,25 +165,41 @@ export default (langPrefix = "") => ({
           placeholder: "+1 123 4567890"
         }
       },
-      step3: {
-        title: "Step 3: Project",
+      rules: {
+        title: "Terms & Conditions",
+        description: "For a transparent collaboration",
+        rulesList: [
+          "Goals, style, and content are defined at the start; major changes require extra agreements.",
+          "Feedback is important, but the technical and creative consistency of the project remains my responsibility.",
+          "Texts, images, and materials must be provided within the agreed timelines.",
+          "Payment is made in 2 or 3 installments, depending on the project.",
+          "Revisions are limited and do not include major structural changes to the approved plan.",
+          "I reserve the right to showcase the work on my channels without disclosing confidential information."
+        ],
+        accept: "I agree, let's get started!",
+        termsText: "By checking this box, you also fully accept the ",
+        termsLink: "Terms of Service",
+        nextButton: "Continue"
+      },
+      project: {
+        title: "Project",
         description: "Tell me about your project",
         projectType: {
           label: "What type of project do you have in mind?",
           options: ["New website", "Redesign existing site", "E-commerce", "Web app", "SEO & optimization", "Other"]
         },
         budget: {
-          label: "Indicative budget",
+          label: "What's your indicative budget?",
           options: ["< 1000€", "1000€ - 2000€", "2000€ - 3000€", "Over 3000€"]
         },
         timeline: {
-          label: "Desired timeline",
+          label: "What's yoour desired timeline?",
           options: ["Urgent (surcharges apply)", "Flexible"]
         }
       },
-      step4: {
-        title: "Step 4: Details",
-        description: "Describe your project in more detail",
+      details: {
+        title: "Details",
+        description: "Describe your project in detail",
         message: {
           label: "Describe your project",
           placeholder: "Tell me what you'd like to achieve, your business sector, specific features you want, etc."
@@ -191,7 +220,7 @@ export default (langPrefix = "") => ({
       validation: {
         required: "This field is required",
         email: "Please enter a valid email address",
-        acceptTerms: "You must accept the project rules to continue"
+        acceptTerms: "You must accept the conditions to continue"
       },
       success: {
         title: "Request sent",
@@ -207,7 +236,7 @@ export default (langPrefix = "") => ({
       badge: "Values",
       title: "What drives my work",
       description: "The principles that guide every project and client relationship I build.",
-      coreValues: [
+      valuesList: [
         {
           title: "Quality First",
           description: "Every line of code crafted with attention to detail and best practices.",

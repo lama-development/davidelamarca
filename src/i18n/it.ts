@@ -28,12 +28,23 @@ export default (langPrefix = "") => ({
       badge: "Servizi",
       title: "Il tuo sito, fatto come si deve",
       subtitle: "Soluzioni complete per portare il tuo business online, nel modo giusto.",
-      title1: "Sviluppo Web",
-      title2: "Web Design",
-      title3: "SEO & Best Practice",
-      subtitle1: "Siti web moderni, veloci e responsive, pensati per offrire la migliore esperienza utente.",
-      subtitle2: "Interfacce intuitive che migliorano la navigazione e convertono i visitatori in clienti.",
-      subtitle3: "Ottimizzazione SEO e sviluppo secondo best practice per visibilità e performance."
+      servicesList: [
+        {
+          title: "Sviluppo Web",
+          description: "Siti web moderni, veloci e responsive, pensati per offrire la migliore esperienza utente.",
+          icon: "M7 8l-4 4l4 4M17 8l4 4l-4 4M14 4l-4 16"
+        },
+        {
+          title: "Web Design",
+          description: "Interfacce intuitive che migliorano la navigazione e convertono i visitatori in clienti.",
+          icon: "M12 7h.01m3.486 1.513h.01m-6.978 0h.01M6.99 12H7m9 4h2.706a1.957 1.957 0 0 0 1.883-1.325A9 9 0 1 0 3.043 12.89 9.1 9.1 0 0 0 8.2 20.1a8.62 8.62 0 0 0 3.769.9 2.013 2.013 0 0 0 2.03-2v-.857A2.036 2.036 0 0 1 16 16Z"
+        },
+        {
+          title: "SEO & Best Practice",
+          description: "Ottimizzazione SEO e sviluppo secondo best practice per visibilità e performance.",
+          icon: "M3 17l6 -6l4 4l8 -8M14 7l7 0l0 7"
+        }
+      ]
     },
     projects: {
       badge: "Progetti",
@@ -88,6 +99,17 @@ export default (langPrefix = "") => ({
       button: "Inizia ora"
     }
   },
+  projects: {
+    meta: {
+      title: "Progetti - Davide La Marca",
+      description: ""
+    },
+    header: {
+      badge: "Portfolio",
+      title: "Lorem Ipsum",
+      description: "Lorem ipsum."
+    }
+  },
   contact: {
     meta: {
       title: "Contattami - Davide La Marca",
@@ -100,18 +122,9 @@ export default (langPrefix = "") => ({
     },
     form: {
       stepText: "Passo {current} di {total}",
-      step1: {
-        title: "Step 1: Regole",
-        description: "Per una collaborazione trasparente",
-        rules: ["Definiamo obiettivi, stile e contenuti all'inizio; modifiche sostanziali vanno concordate a parte.", "I feedback sono benvenuti, ma la direzione creativa e tecnica è mia.", "Testi, immagini e materiali devono essere forniti nei tempi concordati.", "Il pagamento avviene in 2 o 3 tranche, a seconda del progetto.", "Le revisioni sono limitate, non accetto richieste che cambiano completamente la struttura già approvata.", "L'assistenza post-lancio copre solo la risoluzione di errori e ritocchi minimi.", "Mi riservo il diritto di mostrare il lavoro sui miei canali, senza divulgare dati riservati.", "Qualora la collaborazione risulti tossica o poco trasparente, mi riservo il diritto di interromperla."],
-        accept: "Ho letto e accetto le regole di collaborazione",
-        termsText: "Spuntando la casella, accetti integralmente anche i ",
-        termsLink: "Termini di Servizio",
-        nextButton: "Continua"
-      },
-      step2: {
-        title: "Step 2: Contatti",
-        description: "Inserisci i tuoi dati per essere contattato",
+      contacts: {
+        title: "Contatti",
+        description: "Inserisci i tuoi dati di contatto",
         name: {
           label: "Nome e Cognome",
           placeholder: "Mario Rossi"
@@ -129,36 +142,52 @@ export default (langPrefix = "") => ({
           placeholder: "+39 123 4567890"
         }
       },
-      step3: {
-        title: "Step 3: Progetto",
-        description: "Raccontami di cosa si tratta il progetto",
+      rules: {
+        title: "Termini e Condizioni",
+        description: "Per una collaborazione trasparente",
+        rulesList: [
+          "Gli obiettivi, lo stile e i contenuti si definiscono all’inizio; modifiche sostanziali richiedono accordi extra.",
+          "I feedback sono fondamentali, ma la coerenza tecnica e creativa del progetto resta sotto la mia responsabilità.",
+          "Testi, immagini e materiali vanno forniti nei tempi concordati.",
+          "Il pagamento avviene in 2 o 3 tranche, a seconda del progetto.",
+          "Le revisioni sono limitate e non includono cambiamenti radicali alla struttura approvata.",
+          "Mi riservo il diritto di mostrare il lavoro sui miei canali, senza divulgare dati riservati."
+        ],
+        accept: "Sono d'accordo, iniziamo!",
+        termsText: "Spuntando la casella, accetti integralmente anche i ",
+        termsLink: "Termini di Servizio",
+        nextButton: "Continua"
+      },
+      project: {
+        title: "Progetto",
+        description: "Raccontami del progetto",
         projectType: {
           label: "Che tipo di progetto hai in mente?",
           options: ["Nuovo sito web", "Redesign di un sito esistente", "E-commerce", "Web app", "SEO e ottimizzazione", "Altro"]
         },
         budget: {
-          label: "Budget indicativo",
+          label: "Qual è il budget?",
           options: ["< 1000€", "1000€ - 2000€", "2000€ - 3000€", "Oltre 3000€"]
         },
         timeline: {
-          label: "Tempistiche desiderate",
+          label: "Qiali sono le tempistiche desiderate?",
           options: ["Urgente (si applicano maggiorazioni)", "Flessibili"]
         }
       },
-      step4: {
-        title: "Step 4: Dettagli",
+      details: {
+        title: "Dettagli",
         description: "Descrivi meglio il progetto",
         message: {
           label: "Descrivi il progetto nei dettagli",
-          placeholder: "Raccontami cosa vorresti ottenere, qual è il tuo settore di business, funzionalità specifiche che desideri, ecc."
+          placeholder: "Spiegami cosa vorresti ottenere, il tuo settore, funzionalità specifiche, ecc."
         },
         inspiration: {
-          label: "Siti web che ti ispirano (opzionale)",
-          placeholder: "Link a siti o risorse che ti piacciono o che rappresentano lo stile che vorresti"
+          label: "Hai ispirazioni o esempi? (opzionale)",
+          placeholder: "Link a siti o risorse che rappresentano lo stile che vorresti"
         },
         hasBranding: {
           label: "Hai già un branding (colori, logo, stile grafico)?",
-          options: ["Sì, ho già un branding completo", "In parte, devo definire alcuni elementi", "No, devo crearne uno"]
+          options: ["Sì, tutto pronto", "In parte, devo definirla meglio", "No, devo crearne uno"]
         }
       },
       navigation: {
@@ -168,7 +197,7 @@ export default (langPrefix = "") => ({
       validation: {
         required: "Questo campo è obbligatorio",
         email: "Inserisci un indirizzo email valido",
-        acceptTerms: "Devi accettare le regole del progetto per continuare"
+        acceptTerms: "Devi accettare le condizioni per continuare"
       },
       success: {
         title: "Richiesta inviata",
@@ -184,7 +213,7 @@ export default (langPrefix = "") => ({
       badge: "Valori",
       title: "Ciò che guida il mio lavoro",
       description: "I principi che orientano ogni progetto e relazione con i clienti che costruisco.",
-      coreValues: [
+      valuesList: [
         {
           title: "Qualità Prima di Tutto",
           description: "Ogni riga di codice realizzata con attenzione ai dettagli e best practices.",

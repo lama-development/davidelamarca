@@ -12,33 +12,20 @@ const { services } = Astro.props;
       <p class="mx-auto max-w-xs text-base leading-[1.1] text-neutral-700 md:max-w-xl md:text-lg dark:text-neutral-300">{services.subtitle}</p>
     </div>
     <div class="flex flex-wrap justify-center gap-8">
-      <div class="max-w-md min-w-[280px] flex-1 basis-full rounded-xl border border-neutral-200 bg-neutral-50 p-8 md:basis-[calc(50%-1rem)] lg:basis-[calc(33.33%-1.5rem)] dark:border-neutral-800 dark:bg-neutral-950">
-        <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-xl border border-sky-500/20 bg-sky-500/10">
-          <svg class="h-7 w-7 text-sky-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M7 8l-4 4l4 4"></path><path d="M17 8l4 4l-4 4"></path><path d="M14 4l-4 16"></path>
-          </svg>
-        </div>
-        <h3 class="mb-3 text-xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100">{services.title1}</h3>
-        <p class="text-base tracking-tight text-neutral-700 dark:text-neutral-400">{services.subtitle1}</p>
-      </div>
-      <div class="max-w-md min-w-[280px] flex-1 basis-full rounded-xl border border-neutral-200 bg-neutral-50 p-8 md:basis-[calc(50%-1rem)] lg:basis-[calc(33.33%-1.5rem)] dark:border-neutral-800 dark:bg-neutral-950">
-        <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-xl border border-sky-500/20 bg-sky-500/10">
-          <svg class="h-7 w-7 text-sky-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M6 21l15 -15l-3 -3l-15 15l3 3"></path><path d="M15 6l3 3"></path><path d="M9 3a2 2 0 0 0 2 2a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2a2 2 0 0 0 2 -2"></path><path d="M19 13a2 2 0 0 0 2 2a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2a2 2 0 0 0 2 -2"></path>
-          </svg>
-        </div>
-        <h3 class="mb-3 text-xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100">{services.title2}</h3>
-        <p class="text-base tracking-tight text-neutral-700 dark:text-neutral-400">{services.subtitle2}</p>
-      </div>
-      <div class="max-w-md min-w-[280px] flex-1 basis-full rounded-xl border border-neutral-200 bg-neutral-50 p-8 md:basis-[calc(50%-1rem)] lg:basis-[calc(33.33%-1.5rem)] dark:border-neutral-800 dark:bg-neutral-950">
-        <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-xl border border-sky-500/20 bg-sky-500/10">
-          <svg class="h-7 w-7 text-sky-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M3 17l6 -6l4 4l8 -8"></path><path d="M14 7l7 0l0 7"></path>
-          </svg>
-        </div>
-        <h3 class="mb-3 text-xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100">{services.title3}</h3>
-        <p class="text-base tracking-tight text-neutral-700 dark:text-neutral-400">{services.subtitle3}</p>
-      </div>
+      {
+        services.servicesList.map((service) => (
+          <div class="max-w-md min-w-[280px] flex-1 basis-full rounded-xl border border-neutral-200 bg-neutral-50 p-8 md:basis-[calc(50%-1rem)] lg:basis-[calc(33.33%-1.5rem)] dark:border-neutral-800 dark:bg-neutral-950">
+            <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-xl border border-sky-500/20 bg-sky-500/10">
+              <svg class="h-7 w-7 text-sky-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d={service.icon} />
+              </svg>
+            </div>
+            <h3 class="mb-3 text-xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100">{service.title}</h3>
+            <p class="text-base tracking-tight text-neutral-700 dark:text-neutral-400">{service.description}</p>
+          </div>
+        ))
+      }
     </div>
   </div>
 </section>

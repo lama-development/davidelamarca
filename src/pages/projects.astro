@@ -1,9 +1,10 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Header from "../components/projects/Header.astro";
 import language from "../i18n/it";
 const t = language();
 ---
 
-<Layout t={t} meta={t.contact.meta}>
-
+<Layout t={t} meta={t.projects.meta}>
+  <Header header={t.projects.header} />
 </Layout>

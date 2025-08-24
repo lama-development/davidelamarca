@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const stepDots = document.querySelectorAll(".step-dot");
   const nextBtn = document.getElementById("next-btn");
   const prevBtn = document.getElementById("prev-btn");
-  const acceptRulesCheckbox = document.getElementById("accept-rules");
 
   if (!form || !nextBtn || !prevBtn) return;
 
@@ -12,8 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const totalSteps = 4;
 
   // Get translations from form data attributes
-  const submitText = form.getAttribute("data-submit-text") || "Send Request";
-  const nextText = nextBtn.textContent || "Next";
+  const submitText = form.getAttribute("data-submit-text") || "Submit";
 
   function hideAllErrors() {
     const errorMessages = document.querySelectorAll(".error-message");
@@ -80,20 +78,19 @@ document.addEventListener("DOMContentLoaded", function () {
       if (nextBtn) {
         // Transform to submit button with text
         nextBtn.innerHTML = submitText;
-        nextBtn.className = "cursor-pointer rounded-full bg-sky-500 px-6 py-3 font-medium text-white transition-colors hover:bg-sky-600 disabled:cursor-not-allowed disabled:opacity-50";
+        nextBtn.className = "cursor-pointer rounded-full bg-sky-500 px-6 py-3 font-medium text-white transition-colors hover:bg-sky-600";
         nextBtn.type = "submit";
       }
     } else {
       if (nextBtn) {
         // Keep as arrow button
         nextBtn.innerHTML = '<svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>';
-        nextBtn.className = "cursor-pointer rounded-full bg-sky-500 p-3 text-white transition-colors hover:bg-sky-600 disabled:cursor-not-allowed disabled:opacity-50";
+        nextBtn.className = "cursor-pointer rounded-full bg-sky-500 p-3 text-white transition-colors hover:bg-sky-600";
         nextBtn.type = "button";
       }
     }
 
     updateStepDots();
-    updateNextButton();
   }
 
   function validateStep(step) {
@@ -172,14 +169,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  function updateNextButton() {
-    if (currentStep === 1 && acceptRulesCheckbox) {
-      nextBtn.disabled = !acceptRulesCheckbox.checked;
-    } else {
-      nextBtn.disabled = false;
-    }
-  }
-
   function showSuccessMessage() {
     // Hide all form steps (not the success message)
     const formSteps = document.querySelectorAll(".step-content");
@@ -194,11 +183,6 @@ document.addEventListener("DOMContentLoaded", function () {
       // Scroll to top to ensure the success message is visible
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
-  }
-
-  // Enable/disable next button based on rules acceptance
-  if (acceptRulesCheckbox) {
-    acceptRulesCheckbox.addEventListener("change", updateNextButton);
   }
 
   // Handle radio button selection styling

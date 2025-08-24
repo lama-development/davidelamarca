@@ -11,16 +11,16 @@ const { values } = Astro.props;
       <h2 class="mb-4 text-5xl leading-[0.8] font-bold tracking-tight text-neutral-900 dark:text-neutral-100">{values.title}</h2>
       <p class="mx-auto max-w-xs text-base leading-[1.1] text-neutral-700 md:max-w-xl md:text-lg dark:text-neutral-300">{values.description}</p>
     </div>
-    <div class="mx-auto grid max-w-3xl grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-2">
+    <div class="flex flex-wrap justify-center gap-8">
       {
-        values.coreValues.map((value) => (
-          <div class="flex flex-col items-center justify-center rounded-xl border border-neutral-200 bg-neutral-50 p-8 text-center dark:border-neutral-800 dark:bg-neutral-950">
-            <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl border border-sky-500/20 bg-sky-500/10">
-              <svg class="h-6 w-6 text-sky-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        values.valuesList.map((value) => (
+          <div class="max-w-md min-w-[280px] flex-1 basis-full rounded-xl border border-neutral-200 bg-neutral-50 p-10 md:basis-[calc(50%-1rem)] lg:basis-[calc(50%-1rem)] dark:border-neutral-800 dark:bg-neutral-950">
+            <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-xl border border-sky-500/20 bg-sky-500/10">
+              <svg class="h-7 w-7 text-sky-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d={value.icon} />
               </svg>
             </div>
-            <h3 class="mb-2 text-xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100">{value.title}</h3>
+            <h3 class="mb-3 text-xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100">{value.title}</h3>
             <p class="text-base tracking-tight text-neutral-700 dark:text-neutral-400">{value.description}</p>
           </div>
         ))

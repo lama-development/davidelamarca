@@ -50,21 +50,7 @@ export default (langPrefix = "") => ({
       badge: "Projects",
       title: "Real projects, actual results",
       subtitle: "Some of the work I've delivered for my clients.",
-      button: "View all projects",
-      project1: {
-        title: "Sorrento Boat Trips",
-        description: "Modern website for a private boat tour agency in Sorrento, featuring an online booking system integrated with FareHarbor.",
-        button: "View project"
-      },
-      project2: {
-        title: "SkillBridge",
-        description: "Fully functional web app connecting freelancers and companies: job posts, advanced search, real-time chat, and customizable profiles.",
-        button: "View project"
-      },
-      aria: {
-        image1: "Screenshot of Sorrento Boat Trips website showing homepage with modern design and booking system",
-        image2: "Screenshot of SkillBridge web app showing freelancer interface with job search and chat features"
-      }
+      button: "View all projects"
     },
     faq: {
       badge: "FAQ",
@@ -101,14 +87,66 @@ export default (langPrefix = "") => ({
   },
   projects: {
     meta: {
-      title: "Progetti - Davide La Marca",
-      description: ""
+      title: "Projects - Davide La Marca",
+      description: "Explore my portfolio of web development projects including modern websites, e-commerce platforms, and web applications."
     },
     header: {
-      badge: "Portfolio",
-      title: "Lorem Ipsum",
-      description: "Lorem ipsum."
-    }
+      badge: "Projects",
+      title: "My projects",
+      subtitle: "Some of the work I've delivered for my clients.",
+    },
+    projectsList: [
+      {
+        id: "sorrento-boat-trips",
+        title: "Sorrento Boat Trips",
+        description: "Modern website for a private boat tour agency in Sorrento, featuring an online booking system integrated with FareHarbor.",
+        button: "View details",
+        image: "sorrento-boat-trips.png",
+        technologies: ["Squarespace", "SEO", "Fareharbor"],
+        link: "https://sorrentoboattrips.com",
+        ariaLabel: "Screenshot of Sorrento Boat Trips website showing homepage with modern design and booking system"
+      },
+      {
+        id: "skillbridge",
+        title: "SkillBridge",
+        description: "Fully functional web app connecting freelancers and companies: job posts, advanced search, real-time chat, and customizable profiles.",
+        button: "View details",
+        image: "skillbridge.png",
+        technologies: ["HTML", "CSS", "Javascript", "SQLite"],
+        link: "https://github.com/lama-development/skillbridge",
+        ariaLabel: "Screenshot of SkillBridge web app showing freelancer interface with job search and chat features"
+      },
+      {
+        id: "caprice-bleu",
+        title: "Caprice Bleu",
+        description: "lorem ipsum dolor sit amet.",
+        button: "View details",
+        image: "caprice-bleu.png",
+        technologies: ["Squarespace", "SEO"],
+        link: "https://capricebleu.com",
+        ariaLabel: "lorem ipsum dolor sit amet"
+      },
+      // {
+      //   id: "netwatch",
+      //   title: "NetWatch",
+      //   description: "lorem ipsum dolor sit amet.",
+      //   button: "View details",
+      //   image: "placeholder.png",
+      //   technologies: ["HTML", "CSS", "Javascript", "Python", "SQLite"],
+      //   link: "https://github.com/lama-development/netwatch",
+      //   ariaLabel: "lorem ipsum dolor sit amet"
+      // },
+      // {
+      //   id: "exotic-county-roleplay",
+      //   title: "Exotic County Roleplay",
+      //   description: "lorem ipsum dolor sit amet.",
+      //   button: "View details",
+      //   image: "placeholder.png",
+      //   technologies: ["Framer", "Design"],
+      //   link: "https://ecrp.framer.website",
+      //   ariaLabel: "lorem ipsum dolor sit amet"
+      // }
+    ]
   },
   contact: {
     meta: {

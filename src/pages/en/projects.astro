@@ -1,10 +1,10 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import Header from "../../components/projects/Header.astro";
+import ProjectsGrid from "../../components/projects/Projects.astro";
 import language from "../../i18n/en";
 const t = language("/en");
 ---
 
 <Layout t={t} meta={t.projects.meta}>
-  <Header header={t.projects.header} />
+  <ProjectsGrid header={t.projects.header} projectsList={t.projects.projectsList} isHomePage={false} />
 </Layout>

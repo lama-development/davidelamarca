@@ -2,7 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Hero from "../components/home/Hero.astro";
 import Services from "../components/home/Services.astro";
-import Projects from "../components/home/Projects.astro";
+import Projects from "../components/projects/Projects.astro";
 import FAQ from "../components/home/FAQ.astro";
 import Banner from "../components/home/Banner.astro";
 import language from "../i18n/it";
@@ -12,7 +12,7 @@ const t = language();
 <Layout t={t} meta={t.home.meta}>
   <Hero hero={t.home.hero} />
   <Services services={t.home.services} />
-  <Projects projects={t.home.projects} />
+  <Projects header={t.home.projects} projectsList={t.projects.projectsList} isHomePage={true} />
   <FAQ faq={t.home.faq} />
   <Banner banner={t.home.banner} />
 </Layout>

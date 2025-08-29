@@ -15,10 +15,6 @@ body {
     sans-serif;
 }
 
-section h1 {
-  font-size: revert-layer;
-}
-
 details summary::-webkit-details-marker {
   display: none;
 }

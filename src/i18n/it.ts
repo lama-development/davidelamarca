@@ -49,12 +49,12 @@ export default (langPrefix = "") => ({
     projects: {
       badge: "Progetti",
       title: "Progetti reali, risultati concreti",
-      subtitle: "Alcuni dei lavori che ho realizzato per i miei clienti.",
+      subtitle: "Scopri alcuni lavori realizzati per i miei clienti.",
       button: "Vedi tutti i progetti"
     },
     faq: {
       badge: "FAQ",
-      title: "Domande? Risposte!",
+      title: "Tutto quello che vuoi sapere",
       subtitle: "Ecco le risposte alle domande più frequenti sul mio lavoro.",
       questions: [
         {
@@ -92,8 +92,8 @@ export default (langPrefix = "") => ({
     },
     header: {
       badge: "Portfolio",
-      title: "I Miei Progetti",
-      subtitle: "Una vetrina dei lavori che ho realizzato per i miei clienti."
+      title: "Idee che diventano realtà",
+      subtitle: "Il mio lavoro raccontato attraverso i risultati."
     },
     ProjectCards: [
       {
@@ -149,7 +149,7 @@ export default (langPrefix = "") => ({
     ],
     testimonials: {
       badge: "Testimonials",
-      title: "Cosa dicono di me",
+      title: "Non lo dico io, lo dicono loro",
       subtitle: "La voce dei clienti che hanno già lavorato con me.",
       testimonialsList: [
         {
@@ -165,12 +165,12 @@ export default (langPrefix = "") => ({
   contact: {
     meta: {
       title: "Contattami - Davide La Marca",
-      description: "Raccontami il tuo progetto e scopri come possiamo lavorare insieme per realizzare il sito che meriti."
+      description:  "Raccontami il tuo progetto e scopri come possiamo collaborare per realizzarlo al meglio."
     },
     header: {
       badge: "Form",
-      title: "Iniziamo il tuo progetto",
-      subtitle: "Raccontami la tua idea e scopriamo insieme come realizzare il sito web che meriti. "
+      title: "Il tuo prossimo progetto parte da qui",
+      subtitle: "Parlami della tua idea e vediamo insieme come trasformarla in realtà."
     },
     form: {
       stepText: "Passo {current} di {total}",
@@ -256,8 +256,8 @@ export default (langPrefix = "") => ({
     },
     values: {
       badge: "Valori",
-      title: "Ciò che guida il mio lavoro",
-      subtitle: "I principi che orientano ogni progetto e relazione con i clienti che costruisco.",
+      title: "Le fondamenta di ogni progetto",
+      subtitle: "I principi che guidano il mio lavoro e le relazioni con i clienti.",
       valuesList: [
         {
           title: "Qualità Prima di Tutto",

@@ -49,12 +49,12 @@ export default (langPrefix = "") => ({
     projects: {
       badge: "Projects",
       title: "Real projects, actual results",
-      subtitle: "Some of the work I've delivered for my clients.",
+      subtitle: "Discover some of the projects I’ve built for my clients.",
       button: "View all projects"
     },
     faq: {
       badge: "FAQ",
-      title: "Questions? Answers!",
+      title: "Everything you want to know",
       subtitle: "Here are the answers to the most frequently asked questions about my work.",
       questions: [
         {
@@ -92,8 +92,8 @@ export default (langPrefix = "") => ({
     },
     header: {
       badge: "Projects",
-      title: "My projects",
-      subtitle: "Some of the work I've delivered for my clients."
+      title: "Ideas that become reality",
+      subtitle: "My work, told through real results."
     },
     ProjectCards: [
       {
@@ -149,7 +149,7 @@ export default (langPrefix = "") => ({
     ],
     testimonials: {
       badge: "Testimonials",
-      title: "What clients say",
+      title: "Don’t take my word for it",
       subtitle: "Hear from clients who have already worked with me.",
       testimonialsList: [
         {
@@ -165,12 +165,12 @@ export default (langPrefix = "") => ({
   contact: {
     meta: {
       title: "Get in Touch - Davide La Marca",
-      description: "Tell me about your project and let's work together to create the website you deserve."
+      description: "Tell me about your project and discover how we can collaborate to bring it to life."
     },
     header: {
       badge: "Form",
-      title: "Let's start your project",
-      subtitle: "Tell me about your idea and let's discover together how to create the website you deserve."
+      title: "Your next project starts here",
+      subtitle: "Share your idea and let’s explore how to turn it into reality together."
     },
     form: {
       stepText: "Step {current} of {total}",
@@ -256,8 +256,8 @@ export default (langPrefix = "") => ({
     },
     values: {
       badge: "Values",
-      title: "What drives my work",
-      subtitle: "The principles that guide every project and client relationship I build.",
+      title: "The foundation of every project",
+      subtitle: "The principles that guide my work and relationships with clients.",
       valuesList: [
         {
           title: "Quality First",

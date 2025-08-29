@@ -3,7 +3,7 @@ const { form } = Astro.props;
 const langPrefix = Astro.url.pathname.startsWith("/en") ? "/en" : "";
 ---
 
-<section class="m:py-12 w-full border-b border-neutral-200 bg-neutral-50 px-6 py-12 pb-24 dark:border-neutral-800 dark:bg-neutral-950">
+<section class="m:py-12 w-full border-b border-neutral-200 bg-neutral-50 px-6 py-20 pb-24 dark:border-neutral-800 dark:bg-neutral-950">
   <div class="mx-auto max-w-4xl">
     <div id="multi-step-form" class="rounded-2xl border border-neutral-200 bg-neutral-100 p-6 sm:p-8 md:p-10 dark:border-neutral-800 dark:bg-neutral-900">
       <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" data-step-text={form.stepText} data-submit-text={form.navigation.submit}>

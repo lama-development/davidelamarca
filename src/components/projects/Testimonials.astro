@@ -11,7 +11,6 @@ const { testimonials } = Astro.props;
       <h2 class="mb-4 text-5xl leading-[0.8] font-bold tracking-tight text-neutral-900 dark:text-neutral-100">{testimonials.title}</h2>
       <p class="mx-auto max-w-xs text-base leading-[1.1] text-neutral-700 md:max-w-xl md:text-lg dark:text-neutral-300">{testimonials.subtitle}</p>
     </div>
-
     <!-- Carousel Container -->
     <div class="relative">
       <div id="testimonials-carousel" class="overflow-hidden">
@@ -40,7 +39,6 @@ const { testimonials } = Astro.props;
           }
         </div>
       </div>
-
       <!-- Navigation Arrows -->
       {
         testimonials.testimonialsList.length > 1 && (
@@ -59,7 +57,6 @@ const { testimonials } = Astro.props;
           </>
         )
       }
-
       <!-- Indicators -->
       {
         testimonials.testimonialsList.length > 1 && (

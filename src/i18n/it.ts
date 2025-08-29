@@ -88,14 +88,14 @@ export default (langPrefix = "") => ({
   projects: {
     meta: {
       title: "Progetti - Davide La Marca",
-      description: "Esplora il mio portfolio di progetti di sviluppo web inclusi siti moderni, piattaforme e-commerce e applicazioni web."
+      subtitle: "Esplora il mio portfolio di progetti di sviluppo web inclusi siti moderni, piattaforme e-commerce e applicazioni web."
     },
     header: {
       badge: "Portfolio",
       title: "I Miei Progetti",
       subtitle: "Una vetrina dei lavori che ho realizzato per i miei clienti."
     },
-    projectsList: [
+    ProjectCards: [
       {
         id: "sorrento-boat-trips",
         title: "Sorrento Boat Trips",
@@ -119,13 +119,13 @@ export default (langPrefix = "") => ({
       {
         id: "caprice-bleu",
         title: "Caprice Bleu",
-        description: "lorem ipsum dolor sit amet.",
+        description: "Sito web elegante per un'agenzia che offre esperienze e tour privati in barca di lusso, con design raffinato e ottimizzazione SEO.",
         button: "Vedi dettagli",
         image: "caprice-bleu.png",
         technologies: ["Squarespace", "SEO"],
         link: "https://capricebleu.com",
-        ariaLabel: "lorem ipsum dolor sit amet"
-      },
+        ariaLabel: "Screenshot del sito web Caprice Bleu per tour privati in barca di lusso"
+      }
       // {
       //   id: "netwatch",
       //   title: "NetWatch",
@@ -146,7 +146,21 @@ export default (langPrefix = "") => ({
       //   link: "https://ecrp.framer.website",
       //   ariaLabel: "lorem ipsum dolor sit amet"
       // }
-    ]
+    ],
+    testimonials: {
+      badge: "Testimonials",
+      title: "Cosa dicono di me",
+      subtitle: "La voce dei clienti che hanno già lavorato con me.",
+      testimonialsList: [
+        {
+          id: "sorrento-boat-trips-testimonial",
+          quote: "Lavorare con te è stata un'esperienza molto positiva. Ho apprezzato la tua disponibilità, la professionalità e soprattutto la pazienza nel seguire ogni dettaglio. Mi è piaciuto il fatto che hai saputo ascoltare le mie esigenze e trasformarle in una pagina web funzionale ed esteticamente curata. Un aspetto che mi ha colpito particolarmente è stata la tua capacità di proporre soluzioni creative e pratiche che hanno reso il risultato finale ancora migliore di quanto immaginassi.",
+          author: "Amy e Antonio",
+          company: "Sorrento Boat Trips",
+          role: "Fondatori"
+        }
+      ]
+    }
   },
   contact: {
     meta: {
@@ -156,13 +170,13 @@ export default (langPrefix = "") => ({
     header: {
       badge: "Form",
       title: "Iniziamo il tuo progetto",
-      description: "Raccontami la tua idea e scopriamo insieme come realizzare il sito web che meriti. "
+      subtitle: "Raccontami la tua idea e scopriamo insieme come realizzare il sito web che meriti. "
     },
     form: {
       stepText: "Passo {current} di {total}",
       contacts: {
         title: "Contatti",
-        description: "Inserisci i tuoi dati di contatto",
+        subtitle: "Inserisci i tuoi dati di contatto",
         name: {
           label: "Nome e Cognome",
           placeholder: "Mario Rossi"
@@ -182,15 +196,8 @@ export default (langPrefix = "") => ({
       },
       rules: {
         title: "Termini e Condizioni",
-        description: "Per una collaborazione trasparente",
-        rulesList: [
-          "Gli obiettivi, lo stile e i contenuti si definiscono all’inizio; modifiche sostanziali richiedono accordi extra.",
-          "I feedback sono fondamentali, ma la coerenza tecnica e creativa del progetto resta sotto la mia responsabilità.",
-          "Testi, immagini e materiali vanno forniti nei tempi concordati.",
-          "Il pagamento avviene in 2 o 3 tranche, a seconda del progetto.",
-          "Le revisioni sono limitate e non includono cambiamenti radicali alla struttura approvata.",
-          "Mi riservo il diritto di mostrare il lavoro sui miei canali, senza divulgare dati riservati."
-        ],
+        subtitle: "Per una collaborazione trasparente",
+        rulesList: ["Gli obiettivi, lo stile e i contenuti si definiscono all’inizio; modifiche sostanziali richiedono accordi extra.", "I feedback sono fondamentali, ma la coerenza tecnica e creativa del progetto resta sotto la mia responsabilità.", "Testi, immagini e materiali vanno forniti nei tempi concordati.", "Il pagamento avviene in 2 o 3 tranche, a seconda del progetto.", "Le revisioni sono limitate e non includono cambiamenti radicali alla struttura approvata.", "Mi riservo il diritto di mostrare il lavoro sui miei canali, senza divulgare dati riservati."],
         accept: "Sono d'accordo, iniziamo!",
         termsText: "Spuntando la casella, accetti integralmente anche i ",
         termsLink: "Termini di Servizio",
@@ -198,7 +205,7 @@ export default (langPrefix = "") => ({
       },
       project: {
         title: "Progetto",
-        description: "Raccontami del progetto",
+        subtitle: "Raccontami del progetto",
         projectType: {
           label: "Che tipo di progetto hai in mente?",
           options: ["Nuovo sito web", "Redesign di un sito esistente", "E-commerce", "Web app", "SEO e ottimizzazione", "Altro"]
@@ -214,7 +221,7 @@ export default (langPrefix = "") => ({
       },
       details: {
         title: "Dettagli",
-        description: "Descrivi meglio il progetto",
+        subtitle: "Descrivi meglio il progetto",
         message: {
           label: "Descrivi il progetto nei dettagli",
           placeholder: "Spiegami cosa vorresti ottenere, il tuo settore, funzionalità specifiche, ecc."
@@ -250,7 +257,7 @@ export default (langPrefix = "") => ({
     values: {
       badge: "Valori",
       title: "Ciò che guida il mio lavoro",
-      description: "I principi che orientano ogni progetto e relazione con i clienti che costruisco.",
+      subtitle: "I principi che orientano ogni progetto e relazione con i clienti che costruisco.",
       valuesList: [
         {
           title: "Qualità Prima di Tutto",
@@ -289,7 +296,7 @@ export default (langPrefix = "") => ({
       description: "La pagina che stai cercando non esiste o si è verificato un altro errore. Torna alla home per continuare la navigazione."
     },
     title: "Pagina non trovata",
-    description: "La pagina che stai cercando non esiste o si è verificato un altro errore.",
+    subtitle: "La pagina che stai cercando non esiste o si è verificato un altro errore.",
     button: "Torna alla home"
   },
   footer: {

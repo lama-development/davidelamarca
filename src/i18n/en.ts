@@ -93,9 +93,9 @@ export default (langPrefix = "") => ({
     header: {
       badge: "Projects",
       title: "My projects",
-      subtitle: "Some of the work I've delivered for my clients.",
+      subtitle: "Some of the work I've delivered for my clients."
     },
-    projectsList: [
+    ProjectCards: [
       {
         id: "sorrento-boat-trips",
         title: "Sorrento Boat Trips",
@@ -119,13 +119,13 @@ export default (langPrefix = "") => ({
       {
         id: "caprice-bleu",
         title: "Caprice Bleu",
-        description: "lorem ipsum dolor sit amet.",
+        description: "Elegant website for an agency offering luxury private boat experiences and tours, featuring refined design and SEO optimization.",
         button: "View details",
         image: "caprice-bleu.png",
         technologies: ["Squarespace", "SEO"],
         link: "https://capricebleu.com",
-        ariaLabel: "lorem ipsum dolor sit amet"
-      },
+        ariaLabel: "Screenshot of Caprice Bleu website for luxury private boat tours"
+      }
       // {
       //   id: "netwatch",
       //   title: "NetWatch",
@@ -146,7 +146,21 @@ export default (langPrefix = "") => ({
       //   link: "https://ecrp.framer.website",
       //   ariaLabel: "lorem ipsum dolor sit amet"
       // }
-    ]
+    ],
+    testimonials: {
+      badge: "Testimonials",
+      title: "What clients say",
+      subtitle: "Hear from clients who have already worked with me.",
+      testimonialsList: [
+        {
+          id: "sorrento-boat-trips-testimonial",
+          quote: "Working with you has been a very positive experience. I appreciated your availability, professionalism, and especially your patience in following every detail. I liked how you listened to my needs and transformed them into a functional and aesthetically pleasing website. What particularly impressed me was your ability to propose creative and practical solutions that made the final result even better than I had imagined.",
+          author: "Amy and Antonio",
+          company: "Sorrento Boat Trips",
+          role: "Founders"
+        }
+      ]
+    }
   },
   contact: {
     meta: {
@@ -156,36 +170,13 @@ export default (langPrefix = "") => ({
     header: {
       badge: "Form",
       title: "Let's start your project",
-      description: "Tell me about your idea and let's discover together how to create the website you deserve."
-    },
-    statistics: {
-      badge: "Statistics",
-      title: "Trusted by clients worldwide",
-      description: "Numbers that speak to the quality of my work and commitment to every project.",
-      stats: [
-        {
-          value: "10+",
-          label: "Projects completed"
-        },
-        {
-          value: "100%",
-          label: "Client satisfaction"
-        },
-        {
-          value: "5+",
-          label: "Online websites"
-        },
-        {
-          value: "5★",
-          label: "Average rating"
-        }
-      ]
+      subtitle: "Tell me about your idea and let's discover together how to create the website you deserve."
     },
     form: {
       stepText: "Step {current} of {total}",
       contacts: {
         title: "Contact",
-        description: "Enter your contact details",
+        subtitle: "Enter your contact details",
         name: {
           label: "Full Name",
           placeholder: "John Doe"
@@ -205,15 +196,8 @@ export default (langPrefix = "") => ({
       },
       rules: {
         title: "Terms & Conditions",
-        description: "For a transparent collaboration",
-        rulesList: [
-          "Goals, style, and content are defined at the start; major changes require extra agreements.",
-          "Feedback is important, but the technical and creative consistency of the project remains my responsibility.",
-          "Texts, images, and materials must be provided within the agreed timelines.",
-          "Payment is made in 2 or 3 installments, depending on the project.",
-          "Revisions are limited and do not include major structural changes to the approved plan.",
-          "I reserve the right to showcase the work on my channels without disclosing confidential information."
-        ],
+        subtitle: "For a transparent collaboration",
+        rulesList: ["Goals, style, and content are defined at the start; major changes require extra agreements.", "Feedback is important, but the technical and creative consistency of the project remains my responsibility.", "Texts, images, and materials must be provided within the agreed timelines.", "Payment is made in 2 or 3 installments, depending on the project.", "Revisions are limited and do not include major structural changes to the approved plan.", "I reserve the right to showcase the work on my channels without disclosing confidential information."],
         accept: "I agree, let's get started!",
         termsText: "By checking this box, you also fully accept the ",
         termsLink: "Terms of Service",
@@ -221,7 +205,7 @@ export default (langPrefix = "") => ({
       },
       project: {
         title: "Project",
-        description: "Tell me about your project",
+        subtitle: "Tell me about your project",
         projectType: {
           label: "What type of project do you have in mind?",
           options: ["New website", "Redesign existing site", "E-commerce", "Web app", "SEO & optimization", "Other"]
@@ -237,7 +221,7 @@ export default (langPrefix = "") => ({
       },
       details: {
         title: "Details",
-        description: "Describe your project in detail",
+        subtitle: "Describe your project in detail",
         message: {
           label: "Describe your project",
           placeholder: "Tell me what you'd like to achieve, your business sector, specific features you want, etc."
@@ -273,7 +257,7 @@ export default (langPrefix = "") => ({
     values: {
       badge: "Values",
       title: "What drives my work",
-      description: "The principles that guide every project and client relationship I build.",
+      subtitle: "The principles that guide every project and client relationship I build.",
       valuesList: [
         {
           title: "Quality First",
@@ -312,7 +296,7 @@ export default (langPrefix = "") => ({
       description: "The page you're looking for doesn't exist or another error occurred. Return to the homepage to keep browsing."
     },
     title: "Page not found",
-    description: "The page you're looking for doesn't exist or another error occurred.",
+    subtitle: "The page you're looking for doesn't exist or another error occurred.",
     button: "Return home"
   },
   footer: {

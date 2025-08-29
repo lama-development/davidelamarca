@@ -1,10 +1,15 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import ProjectsGrid from "../../components/projects/Projects.astro";
+import Header from "../../components/projects/Header.astro";
+import ProjectCards from "../../components/projects/ProjectCards.astro";
+import Testimonials from "../../components/projects/Testimonials.astro";
 import language from "../../i18n/en";
 const t = language("/en");
 ---
 
 <Layout t={t} meta={t.projects.meta}>
-  <ProjectsGrid header={t.projects.header} projectsList={t.projects.projectsList} isHomePage={false} />
+  <Header header={t.projects.header} />
+  <ProjectCards projectCard={t.projects.ProjectCards} isHomePage={false} />
+  <Testimonials testimonials={t.projects.testimonials} />
+  <script src="/src/scripts/testimonials.js"></script>
 </Layout>

@@ -2,7 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Hero from "../components/home/Hero.astro";
 import Services from "../components/home/Services.astro";
-import Projects from "../components/projects/Projects.astro";
+import ProjectCards from "../components/projects/ProjectCards.astro";
 import FAQ from "../components/home/FAQ.astro";
 import Banner from "../components/home/Banner.astro";
 import language from "../i18n/it";
@@ -12,7 +12,8 @@ const t = language();
 <Layout t={t} meta={t.home.meta}>
   <Hero hero={t.home.hero} />
   <Services services={t.home.services} />
-  <Projects header={t.home.projects} projectsList={t.projects.projectsList} isHomePage={true} />
+  <ProjectCards projects={t.home.projects} projectCard={t.projects.ProjectCards} isHomePage={true} viewAllText={t.home.projects.button} />
   <FAQ faq={t.home.faq} />
   <Banner banner={t.home.banner} />
+  <script src="/src/scripts/faq.js"></script>
 </Layout>

@@ -4,7 +4,7 @@ import { Image } from "astro:assets";
 // Dynamic imports for project images
 const images = import.meta.glob("../../img/*.{png,jpg,jpeg,webp}", { eager: true });
 
-const { header, projectsList, isHomePage = true } = Astro.props;
+const { projects, projectCard, isHomePage = true, viewAllText = "View all projects" } = Astro.props;
 const langPrefix = Astro.url.pathname.startsWith("/en") ? "/en" : "";
 
 // Function to get image from dynamic imports
@@ -13,27 +13,29 @@ const getImage = (imageName: string) => {
   return (images[imagePath] as any)?.default;
 };
 
-// Use home projects data for text content, and projectsList for the actual projects
-const projects = header;
 // Limit to first 3 projects on home page, show all on projects page
-const displayProjects = isHomePage ? projectsList.slice(0, 3) : projectsList;
+const displayProjects = isHomePage ? projectCard.slice(0, 3) : projectCard;
 ---
 
 <section id="projects" class="border-b border-neutral-200 bg-neutral-50 px-6 py-24 dark:border-neutral-800 dark:bg-neutral-950">
   <div class="mx-auto max-w-7xl">
-    <div class="mb-16 text-center">
-      <div class="mx-auto mb-6 inline-flex items-center gap-2 rounded-full border border-sky-500/20 bg-sky-500/10 px-3 py-1.5 text-xs font-medium whitespace-nowrap text-sky-500 sm:mb-8 sm:text-sm">
-        <span class="text-xs font-medium text-sky-500 sm:text-sm">{projects.badge}</span>
-      </div>
-      <h2 class="mb-4 text-5xl leading-[0.8] font-bold tracking-tight text-neutral-900 dark:text-neutral-100">{projects.title}</h2>
-      <p class="mx-auto max-w-xs text-base leading-[1.1] text-neutral-700 md:max-w-xl md:text-lg dark:text-neutral-300">{projects.subtitle}</p>
-    </div>
+    {
+      isHomePage && (
+        <div class="mb-16 text-center">
+          <div class="mx-auto mb-6 inline-flex items-center gap-2 rounded-full border border-sky-500/20 bg-sky-500/10 px-3 py-1.5 text-xs font-medium whitespace-nowrap text-sky-500 sm:mb-8 sm:text-sm">
+            <span class="text-xs font-medium text-sky-500 sm:text-sm">{projects.badge}</span>
+          </div>
+          <h2 class="mb-4 text-5xl leading-[0.8] font-bold tracking-tight text-neutral-900 dark:text-neutral-100">{projects.title}</h2>
+          <p class="mx-auto max-w-xs text-base leading-[1.1] text-neutral-700 md:max-w-xl md:text-lg dark:text-neutral-300">{projects.subtitle}</p>
+        </div>
+      )
+    }
     <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
       {
         displayProjects.map((project: any) => (
           <div class="overflow-hidden rounded-3xl border border-neutral-200 bg-neutral-100 dark:border-neutral-800 dark:bg-neutral-900">
             <div class="flex aspect-video items-center justify-center overflow-hidden border-b border-neutral-200 bg-neutral-200 dark:border-neutral-800 dark:bg-neutral-800">
-              <a href={project.link} aria-label={project.ariaLabel} class="block h-full w-full">
+              <a href={project.link} aria-label={project.ariaLabel} target="_blank" rel="noopener" class="block h-full w-full">
                 <Image src={getImage(project.image)} alt="" class="h-full w-full object-cover transition-transform duration-700 ease-out hover:scale-105" />
               </a>
             </div>
@@ -48,7 +50,7 @@ const displayProjects = isHomePage ? projectsList.slice(0, 3) : projectsList;
                 ))}
               </div>
               <div>
-                <a href={project.link} class="inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-neutral-50 px-6 py-3 text-sm font-medium text-neutral-700 transition-colors duration-200 hover:bg-neutral-200 dark:border-neutral-800 dark:bg-neutral-950 dark:text-neutral-200 dark:hover:bg-neutral-800">
+                <a href={project.link} target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-neutral-50 px-6 py-3 text-sm font-medium text-neutral-700 transition-colors duration-200 hover:bg-neutral-200 dark:border-neutral-800 dark:bg-neutral-950 dark:text-neutral-200 dark:hover:bg-neutral-800">
                   {project.button}
                 </a>
               </div>
@@ -61,7 +63,7 @@ const displayProjects = isHomePage ? projectsList.slice(0, 3) : projectsList;
       isHomePage && (
         <div class="mt-12 text-center">
           <a href={`${langPrefix}/projects`} class="inline-flex items-center gap-2 rounded-full bg-sky-500 px-8 py-4 text-lg font-semibold tracking-tight text-white transition-colors duration-200 hover:bg-sky-600 dark:text-black">
-            {projects.button}
+            {viewAllText}
           </a>
         </div>
       )

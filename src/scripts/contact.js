@@ -152,11 +152,8 @@ document.addEventListener("DOMContentLoaded", function () {
       e.preventDefault();
 
       if (validateStep(currentStep)) {
-        // Simulate form submission
-        console.log("Form submitted successfully");
-
-        // Show success message immediately
-        showSuccessMessage();
+        // Actually submit the form to Web3Forms
+        submitForm();
       }
     }
   });
@@ -182,6 +179,51 @@ document.addEventListener("DOMContentLoaded", function () {
       successMessage.classList.remove("hidden");
       // Scroll to top to ensure the success message is visible
       window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  }
+
+  async function submitForm() {
+    try {
+      // Disable the submit button to prevent multiple submissions
+      nextBtn.disabled = true;
+      nextBtn.innerHTML = "Submitting...";
+
+      // Create FormData object from the form
+      const formData = new FormData(form);
+      
+      // Log form data for debugging
+      console.log("Submitting form data:");
+      for (let [key, value] of formData.entries()) {
+        console.log(key, value);
+      }
+
+      // Submit to Web3Forms
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
+
+      console.log("Response status:", response.status);
+      
+      if (response.ok) {
+        const result = await response.json();
+        console.log("Form submission successful:", result);
+        // Success - show the success message
+        showSuccessMessage();
+      } else {
+        const errorText = await response.text();
+        console.error("Form submission failed:", response.status, errorText);
+        throw new Error(`Form submission failed: ${response.status}`);
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      
+      // Re-enable the submit button
+      nextBtn.disabled = false;
+      nextBtn.innerHTML = submitText;
+      
+      // Show an error message (you could create a more user-friendly error display)
+      alert("There was an error submitting the form. Please try again.");
     }
   }
 

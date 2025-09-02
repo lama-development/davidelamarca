@@ -1,5 +1,22 @@
 {
   "name": "davidelamarca",
+  "description": "Freelance web developer specializing in modern, optimized websites. Custom web development, responsive design, and digital solutions for growing businesses.",
+  "license": "MIT",
+  "repository": "https://github.com/lama-development/davidelamarca",
+  "homepage": "https://davidelamarca.com",
+  "author": "lama-development",
+  "keywords": [
+    "web developer",
+    "freelance web developer", 
+    "web development",
+    "web design",
+    "seo",
+    "responsive design",
+    "websites",
+    "squarespace",
+    "framer",
+    "portfolio"
+  ],
   "type": "module",
   "version": "0.0.1",
   "scripts": {

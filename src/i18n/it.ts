@@ -104,7 +104,7 @@ export default (langPrefix = "") => ({
         image: "sorrento-boat-trips.png",
         technologies: ["Squarespace", "SEO", "Fareharbor"],
         link: "https://sorrentoboattrips.com",
-        ariaLabel: "Screenshot del sito web Sorrento Boat Trips, mostrando l'homepage con design moderno e sistema di prenotazione"
+        ariaLabel: "Pagina web con contatti di Sorrento Boat Trips e foto di due persone sorridenti in barca al sole."
       },
       {
         id: "skillbridge",
@@ -114,7 +114,7 @@ export default (langPrefix = "") => ({
         image: "skillbridge.png",
         technologies: ["HTML", "CSS", "Javascript", "SQLite"],
         link: "https://github.com/lama-development/skillbridge",
-        ariaLabel: "Screenshot della web app SkillBridge, mostrando l'interfaccia per freelancer con ricerca lavori e chat"
+        ariaLabel: "Schermata digitale di smartphone con app per cercare lavoro, profili e opportunità."
       },
       {
         id: "caprice-bleu",
@@ -124,7 +124,7 @@ export default (langPrefix = "") => ({
         image: "caprice-bleu.png",
         technologies: ["Squarespace", "SEO"],
         link: "https://capricebleu.com",
-        ariaLabel: "Screenshot del sito web Caprice Bleu per tour privati in barca di lusso"
+        ariaLabel: "Pagina web con tre donne su una barca, l’isola di Capri sullo sfondo, che promuove tour esclusivi."
       }
       // {
       //   id: "netwatch",

@@ -100,17 +100,17 @@ export default (langPrefix = "") => ({
         id: "sorrento-boat-trips",
         title: "Sorrento Boat Trips",
         description: "Modern website for a private boat tour agency in Sorrento, featuring an online booking system integrated with FareHarbor.",
-        button: "View details",
+        button: "Go to website",
         image: "sorrento-boat-trips.png",
         technologies: ["Squarespace", "SEO", "Fareharbor"],
         link: "https://sorrentoboattrips.com",
-        ariaLabel: "Website page with Sorrento Boat Trips contact details and photo of two people smiling on a sunny boat ride."
+        ariaLabel: "Website page with Sorrento Boat Trips contact details and two people smiling on a sunny boat ride."
       },
       {
         id: "skillbridge",
         title: "SkillBridge",
         description: "Fully functional web app connecting freelancers and companies: job posts, advanced search, real-time chat, and customizable profiles.",
-        button: "View details",
+        button: "Go to project",
         image: "skillbridge.png",
         technologies: ["HTML", "CSS", "Javascript", "SQLite"],
         link: "https://github.com/lama-development/skillbridge",
@@ -120,7 +120,7 @@ export default (langPrefix = "") => ({
         id: "caprice-bleu",
         title: "Caprice Bleu",
         description: "Elegant website for an agency offering luxury private boat experiences and tours, featuring refined design and SEO optimization.",
-        button: "View details",
+        button: "Go to website",
         image: "caprice-bleu.png",
         technologies: ["Squarespace", "SEO"],
         link: "https://capricebleu.com",
@@ -289,6 +289,91 @@ export default (langPrefix = "") => ({
         email: "Send email"
       }
     }
+  },
+  termsOfService: {
+    meta: {
+      title: "Terms of Service - Davide La Marca",
+      description: "Terms and conditions of service for web development projects and collaborations."
+    },
+    header: {
+      badge: "Legal",
+      title: "Terms of Service",
+      subtitle: "To ensure transparency and quality in every project."
+    },
+    lastUpdated: "Last updated: September 2, 2025",
+    questions: {
+      title: "Questions?",
+      description: "For any questions regarding the terms of service, you can contact me at the address ",
+      ariaLabel: "Send email"
+    },
+    sections: [
+      {
+        title: "1. Project Definition",
+        content: [
+          {
+            type: "paragraph",
+            text: "The project's objectives, graphic style, and content are defined in the initial phase through a detailed briefing. This phase is essential to ensure the final result meets the client's expectations."
+          },
+          {
+            type: "list", 
+            items: [
+              "The briefing includes technical specifications, design, and required functionalities",
+              "Substantial changes to the approved structure require additional agreements",
+              "The client must provide all necessary materials within the agreed timeframes"
+            ]
+          },
+          {
+            type: "paragraph",
+            text: "For more information about the development process, you can visit the <a href='/en/projects' class='text-sky-500 hover:underline'>Projects</a> section of the website."
+          }
+        ]
+      },
+      {
+        title: "2. Responsibilities and Feedback",
+        content: [
+          {
+            type: "paragraph", 
+            text: "Client feedback is essential for project success, however technical and creative consistency remains under my professional responsibility."
+          },
+          {
+            type: "list",
+            items: [
+              "Up to 3 revisions are included for each project phase",
+              "Revisions do not include radical changes to the approved structure",
+              "Additional modifications involve extra costs to be agreed in advance"
+            ]
+          }
+        ]
+      },
+      {
+        title: "3. Materials and Content",
+        content: [
+          {
+            type: "paragraph",
+            text: "The client commits to providing all necessary materials (texts, images, logos, etc.) within the agreed timeframes to avoid delivery delays."
+          },
+          {
+            type: "list",
+            items: [
+              "Content must be provided in appropriate formats and quality",
+              "Images must have appropriate resolution for web use",
+              "Texts must be final and reviewed by the client"
+            ]
+          }
+        ]
+      }
+    ]
+  }, 
+  privacyPolicy: {
+    meta: {
+      title: "Privacy Policy - Davide La Marca",
+      description: ""
+    },
+    header: {
+      badge: "Legal",
+      title: "Privacy Policy",
+      subtitle: "Lorem Ipsum."
+    },
   },
   pageNotFound: {
     meta: {

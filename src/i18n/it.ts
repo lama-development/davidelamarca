@@ -100,7 +100,7 @@ export default (langPrefix = "") => ({
         id: "sorrento-boat-trips",
         title: "Sorrento Boat Trips",
         description: "Sito web moderno per un'agenzia di tour privati a Sorrento, con sistema di prenotazione online integrato tramite FareHarbor.",
-        button: "Vedi dettagli",
+        button: "Vai al sito",
         image: "sorrento-boat-trips.png",
         technologies: ["Squarespace", "SEO", "Fareharbor"],
         link: "https://sorrentoboattrips.com",
@@ -110,7 +110,7 @@ export default (langPrefix = "") => ({
         id: "skillbridge",
         title: "SkillBridge",
         description: "Web app completa che connette freelancer e aziende: post di lavoro, ricerca avanzata, chat in tempo reale e profili personalizzati.",
-        button: "Vedi dettagli",
+        button: "Vai al progetto",
         image: "skillbridge.png",
         technologies: ["HTML", "CSS", "Javascript", "SQLite"],
         link: "https://github.com/lama-development/skillbridge",
@@ -120,7 +120,7 @@ export default (langPrefix = "") => ({
         id: "caprice-bleu",
         title: "Caprice Bleu",
         description: "Sito web elegante per un'agenzia che offre esperienze e tour privati in barca di lusso, con design raffinato e ottimizzazione SEO.",
-        button: "Vedi dettagli",
+        button: "Vai al sito",
         image: "caprice-bleu.png",
         technologies: ["Squarespace", "SEO"],
         link: "https://capricebleu.com",
@@ -148,7 +148,7 @@ export default (langPrefix = "") => ({
       // }
     ],
     testimonials: {
-      badge: "Testimonials",
+      badge: "Testimonial",
       title: "Non lo dico io, lo dicono loro",
       subtitle: "La voce dei clienti che hanno già lavorato con me.",
       testimonialsList: [
@@ -169,7 +169,7 @@ export default (langPrefix = "") => ({
     },
     header: {
       badge: "Form",
-      title: "Il tuo prossimo progetto parte da qui",
+      title: "Il tuo prossimo progetto inizia qui",
       subtitle: "Parlami della tua idea e vediamo insieme come trasformarla in realtà."
     },
     form: {
@@ -289,6 +289,91 @@ export default (langPrefix = "") => ({
         email: "Invia email"
       }
     }
+  },
+  termsOfService: {
+    meta: {
+      title: "Termini di Servizio - Davide La Marca",
+      description: "Termini e condizioni di servizio per i progetti di sviluppo web e collaborazioni."
+    },
+    header: {
+      badge: "Legale",
+      title: "Termini di Servizio",
+      subtitle: "Per garantire trasparenza e qualità in ogni progetto."
+    },
+    lastUpdated: "Ultimo aggiornamento: 2 settembre 2025",
+    questions: {
+      title: "Domande?",
+      description: "Per qualsiasi domanda riguardo ai termini di servizio, puoi contattarmi all’indirizzo ",
+      ariaLabel: "Invia email"
+    },
+    sections: [
+      {
+        title: "1. Definizione del Progetto",
+        content: [
+          {
+            type: "paragraph",
+            text: "Gli obiettivi, lo stile grafico e i contenuti del progetto vengono definiti nella fase iniziale attraverso un briefing dettagliato. Questa fase è fondamentale per garantire che il risultato finale soddisfi le aspettative del cliente."
+          },
+          {
+            type: "list", 
+            items: [
+              "Il briefing include specifiche tecniche, design e funzionalità richieste",
+              "Modifiche sostanziali alla struttura approvata richiedono accordi aggiuntivi",
+              "Il cliente deve fornire tutti i materiali necessari nei tempi concordati"
+            ]
+          },
+          {
+            type: "paragraph",
+            text: "Per maggiori informazioni sul processo di sviluppo, puoi consultare la sezione <a href='/projects' class='text-sky-500 hover:underline'>Progetti</a> del sito."
+          }
+        ]
+      },
+      {
+        title: "2. Responsabilità e Feedback",
+        content: [
+          {
+            type: "paragraph", 
+            text: "I feedback del cliente sono fondamentali per il successo del progetto, tuttavia la coerenza tecnica e creativa resta sotto la mia responsabilità professionale."
+          },
+          {
+            type: "list",
+            items: [
+              "Sono previste fino a 3 revisioni per ogni fase del progetto",
+              "Le revisioni non includono cambiamenti radicali alla struttura approvata",
+              "Modifiche aggiuntive comportano costi extra da concordare preventivamente"
+            ]
+          }
+        ]
+      },
+      {
+        title: "3. Materiali e Contenuti",
+        content: [
+          {
+            type: "paragraph",
+            text: "Il cliente si impegna a fornire tutti i materiali necessari (testi, immagini, loghi, ecc.) nei tempi concordati per evitare ritardi nella consegna."
+          },
+          {
+            type: "list",
+            items: [
+              "I contenuti devono essere forniti in formati adeguati e di qualità",
+              "Le immagini devono avere risoluzione appropriata per il web",
+              "I testi devono essere finali e revisionati dal cliente"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  privacyPolicy: {
+    meta: {
+      title: "Privacy Policy - Davide La Marca",
+      description: "Termini e condizioni di servizio per i progetti di sviluppo web e collaborazioni."
+    },
+    header: {
+      badge: "Legale",
+      title: "Privacy Policy",
+      subtitle: "Lorem Ipsum."
+    },
   },
   pageNotFound: {
     meta: {

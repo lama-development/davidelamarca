@@ -1,0 +1,12 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/common/Header.astro";
+import Terms from "../../components//legal/TermsOfService.astro";
+import language from "../../i18n/en";
+const t = language("/en");
+---
+
+<Layout t={t} meta={t.termsOfService.meta}>
+  <Header header={t.termsOfService.header} />
+  <Terms terms={t.termsOfService} />
+</Layout>

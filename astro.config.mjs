@@ -5,19 +5,20 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://davidelamarca.com',
+  site: "https://davidelamarca.com",
+  trailingSlash: "never",
   vite: {
     plugins: [tailwindcss()]
   },
   integrations: [
     sitemap({
       i18n: {
-        defaultLocale: 'it',
+        defaultLocale: "it",
         locales: {
-          it: 'it-IT',
-          en: 'en-US'
-        },
-      },
-    }),
+          it: "it-IT",
+          en: "en-US"
+        }
+      }
+    })
   ]
 });

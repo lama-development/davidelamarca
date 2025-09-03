@@ -67,7 +67,7 @@ const langPrefix = Astro.url.pathname.startsWith("/en") ? "/en" : "";
             {form.rules.rulesList.map((rule) => <div class="w-full rounded-lg border border-neutral-200 bg-neutral-50 p-4 text-base font-medium text-neutral-700 dark:border-neutral-800 dark:bg-neutral-950 dark:text-neutral-300">{rule}</div>)}
           </div>
           <div class="mb-8 rounded-lg border border-sky-500/20 bg-sky-500/10 p-6">
-            <label class="flex cursor-pointer items-start space-x-4">
+            <label for="accept-rules" class="flex cursor-pointer items-start space-x-4">
               <input type="checkbox" id="accept-rules" required class="mt-1 h-5 w-5 cursor-pointer" />
               <div class="flex-1">
                 <span class="block font-medium text-neutral-900 dark:text-neutral-100">{form.rules.accept}</span>
@@ -99,12 +99,12 @@ const langPrefix = Astro.url.pathname.startsWith("/en") ? "/en" : "";
           </div>
           <div class="space-y-6">
             <div>
-              <label class="mb-3 block text-sm font-medium text-neutral-800 dark:text-neutral-200">{form.project.projectType.label}</label>
+              <label for="projectType" class="mb-3 block text-sm font-medium text-neutral-800 dark:text-neutral-200">{form.project.projectType.label}</label>
               <div class="grid gap-3 sm:grid-cols-2">
                 {
                   form.project.projectType.options.map((option) => (
-                    <label class="flex cursor-pointer items-center space-x-3 rounded-lg border border-neutral-200 bg-neutral-50 p-3 hover:bg-neutral-200 dark:border-neutral-800 dark:bg-neutral-950 dark:hover:bg-neutral-800">
-                      <input type="radio" name="projectType" value={option} required class="h-4 w-4 border-neutral-200 dark:border-neutral-800" />
+                    <label for="projectType" class="flex cursor-pointer items-center space-x-3 rounded-lg border border-neutral-200 bg-neutral-50 p-3 hover:bg-neutral-200 dark:border-neutral-800 dark:bg-neutral-950 dark:hover:bg-neutral-800">
+                      <input type="radio" id="projectType" name="projectType" value={option} required class="h-4 w-4 border-neutral-200 dark:border-neutral-800" />
                       <span class="text-neutral-800 dark:text-neutral-200">{option}</span>
                     </label>
                   ))
@@ -115,12 +115,12 @@ const langPrefix = Astro.url.pathname.startsWith("/en") ? "/en" : "";
               </div>
             </div>
             <div>
-              <label class="mb-3 block text-sm font-medium text-neutral-800 dark:text-neutral-200">{form.project.budget.label}</label>
+              <label for="budget" class="mb-3 block text-sm font-medium text-neutral-800 dark:text-neutral-200">{form.project.budget.label}</label>
               <div class="grid gap-3 sm:grid-cols-2">
                 {
                   form.project.budget.options.map((option) => (
-                    <label class="flex cursor-pointer items-center space-x-3 rounded-lg border border-neutral-200 bg-neutral-50 p-3 hover:bg-neutral-200 dark:border-neutral-800 dark:bg-neutral-950 dark:hover:bg-neutral-800">
-                      <input type="radio" name="budget" value={option} required class="h-4 w-4 border-neutral-200 dark:border-neutral-800" />
+                    <label for="budget" class="flex cursor-pointer items-center space-x-3 rounded-lg border border-neutral-200 bg-neutral-50 p-3 hover:bg-neutral-200 dark:border-neutral-800 dark:bg-neutral-950 dark:hover:bg-neutral-800">
+                      <input type="radio" id="budget" name="budget" value={option} required class="h-4 w-4 border-neutral-200 dark:border-neutral-800" />
                       <span class="text-neutral-800 dark:text-neutral-200">{option}</span>
                     </label>
                   ))
@@ -131,12 +131,12 @@ const langPrefix = Astro.url.pathname.startsWith("/en") ? "/en" : "";
               </div>
             </div>
             <div>
-              <label class="mb-3 block text-sm font-medium text-neutral-800 dark:text-neutral-200">{form.project.timeline.label}</label>
+              <label for="timeline" class="mb-3 block text-sm font-medium text-neutral-800 dark:text-neutral-200">{form.project.timeline.label}</label>
               <div class="grid gap-3 sm:grid-cols-2">
                 {
                   form.project.timeline.options.map((option) => (
-                    <label class="flex cursor-pointer items-center space-x-3 rounded-lg border border-neutral-200 bg-neutral-50 p-3 hover:bg-neutral-200 dark:border-neutral-800 dark:bg-neutral-950 dark:hover:bg-neutral-800">
-                      <input type="radio" name="timeline" value={option} required class="h-4 w-4 border-neutral-200 dark:border-neutral-800" />
+                    <label for="timeline" class="flex cursor-pointer items-center space-x-3 rounded-lg border border-neutral-200 bg-neutral-50 p-3 hover:bg-neutral-200 dark:border-neutral-800 dark:bg-neutral-950 dark:hover:bg-neutral-800">
+                      <input type="radio" id="timeline" name="timeline" value={option} required class="h-4 w-4 border-neutral-200 dark:border-neutral-800" />
                       <span class="text-neutral-800 dark:text-neutral-200">{option}</span>
                     </label>
                   ))
@@ -176,12 +176,12 @@ const langPrefix = Astro.url.pathname.startsWith("/en") ? "/en" : "";
               <textarea id="inspiration" name="inspiration" rows="3" placeholder={form.details.inspiration.placeholder} class="w-full resize-none rounded-lg border border-neutral-200 bg-neutral-50 px-4 py-3 text-neutral-900 placeholder-neutral-500 dark:border-neutral-800 dark:bg-neutral-950 dark:text-neutral-100 dark:placeholder-neutral-400"></textarea>
             </div>
             <div>
-              <label class="mb-3 block text-sm font-medium text-neutral-800 dark:text-neutral-200">{form.details.hasBranding.label}</label>
+              <label for="branding" class="mb-3 block text-sm font-medium text-neutral-800 dark:text-neutral-200">{form.details.hasBranding.label}</label>
               <div class="grid gap-3 sm:grid-cols-1">
                 {
                   form.details.hasBranding.options.map((option) => (
-                    <label class="flex cursor-pointer items-center space-x-3 rounded-lg border border-neutral-200 bg-neutral-50 p-3 hover:bg-neutral-200 dark:border-neutral-800 dark:bg-neutral-950 dark:hover:bg-neutral-800">
-                      <input type="radio" name="hasBranding" value={option} required class="h-4 w-4 border-neutral-200 dark:border-neutral-800" />
+                    <label for="branding" class="flex cursor-pointer items-center space-x-3 rounded-lg border border-neutral-200 bg-neutral-50 p-3 hover:bg-neutral-200 dark:border-neutral-800 dark:bg-neutral-950 dark:hover:bg-neutral-800">
+                      <input id="branding" type="radio" name="hasBranding" value={option} required class="h-4 w-4 border-neutral-200 dark:border-neutral-800" />
                       <span class="text-neutral-800 dark:text-neutral-200">{option}</span>
                     </label>
                   ))

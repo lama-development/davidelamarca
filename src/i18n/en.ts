@@ -298,71 +298,163 @@ export default (langPrefix = "") => ({
     header: {
       badge: "Legal",
       title: "Terms of Service",
-      subtitle: "To ensure transparency and quality in every project."
-    },
-    lastUpdated: "Last updated: September 2, 2025",
-    questions: {
-      title: "Questions?",
-      description: "For any questions regarding the terms of service, you can contact me at the address ",
-      ariaLabel: "Send email"
+      subtitle: "Last updated: September 2, 2025."
     },
     sections: [
       {
-        title: "1. Project Definition",
+        title: "Introduction",
+        content : [
+          {
+            type: "paragraph",
+            text: "The term “Provider” refers to LA MARCA DAVIDE (sole proprietorship, VAT ID 02804090039). The term “Client” refers to the natural or legal person who submits a request through the form on the <a href='/en/contact' class='text-sky-500 hover:underline'>contact page</a> or accepts the written offer. These Terms govern the provision of website design, development, optimization, and maintenance services and related services (the “Services”). Submitting the form or continued use of the website <a href='https://davidelamarca.com/en' class='text-sky-500 hover:underline'>davidelamarca.com</a> constitutes full acceptance of these Terms. The Provider reserves the right to modify these Terms at any time; changes will take effect from the date of publication on the website. Continued use of the website or execution of new orders following the publication of changes constitutes tacit acceptance thereof. The date of the latest version is shown at the top of this document and is updated when changes are published."
+          }
+        ]
+      },
+      {
+        title: "1. Scope of service and operating procedures",
         content: [
           {
             type: "paragraph",
-            text: "The project's objectives, graphic style, and content are defined in the initial phase through a detailed briefing. This phase is essential to ensure the final result meets the client's expectations."
+            text: "Services are performed according to the agreed brief and specifications. Websites are typically built on SaaS platforms such as <a href='https://squarespace.com' aria-label='Open Squarespace website' target='_blank' rel='noopener noreferrer' class='text-sky-500 hover:underline '>Squarespace</a> or <a href='https://framer.com' aria-label='Open Framer website' target='_blank' rel='noopener noreferrer' class='text-sky-500 hover:underline '>Framer</a>; custom code development is possible exclusively for complex requirements and will be specified in the quote."
+          },
+          {
+            type: "paragraph",
+            text: "The graphic, structural, and functional design of the website is entrusted to the Provider's experience and professional competence: the Client may express preferences, guidelines, and content constraints, but does not have the authority to impose technical or graphic solutions that conflict with the Provider's vision, style, or professional standards. Substantial changes from the initial brief (scope change) require written agreement and may result in changes to timelines and costs."
+          }
+        ]
+      },
+      {
+        title: "2. Client obligations, provided materials, and content responsibility",
+        content: [
+          {
+            type: "paragraph", 
+            text: "The Client undertakes to provide in useful time and in the required formats texts, images, logos, videos, licenses, and any other material necessary for website development. The Client guarantees to be the owner of the rights or to have the right to use the provided material and indemnifies the Provider from any claim, cost, or liability arising from violations of copyright, trademarks, or other third-party rights connected to the provided material. The Provider is not responsible for improper or illegal use of material provided by the Client. Any material provided beyond the agreed terms that causes delays does not make the Provider responsible for milestone delays."
+          }
+        ]
+      },
+      {
+        title: "3. Access, hosting, third parties, and external links",
+        content: [
+          {
+            type: "paragraph",
+            text: "The Client provides necessary access (accounts, hosting, DNS, APIs) within the required timeframes; operational management of hosting, domain, and third-party services remains the Client's responsibility. The use of third-party components (plugins, templates, fonts, APIs) will be carried out in compliance with their respective licenses: any license/subscription costs will fall on the Client. For websites built on SaaS platforms, complete exportability or portability of content may be limited by the platform's functionality; any migration or export requirements must be defined and agreed upon during the contract phase. Any links to external resources are provided for informational purposes only: the Provider does not control and is not responsible for external content."
+          }
+        ]
+      },
+      {
+        title: "4. Timeline, delivery, hosting, and domains",
+        content: [
+          {
+            type: "paragraph",
+            text: "For projects built on SaaS platforms (e.g., <a href='https://squarespace.com' aria-label='Open Squarespace website' target='_blank' rel='noopener noreferrer' class='text-sky-500 hover:underline'>Squarespace</a>, <a href='https://framer.com' aria-label='Open Framer website' target='_blank' rel='noopener noreferrer' class='text-sky-500 hover:underline '>Framer</a> or similar) the Client is required to independently purchase the necessary plan/subscription on the chosen platform and grant the Provider access to the project with appropriate privileges (e.g., collaborator role, workspace access, or technical credentials) to enable the performance of activities. Part of the project's content or functionality may remain blocked or invisible until final payment; this limitation is intended to protect the ownership of the work and ensure fulfillment of contractual obligations, and cannot be interpreted as non-compliance, defect, or grounds for complaint against the Provider."
+          },
+          {
+            type: "paragraph",
+            text: "Domain registration is the Client's responsibility: the Client arranges to purchase the domain from their chosen registrar and remains responsible for payment of related fees and renewals. Once purchased, the Client provides the Provider with necessary access (registrar account, administrative credentials, authorization/EPP code if required) or grants management delegation so that the Provider can proceed with technical configuration, addition, or transfer of the domain to the project. The Provider will handle technical transfer/configuration operations upon receipt of all authorizations from the Client; any transfer costs imposed by the registrar are the Client's responsibility. Technical timeframes for DNS propagation, completion of transfers between registrars, or SSL certificate activation depend on the registrars and providers involved and are not attributable to the Provider."
+          }
+        ]
+      },
+      {
+        title: "5. Compensation, billing, VAT, and payment methods",
+        content: [
+          {
+            type: "paragraph",
+            text: "Payment methods depend on the project type and total amount: the final solution will be indicated in the quote accompanying the estimate. Fees are those indicated in the quote and exclude VAT. Payment is made exclusively by bank transfer to the coordinates provided by the Provider. Typical payment methods:"
           },
           {
             type: "list", 
             items: [
-              "The briefing includes technical specifications, design, and required functionalities",
-              "Substantial changes to the approved structure require additional agreements",
-              "The client must provide all necessary materials within the agreed timeframes"
+              "Option A (3 installments): 40% down payment at start, 40% intermediate installment, 20% balance upon delivery;",
+              "Option B (2 installments): 50% down payment at start and 50% balance upon delivery.",
             ]
           },
           {
             type: "paragraph",
-            text: "For more information about the development process, you can visit the <a href='/en/projects' class='text-sky-500 hover:underline'>Projects</a> section of the website."
+            text: "Invoices will be issued with applicable VAT and according to current regulations. In case of payment delay, the Provider reserves the right to suspend work and access to materials until payment; late interest and any collection costs in accordance with the law will be applied. The down payment is generally non-refundable unless otherwise agreed in writing."
           }
         ]
       },
       {
-        title: "2. Responsibilities and Feedback",
-        content: [
-          {
-            type: "paragraph", 
-            text: "Client feedback is essential for project success, however technical and creative consistency remains under my professional responsibility."
-          },
-          {
-            type: "list",
-            items: [
-              "Up to 3 revisions are included for each project phase",
-              "Revisions do not include radical changes to the approved structure",
-              "Additional modifications involve extra costs to be agreed in advance"
-            ]
-          }
-        ]
-      },
-      {
-        title: "3. Materials and Content",
+        title: "6. Revisions, change requests, and technical warranty",
         content: [
           {
             type: "paragraph",
-            text: "The client commits to providing all necessary materials (texts, images, logos, etc.) within the agreed timeframes to avoid delivery delays."
+            text: "The quote typically includes 2 revision rounds; these revisions are intended exclusively for correction, refinement, and adaptation of content and do not include structural changes or redefinition of the project concept. Requests involving significant changes to the structure, architecture, or concept of the website will be considered change requests and will be billed separately at the agreed hourly rate (hourly rate: €25/hour)."
           },
           {
-            type: "list",
-            items: [
-              "Content must be provided in appropriate formats and quality",
-              "Images must have appropriate resolution for web use",
-              "Texts must be final and reviewed by the client"
-            ]
+            type: "paragraph",
+            text: "Website delivery does not include ongoing technical support, future updates, or subsequent interventions, which are considered extra paid services to be agreed separately (maintenance, support, updates, urgent interventions). Typically included is a 7-day technical warranty period from publication for fixing bugs directly attributable to development; interventions requested beyond this period fall under a possible maintenance contract or will be billed separately."
           }
         ]
-      }
-    ]
+      },
+      {
+        title: "7. Intellectual property and promotional use",
+        content: [
+          {
+            type: "paragraph",
+            text: "Copyright and economic exploitation rights on the created works (graphics, layout, structures, code where provided) are transferred to the Client only after full payment of the agreed fee. Until complete payment, the code, design, and technical solutions developed remain the Provider's property and the Provider may retain the source files or limit delivery."
+          },
+          {
+            type: "paragraph",
+            text: "The Provider reserves the right to use images, screenshots, and project descriptions for their own portfolio and promotional channels; requests for embargo, anonymization, or NDA must be agreed before project start."
+          }
+        ]
+      },
+      {
+        title: "8. Collaboration termination, withdrawal, and force majeure",
+        content: [
+          {
+            type: "paragraph",
+            text: "The Provider reserves the right to unilaterally terminate the collaboration and withdraw from the contract in case of:"
+          },
+          {
+            type: "list", 
+            items: [
+              "Non-compliance with economic or contractual conditions by the Client;",
+              "Client behavior detrimental to the Provider's professionalism or dignity;",
+              "Client communications or conduct that are manifestly inappropriate, harassing, aggressive, manipulative, or offensive toward the Provider.",
+            ]
+          },
+          {
+            type: "paragraph",
+            text: "In case of termination for the above reasons, the Provider will retain the down payment and/or what has been earned up to that point in proportion to the work performed."
+          },
+          {
+            type: "paragraph",
+            text: "Force majeure events (calamities, wars, large-scale cyber attacks, infrastructure or third-party service interruptions) suspend the parties' obligations for the duration of the event; the parties will endeavor to resume performance as soon as possible."
+          }
+        ]
+      },
+      {
+        title: "9. Warranties, limitation of liability, indemnification, and applicable law",
+        content: [
+          {
+            type: "paragraph",
+            text: "The Provider performs services with professional diligence but does not guarantee economic results, SEO rankings, or performance not directly controllable by technical activity. The Provider's overall liability is limited to the total amount paid by the Client for the project subject to the dispute. The Client indemnifies and holds harmless the Provider from any request or claim by third parties arising from material provided by the Client that violates third-party rights or legal provisions. These Terms are governed by Italian law."
+          }
+        ]
+      },
+      {
+        title: "Contact information",
+        content: [
+          {
+            type: "list", 
+            items: [
+              "LA MARCA DAVIDE",
+              "VAT ID: 02804090039",
+              "Website: <a href='https://davidelamarca.com/en' aria-label='Go to website' class='text-sky-500 hover:underline'>davidelamarca.com</a>",
+              "Email: <a href='mailto:info@davidelamarca.com' aria-label='Send email' class='text-sky-500 hover:underline'>info@davidelamarca.com</a>",
+              "PEC: <a href='mailto:davidelamarca@legalmail.it' aria-label='Send email' class='text-sky-500 hover:underline'>davidelamarca@legalmail.it</a>",
+            ]
+          },
+        ]
+      },
+    ],
+    questions: {
+      title: "Questions?",
+      description: "For any questions regarding the terms of service, you can contact me at the address ",
+      ariaLabel: "Send email"
+    }
   }, 
   privacyPolicy: {
     meta: {
@@ -372,8 +464,19 @@ export default (langPrefix = "") => ({
     header: {
       badge: "Legal",
       title: "Privacy Policy",
-      subtitle: "Lorem Ipsum."
+      subtitle: "Last updated:"
     },
+    sections: [
+      {
+        content : [
+        ]
+      }
+    ],
+    questions: {
+      title: "Questions?",
+      description: "For any questions regarding the privacy policy, you can contact me at the address ",
+      ariaLabel: "Send email"
+    }
   },
   pageNotFound: {
     meta: {

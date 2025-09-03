@@ -298,71 +298,163 @@ export default (langPrefix = "") => ({
     header: {
       badge: "Legale",
       title: "Termini di Servizio",
-      subtitle: "Per garantire trasparenza e qualità in ogni progetto."
-    },
-    lastUpdated: "Ultimo aggiornamento: 2 settembre 2025",
-    questions: {
-      title: "Domande?",
-      description: "Per qualsiasi domanda riguardo ai termini di servizio, puoi contattarmi all’indirizzo ",
-      ariaLabel: "Invia email"
+      subtitle: "Ultimo aggiornamento: 2 settembre 2025"
     },
     sections: [
       {
-        title: "1. Definizione del Progetto",
+        title: "Introduzione",
+        content : [
+          {
+            type: "paragraph",
+            text: "Con “Fornitore” si intende LA MARCA DAVIDE (ditta individuale, P.IVA 02804090039). Con “Cliente” si intende la persona fisica o giuridica che inoltra richiesta tramite il form presente nella <a href='/contact' class='text-sky-500 hover:underline'>pagina di contatto</a> o accetta per iscritto l’offerta. I presenti Termini disciplinano la fornitura di servizi di progettazione, realizzazione, ottimizzazione e manutenzione di siti web e servizi connessi (i “Servizi”). L’invio del form o l’utilizzo continuato del sito <a href='https://davidelamarca.com' class='text-sky-500 hover:underline'>davidelamarca.com</a> costituiscono accettazione integrale dei presenti Termini. Il Fornitore si riserva il diritto di modificare i presenti Termini in qualsiasi momento; le modifiche entreranno in vigore dalla data di pubblicazione sul sito. L’uso continuato del sito o l’esecuzione di nuovi ordini successivi alla pubblicazione delle modifiche costituiscono accettazione tacita delle stesse. La data dell’ultima versione è riportata in testa al presente documento e viene aggiornata al momento della pubblicazione delle modifiche."
+          }
+        ]
+      },
+      {
+        title: "1. Ambito del servizio e modalità operative ",
         content: [
           {
             type: "paragraph",
-            text: "Gli obiettivi, lo stile grafico e i contenuti del progetto vengono definiti nella fase iniziale attraverso un briefing dettagliato. Questa fase è fondamentale per garantire che il risultato finale soddisfi le aspettative del cliente."
+            text: "I Servizi sono eseguiti secondo il brief e le specifiche concordate. Di norma i siti vengono realizzati su piattaforme SaaS come <a href='https://squarespace.com' aria-label='Apri sito Squarespace' target='_blank' rel='noopener noreferrer' class='text-sky-500 hover:underline '>Squarespace</a> o <a href='https://framer.com' aria-label='Apri sito Framer' target='_blank' rel='noopener noreferrer' class='text-sky-500 hover:underline '>Framer</a>; lo sviluppo in codice è possibile esclusivamente per esigenze complesse e sarà specificato nell’offerta."
+          },
+          {
+            type: "paragraph",
+            text: "La progettazione grafica, strutturale e funzionale del sito è affidata all’esperienza e alla competenza professionale del Fornitore: il Cliente può esprimere preferenze, indicazioni e vincoli di contenuto, ma non ha facoltà di imporre soluzioni tecniche o grafiche in contrasto con la visione, lo stile o gli standard professionali del Fornitore. Le modifiche sostanziali rispetto al brief iniziale (scope change) richiedono accordo scritto e possono comportare variazioni di tempi e costi."
+          }
+        ]
+      },
+      {
+        title: "2. Obblighi del Cliente, materiali forniti e responsabilità sui contenuti",
+        content: [
+          {
+            type: "paragraph", 
+            text: "Il Cliente si impegna a fornire in tempi utili e nei formati richiesti testi, immagini, loghi, video, licenze e ogni altro materiale necessario alla realizzazione del sito. Il Cliente garantisce di essere titolare dei diritti o di avere il diritto di utilizzo del materiale fornito e manleva il Fornitore da qualsiasi pretesa, costo o responsabilità derivante da violazioni di copyright, marchi o altri diritti di terzi connesse al materiale fornito. Il Fornitore non è responsabile per usi impropri o illeciti di materiale fornito dal Cliente. Qualsiasi materiale fornito oltre i termini concordati che comporti ritardi non rende il Fornitore responsabile per lo slittamento delle milestone."
+          }
+        ]
+      },
+      {
+        title: "3. Accessi, hosting, terze parti e link esterni",
+        content: [
+          {
+            type: "paragraph",
+            text: "Il Cliente fornisce accessi necessari (account, hosting, DNS, API) nei tempi richiesti; la gestione operativa dell’hosting, del dominio e dei servizi terzi rimane a carico del Cliente. L’utilizzo di componenti di terze parti (plugin, template, font, API) sarà effettuato nel rispetto delle relative licenze: eventuali costi di licenza/abbonamento ricadranno sul Cliente. Per i siti realizzati su piattaforme SaaS, la completa esportabilità o portabilità dei contenuti può essere limitata dalle funzionalità della piattaforma stessa; ogni esigenza di migrazione o esportazione dovrà essere definita e concordata in fase contrattuale. Eventuali link a risorse esterne sono forniti a solo scopo informativo: il Fornitore non controlla né è responsabile dei contenuti esterni."
+          }
+        ]
+      },
+      {
+        title: "4. Tempistiche, consegna, hosting e domini",
+        content: [
+          {
+            type: "paragraph",
+            text: "Per i progetti realizzati su piattaforme SaaS (es. <a href='https://squarespace.com' aria-label='Apri sito Squarespace' target='_blank' rel='noopener noreferrer' class='text-sky-500 hover:underline'>Squarespace</a>, <a href='https://framer.com' aria-label='Apri sito Framer' target='_blank' rel='noopener noreferrer' class='text-sky-500 hover:underline '>Framer</a> o simili) il Cliente è tenuto ad acquistare autonomamente il piano/abbonamento necessario sulla piattaforma scelta e a concedere al Fornitore accesso al progetto con privilegi appropriati (es. ruolo di collaboratore, accesso a workspace o credenziali tecniche) in modo da permettere lo svolgimento delle attività. Parte dei contenuti o delle funzionalità del progetto potrà rimanere bloccata o non visibile fino al saldo; tale limitazione è finalizzata a tutelare la titolarità degli elaborati e a garantire l’adempimento degli obblighi contrattuali, e non può essere interpretata come inadempimento, difetto o motivo di reclamo nei confronti del Fornitore."
+          },
+          {
+            type: "paragraph",
+            text: "La registrazione del dominio è a carico del Cliente: il Cliente provvede ad acquistare il dominio presso il registrar di sua scelta e resta responsabile del pagamento delle relative tariffe e rinnovi. Una volta acquistato, il Cliente fornisce al Fornitore gli accessi necessari (account presso il registrar, credenziali amministrative, codice di autorizzazione/EPP se previsto) o concede una delega di gestione in modo che il Fornitore possa procedere con la configurazione tecnica, l’aggiunta o il trasferimento del dominio sul progetto. Il Fornitore si occuperà delle operazioni tecniche di trasferimento o configurazione previa ricezione di tutte le autorizzazioni dal Cliente; eventuali costi di trasferimento imposti dal registrar sono a carico del Cliente. I tempi tecnici per la propagazione DNS, il completamento del trasferimento tra registrar o l’attivazione di certificati SSL dipendono dai registrar e dai provider coinvolti e non sono imputabili al Fornitore."
+          }
+        ]
+      },
+      {
+        title: "5. Compenso, fatturazione, IVA e modalità di pagamento",
+        content: [
+          {
+            type: "paragraph",
+            text: "Le modalità di pagamento dipendono dal tipo di progetto e dall’importo totale: la soluzione definitiva sarà indicata nell’offerta che accompagnerà il preventivo. I compensi sono quelli indicati nell’offerta e sono IVA esclusa. Il pagamento avviene esclusivamente tramite bonifico bancario alle coordinate comunicate dal Fornitore. Modalità di pagamento tipiche:"
           },
           {
             type: "list", 
             items: [
-              "Il briefing include specifiche tecniche, design e funzionalità richieste",
-              "Modifiche sostanziali alla struttura approvata richiedono accordi aggiuntivi",
-              "Il cliente deve fornire tutti i materiali necessari nei tempi concordati"
+              "Opzione A (3 tranche): acconto 40% all’avvio, tranche intermedia 40%, saldo 20% alla consegna;",
+              "Opzione B (2 tranche): acconto 50% all’avvio e saldo 50% alla consegna.",
             ]
           },
           {
             type: "paragraph",
-            text: "Per maggiori informazioni sul processo di sviluppo, puoi consultare la sezione <a href='/projects' class='text-sky-500 hover:underline'>Progetti</a> del sito."
+            text: "Le fatture saranno emesse con l’IVA applicabile e secondo la normativa vigente. In caso di ritardo nel pagamento il Fornitore si riserva il diritto di sospendere i lavori e l’accesso ai materiali fino al saldo; saranno applicati interessi di mora ed eventuali costi di sollecito conformi alla legge. L’acconto è generalmente non rimborsabile salvo diverso accordo scritto."
           }
         ]
       },
       {
-        title: "2. Responsabilità e Feedback",
-        content: [
-          {
-            type: "paragraph", 
-            text: "I feedback del cliente sono fondamentali per il successo del progetto, tuttavia la coerenza tecnica e creativa resta sotto la mia responsabilità professionale."
-          },
-          {
-            type: "list",
-            items: [
-              "Sono previste fino a 3 revisioni per ogni fase del progetto",
-              "Le revisioni non includono cambiamenti radicali alla struttura approvata",
-              "Modifiche aggiuntive comportano costi extra da concordare preventivamente"
-            ]
-          }
-        ]
-      },
-      {
-        title: "3. Materiali e Contenuti",
+        title: "6. Revisioni, change request e garanzia tecnica",
         content: [
           {
             type: "paragraph",
-            text: "Il cliente si impegna a fornire tutti i materiali necessari (testi, immagini, loghi, ecc.) nei tempi concordati per evitare ritardi nella consegna."
+            text: "L’offerta include di norma 2 round di revisione; tali revisioni sono finalizzate esclusivamente alla correzione, al perfezionamento e all’adattamento dei contenuti e non comprendono cambiamenti strutturali o ridefinizione del concept del progetto. Le richieste che comportano modifiche significative alla struttura, all’architettura o al concept del sito saranno considerate change request e verranno fatturate separatamente alla tariffa oraria concordata (tariffa oraria: €25/ora)."
           },
           {
-            type: "list",
-            items: [
-              "I contenuti devono essere forniti in formati adeguati e di qualità",
-              "Le immagini devono avere risoluzione appropriata per il web",
-              "I testi devono essere finali e revisionati dal cliente"
-            ]
+            type: "paragraph",
+            text: "La consegna del sito non include assistenza tecnica continuativa, aggiornamenti futuri o interventi successivi, che sono considerati servizi extra a pagamento da concordare separatamente (manutenzione, assistenza, aggiornamenti, interventi urgenti). È incluso, di norma, un periodo di garanzia tecnica di 7 giorni dalla pubblicazione per la correzione di bug direttamente imputabili allo sviluppo; gli interventi richiesti oltre tale termine rientrano in un eventuale contratto di manutenzione o saranno fatturati a parte."
           }
         ]
-      }
-    ]
+      },
+      {
+        title: "7. Proprietà intellettuale e uso promozionale",
+        content: [
+          {
+            type: "paragraph",
+            text: "I diritti d’autore e i diritti di utilizzazione economica sugli elaborati realizzati (grafica, layout, strutture, codice ove fornito) sono ceduti al Cliente solo dopo il pagamento integrale del corrispettivo pattuito. Fino al saldo completo il codice, il design e le soluzioni tecniche sviluppate restano di proprietà del Fornitore e il Fornitore può trattenere i sorgenti o limitare la consegna."
+          },
+          {
+            type: "paragraph",
+            text: "Il Fornitore si riserva il diritto di utilizzare immagini, screenshot e descrizioni del progetto per il proprio portfolio e canali promozionali; richieste di embargo, anonimizzazione o NDA devono essere concordate prima dell’avvio del progetto."
+          }
+        ]
+      },
+      {
+        title: "8. Interruzione della collaborazione, recesso e forza maggiore",
+        content: [
+          {
+            type: "paragraph",
+            text: "Il Fornitore si riserva il diritto di interrompere unilateralmente la collaborazione e recedere dal contratto in caso di:"
+          },
+          {
+            type: "list", 
+            items: [
+              "Mancato rispetto delle condizioni economiche o contrattuali da parte del Cliente;",
+              "Comportamenti del Cliente lesivi della professionalità o dignità del Fornitore;",
+              "Comunicazioni o condotte del Cliente manifestamente inappropriate, moleste, aggressive, manipolative o offensivi nei confronti del Fornitore.",
+            ]
+          },
+          {
+            type: "paragraph",
+            text: "In caso di interruzione per i motivi su indicati il Fornitore tratterrà l’acconto e/o quanto maturato fino a quel momento in proporzione al lavoro svolto."
+          },
+          {
+            type: "paragraph",
+            text: "Gli eventi di forza maggiore (calamità, guerre, attacchi informatici su larga scala, interruzioni di infrastrutture o servizi terzi) sospendono le obbligazioni delle parti per la durata dell’evento; le parti si adopereranno per riprendere le prestazioni non appena possibile."
+          }
+        ]
+      },
+      {
+        title: "9. Garanzie, limitazione di responsabilità, indennizzo e legge applicabile",
+        content: [
+          {
+            type: "paragraph",
+            text: "Il Fornitore svolge le prestazioni con diligenza professionale ma non garantisce risultati economici, posizionamenti SEO o performance non direttamente controllabili dall’attività tecnica. La responsabilità complessiva del Fornitore è limitata all’importo complessivamente corrisposto dal Cliente per il progetto oggetto della controversia. Il Cliente manleva e tiene indenne il Fornitore da qualsiasi richiesta o pretesa di terzi derivante da materiale fornito dal Cliente che violi diritti di terzi o norme di legge. I presenti Termini sono regolati dalla legge italiana."
+          }
+        ]
+      },
+      {
+        title: "Informazioni di contatto",
+        content: [
+          {
+            type: "list", 
+            items: [
+              "LA MARCA DAVIDE",
+              "P.IVA: 02804090039",
+              "Sito web: <a href='https://davidelamarca.com' aria-label='Vai al sito web' class='text-sky-500 hover:underline'>davidelamarca.com</a>",
+              "Email: <a href='mailto:info@davidelamarca.com' aria-label='Invia email' class='text-sky-500 hover:underline'>info@davidelamarca.com</a>",
+              "PEC: <a href='mailto:davidelamarca@legalmail.it' aria-label='Invia email' class='text-sky-500 hover:underline'>davidelamarca@legalmail.it</a>",
+            ]
+          },
+        ]
+      },
+    ],
+    questions: {
+      title: "Domande?",
+      description: "Per qualsiasi domanda riguardo ai termini di servizio, puoi contattarmi all’indirizzo ",
+      ariaLabel: "Invia email"
+    }
   },
   privacyPolicy: {
     meta: {
@@ -372,8 +464,19 @@ export default (langPrefix = "") => ({
     header: {
       badge: "Legale",
       title: "Privacy Policy",
-      subtitle: "Lorem Ipsum."
+      subtitle: "Ultimo aggiornamento:"
     },
+    sections: [
+      {
+        content : [
+        ]
+      }
+    ],
+    questions: {
+      title: "Domande?",
+      description: "Per qualsiasi domanda riguardo ai termini di servizio, puoi contattarmi all’indirizzo ",
+      ariaLabel: "Invia email"
+    }
   },
   pageNotFound: {
     meta: {

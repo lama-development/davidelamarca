@@ -3,14 +3,14 @@ const { questions } = Astro.props;
 ---
 
 <div class="mt-16 border-t border-neutral-200 pt-8 dark:border-neutral-800">
-  <div class="rounded-lg bg-neutral-100 p-6 dark:bg-neutral-900">
+  <div class="rounded-lg border border-neutral-200 bg-neutral-100 p-6 dark:border-neutral-800 dark:bg-neutral-900">
     <h3 class="mb-3 text-lg font-semibold text-neutral-900 dark:text-neutral-100">
       {questions.title}
     </h3>
-    <p class="text-neutral-700 dark:text-neutral-300">
+    <p class="0tracking-tight text-neutral-700 dark:text-neutral-300">
       {questions.description}
       <a href="mailto:info@davidelamarca.com" class="inline-flex items-center gap-1 text-sky-500 hover:underline" aria-label={questions.ariaLabel}>
-        <span class="font-medium">info@davidelamarca.com</span>
+        <span class="font-medium tracking-tight">info@davidelamarca.com</span>
         <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
         </svg>

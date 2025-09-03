@@ -1,5 +1,45 @@
 ---
-const { terms } = Astro.props;
+import Questions from "../legal/Questions.astro";
+const { privacy } = Astro.props;
+
+interface ContentBlock {
+  type: "paragraph" | "list";
+  text?: string;
+  items?: string[];
+}
+
+interface Section {
+  title: string;
+  content: ContentBlock[];
+}
 ---
 
-<section class="w-full bg-neutral-50 px-6 py-16 md:py-24 dark:bg-neutral-950"></section>
+<section class="w-full bg-neutral-50 px-6 py-16 dark:bg-neutral-950">
+  <div class="mx-auto max-w-4xl">
+    <div class="space-y-12">
+      {
+        privacy.sections?.map((section: Section) => (
+          <div class="prose prose-neutral dark:prose-invert max-w-none">
+            <h2 class="mb-3 text-2xl font-bold tracking-tighter text-neutral-900 dark:text-neutral-100">{section.title}</h2>
+            <div class="space-y-3">
+              {section.content.map((block: ContentBlock) => {
+                if (block.type === "paragraph") {
+                  return <p class="tracking-tight text-neutral-700 dark:text-neutral-300" set:html={block.text} />;
+                } else if (block.type === "list") {
+                  return (
+                    <ul class="list-disc pl-6">
+                      {block.items?.map((item: string) => (
+                        <li class="tracking-tight text-neutral-700 dark:text-neutral-300" set:html={item} />
+                      ))}
+                    </ul>
+                  );
+                }
+              })}
+            </div>
+          </div>
+        ))
+      }
+    </div>
+    <Questions questions={privacy.questions} />
+  </div>
+</section>

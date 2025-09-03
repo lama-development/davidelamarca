@@ -2,7 +2,6 @@
 import Questions from "../legal/Questions.astro";
 const { terms } = Astro.props;
 
-// Type definitions for content structure
 interface ContentBlock {
   type: "paragraph" | "list";
   text?: string;
@@ -15,23 +14,22 @@ interface Section {
 }
 ---
 
-<section class="w-full bg-neutral-50 px-6 py-16 md:py-24 dark:bg-neutral-950">
+<section class="w-full bg-neutral-50 px-6 py-16 dark:bg-neutral-950">
   <div class="mx-auto max-w-4xl">
-    {terms.lastUpdated && <p class="mb-8 text-sm text-neutral-600 dark:text-neutral-400">{terms.lastUpdated}</p>}
     <div class="space-y-12">
       {
         terms.sections?.map((section: Section) => (
           <div class="prose prose-neutral dark:prose-invert max-w-none">
-            <h2 class="mb-6 text-2xl font-bold text-neutral-900 dark:text-neutral-100">{section.title}</h2>
-            <div class="space-y-4">
+            <h2 class="mb-3 text-xl leading-[1.0] font-bold tracking-tighter text-neutral-900 dark:text-neutral-100">{section.title}</h2>
+            <div class="space-y-3">
               {section.content.map((block: ContentBlock) => {
                 if (block.type === "paragraph") {
-                  return <p class="leading-relaxed text-neutral-700 dark:text-neutral-300" set:html={block.text} />;
+                  return <p class="tracking-tight text-neutral-700 dark:text-neutral-300" set:html={block.text} />;
                 } else if (block.type === "list") {
                   return (
-                    <ul class="list-disc space-y-2 pl-6">
+                    <ul class="list-disc pl-6">
                       {block.items?.map((item: string) => (
-                        <li class="text-neutral-700 dark:text-neutral-300" set:html={item} />
+                        <li class="tracking-tight text-neutral-700 dark:text-neutral-300" set:html={item} />
                       ))}
                     </ul>
                   );

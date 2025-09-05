@@ -242,7 +242,8 @@ export default (langPrefix = "") => ({
       validation: {
         required: "Questo campo è obbligatorio",
         email: "Inserisci un indirizzo email valido",
-        acceptTerms: "Devi accettare le condizioni per continuare"
+        acceptTerms: "Devi accettare le condizioni per continuare",
+        submitError: "Si è verificato un errore durante l'invio del modulo. Riprova."
       },
       success: {
         title: "Richiesta inviata",

@@ -182,8 +182,27 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
+  function showErrorMessage() {
+    const errorMessage = document.getElementById("error-message");
+    if (errorMessage) {
+      errorMessage.classList.remove("hidden");
+      // Scroll to show the error message
+      errorMessage.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  }
+
+  function hideErrorMessage() {
+    const errorMessage = document.getElementById("error-message");
+    if (errorMessage) {
+      errorMessage.classList.add("hidden");
+    }
+  }
+
   async function submitForm() {
     try {
+      // Hide any previous error messages
+      hideErrorMessage();
+      
       // Disable the submit button to prevent multiple submissions
       nextBtn.disabled = true;
       nextBtn.innerHTML = "Submitting...";
@@ -222,8 +241,8 @@ document.addEventListener("DOMContentLoaded", function () {
       nextBtn.disabled = false;
       nextBtn.innerHTML = submitText;
       
-      // Show an error message (you could create a more user-friendly error display)
-      alert("There was an error submitting the form. Please try again.");
+      // Show the error message box
+      showErrorMessage();
     }
   }
 

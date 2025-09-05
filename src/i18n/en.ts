@@ -242,7 +242,8 @@ export default (langPrefix = "") => ({
       validation: {
         required: "This field is required",
         email: "Please enter a valid email address",
-        acceptTerms: "You must accept the conditions to continue"
+        acceptTerms: "You must accept the conditions to continue",
+        submitError: "There was an error submitting the form. Please try again."
       },
       success: {
         title: "Request sent",

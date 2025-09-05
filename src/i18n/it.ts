@@ -124,7 +124,7 @@ export default (langPrefix = "") => ({
         image: "caprice-bleu.png",
         technologies: ["Squarespace", "SEO"],
         link: "https://capricebleu.com",
-        ariaLabel: "Pagina web con tre donne su una barca, l’isola di Capri sullo sfondo, che promuove tour esclusivi."
+        ariaLabel: "Pagina web con tre donne su una barca, l'isola di Capri sullo sfondo, che promuove tour esclusivi."
       }
       // {
       //   id: "netwatch",
@@ -197,7 +197,7 @@ export default (langPrefix = "") => ({
       rules: {
         title: "Termini e Condizioni",
         subtitle: "Per una collaborazione trasparente",
-        rulesList: ["Gli obiettivi, lo stile e i contenuti si definiscono all’inizio; modifiche sostanziali richiedono accordi extra.", "I feedback sono fondamentali, ma la coerenza tecnica e creativa del progetto resta sotto la mia responsabilità.", "Testi, immagini e materiali vanno forniti nei tempi concordati.", "Il pagamento avviene in 2 o 3 tranche, a seconda del progetto.", "Le revisioni sono limitate e non includono cambiamenti radicali alla struttura approvata.", "Mi riservo il diritto di mostrare il lavoro sui miei canali, senza divulgare dati riservati."],
+        rulesList: ["Gli obiettivi, lo stile e i contenuti si definiscono all'inizio; modifiche sostanziali richiedono accordi extra.", "I feedback sono fondamentali, ma la coerenza tecnica e creativa del progetto resta sotto la mia responsabilità.", "Testi, immagini e materiali vanno forniti nei tempi concordati.", "Il pagamento avviene in 2 o 3 tranche, a seconda del progetto.", "Le revisioni sono limitate e non includono cambiamenti radicali alla struttura approvata.", "Mi riservo il diritto di mostrare il lavoro sui miei canali, senza divulgare dati riservati."],
         accept: "Sono d'accordo, iniziamo!",
         termsText: "Spuntando la casella, accetti integralmente anche i ",
         termsLink: "Termini di Servizio",
@@ -299,7 +299,7 @@ export default (langPrefix = "") => ({
     header: {
       badge: "Legale",
       title: "Termini di Servizio",
-      subtitle: "Ultimo aggiornamento: 2 settembre 2025"
+      subtitle: "Ultimo aggiornamento: <code>2025-09-03</code>"
     },
     sections: [
       {
@@ -307,7 +307,7 @@ export default (langPrefix = "") => ({
         content : [
           {
             type: "paragraph",
-            text: "Con “Fornitore” si intende LA MARCA DAVIDE (ditta individuale, P.IVA 02804090039). Con “Cliente” si intende la persona fisica o giuridica che inoltra richiesta tramite il form presente nella <a href='/contact' class='text-sky-500 hover:underline'>pagina di contatto</a> o accetta per iscritto l’offerta. I presenti Termini disciplinano la fornitura di servizi di progettazione, realizzazione, ottimizzazione e manutenzione di siti web e servizi connessi (i “Servizi”). L’invio del form o l’utilizzo continuato del sito <a href='https://davidelamarca.com' class='text-sky-500 hover:underline'>davidelamarca.com</a> costituiscono accettazione integrale dei presenti Termini. Il Fornitore si riserva il diritto di modificare i presenti Termini in qualsiasi momento; le modifiche entreranno in vigore dalla data di pubblicazione sul sito. L’uso continuato del sito o l’esecuzione di nuovi ordini successivi alla pubblicazione delle modifiche costituiscono accettazione tacita delle stesse. La data dell’ultima versione è riportata in testa al presente documento e viene aggiornata al momento della pubblicazione delle modifiche."
+            text: "Con “Fornitore” si intende LA MARCA DAVIDE (ditta individuale, P.IVA 02804090039). Con “Cliente” si intende la persona fisica o giuridica che inoltra richiesta tramite il form presente nella <a href='/contact' class='text-sky-500 hover:underline'>pagina di contatto</a> o accetta per iscritto l'offerta. I presenti Termini disciplinano la fornitura di servizi di progettazione, realizzazione, ottimizzazione e manutenzione di siti web e servizi connessi (i “Servizi”). L'invio del form o l'utilizzo continuato del sito <a href='https://davidelamarca.com' class='text-sky-500 hover:underline'>davidelamarca.com</a> costituiscono accettazione integrale dei presenti Termini. Il Fornitore si riserva il diritto di modificare i presenti Termini in qualsiasi momento; le modifiche entreranno in vigore dalla data di pubblicazione sul sito. L'uso continuato del sito o l'esecuzione di nuovi ordini successivi alla pubblicazione delle modifiche costituiscono accettazione tacita delle stesse. La data dell'ultima versione è riportata in testa al presente documento e viene aggiornata al momento della pubblicazione delle modifiche."
           }
         ]
       },
@@ -316,11 +316,11 @@ export default (langPrefix = "") => ({
         content: [
           {
             type: "paragraph",
-            text: "I Servizi sono eseguiti secondo il brief e le specifiche concordate. Di norma i siti vengono realizzati su piattaforme SaaS come <a href='https://squarespace.com' aria-label='Apri sito Squarespace' target='_blank' rel='noopener noreferrer' class='text-sky-500 hover:underline '>Squarespace</a> o <a href='https://framer.com' aria-label='Apri sito Framer' target='_blank' rel='noopener noreferrer' class='text-sky-500 hover:underline '>Framer</a>; lo sviluppo in codice è possibile esclusivamente per esigenze complesse e sarà specificato nell’offerta."
+            text: "I Servizi sono eseguiti secondo il brief e le specifiche concordate. Di norma i siti vengono realizzati su piattaforme SaaS come <a href='https://squarespace.com' aria-label='Apri sito Squarespace' target='_blank' rel='noopener noreferrer' class='text-sky-500 hover:underline '>Squarespace</a> o <a href='https://framer.com' aria-label='Apri sito Framer' target='_blank' rel='noopener noreferrer' class='text-sky-500 hover:underline '>Framer</a>; lo sviluppo in codice è possibile esclusivamente per esigenze complesse e sarà specificato nell'offerta."
           },
           {
             type: "paragraph",
-            text: "La progettazione grafica, strutturale e funzionale del sito è affidata all’esperienza e alla competenza professionale del Fornitore: il Cliente può esprimere preferenze, indicazioni e vincoli di contenuto, ma non ha facoltà di imporre soluzioni tecniche o grafiche in contrasto con la visione, lo stile o gli standard professionali del Fornitore. Le modifiche sostanziali rispetto al brief iniziale (scope change) richiedono accordo scritto e possono comportare variazioni di tempi e costi."
+            text: "La progettazione grafica, strutturale e funzionale del sito è affidata all'esperienza e alla competenza professionale del Fornitore: il Cliente può esprimere preferenze, indicazioni e vincoli di contenuto, ma non ha facoltà di imporre soluzioni tecniche o grafiche in contrasto con la visione, lo stile o gli standard professionali del Fornitore. Le modifiche sostanziali rispetto al brief iniziale (scope change) richiedono accordo scritto e possono comportare variazioni di tempi e costi."
           }
         ]
       },
@@ -338,7 +338,7 @@ export default (langPrefix = "") => ({
         content: [
           {
             type: "paragraph",
-            text: "Il Cliente fornisce accessi necessari (account, hosting, DNS, API) nei tempi richiesti; la gestione operativa dell’hosting, del dominio e dei servizi terzi rimane a carico del Cliente. L’utilizzo di componenti di terze parti (plugin, template, font, API) sarà effettuato nel rispetto delle relative licenze: eventuali costi di licenza/abbonamento ricadranno sul Cliente. Per i siti realizzati su piattaforme SaaS, la completa esportabilità o portabilità dei contenuti può essere limitata dalle funzionalità della piattaforma stessa; ogni esigenza di migrazione o esportazione dovrà essere definita e concordata in fase contrattuale. Eventuali link a risorse esterne sono forniti a solo scopo informativo: il Fornitore non controlla né è responsabile dei contenuti esterni."
+            text: "Il Cliente fornisce accessi necessari (account, hosting, DNS, API) nei tempi richiesti; la gestione operativa dell'hosting, del dominio e dei servizi terzi rimane a carico del Cliente. L'utilizzo di componenti di terze parti (plugin, template, font, API) sarà effettuato nel rispetto delle relative licenze: eventuali costi di licenza/abbonamento ricadranno sul Cliente. Per i siti realizzati su piattaforme SaaS, la completa esportabilità o portabilità dei contenuti può essere limitata dalle funzionalità della piattaforma stessa; ogni esigenza di migrazione o esportazione dovrà essere definita e concordata in fase contrattuale. Eventuali link a risorse esterne sono forniti a solo scopo informativo: il Fornitore non controlla né è responsabile dei contenuti esterni."
           }
         ]
       },
@@ -347,11 +347,11 @@ export default (langPrefix = "") => ({
         content: [
           {
             type: "paragraph",
-            text: "Per i progetti realizzati su piattaforme SaaS (es. <a href='https://squarespace.com' aria-label='Apri sito Squarespace' target='_blank' rel='noopener noreferrer' class='text-sky-500 hover:underline'>Squarespace</a>, <a href='https://framer.com' aria-label='Apri sito Framer' target='_blank' rel='noopener noreferrer' class='text-sky-500 hover:underline '>Framer</a> o simili) il Cliente è tenuto ad acquistare autonomamente il piano/abbonamento necessario sulla piattaforma scelta e a concedere al Fornitore accesso al progetto con privilegi appropriati (es. ruolo di collaboratore, accesso a workspace o credenziali tecniche) in modo da permettere lo svolgimento delle attività. Parte dei contenuti o delle funzionalità del progetto potrà rimanere bloccata o non visibile fino al saldo; tale limitazione è finalizzata a tutelare la titolarità degli elaborati e a garantire l’adempimento degli obblighi contrattuali, e non può essere interpretata come inadempimento, difetto o motivo di reclamo nei confronti del Fornitore."
+            text: "Per i progetti realizzati su piattaforme SaaS (es. <a href='https://squarespace.com' aria-label='Apri sito Squarespace' target='_blank' rel='noopener noreferrer' class='text-sky-500 hover:underline'>Squarespace</a>, <a href='https://framer.com' aria-label='Apri sito Framer' target='_blank' rel='noopener noreferrer' class='text-sky-500 hover:underline '>Framer</a> o simili) il Cliente è tenuto ad acquistare autonomamente il piano/abbonamento necessario sulla piattaforma scelta e a concedere al Fornitore accesso al progetto con privilegi appropriati (es. ruolo di collaboratore, accesso a workspace o credenziali tecniche) in modo da permettere lo svolgimento delle attività. Parte dei contenuti o delle funzionalità del progetto potrà rimanere bloccata o non visibile fino al saldo; tale limitazione è finalizzata a tutelare la titolarità degli elaborati e a garantire l'adempimento degli obblighi contrattuali, e non può essere interpretata come inadempimento, difetto o motivo di reclamo nei confronti del Fornitore."
           },
           {
             type: "paragraph",
-            text: "La registrazione del dominio è a carico del Cliente: il Cliente provvede ad acquistare il dominio presso il registrar di sua scelta e resta responsabile del pagamento delle relative tariffe e rinnovi. Una volta acquistato, il Cliente fornisce al Fornitore gli accessi necessari (account presso il registrar, credenziali amministrative, codice di autorizzazione/EPP se previsto) o concede una delega di gestione in modo che il Fornitore possa procedere con la configurazione tecnica, l’aggiunta o il trasferimento del dominio sul progetto. Il Fornitore si occuperà delle operazioni tecniche di trasferimento o configurazione previa ricezione di tutte le autorizzazioni dal Cliente; eventuali costi di trasferimento imposti dal registrar sono a carico del Cliente. I tempi tecnici per la propagazione DNS, il completamento del trasferimento tra registrar o l’attivazione di certificati SSL dipendono dai registrar e dai provider coinvolti e non sono imputabili al Fornitore."
+            text: "La registrazione del dominio è a carico del Cliente: il Cliente provvede ad acquistare il dominio presso il registrar di sua scelta e resta responsabile del pagamento delle relative tariffe e rinnovi. Una volta acquistato, il Cliente fornisce al Fornitore gli accessi necessari (account presso il registrar, credenziali amministrative, codice di autorizzazione/EPP se previsto) o concede una delega di gestione in modo che il Fornitore possa procedere con la configurazione tecnica, l'aggiunta o il trasferimento del dominio sul progetto. Il Fornitore si occuperà delle operazioni tecniche di trasferimento o configurazione previa ricezione di tutte le autorizzazioni dal Cliente; eventuali costi di trasferimento imposti dal registrar sono a carico del Cliente. I tempi tecnici per la propagazione DNS, il completamento del trasferimento tra registrar o l'attivazione di certificati SSL dipendono dai registrar e dai provider coinvolti e non sono imputabili al Fornitore."
           }
         ]
       },
@@ -360,18 +360,18 @@ export default (langPrefix = "") => ({
         content: [
           {
             type: "paragraph",
-            text: "Le modalità di pagamento dipendono dal tipo di progetto e dall’importo totale: la soluzione definitiva sarà indicata nell’offerta che accompagnerà il preventivo. I compensi sono quelli indicati nell’offerta e sono IVA esclusa. Il pagamento avviene esclusivamente tramite bonifico bancario alle coordinate comunicate dal Fornitore. Modalità di pagamento tipiche:"
+            text: "Le modalità di pagamento dipendono dal tipo di progetto e dall'importo totale: la soluzione definitiva sarà indicata nell'offerta che accompagnerà il preventivo. I compensi sono quelli indicati nell'offerta e sono IVA esclusa. Il pagamento avviene esclusivamente tramite bonifico bancario alle coordinate comunicate dal Fornitore. Modalità di pagamento tipiche:"
           },
           {
             type: "list", 
             items: [
-              "Opzione A (3 tranche): acconto 40% all’avvio, tranche intermedia 40%, saldo 20% alla consegna;",
-              "Opzione B (2 tranche): acconto 50% all’avvio e saldo 50% alla consegna.",
+              "Opzione A (3 tranche): acconto 40% all'avvio, tranche intermedia 40%, saldo 20% alla consegna;",
+              "Opzione B (2 tranche): acconto 50% all'avvio e saldo 50% alla consegna.",
             ]
           },
           {
             type: "paragraph",
-            text: "Le fatture saranno emesse con l’IVA applicabile e secondo la normativa vigente. In caso di ritardo nel pagamento il Fornitore si riserva il diritto di sospendere i lavori e l’accesso ai materiali fino al saldo; saranno applicati interessi di mora ed eventuali costi di sollecito conformi alla legge. L’acconto è generalmente non rimborsabile salvo diverso accordo scritto."
+            text: "Le fatture saranno emesse con l'IVA applicabile e secondo la normativa vigente. In caso di ritardo nel pagamento il Fornitore si riserva il diritto di sospendere i lavori e l'accesso ai materiali fino al saldo; saranno applicati interessi di mora ed eventuali costi di sollecito conformi alla legge. L'acconto è generalmente non rimborsabile salvo diverso accordo scritto."
           }
         ]
       },
@@ -380,7 +380,7 @@ export default (langPrefix = "") => ({
         content: [
           {
             type: "paragraph",
-            text: "L’offerta include di norma 2 round di revisione; tali revisioni sono finalizzate esclusivamente alla correzione, al perfezionamento e all’adattamento dei contenuti e non comprendono cambiamenti strutturali o ridefinizione del concept del progetto. Le richieste che comportano modifiche significative alla struttura, all’architettura o al concept del sito saranno considerate change request e verranno fatturate separatamente alla tariffa oraria concordata (tariffa oraria: €25/ora)."
+            text: "L'offerta include di norma 2 round di revisione; tali revisioni sono finalizzate esclusivamente alla correzione, al perfezionamento e all'adattamento dei contenuti e non comprendono cambiamenti strutturali o ridefinizione del concept del progetto. Le richieste che comportano modifiche significative alla struttura, all'architettura o al concept del sito saranno considerate change request e verranno fatturate separatamente alla tariffa oraria concordata (tariffa oraria: €25/ora)."
           },
           {
             type: "paragraph",
@@ -393,11 +393,11 @@ export default (langPrefix = "") => ({
         content: [
           {
             type: "paragraph",
-            text: "I diritti d’autore e i diritti di utilizzazione economica sugli elaborati realizzati (grafica, layout, strutture, codice ove fornito) sono ceduti al Cliente solo dopo il pagamento integrale del corrispettivo pattuito. Fino al saldo completo il codice, il design e le soluzioni tecniche sviluppate restano di proprietà del Fornitore e il Fornitore può trattenere i sorgenti o limitare la consegna."
+            text: "I diritti d'autore e i diritti di utilizzazione economica sugli elaborati realizzati (grafica, layout, strutture, codice ove fornito) sono ceduti al Cliente solo dopo il pagamento integrale del corrispettivo pattuito. Fino al saldo completo il codice, il design e le soluzioni tecniche sviluppate restano di proprietà del Fornitore e il Fornitore può trattenere i sorgenti o limitare la consegna."
           },
           {
             type: "paragraph",
-            text: "Il Fornitore si riserva il diritto di utilizzare immagini, screenshot e descrizioni del progetto per il proprio portfolio e canali promozionali; richieste di embargo, anonimizzazione o NDA devono essere concordate prima dell’avvio del progetto."
+            text: "Il Fornitore si riserva il diritto di utilizzare immagini, screenshot e descrizioni del progetto per il proprio portfolio e canali promozionali; richieste di embargo, anonimizzazione o NDA devono essere concordate prima dell'avvio del progetto."
           }
         ]
       },
@@ -418,11 +418,11 @@ export default (langPrefix = "") => ({
           },
           {
             type: "paragraph",
-            text: "In caso di interruzione per i motivi su indicati il Fornitore tratterrà l’acconto e/o quanto maturato fino a quel momento in proporzione al lavoro svolto."
+            text: "In caso di interruzione per i motivi su indicati il Fornitore tratterrà l'acconto e/o quanto maturato fino a quel momento in proporzione al lavoro svolto."
           },
           {
             type: "paragraph",
-            text: "Gli eventi di forza maggiore (calamità, guerre, attacchi informatici su larga scala, interruzioni di infrastrutture o servizi terzi) sospendono le obbligazioni delle parti per la durata dell’evento; le parti si adopereranno per riprendere le prestazioni non appena possibile."
+            text: "Gli eventi di forza maggiore (calamità, guerre, attacchi informatici su larga scala, interruzioni di infrastrutture o servizi terzi) sospendono le obbligazioni delle parti per la durata dell'evento; le parti si adopereranno per riprendere le prestazioni non appena possibile."
           }
         ]
       },
@@ -431,7 +431,7 @@ export default (langPrefix = "") => ({
         content: [
           {
             type: "paragraph",
-            text: "Il Fornitore svolge le prestazioni con diligenza professionale ma non garantisce risultati economici, posizionamenti SEO o performance non direttamente controllabili dall’attività tecnica. La responsabilità complessiva del Fornitore è limitata all’importo complessivamente corrisposto dal Cliente per il progetto oggetto della controversia. Il Cliente manleva e tiene indenne il Fornitore da qualsiasi richiesta o pretesa di terzi derivante da materiale fornito dal Cliente che violi diritti di terzi o norme di legge. I presenti Termini sono regolati dalla legge italiana."
+            text: "Il Fornitore svolge le prestazioni con diligenza professionale ma non garantisce risultati economici, posizionamenti SEO o performance non direttamente controllabili dall'attività tecnica. La responsabilità complessiva del Fornitore è limitata all'importo complessivamente corrisposto dal Cliente per il progetto oggetto della controversia. Il Cliente manleva e tiene indenne il Fornitore da qualsiasi richiesta o pretesa di terzi derivante da materiale fornito dal Cliente che violi diritti di terzi o norme di legge. I presenti Termini sono regolati dalla legge italiana."
           }
         ]
       },
@@ -453,7 +453,7 @@ export default (langPrefix = "") => ({
     ],
     questions: {
       title: "Domande?",
-      description: "Per qualsiasi domanda riguardo ai termini di servizio, puoi contattarmi all’indirizzo ",
+      description: "Per qualsiasi domanda riguardo ai termini di servizio, puoi contattarmi all'indirizzo ",
       ariaLabel: "Invia email"
     }
   },
@@ -465,17 +465,169 @@ export default (langPrefix = "") => ({
     header: {
       badge: "Legale",
       title: "Privacy Policy",
-      subtitle: "Ultimo aggiornamento:"
+      subtitle: "Ultimo aggiornamento: <code>2025-09-05</code>"
     },
     sections: [
       {
+        title: "Introduzione",
         content : [
+          {
+            type: "paragraph",
+            text: "La presente Informativa sulla Privacy descrive come vengono trattati i dati personali raccolti tramite il sito web <a href='https://davidelamarca.com' aria-label='Vai al sito web' class='text-sky-500 hover:underline'>davidelamarca.com</a>, in conformità al Regolamento (UE) 2016/679 (“GDPR”). L'obiettivo è garantire la massima trasparenza e chiarezza riguardo al trattamento dei dati, ai diritti degli utenti e alle misure di sicurezza adottate."
+          }
         ]
-      }
+      },
+      {
+        title: "1. Titolare del trattamento e informazioni di contatto",
+        content: [
+          {
+            type: "paragraph",
+            text: "Il titolare del trattamento è:"
+          },
+          {
+            type: "list", 
+            items: [
+              "LA MARCA DAVIDE",
+              "P.IVA: 02804090039",
+              "Sito web: <a href='https://davidelamarca.com' aria-label='Vai al sito web' class='text-sky-500 hover:underline'>davidelamarca.com</a>",
+              "Email: <a href='mailto:info@davidelamarca.com' aria-label='Invia email' class='text-sky-500 hover:underline'>info@davidelamarca.com</a>",
+              "PEC: <a href='mailto:davidelamarca@legalmail.it' aria-label='Invia email' class='text-sky-500 hover:underline'>davidelamarca@legalmail.it</a>",
+            ]
+          },
+          {
+            type: "paragraph",
+            text: "Per richieste di progetto deve essere utilizzato esclusivamente il form dedicato disponibile alla pagina <a href='https://davidelamarca.com/contact' aria-label='Vai alla pagina contatti' class='text-sky-500 hover:underline'>davidelamarca.com/contact</a>. Per qualsiasi altra domanda relativa alla privacy o ai diritti dell'interessato, è possibile utilizzare l'indirizzo email indicato sopra."
+          }
+        ]
+      },
+      {
+        title: "2. Dati raccolti e finalità del trattamento",
+        content: [
+          {
+            type: "paragraph",
+            text: "I dati personali vengono raccolti unicamente attraverso il form di contatto per richieste di progetto, gestito da <a href='https://web3forms.com' aria-label='Apri sito Web3Forms' target='_blank' rel='noopener noreferrer' class='text-sky-500 hover:underline '>Web3Forms</a>. I dati trattati sono esclusivamente quelli forniti volontariamente dall'utente compilando i campi del form, e comprendono:"
+          },
+          {
+            type: "list", 
+            items: [
+              "nome e cognome (obbligatori);",
+              "indirizzo email (obbligatorio);",
+              "nome azienda (opzionale);",
+              "numero di telefono (opzionale);",
+              "specifiche del progetto, ad esempio: budget previsto, tipologia del progetto, link a siti di riferimento o altre informazioni utili."
+            ]
+          },
+          {
+            type: "paragraph",
+            text: "Le finalità del trattamento sono:"
+          },
+          {
+            type: "list", 
+            items: [
+              "valutare ed eventualmente rispondere a richieste di progetto;",
+              "gestire la comunicazione con il cliente in caso di avvio della collaborazione;",
+              "adempiere ad eventuali obblighi contrattuali derivanti dal progetto."
+            ]
+          },
+        ]
+      },
+      {
+        title: "3. Conservazione e cancellazione dei dati",
+        content: [
+          {
+            type: "paragraph",
+            text: "I dati ricevuti tramite form vengono recapitati via email al titolare e non sono conservati in alcun database esterno."
+          },
+          {
+            type: "list", 
+            items: [
+              "Se non si procede con il progetto, i dati vengono eliminati.",
+              "Se il progetto viene accettato, i dati vengono conservati fino alla conclusione e consegna del lavoro. Successivamente vengono cancellati, salvo consenso esplicito del cliente per mantenerli a fini di riferimento futuro."
+            ]
+          },
+          {
+            type: "paragraph",
+            text: "Eventuali progetti completati possono essere mostrati nel portfolio del sito, ma senza mai includere dati personali identificativi del cliente."
+          },
+        ]
+      },
+      {
+        title: "4. Analisi del traffico e tracciamento",
+        content: [
+          {
+            type: "paragraph",
+            text: "Il sito utilizza esclusivamente <a href='https://www.cloudflare.com/web-analytics' aria-label='Apri sito Cloudflare Web Analytics' target='_blank' rel='noopener noreferrer' class='text-sky-500 hover:underline '>Cloudflare Web Analytics</a>, che non impiega cookie né tecniche invasive di tracciamento."
+          },
+          {
+            type: "paragraph",
+            text: "Non vengono utilizzati altri servizi di monitoraggio di terze parti. L'unica informazione salvata localmente sul dispositivo dell'utente è la preferenza del tema (chiaro/scuro), memorizzata tramite localStorage."
+          },
+        ]
+      },
+      {
+        title: "5. Hosting e infrastruttura tecnica",
+        content: [
+          {
+            type: "paragraph",
+            text: "Il sito è ospitato su <a href='https://www.cloudflare.com' aria-label='Apri sito Cloudflare' target='_blank' rel='noopener noreferrer' class='text-sky-500 hover:underline '>Cloudflare</a>, che offre protezioni avanzate contro accessi non autorizzati e attacchi informatici. Il form di contatto è gestito da <a href='https://web3forms.com' aria-label='Apri sito Web3Forms' target='_blank' rel='noopener noreferrer' class='text-sky-500 hover:underline '>Web3Forms</a>, che garantisce trasmissione sicura e conformità al GDPR grazie all'infrastruttura basata su Amazon. I dati non vengono memorizzati su server terzi permanenti."
+          },
+        ]
+      },
+      {
+        title: "6. Condivisione e trasferimento dei dati",
+        content: [
+          {
+            type: "paragraph",
+            text: "I dati personali non vengono venduti, ceduti né condivisi con terzi, salvo obblighi di legge. Eventuali trasferimenti tecnici (es. attraverso l'infrastruttura di Web3Forms o Cloudflare) sono protetti e conformi al GDPR."
+          },
+        ]
+      },
+      {
+        title: "7. Sicurezza dei dati",
+        content: [
+          {
+            type: "paragraph",
+            text: "Il sito beneficia delle misure di sicurezza integrate di Cloudflare (firewall, scansioni periodiche, protezioni anti-bot). La trasmissione dei dati tramite form è crittografata e resa sicura tramite Web3Forms. Nonostante tutte le precauzioni adottate, nessun sistema può garantire sicurezza assoluta, ma vengono messe in atto le migliori pratiche disponibili."
+          },
+        ]
+      },
+      {
+        title: "8. Diritti degli interessati (GDPR)",
+        content: [
+          {
+            type: "paragraph",
+            text: "Gli utenti hanno diritto a:"
+          },
+          {
+            type: "list", 
+            items: [
+              "Accedere ai propri dati personali trattati.",
+              "Rettificare dati inesatti o incompleti.",
+              "Cancellare i propri dati, quando non più necessari.",
+              "Limitare temporaneamente il trattamento in determinate circostanze.",
+              "Opporsi al trattamento per motivi legittimi.",
+              "Ottenere la portabilità dei dati in formato strutturato e leggibile da dispositivo automatico.",
+            ]
+          },
+          {
+            type: "paragraph",
+            text: "Per esercitare tali diritti, l'utente può contattare il titolare via email all'indirizzo <a href='mailto:info@davidelamarca.com' aria-label='Invia email' class='text-sky-500 hover:underline'>info@davidelamarca.com</a>."
+          },
+        ]
+      },
+      {
+        title: "9. Aggiornamenti della presente informativa",
+        content: [
+          {
+            type: "paragraph",
+            text: "Il titolare si riserva il diritto di modificare in qualsiasi momento la presente informativa, ad esempio in caso di evoluzioni normative o aggiornamenti tecnici del sito. La versione più recente sarà sempre disponibile su questa pagina con l'indicazione della data di aggiornamento."
+          },
+        ]
+      }   
     ],
     questions: {
       title: "Domande?",
-      description: "Per qualsiasi domanda riguardo ai termini di servizio, puoi contattarmi all’indirizzo ",
+      description: "Per qualsiasi domanda riguardo ai termini di servizio, puoi contattarmi all'indirizzo ",
       ariaLabel: "Invia email"
     }
   },

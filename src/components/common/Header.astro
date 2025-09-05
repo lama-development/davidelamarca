@@ -10,8 +10,6 @@ const { header } = Astro.props;
     <h1 class="mb-4 text-5xl leading-[0.8] font-bold tracking-tight text-neutral-900 dark:text-neutral-100" style="font-size: 3rem;">
       {header.title}
     </h1>
-    <p class="mx-auto max-w-xs text-base leading-[1.1] text-neutral-700 md:max-w-xl md:text-lg dark:text-neutral-300">
-      {header.subtitle}
-    </p>
+    <p class="mx-auto max-w-xs text-base leading-[1.1] text-neutral-700 md:max-w-xl md:text-lg dark:text-neutral-300" set:html={header.subtitle} />
   </div>
 </section>

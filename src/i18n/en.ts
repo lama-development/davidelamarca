@@ -49,7 +49,7 @@ export default (langPrefix = "") => ({
     projects: {
       badge: "Projects",
       title: "Real projects, actual results",
-      subtitle: "Discover some of the projects I’ve built for my clients.",
+      subtitle: "Discover some of the projects I've built for my clients.",
       button: "View all projects"
     },
     faq: {
@@ -149,7 +149,7 @@ export default (langPrefix = "") => ({
     ],
     testimonials: {
       badge: "Testimonials",
-      title: "Don’t take my word for it",
+      title: "Don't take my word for it",
       subtitle: "Hear from clients who have already worked with me.",
       testimonialsList: [
         {
@@ -170,7 +170,7 @@ export default (langPrefix = "") => ({
     header: {
       badge: "Form",
       title: "Your next project starts here",
-      subtitle: "Share your idea and let’s explore how to turn it into reality together."
+      subtitle: "Share your idea and let's explore how to turn it into reality together."
     },
     form: {
       stepText: "Step {current} of {total}",
@@ -299,7 +299,7 @@ export default (langPrefix = "") => ({
     header: {
       badge: "Legal",
       title: "Terms of Service",
-      subtitle: "Last updated: September 2, 2025."
+      subtitle: "Last updated: <code>2025-09-03</code>"
     },
     sections: [
       {
@@ -465,7 +465,7 @@ export default (langPrefix = "") => ({
     header: {
       badge: "Legal",
       title: "Privacy Policy",
-      subtitle: "Last updated:"
+      subtitle: "Last updated: <code>2025-09-05</code>"
     },
     sections: [
       {

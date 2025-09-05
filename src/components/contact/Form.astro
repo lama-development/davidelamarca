@@ -99,7 +99,7 @@ const langPrefix = Astro.url.pathname.startsWith("/en") ? "/en" : "";
           </div>
           <div class="space-y-6">
             <div>
-              <label for="projectType" class="mb-3 block text-sm font-medium text-neutral-800 dark:text-neutral-200">{form.project.projectType.label}</label>
+              <label for="projectType-0" class="mb-3 block text-sm font-medium text-neutral-800 dark:text-neutral-200">{form.project.projectType.label}</label>
               <div class="grid gap-3 sm:grid-cols-2">
                 {
                   form.project.projectType.options.map((option, index) => (
@@ -115,7 +115,7 @@ const langPrefix = Astro.url.pathname.startsWith("/en") ? "/en" : "";
               </div>
             </div>
             <div>
-              <label for="budget" class="mb-3 block text-sm font-medium text-neutral-800 dark:text-neutral-200">{form.project.budget.label}</label>
+              <label for="budget-0" class="mb-3 block text-sm font-medium text-neutral-800 dark:text-neutral-200">{form.project.budget.label}</label>
               <div class="grid gap-3 sm:grid-cols-2">
                 {
                   form.project.budget.options.map((option, index) => (
@@ -131,7 +131,7 @@ const langPrefix = Astro.url.pathname.startsWith("/en") ? "/en" : "";
               </div>
             </div>
             <div>
-              <label for="timeline" class="mb-3 block text-sm font-medium text-neutral-800 dark:text-neutral-200">{form.project.timeline.label}</label>
+              <label for="timeline-0" class="mb-3 block text-sm font-medium text-neutral-800 dark:text-neutral-200">{form.project.timeline.label}</label>
               <div class="grid gap-3 sm:grid-cols-2">
                 {
                   form.project.timeline.options.map((option, index) => (
@@ -176,7 +176,7 @@ const langPrefix = Astro.url.pathname.startsWith("/en") ? "/en" : "";
               <textarea id="inspiration" name="inspiration" rows="3" placeholder={form.details.inspiration.placeholder} class="w-full resize-none rounded-lg border border-neutral-200 bg-neutral-50 px-4 py-3 text-neutral-900 placeholder-neutral-500 dark:border-neutral-800 dark:bg-neutral-950 dark:text-neutral-100 dark:placeholder-neutral-400"></textarea>
             </div>
             <div>
-              <label for="branding" class="mb-3 block text-sm font-medium text-neutral-800 dark:text-neutral-200">{form.details.hasBranding.label}</label>
+              <label for="branding-0" class="mb-3 block text-sm font-medium text-neutral-800 dark:text-neutral-200">{form.details.hasBranding.label}</label>
               <div class="grid gap-3 sm:grid-cols-1">
                 {
                   form.details.hasBranding.options.map((option, index) => (

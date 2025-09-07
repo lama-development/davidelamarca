@@ -469,21 +469,17 @@ export default (langPrefix = "") => ({
     },
     sections: [
       {
-        title: "Introduzione",
+        title: "Premessa",
         content : [
           {
             type: "paragraph",
-            text: "La presente Informativa sulla Privacy descrive come vengono trattati i dati personali raccolti tramite il sito web <a href='https://davidelamarca.com' aria-label='Vai al sito web' class='text-sky-500 hover:underline'>davidelamarca.com</a>, in conformità al Regolamento (UE) 2016/679 (“GDPR”). L'obiettivo è garantire la massima trasparenza e chiarezza riguardo al trattamento dei dati, ai diritti degli utenti e alle misure di sicurezza adottate."
+            text: "La presente Informativa descrive le modalità di raccolta, trattamento, conservazione e protezione dei dati personali effettuati da LA MARCA DAVIDE (di seguito, il “Titolare” o “noi”) tramite il sito web <a href='https://davidelamarca.com' aria-label='Vai al sito web' class='text-sky-500 hover:underline'>davidelamarca.com</a>  (di seguito, il “Sito”) in conformità al Regolamento (UE) 2016/679 (di seguito, “GDPR”) e alla normativa nazionale applicabile. L’utilizzo del Sito comporta l’accettazione delle modalità indicate nella presente Informativa. In mancanza di accettazione, si invita a non utilizzare il Sito."
           }
         ]
       },
       {
-        title: "1. Titolare del trattamento e informazioni di contatto",
+        title: "1. Titolare del trattamento dei dati",
         content: [
-          {
-            type: "paragraph",
-            text: "Il titolare del trattamento è:"
-          },
           {
             type: "list", 
             items: [
@@ -491,136 +487,179 @@ export default (langPrefix = "") => ({
               "P.IVA: 02804090039",
               "Sito web: <a href='https://davidelamarca.com' aria-label='Vai al sito web' class='text-sky-500 hover:underline'>davidelamarca.com</a>",
               "Email: <a href='mailto:info@davidelamarca.com' aria-label='Invia email' class='text-sky-500 hover:underline'>info@davidelamarca.com</a>",
-              "PEC: <a href='mailto:davidelamarca@legalmail.it' aria-label='Invia email' class='text-sky-500 hover:underline'>davidelamarca@legalmail.it</a>",
+              "PEC: <a href='mailto:davidelamarca@legalmail.it' aria-label='Invia email' class='text-sky-500 hover:underline'>davidelamarca@legalmail.it</a>"
             ]
           },
           {
             type: "paragraph",
-            text: "Per richieste di progetto deve essere utilizzato esclusivamente il form dedicato disponibile alla pagina <a href='https://davidelamarca.com/contact' aria-label='Vai alla pagina contatti' class='text-sky-500 hover:underline'>davidelamarca.com/contact</a>. Per qualsiasi altra domanda relativa alla privacy o ai diritti dell'interessato, è possibile utilizzare l'indirizzo email indicato sopra."
+            text: "Per richieste di progetto deve essere utilizzato esclusivamente il form dedicato disponibile nella pagina <a href='https://davidelamarca.com/contact' aria-label='Vai alla pagina contatti' class='text-sky-500 hover:underline'>davidelamarca.com/contact</a>. Per qualsiasi questione relativa alla presente Informativa o all’esercizio dei diritti spettanti, contattare i riferimenti sopra indicati."
           }
         ]
       },
       {
-        title: "2. Dati raccolti e finalità del trattamento",
+        title: "2. Definizioni",
         content: [
           {
             type: "paragraph",
-            text: "I dati personali vengono raccolti unicamente attraverso il form di contatto per richieste di progetto, gestito da <a href='https://web3forms.com' aria-label='Apri sito Web3Forms' target='_blank' rel='noopener noreferrer' class='text-sky-500 hover:underline '>Web3Forms</a>. I dati trattati sono esclusivamente quelli forniti volontariamente dall'utente compilando i campi del form, e comprendono:"
+            text: "Ai fini della presente Informativa si intendono per:"
           },
           {
             type: "list", 
             items: [
-              "nome e cognome (obbligatori);",
-              "indirizzo email (obbligatorio);",
-              "nome azienda (opzionale);",
-              "numero di telefono (opzionale);",
-              "specifiche del progetto, ad esempio: budget previsto, tipologia del progetto, link a siti di riferimento o altre informazioni utili."
+              "Dati personali: qualsiasi informazione riguardante una persona fisica identificata o identificabile;",
+              "Interessato/Utente: la persona fisica cui si riferiscono i Dati personali;",
+              "Trattamento: qualsiasi operazione o complesso di operazioni effettuate sui Dati personali;",
+              "Titolare del trattamento: la persona fisica o giuridica che determina le finalità e i mezzi del trattamento;",
+              "Responsabile del trattamento: la persona fisica o giuridica che tratta i dati per conto del Titolare;",
+              "Tracker/Cookie/localStorage: strumenti che consentono la memorizzazione di informazioni sul dispositivo dell’Utente."
+            ]
+          }
+        ]
+      },
+      {
+        title: "3. Tipologie di dati trattati",
+        content: [
+          {
+            type: "list", 
+            items: [
+              "<b>Dati forniti volontariamente dall’Utente (tramite form)</b>: nome e cognome (obbligatori); indirizzo email (obbligatorio); nome azienda (opzionale); numero di telefono (opzionale); informazioni e specifiche del progetto (es. budget, tipologia, link di riferimento).",
+              "<b>Dati raccolti automaticamente (Usage Data)</b>: dati tecnici di navigazione e di comunicazione (indirizzo IP, tipo di dispositivo e browser, pagine visitate, URI richieste, tempi di risposta, codice di stato HTTP, ecc.); log di sistema e diagnostica.",
+              "<b>Dati memorizzati localmente</b>: preferenza relativa al tema (chiaro/scuro) salvata tramite localStorage."
             ]
           },
+        ]
+      },
+      {
+        title: "4. Finalità del trattamento e basi giuridiche",
+        content: [
           {
             type: "paragraph",
-            text: "Le finalità del trattamento sono:"
+            text: "I Dati personali sono trattati per le seguenti finalità e con le corrispondenti basi giuridiche:"
           },
           {
             type: "list", 
             items: [
-              "valutare ed eventualmente rispondere a richieste di progetto;",
-              "gestire la comunicazione con il cliente in caso di avvio della collaborazione;",
-              "adempiere ad eventuali obblighi contrattuali derivanti dal progetto."
+              "<b>Gestione delle richieste pervenute tramite il form di contatto</b> - finalità: valutazione ed eventuale risposta a richieste di preventivo o informazione; base giuridica: esecuzione di misure precontrattuali richieste dall’Interessato e legittimo perseguimento dell’interesse a valutare opportunità di collaborazione.",
+              "<b>Esecuzione e gestione del rapporto contrattuale</b> - finalità: esecuzione del contratto e adempimenti connessi; base giuridica: esecuzione del contratto.",
+              "<b>Conservazione a fini contabili e fiscali</b> - finalità: ottemperanza a obblighi di legge; base giuridica: adempimento di obblighi legali.",
+              "<b>Garanzia della sicurezza e prevenzione di abusi</b> - finalità: protezione del Sito e degli interessi del Titolare; base giuridica: interesse legittimo del Titolare.",
+              "<b>Analisi statistica aggregata del traffico (Cloudflare Web Analytics)</b> - finalità: analisi dell’uso del Sito in forma anonima e non invasiva; base giuridica: interesse legittimo del Titolare.",
+              "<b>Comunicazioni informative o promozionali</b> - finalità: invio di comunicazioni solo previo consenso espresso dell’Interessato; base giuridica: consenso."
             ]
+          },
+          {
+            type: "paragraph",
+            text: "I Dati non saranno oggetto di profilazione automatica né venduti o comunicati a terzi per finalità commerciali."
           },
         ]
       },
       {
-        title: "3. Conservazione e cancellazione dei dati",
+        title: "5. Modalità di trattamento",
         content: [
           {
             type: "paragraph",
-            text: "I dati ricevuti tramite form vengono recapitati via email al titolare e non sono conservati in alcun database esterno."
+            text: "I trattamenti sono effettuati con strumenti manuali, informatici e telematici, con logiche strettamente correlate alle finalità indicate e con misure tecniche e organizzative idonee a garantire la sicurezza, la riservatezza e l’integrità dei Dati. L’accesso ai Dati è limitato a personale autorizzato e a eventuali Responsabili esterni nominati dal Titolare."
+          }
+        ]
+      },
+      {
+        title: "6. Responsabili esterni e fornitori",
+        content: [
+          {
+            type: "paragraph",
+            text: "Per lo svolgimento delle attività connesse alle finalità sopra descritte, il Titolare si avvale dei seguenti fornitori e servizi terzi:"
           },
           {
             type: "list", 
             items: [
-              "Se non si procede con il progetto, i dati vengono eliminati.",
-              "Se il progetto viene accettato, i dati vengono conservati fino alla conclusione e consegna del lavoro. Successivamente vengono cancellati, salvo consenso esplicito del cliente per mantenerli a fini di riferimento futuro."
+              "<a href='https://web3forms.com' aria-label='Apri sito Web3Forms' target='_blank' rel='noopener noreferrer' class='text-sky-500 hover:underline '>Web3Forms</a>: gestione tecnica del form di contatto; i dati raccolti tramite form vengono inoltrati via e-mail al Titolare; Web3Forms utilizza l’infrastruttura di Amazon Web Services per la trasmissione;",
+              "<a href='https://www.cloudflare.com' aria-label='Apri sito Cloudflare' target='_blank' rel='noopener noreferrer' class='text-sky-500 hover:underline '>Cloudflare</a> e <a href='https://www.cloudflare.com/web-analytics' aria-label='Apri sito Cloudflare Web Analytics' target='_blank' rel='noopener noreferrer' class='text-sky-500 hover:underline '>Cloudflare Web Analytics</a>: servizi di protezione, CDN, hosting parziale e analisi aggregata del traffico; Cloudflare Web Analytics è impiegato in modalità che non utilizza cookie identificativi personali."
             ]
           },
           {
             type: "paragraph",
-            text: "Eventuali progetti completati possono essere mostrati nel portfolio del sito, ma senza mai includere dati personali identificativi del cliente."
+            text: "I rapporti con i fornitori sono regolati mediante idonee misure contrattuali e garanzie di compliance GDPR (nomine a Responsabile, clausole contrattuali ove necessario)."
+          }
+        ]
+      },
+      {
+        title: "7. Trasferimenti internazionali",
+        content: [
+          {
+            type: "paragraph",
+            text: "I servizi indicati nel presente documento possono comportare trasferimenti di Dati verso Paesi terzi (ad es. Stati Uniti). Qualora si verifichino trasferimenti di Dati al di fuori dell’Unione Europea, il Titolare adotta adeguate garanzie (quali clausole contrattuali standard approvate dalla Commissione europea, decisioni di adeguatezza, ove applicabili) per assicurare un livello di protezione sostanzialmente equivalente a quello garantito dal GDPR."
           },
         ]
       },
       {
-        title: "4. Analisi del traffico e tracciamento",
+        title: "8. Periodi di conservazione",
         content: [
           {
             type: "paragraph",
-            text: "Il sito utilizza esclusivamente <a href='https://www.cloudflare.com/web-analytics' aria-label='Apri sito Cloudflare Web Analytics' target='_blank' rel='noopener noreferrer' class='text-sky-500 hover:underline '>Cloudflare Web Analytics</a>, che non impiega cookie né tecniche invasive di tracciamento."
-          },
-          {
-            type: "paragraph",
-            text: "Non vengono utilizzati altri servizi di monitoraggio di terze parti. L'unica informazione salvata localmente sul dispositivo dell'utente è la preferenza del tema (chiaro/scuro), memorizzata tramite localStorage."
+            text: "I Dati personali saranno conservati per il tempo necessario a conseguire le finalità per le quali sono stati raccolti e, in ogni caso, nei limiti e per i termini previsti dalla normativa applicabile:"
           },
         ]
       },
       {
-        title: "5. Hosting e infrastruttura tecnica",
+        title: "9. Cookies, tracker e localStorage",
         content: [
           {
             type: "paragraph",
-            text: "Il sito è ospitato su <a href='https://www.cloudflare.com' aria-label='Apri sito Cloudflare' target='_blank' rel='noopener noreferrer' class='text-sky-500 hover:underline '>Cloudflare</a>, che offre protezioni avanzate contro accessi non autorizzati e attacchi informatici. Il form di contatto è gestito da <a href='https://web3forms.com' aria-label='Apri sito Web3Forms' target='_blank' rel='noopener noreferrer' class='text-sky-500 hover:underline '>Web3Forms</a>, che garantisce trasmissione sicura e conformità al GDPR grazie all'infrastruttura basata su Amazon. I dati non vengono memorizzati su server terzi permanenti."
+            text: ""
           },
         ]
       },
       {
-        title: "6. Condivisione e trasferimento dei dati",
+        title: "10. Sicurezza dei dati e data breach",
         content: [
           {
             type: "paragraph",
-            text: "I dati personali non vengono venduti, ceduti né condivisi con terzi, salvo obblighi di legge. Eventuali trasferimenti tecnici (es. attraverso l'infrastruttura di Web3Forms o Cloudflare) sono protetti e conformi al GDPR."
+            text: ""
           },
         ]
       },
       {
-        title: "7. Sicurezza dei dati",
+        title: "11. Comunicazione e diffusione dei dati",
         content: [
           {
             type: "paragraph",
-            text: "Il sito beneficia delle misure di sicurezza integrate di Cloudflare (firewall, scansioni periodiche, protezioni anti-bot). La trasmissione dei dati tramite form è crittografata e resa sicura tramite Web3Forms. Nonostante tutte le precauzioni adottate, nessun sistema può garantire sicurezza assoluta, ma vengono messe in atto le migliori pratiche disponibili."
+            text: ""
           },
         ]
       },
       {
-        title: "8. Diritti degli interessati (GDPR)",
+        title: "12. Diritti dell’Interessato",
         content: [
           {
             type: "paragraph",
-            text: "Gli utenti hanno diritto a:"
-          },
-          {
-            type: "list", 
-            items: [
-              "Accedere ai propri dati personali trattati.",
-              "Rettificare dati inesatti o incompleti.",
-              "Cancellare i propri dati, quando non più necessari.",
-              "Limitare temporaneamente il trattamento in determinate circostanze.",
-              "Opporsi al trattamento per motivi legittimi.",
-              "Ottenere la portabilità dei dati in formato strutturato e leggibile da dispositivo automatico.",
-            ]
-          },
-          {
-            type: "paragraph",
-            text: "Per esercitare tali diritti, l'utente può contattare il titolare via email all'indirizzo <a href='mailto:info@davidelamarca.com' aria-label='Invia email' class='text-sky-500 hover:underline'>info@davidelamarca.com</a>."
+            text: ""
           },
         ]
       },
       {
-        title: "9. Aggiornamenti della presente informativa",
+        title: "13. Modalità di esercizio dei diritti e informazioni aggiuntive",
         content: [
           {
             type: "paragraph",
-            text: "Il titolare si riserva il diritto di modificare in qualsiasi momento la presente informativa, ad esempio in caso di evoluzioni normative o aggiornamenti tecnici del sito. La versione più recente sarà sempre disponibile su questa pagina con l'indicazione della data di aggiornamento."
+            text: ""
+          },
+        ]
+      },
+      {
+        title: "14. Finalità legali e giudiziarie",
+        content: [
+          {
+            type: "paragraph",
+            text: ""
+          },
+        ]
+      },
+      {
+        title: "15. Aggiornamenti della presente informativa",
+        content: [
+          {
+            type: "paragraph",
+            text: "Il Titolare si riserva il diritto di modificare o aggiornare la presente Informativa. Eventuali variazioni sostanziali saranno rese note mediante pubblicazione della nuova versione su questa pagina con l’indicazione della data di aggiornamento."
           },
         ]
       }   

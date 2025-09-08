@@ -3,6 +3,21 @@ import "../styles/global.css";
 import Navbar from "../components/common/Navbar.astro";
 import Footer from "../components/common/Footer.astro";
 const { t, meta } = Astro.props;
+const url = new URL(Astro.request.url);
+
+// Remove trailing slash consistency
+let pathname = url.pathname.endsWith("/") ? url.pathname : url.pathname + "/";
+const baseUrl = "https://davidelamarca.com";
+
+// Canonical URL
+const canonical = baseUrl + pathname;
+
+// Build hreflang links
+const altLinks = [
+  { lang: "it", href: baseUrl + pathname.replace(/^\/en/, "") }, // Italian version
+  { lang: "en", href: baseUrl + (pathname.startsWith("/en") ? pathname : "/en" + pathname) }, // English version
+  { lang: "x-default", href: baseUrl + pathname.replace(/^\/en/, "") } // Fallback
+];
 ---
 
 <!doctype html>
@@ -15,6 +30,8 @@ const { t, meta } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{meta.title}</title>
     <meta name="description" content={meta.description} />
+    <link rel="canonical" href={canonical} />
+    {altLinks.map((link) => <link rel="alternate" href={link.href} hreflang={link.lang} />)}
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet" />

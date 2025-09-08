@@ -545,7 +545,7 @@ privacyPolicy: {
             "Handling requests submitted via the contact form – purpose: evaluation and possible response to inquiries or requests for quotes; legal basis: pre-contractual measures requested by the Data Subject (Art. 6, par. 1, lett. b GDPR) and, if applicable, legitimate interest to engage in collaboration opportunities (Art. 6, par. 1, lett. f GDPR).",
             "Execution and management of contractual relationships – purpose: contract performance and related obligations; legal basis: contract execution (Art. 6, par. 1, lett. b GDPR).",
             "Accounting and tax record-keeping – purpose: compliance with legal obligations; legal basis: fulfillment of legal obligations (Art. 6, par. 1, lett. c GDPR).",
-            "Ensuring security and abuse prevention – purpose: protection of the Website and the Controller’s interests; legal basis: legitimate interest of the Controller (Art. 6, par. 1, lett. f GDPR).",
+            "Ensuring security and abuse prevention – purpose: protection of the Website and the Controller's interests; legal basis: legitimate interest of the Controller (Art. 6, par. 1, lett. f GDPR).",
             "Aggregate traffic analysis – purpose: analyzing Website usage in an anonymous and non-intrusive manner; legal basis: legitimate interest of the Controller (Art. 6, par. 1, lett. f GDPR)."
           ]
         },

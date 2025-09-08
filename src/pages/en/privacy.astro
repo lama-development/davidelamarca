@@ -1,12 +1,12 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import Header from "../../components/common/Header.astro";
-import Privacy from "../../components/legal/PrivacyPolicy.astro";
+import PrivacyPolicy from "../../components/legal/PrivacyPolicy.astro";
 import language from "../../i18n/en";
 const t = language();
 ---
 
 <Layout t={t} meta={t.privacyPolicy.meta}>
   <Header header={t.privacyPolicy.header} />
-  <Privacy privacy={t.privacyPolicy} />
+  <PrivacyPolicy privacy={t.privacyPolicy} />
 </Layout>

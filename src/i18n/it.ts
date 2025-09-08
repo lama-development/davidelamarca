@@ -465,7 +465,7 @@ export default (langPrefix = "") => ({
     header: {
       badge: "Legale",
       title: "Privacy Policy",
-      subtitle: "Ultimo aggiornamento: <code>2025-09-05</code>"
+      subtitle: "Ultimo aggiornamento: <code>2025-09-08</code>"
     },
     sections: [
       {
@@ -473,7 +473,7 @@ export default (langPrefix = "") => ({
         content : [
           {
             type: "paragraph",
-            text: "La presente Informativa descrive le modalità di raccolta, trattamento, conservazione e protezione dei dati personali effettuati da LA MARCA DAVIDE (di seguito, il “Titolare” o “noi”) tramite il sito web <a href='https://davidelamarca.com' aria-label='Vai al sito web' class='text-sky-500 hover:underline'>davidelamarca.com</a>  (di seguito, il “Sito”) in conformità al Regolamento (UE) 2016/679 (di seguito, “GDPR”) e alla normativa nazionale applicabile. L’utilizzo del Sito comporta l’accettazione delle modalità indicate nella presente Informativa. In mancanza di accettazione, si invita a non utilizzare il Sito."
+            text: "La presente Informativa descrive le modalità di raccolta, trattamento, conservazione e protezione dei dati personali effettuati da LA MARCA DAVIDE (di seguito, il “Titolare” o “noi”) tramite il sito web <a href='https://davidelamarca.com' aria-label='Vai al sito web' class='text-sky-500 hover:underline'>davidelamarca.com</a>  (di seguito, il “Sito”) in conformità al Regolamento (UE) 2016/679 (di seguito, “GDPR”) e alla normativa nazionale applicabile. L'utilizzo del Sito comporta l'accettazione delle modalità indicate nella presente Informativa. In mancanza di accettazione, si invita a non utilizzare il Sito."
           }
         ]
       },
@@ -492,7 +492,7 @@ export default (langPrefix = "") => ({
           },
           {
             type: "paragraph",
-            text: "Per richieste di progetto deve essere utilizzato esclusivamente il form dedicato disponibile nella pagina <a href='https://davidelamarca.com/contact' aria-label='Vai alla pagina contatti' class='text-sky-500 hover:underline'>davidelamarca.com/contact</a>. Per qualsiasi questione relativa alla presente Informativa o all’esercizio dei diritti spettanti, contattare i riferimenti sopra indicati."
+            text: "Per richieste di progetto deve essere utilizzato esclusivamente il form dedicato disponibile nella pagina <a href='https://davidelamarca.com/contact' aria-label='Vai alla pagina contatti' class='text-sky-500 hover:underline'>davidelamarca.com/contact</a>. Per qualsiasi questione relativa alla presente Informativa o all'esercizio dei diritti spettanti, contattare i riferimenti sopra indicati. Non è stato nominato un Data Protection Officer (DPO)."
           }
         ]
       },
@@ -511,7 +511,7 @@ export default (langPrefix = "") => ({
               "Trattamento: qualsiasi operazione o complesso di operazioni effettuate sui Dati personali;",
               "Titolare del trattamento: la persona fisica o giuridica che determina le finalità e i mezzi del trattamento;",
               "Responsabile del trattamento: la persona fisica o giuridica che tratta i dati per conto del Titolare;",
-              "Tracker/Cookie/localStorage: strumenti che consentono la memorizzazione di informazioni sul dispositivo dell’Utente."
+              "Tracker/Cookie/localStorage: strumenti che consentono la memorizzazione di informazioni sul dispositivo dell'Utente."
             ]
           }
         ]
@@ -522,11 +522,14 @@ export default (langPrefix = "") => ({
           {
             type: "list", 
             items: [
-              "<b>Dati forniti volontariamente dall’Utente (tramite form)</b>: nome e cognome (obbligatori); indirizzo email (obbligatorio); nome azienda (opzionale); numero di telefono (opzionale); informazioni e specifiche del progetto (es. budget, tipologia, link di riferimento).",
-              "<b>Dati raccolti automaticamente (Usage Data)</b>: dati tecnici di navigazione e di comunicazione (indirizzo IP, tipo di dispositivo e browser, pagine visitate, URI richieste, tempi di risposta, codice di stato HTTP, ecc.); log di sistema e diagnostica.",
-              "<b>Dati memorizzati localmente</b>: preferenza relativa al tema (chiaro/scuro) salvata tramite localStorage."
+              "Dati forniti volontariamente dall'Utente (tramite form): nome e cognome (obbligatori); indirizzo email (obbligatorio); nome azienda (opzionale); numero di telefono (opzionale); informazioni e specifiche del progetto (es. budget, tipologia, link di riferimento).",
+              "Dati raccolti automaticamente (Usage Data): dati tecnici di navigazione e di comunicazione (indirizzo IP, tipo di dispositivo e browser, pagine visitate, URI richieste, tempi di risposta, codice di stato HTTP, ecc.); log di sistema e diagnostica.",
             ]
           },
+          {
+            type: "paragraph",
+            text: "Nessuna categoria speciale di dati (dati sensibili) è raccolta tramite il Sito."
+          }
         ]
       },
       {
@@ -539,12 +542,11 @@ export default (langPrefix = "") => ({
           {
             type: "list", 
             items: [
-              "<b>Gestione delle richieste pervenute tramite il form di contatto</b> - finalità: valutazione ed eventuale risposta a richieste di preventivo o informazione; base giuridica: esecuzione di misure precontrattuali richieste dall’Interessato e legittimo perseguimento dell’interesse a valutare opportunità di collaborazione.",
-              "<b>Esecuzione e gestione del rapporto contrattuale</b> - finalità: esecuzione del contratto e adempimenti connessi; base giuridica: esecuzione del contratto.",
-              "<b>Conservazione a fini contabili e fiscali</b> - finalità: ottemperanza a obblighi di legge; base giuridica: adempimento di obblighi legali.",
-              "<b>Garanzia della sicurezza e prevenzione di abusi</b> - finalità: protezione del Sito e degli interessi del Titolare; base giuridica: interesse legittimo del Titolare.",
-              "<b>Analisi statistica aggregata del traffico (Cloudflare Web Analytics)</b> - finalità: analisi dell’uso del Sito in forma anonima e non invasiva; base giuridica: interesse legittimo del Titolare.",
-              "<b>Comunicazioni informative o promozionali</b> - finalità: invio di comunicazioni solo previo consenso espresso dell’Interessato; base giuridica: consenso."
+              "Gestione delle richieste pervenute tramite il form di contatto - finalità: valutazione ed eventuale risposta a richieste di preventivo o informazione; base giuridica: misure precontrattuali richieste dall'Interessato (art. 6, par. 1, lett. b GDPR) e, ove applicabile, legittimo interesse ad entrare in contatto per opportunità di collaborazione (art. 6, par. 1, lett. f GDPR).",
+              "Esecuzione e gestione del rapporto contrattuale - finalità: esecuzione del contratto e adempimenti connessi; base giuridica: esecuzione del contratto (art. 6, par. 1, lett. b GDPR).",
+              "Conservazione a fini contabili e fiscali - finalità: ottemperanza a obblighi di legge; base giuridica: adempimento di obblighi legali (art. 6, par. 1, lett. c GDPR).",
+              "Garanzia della sicurezza e prevenzione di abusi - finalità: protezione del Sito e degli interessi del Titolare; base giuridica: interesse legittimo del Titolare (art. 6, par. 1, lett. f GDPR).",
+              "Analisi statistica aggregata del traffico - finalità: analisi dell'uso del Sito in forma anonima e non invasiva; base giuridica: interesse legittimo del Titolare (art. 6, par. 1, lett. f GDPR)."
             ]
           },
           {
@@ -558,7 +560,7 @@ export default (langPrefix = "") => ({
         content: [
           {
             type: "paragraph",
-            text: "I trattamenti sono effettuati con strumenti manuali, informatici e telematici, con logiche strettamente correlate alle finalità indicate e con misure tecniche e organizzative idonee a garantire la sicurezza, la riservatezza e l’integrità dei Dati. L’accesso ai Dati è limitato a personale autorizzato e a eventuali Responsabili esterni nominati dal Titolare."
+            text: "I trattamenti sono effettuati con strumenti manuali, informatici e telematici, con logiche strettamente correlate alle finalità indicate e con misure tecniche e organizzative idonee a garantire la sicurezza, la riservatezza e l'integrità dei Dati. L'accesso ai Dati è limitato a personale autorizzato e a eventuali Responsabili esterni nominati dal Titolare. I dati sono trattati in conformità ai principi di minimizzazione, limitazione della finalità e conservazione limitata nel tempo."
           }
         ]
       },
@@ -567,18 +569,15 @@ export default (langPrefix = "") => ({
         content: [
           {
             type: "paragraph",
-            text: "Per lo svolgimento delle attività connesse alle finalità sopra descritte, il Titolare si avvale dei seguenti fornitori e servizi terzi:"
+            text: "Per lo svolgimento delle attività connesse alle finalità sopra descritte, il Titolare si avvale dei seguenti fornitori e servizi terzi (con indicazione sintetica del ruolo):"
           },
           {
             type: "list", 
             items: [
-              "<a href='https://web3forms.com' aria-label='Apri sito Web3Forms' target='_blank' rel='noopener noreferrer' class='text-sky-500 hover:underline '>Web3Forms</a>: gestione tecnica del form di contatto; i dati raccolti tramite form vengono inoltrati via e-mail al Titolare; Web3Forms utilizza l’infrastruttura di Amazon Web Services per la trasmissione;",
-              "<a href='https://www.cloudflare.com' aria-label='Apri sito Cloudflare' target='_blank' rel='noopener noreferrer' class='text-sky-500 hover:underline '>Cloudflare</a> e <a href='https://www.cloudflare.com/web-analytics' aria-label='Apri sito Cloudflare Web Analytics' target='_blank' rel='noopener noreferrer' class='text-sky-500 hover:underline '>Cloudflare Web Analytics</a>: servizi di protezione, CDN, hosting parziale e analisi aggregata del traffico; Cloudflare Web Analytics è impiegato in modalità che non utilizza cookie identificativi personali."
+              "<a href='https://web3forms.com' aria-label='Apri sito Web3Forms' target='_blank' rel='noopener noreferrer' class='text-sky-500 hover:underline '>Web3Forms</a>: gestione tecnica del form di contatto; le submission vengono inoltrate via email al Titolare; Web3Forms dichiara di non conservare permanentemente le submission e di cancellare i log periodicamente. Consultare la <a href='https://web3forms.com/privacy' aria-label='Apri privacy policy di Web3Forms' target='_blank' rel='noopener noreferrer' class='text-sky-500 hover:underline '>Privacy Policy</a> di Web3Forms.",
+              "<a href='https://cloudflare.com' aria-label='Apri sito Cloudflare' target='_blank' rel='noopener noreferrer' class='text-sky-500 hover:underline '>Cloudflare</a>: servizi di protezione (WAF), CDN, hosting parziale e analisi aggregata del traffico tramite <a href='https://cloudflare.com/web-analytics' aria-label='Apri sito Cloudflare Web Analytics' target='_blank' rel='noopener noreferrer' class='text-sky-500 hover:underline '>Cloudflare Web Analytics</a>, impiegato in modalità che non utilizza cookie identificativi personali. Consultare la <a href='https://cloudflare.com/privacypolicy' aria-label='Apri privacy policy di Cloudflare' target='_blank' rel='noopener noreferrer' class='text-sky-500 hover:underline '>Privacy Policy</a> di Cloudflare.",
+              "<a href='https://zoho.com' aria-label='Apri sito Zoho' target='_blank' rel='noopener noreferrer' class='text-sky-500 hover:underline '>Zoho</a>: gestione della casella email professionale dove vengono recapitate le submission. Consultare la <a href='https://zoho.com/privacy' aria-label='Apri privacy policy di Zoho' target='_blank' rel='noopener noreferrer' class='text-sky-500 hover:underline '>Privacy Policy</a> di Zoho."
             ]
-          },
-          {
-            type: "paragraph",
-            text: "I rapporti con i fornitori sono regolati mediante idonee misure contrattuali e garanzie di compliance GDPR (nomine a Responsabile, clausole contrattuali ove necessario)."
           }
         ]
       },
@@ -587,7 +586,7 @@ export default (langPrefix = "") => ({
         content: [
           {
             type: "paragraph",
-            text: "I servizi indicati nel presente documento possono comportare trasferimenti di Dati verso Paesi terzi (ad es. Stati Uniti). Qualora si verifichino trasferimenti di Dati al di fuori dell’Unione Europea, il Titolare adotta adeguate garanzie (quali clausole contrattuali standard approvate dalla Commissione europea, decisioni di adeguatezza, ove applicabili) per assicurare un livello di protezione sostanzialmente equivalente a quello garantito dal GDPR."
+            text: "I servizi indicati nel presente documento possono comportare trasferimenti di Dati verso Paesi terzi. Qualora si verifichino trasferimenti di Dati al di fuori dell'Unione Europea, il Titolare adotta adeguate garanzie (quali clausole contrattuali standard approvate dalla Commissione europea, SCC, o altre garanzie riconosciute) per assicurare un livello di protezione sostanzialmente equivalente a quello garantito dal GDPR. Su richiesta è possibile ottenere copia delle garanzie adottate."
           },
         ]
       },
@@ -598,6 +597,19 @@ export default (langPrefix = "") => ({
             type: "paragraph",
             text: "I Dati personali saranno conservati per il tempo necessario a conseguire le finalità per le quali sono stati raccolti e, in ogni caso, nei limiti e per i termini previsti dalla normativa applicabile:"
           },
+          {
+            type: "list", 
+            items: [
+              "Dati inviati tramite form (lead non convertiti): conservazione per finalità di gestione della richiesta e follow-up per un periodo non superiore a 12 mesi dall'ultima interazione, salvo consenso dell'Interessato a una durata maggiore o obblighi legali contrastanti.",
+              "Dati relativi a contratti/progetti: conservazione per tutta la durata del rapporto contrattuale e successivamente per il periodo necessario all'adempimento di obblighi legali e fiscali.",
+              "Log di sistema e dati per sicurezza: conservazione per un periodo necessario alla finalità di sicurezza e diagnostica, di norma non superiore a 12 mesi, salvo esigenze investigative o obblighi di legge.",
+              "Dati statistici anonimizzati: conservati in forma aggregata e non identificativa per periodi indefiniti."
+            ]
+          },
+          {
+            type: "paragraph",
+            text: "Decorso il periodo di conservazione i Dati saranno cancellati o resi anonimi in modo irreversibile."
+          },
         ]
       },
       {
@@ -605,7 +617,18 @@ export default (langPrefix = "") => ({
         content: [
           {
             type: "paragraph",
-            text: ""
+            text: "Il Sito impiega esclusivamente:"
+          },
+          {
+            type: "list",
+            items: [
+              "<a href='https://cloudflare.com/web-analytics' aria-label='Apri sito Cloudflare Web Analytics' target='_blank' rel='noopener noreferrer' class='text-sky-500 hover:underline '>Cloudflare Web Analytics</a>, sistema di analisi del traffico che non utilizza cookie di tracciamento personale e restituisce dati aggregati e non identificativi;",
+              "localStorage del browser per la sola memorizzazione della preferenza relativa al tema grafico (chiaro/scuro)."
+            ]
+          },
+          {
+            type: "paragraph",
+            text: "Non sono utilizzati altri strumenti di profilazione o monitoraggio di terze parti. Qualora in futuro venissero introdotti cookie o tracker aggiuntivi, sarà fornita specifica informativa e, ove previsto dalla normativa, il consenso sarà richiesto prima dell'attivazione."
           },
         ]
       },
@@ -614,7 +637,7 @@ export default (langPrefix = "") => ({
         content: [
           {
             type: "paragraph",
-            text: ""
+            text: "Il Titolare adotta misure tecniche e organizzative adeguate per tutelare i Dati personali contro distruzione, perdita, modifica, divulgazione non autorizzata o accesso non autorizzato. Tra le misure: uso di protocolli sicuri (HTTPS), firewall e protezioni fornite da Cloudflare, controllo degli accessi e backup. In caso di violazione di sicurezza che possa comportare un rischio per i diritti e le libertà degli Interessati, il Titolare adotterà le misure di notifica previste dal GDPR, compresa, ove dovuto, la comunicazione all'Autorità di controllo e, se necessario, agli Interessati."
           },
         ]
       },
@@ -623,16 +646,24 @@ export default (langPrefix = "") => ({
         content: [
           {
             type: "paragraph",
-            text: ""
+            text: "I Dati possono essere comunicati esclusivamente ai soggetti necessari per le finalità sopra indicate (fornitori di servizi, consulenti, autorità competenti ove richiesto dalla legge). I Dati non sono oggetto di diffusione né di cessione a terzi per finalità commerciali."
           },
         ]
       },
       {
-        title: "12. Diritti dell’Interessato",
+        title: "12. Diritti dell'Interessato",
         content: [
           {
             type: "paragraph",
-            text: ""
+            text: "L'Interessato può esercitare in qualsiasi momento i diritti previsti dagli articoli 15-22 del GDPR, tra cui: accesso, rettifica, cancellazione (diritto all'oblio), limitazione del trattamento, opposizione, portabilità dei dati e revoca del consenso (nei casi in cui il trattamento sia basato sul consenso)."
+          },
+          {
+            type: "paragraph",
+            text: "L'esercizio di tali diritti può essere effettuato mediante richiesta scritta indirizzata a <a href='mailto:info@davidelamarca.com' aria-label='Invia email' class='text-sky-500 hover:underline'>info@davidelamarca.com</a> o PEC <a href='mailto:davidelamarca@legalmail.it' aria-label='Invia email' class='text-sky-500 hover:underline'>davidelamarca@legalmail.it</a>. Le richieste saranno evase nei termini e secondo le modalità previste dal GDPR. Il Titolare potrà richiedere informazioni ragionevoli per verificare l'identità dell'Interessato qualora ciò sia necessario per tutelare i diritti e la sicurezza; salvo casi eccezionali, non è richiesto l'invio di documenti di identità per le richieste ordinarie."
+          },
+          {
+            type: "paragraph",
+            text: "In caso di contestazione relativa al trattamento dei propri Dati, l'Interessato ha altresì il diritto di proporre reclamo all'Autorità Garante per la protezione dei dati personali."
           },
         ]
       },
@@ -641,17 +672,21 @@ export default (langPrefix = "") => ({
         content: [
           {
             type: "paragraph",
-            text: ""
+            text: "Le richieste inerenti i diritti possono essere formulate gratuitamente. Qualora la richiesta sia manifestamente infondata o eccessiva, il Titolare potrà addebitare un contributo spese ragionevole o rifiutare di agire, conformemente al GDPR. Successivamente all'esercizio dei diritti, il Titolare informerà gli eventuali destinatari cui i Dati sono stati comunicati qualora ciò sia necessario e non comporti sforzi sproporzionati."
           },
         ]
       },
       {
-        title: "14. Finalità legali e giudiziarie",
+        title: "14. Finalità legali, giudiziarie e tutela dei minori",
         content: [
           {
             type: "paragraph",
-            text: ""
+            text: "I Dati personali potranno essere utilizzati per l'istituzione, l'esercizio o la difesa di un diritto in sede giudiziaria o amministrativa e per l'ottemperanza ad obblighi di legge."
           },
+          {
+            type: "paragraph",
+            text: "Il Sito non è rivolto a minori e non raccogliamo consapevolmente dati personali di minori di 16 anni. Qualora venissimo a conoscenza di dati di un minore di 16 anni senza il consenso dei genitori o del tutore, adotteremo misure per cancellare tali dati. Gli interessati o i loro genitori/tutori possono richiedere la cancellazione dei dati contattando <a href='mailto:info@davidelamarca.com' aria-label='Invia email' class='text-sky-500 hover:underline'>info@davidelamarca.com</a>."
+          }
         ]
       },
       {
@@ -659,7 +694,7 @@ export default (langPrefix = "") => ({
         content: [
           {
             type: "paragraph",
-            text: "Il Titolare si riserva il diritto di modificare o aggiornare la presente Informativa. Eventuali variazioni sostanziali saranno rese note mediante pubblicazione della nuova versione su questa pagina con l’indicazione della data di aggiornamento."
+            text: "Il Titolare si riserva il diritto di modificare o aggiornare la presente Informativa. Eventuali variazioni sostanziali saranno rese note mediante pubblicazione della nuova versione su questa pagina con l'indicazione della data di aggiornamento. Si consiglia agli utenti di consultare periodicamente la presente pagina per verificare eventuali modifiche."
           },
         ]
       }   

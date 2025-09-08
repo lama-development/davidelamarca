@@ -445,7 +445,7 @@ export default (langPrefix = "") => ({
               "VAT ID: 02804090039",
               "Website: <a href='https://davidelamarca.com/en' aria-label='Go to website' class='text-sky-500 hover:underline'>davidelamarca.com</a>",
               "Email: <a href='mailto:info@davidelamarca.com' aria-label='Send email' class='text-sky-500 hover:underline'>info@davidelamarca.com</a>",
-              "PEC: <a href='mailto:davidelamarca@legalmail.it' aria-label='Send email' class='text-sky-500 hover:underline'>davidelamarca@legalmail.it</a>",
+              "PEC (Certified Email): <a href='mailto:davidelamarca@legalmail.it' aria-label='Send email' class='text-sky-500 hover:underline'>davidelamarca@legalmail.it</a>",
             ]
           },
         ]
@@ -457,22 +457,248 @@ export default (langPrefix = "") => ({
       ariaLabel: "Send email"
     }
   }, 
-  privacyPolicy: {
-    meta: {
-      title: "Privacy Policy - Davide La Marca",
-      description: ""
+privacyPolicy: {
+  meta: {
+    title: "Privacy Policy - Davide La Marca",
+    description: "Terms and conditions of service for web development projects and collaborations."
+  },
+  header: {
+    badge: "Legal",
+    title: "Privacy Policy",
+    subtitle: "Last updated: <code>2025-09-08</code>"
+  },
+  sections: [
+    {
+      title: "Introduction",
+      content: [
+        {
+          type: "paragraph",
+          text: "This Privacy Policy describes how LA MARCA DAVIDE (hereinafter, the “Controller” or “we”) collects, processes, stores, and protects personal data through the website <a href='https://davidelamarca.com' aria-label='Go to website' class='text-sky-500 hover:underline'>davidelamarca.com</a> (hereinafter, the “Website”) in accordance with the EU Regulation 2016/679 (hereinafter, “GDPR”) and applicable national law. Using the Website implies acceptance of the terms in this Policy. If you do not accept them, please do not use the Website."
+        }
+      ]
     },
-    header: {
-      badge: "Legal",
-      title: "Privacy Policy",
-      subtitle: "Last updated: <code>2025-09-05</code>"
+    {
+      title: "1. Data Controller",
+      content: [
+        {
+          type: "list",
+          items: [
+            "LA MARCA DAVIDE",
+            "VAT: 02804090039",
+            "Website: <a href='https://davidelamarca.com' aria-label='Go to website' class='text-sky-500 hover:underline'>davidelamarca.com</a>",
+            "Email: <a href='mailto:info@davidelamarca.com' aria-label='Send email' class='text-sky-500 hover:underline'>info@davidelamarca.com</a>",
+            "PEC (Certified Email): <a href='mailto:davidelamarca@legalmail.it' aria-label='Send email' class='text-sky-500 hover:underline'>davidelamarca@legalmail.it</a>"
+          ]
+        },
+        {
+          type: "paragraph",
+          text: "Project requests must be submitted exclusively via the dedicated form available at <a href='https://davidelamarca.com/contact' aria-label='Go to contact page' class='text-sky-500 hover:underline'>davidelamarca.com/contact</a>. For any questions regarding this Privacy Policy or the exercise of rights, please contact the above references. No Data Protection Officer (DPO) has been appointed."
+        }
+      ]
     },
-    sections: [
-      {
-        content : [
-        ]
-      }
-    ],
+    {
+      title: "2. Definitions",
+      content: [
+        {
+          type: "paragraph",
+          text: "For the purposes of this Privacy Policy, the following definitions apply:"
+        },
+        {
+          type: "list",
+          items: [
+            "Personal data: any information relating to an identified or identifiable natural person;",
+            "Data subject/User: the natural person to whom the personal data relates;",
+            "Processing: any operation or set of operations performed on personal data;",
+            "Data controller: the natural or legal person who determines the purposes and means of the processing;",
+            "Data processor: the natural or legal person who processes data on behalf of the controller;",
+            "Tracker/Cookie/localStorage: tools that allow information to be stored on the User's device."
+          ]
+        }
+      ]
+    },
+    {
+      title: "3. Types of data processed",
+      content: [
+        {
+          type: "list",
+          items: [
+            "Data voluntarily provided by the User (via form): first and last name (mandatory); email address (mandatory); company name (optional); phone number (optional); project details and specifications (e.g., budget, type, reference links).",
+            "Automatically collected data (Usage Data): technical navigation and communication data (IP address, device and browser type, visited pages, requested URIs, response times, HTTP status code, etc.); system logs and diagnostics."
+          ]
+        },
+        {
+          type: "paragraph",
+          text: "No special categories of data (sensitive data) are collected through the Website."
+        }
+      ]
+    },
+    {
+      title: "4. Purpose of processing and legal bases",
+      content: [
+        {
+          type: "paragraph",
+          text: "Personal Data are processed for the following purposes with the corresponding legal bases:"
+        },
+        {
+          type: "list",
+          items: [
+            "Handling requests submitted via the contact form – purpose: evaluation and possible response to inquiries or requests for quotes; legal basis: pre-contractual measures requested by the Data Subject (Art. 6, par. 1, lett. b GDPR) and, if applicable, legitimate interest to engage in collaboration opportunities (Art. 6, par. 1, lett. f GDPR).",
+            "Execution and management of contractual relationships – purpose: contract performance and related obligations; legal basis: contract execution (Art. 6, par. 1, lett. b GDPR).",
+            "Accounting and tax record-keeping – purpose: compliance with legal obligations; legal basis: fulfillment of legal obligations (Art. 6, par. 1, lett. c GDPR).",
+            "Ensuring security and abuse prevention – purpose: protection of the Website and the Controller’s interests; legal basis: legitimate interest of the Controller (Art. 6, par. 1, lett. f GDPR).",
+            "Aggregate traffic analysis – purpose: analyzing Website usage in an anonymous and non-intrusive manner; legal basis: legitimate interest of the Controller (Art. 6, par. 1, lett. f GDPR)."
+          ]
+        },
+        {
+          type: "paragraph",
+          text: "Data will not be subject to automated profiling nor sold or shared with third parties for commercial purposes."
+        }
+      ]
+    },
+    {
+      title: "5. Processing methods",
+      content: [
+        {
+          type: "paragraph",
+          text: "Processing is carried out using manual, IT, and telematic tools, strictly linked to the purposes indicated, and with technical and organizational measures to ensure data security, confidentiality, and integrity. Access to Data is limited to authorized personnel and external processors appointed by the Controller. Data are processed according to principles of minimization, purpose limitation, and limited retention time."
+        }
+      ]
+    },
+    {
+      title: "6. External processors and providers",
+      content: [
+        {
+          type: "paragraph",
+          text: "To carry out the activities related to the above purposes, the Controller uses the following third-party providers and services (role indicated):"
+        },
+        {
+          type: "list",
+          items: [
+            "<a href='https://web3forms.com' aria-label='Open Web3Forms website' target='_blank' rel='noopener noreferrer' class='text-sky-500 hover:underline'>Web3Forms</a>: technical management of the contact form; submissions are forwarded via email to the Controller; Web3Forms states that it does not permanently store submissions and periodically deletes logs. See Web3Forms <a href='https://web3forms.com/privacy' aria-label='Open Web3Forms Privacy Policy' target='_blank' rel='noopener noreferrer' class='text-sky-500 hover:underline'>Privacy Policy</a>.",
+            "<a href='https://cloudflare.com' aria-label='Open Cloudflare website' target='_blank' rel='noopener noreferrer' class='text-sky-500 hover:underline'>Cloudflare</a>: protection services (WAF), CDN, partial hosting, and aggregate traffic analysis through <a href='https://cloudflare.com/web-analytics' aria-label='Open Cloudflare Web Analytics website' target='_blank' rel='noopener noreferrer' class='text-sky-500 hover:underline'>Cloudflare Web Analytics</a>, used in a way that does not employ personal tracking cookies. See Cloudflare <a href='https://cloudflare.com/privacypolicy' aria-label='Open Cloudflare Privacy Policy' target='_blank' rel='noopener noreferrer' class='text-sky-500 hover:underline'>Privacy Policy</a>.",
+            "<a href='https://zoho.com' aria-label='Open Zoho website' target='_blank' rel='noopener noreferrer' class='text-sky-500 hover:underline'>Zoho</a>: management of the professional email account where submissions are received. See Zoho <a href='https://zoho.com/privacy' aria-label='Open Zoho Privacy Policy' target='_blank' rel='noopener noreferrer' class='text-sky-500 hover:underline'>Privacy Policy</a>."
+          ]
+        }
+      ]
+    },
+    {
+      title: "7. International transfers",
+      content: [
+        {
+          type: "paragraph",
+          text: "The services listed in this document may involve transferring Data to third countries. Where transfers outside the European Union occur, the Controller adopts adequate safeguards (such as standard contractual clauses approved by the European Commission, SCCs, or other recognized guarantees) to ensure a level of protection substantially equivalent to GDPR. Copies of these safeguards are available upon request."
+        }
+      ]
+    },
+    {
+      title: "8. Retention periods",
+      content: [
+        {
+          type: "paragraph",
+          text: "Personal Data will be retained for as long as necessary to fulfill the purposes for which they were collected and, in any case, within the limits and periods provided by applicable law:"
+        },
+        {
+          type: "list",
+          items: [
+            "Data submitted via form (unconverted leads): retained for handling requests and follow-ups for a period not exceeding 12 months from the last interaction, unless the Data Subject consents to a longer duration or legal obligations dictate otherwise.",
+            "Data related to contracts/projects: retained for the duration of the contractual relationship and subsequently for the period necessary to fulfill legal and tax obligations.",
+            "System logs and security data: retained for the duration necessary for security and diagnostics, usually no more than 12 months, unless investigative needs or legal obligations apply.",
+            "Anonymized statistical data: retained in aggregated, non-identifiable form indefinitely."
+          ]
+        },
+        {
+          type: "paragraph",
+          text: "After the retention period, Data will be deleted or irreversibly anonymized."
+        }
+      ]
+    },
+    {
+      title: "9. Cookies, trackers, and localStorage",
+      content: [
+        {
+          type: "paragraph",
+          text: "The Website uses exclusively:"
+        },
+        {
+          type: "list",
+          items: [
+            "<a href='https://cloudflare.com/web-analytics' aria-label='Open Cloudflare Web Analytics website' target='_blank' rel='noopener noreferrer' class='text-sky-500 hover:underline'>Cloudflare Web Analytics</a>, a traffic analysis system that does not use personal tracking cookies and provides aggregated, non-identifiable data;",
+            "Browser localStorage solely for saving the user's theme preference (light/dark mode)."
+          ]
+        },
+        {
+          type: "paragraph",
+          text: "No other profiling or third-party tracking tools are used. If additional cookies or trackers are introduced in the future, a specific notice will be provided, and consent will be requested when required by law."
+        }
+      ]
+    },
+    {
+      title: "10. Data security and data breaches",
+      content: [
+        {
+          type: "paragraph",
+          text: "The Controller adopts appropriate technical and organizational measures to protect personal data against destruction, loss, alteration, unauthorized disclosure, or unauthorized access. Measures include using secure protocols (HTTPS), firewalls and protections provided by Cloudflare, access control, and backups. In case of a security breach that may pose a risk to the rights and freedoms of Data Subjects, the Controller will take notification measures as required by GDPR, including notification to the supervisory authority and, if necessary, to Data Subjects."
+        }
+      ]
+    },
+    {
+      title: "11. Communication and disclosure of data",
+      content: [
+        {
+          type: "paragraph",
+          text: "Data may be shared only with parties necessary for the purposes described above (service providers, consultants, competent authorities when required by law). Data are not disclosed or transferred to third parties for commercial purposes."
+        }
+      ]
+    },
+    {
+      title: "12. Rights of the Data Subject",
+      content: [
+        {
+          type: "paragraph",
+          text: "Data Subjects may exercise at any time the rights under Articles 15-22 of the GDPR, including: access, rectification, erasure (right to be forgotten), restriction of processing, objection, data portability, and withdrawal of consent (where processing is based on consent)."
+        },
+        {
+          type: "paragraph",
+          text: "Such rights may be exercised by submitting a written request to <a href='mailto:info@davidelamarca.com' aria-label='Send email' class='text-sky-500 hover:underline'>info@davidelamarca.com</a> or PEC (Certified Email) <a href='mailto:davidelamarca@legalmail.it' aria-label='Send email' class='text-sky-500 hover:underline'>davidelamarca@legalmail.it</a>. Requests will be processed within the terms and conditions established by GDPR. The Controller may request reasonable information to verify the identity of the Data Subject if necessary to protect rights and security; except for exceptional cases, identity documents are not required for ordinary requests."
+        },
+        {
+          type: "paragraph",
+          text: "In case of disputes regarding the processing of personal data, the Data Subject also has the right to lodge a complaint with the Data Protection Authority."
+        }
+      ]
+    },
+    {
+      title: "13. How to exercise rights and additional information",
+      content: [
+        {
+          type: "paragraph",
+          text: "Requests regarding rights may be submitted free of charge. If a request is manifestly unfounded or excessive, the Controller may charge a reasonable fee or refuse to act, in accordance with GDPR. After exercising rights, the Controller will inform any recipients to whom Data were communicated if necessary and not disproportionate."
+        }
+      ]
+    },
+    {
+      title: "14. Legal purposes, judicial actions, and protection of minors",
+      content: [
+        {
+          type: "paragraph",
+          text: "Personal Data may be used for establishing, exercising, or defending a legal right in court or administrative proceedings and for compliance with legal obligations."
+        },
+        {
+          type: "paragraph",
+          text: "The Website is not directed at minors, and we do not knowingly collect personal data from individuals under 16 years of age. If we become aware of data from a minor under 16 without parental or guardian consent, we will take steps to delete such data. Minors or their parents/guardians may request deletion of data by contacting <a href='mailto:info@davidelamarca.com' aria-label='Send email' class='text-sky-500 hover:underline'>info@davidelamarca.com</a>."
+        }
+      ]
+    },
+    {
+      title: "15. Updates to this Privacy Policy",
+      content: [
+        {
+          type: "paragraph",
+          text: "The Controller reserves the right to modify or update this Privacy Policy. Any substantial changes will be published on this page with the update date. Users are advised to check this page periodically for changes."
+        }
+      ]
+    }
+  ],
     questions: {
       title: "Questions?",
       description: "For any questions regarding the privacy policy, you can contact me at the address ",

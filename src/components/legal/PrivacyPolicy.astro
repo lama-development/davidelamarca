@@ -24,12 +24,12 @@ interface Section {
             <div class="space-y-3">
               {section.content.map((block: ContentBlock) => {
                 if (block.type === "paragraph") {
-                  return <p class="tracking-tight text-neutral-700 dark:text-neutral-300" set:html={block.text} />;
+                  return <p class="text-sm tracking-tight text-neutral-700 md:text-base dark:text-neutral-300" set:html={block.text} />;
                 } else if (block.type === "list") {
                   return (
                     <ul class="list-disc pl-6">
                       {block.items?.map((item: string) => (
-                        <li class="tracking-tight text-neutral-700 dark:text-neutral-300" set:html={item} />
+                        <li class="text-sm tracking-tight text-neutral-700 md:text-base dark:text-neutral-300" set:html={item} />
                       ))}
                     </ul>
                   );

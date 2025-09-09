@@ -157,6 +157,7 @@ export default (langPrefix = "") => ({
           quote: "Working with you has been a very positive experience. I appreciated your availability, professionalism, and especially your patience in following every detail. I liked how you listened to my needs and transformed them into a functional and aesthetically pleasing website. What particularly impressed me was your ability to propose creative and practical solutions that made the final result even better than I had imagined.",
           author: "Amy and Antonio",
           company: "Sorrento Boat Trips",
+          website: "https://sorrentoboattrips.com",
           role: "Founders"
         }
       ]
@@ -299,7 +300,7 @@ export default (langPrefix = "") => ({
     header: {
       badge: "Legal",
       title: "Terms of Service",
-      subtitle: "Last updated: <code>2025-09-03</code>"
+      subtitle: "Last updated: <code>2025-09-09</code>"
     },
     sections: [
       {
@@ -397,7 +398,7 @@ export default (langPrefix = "") => ({
           },
           {
             type: "paragraph",
-            text: "The Provider reserves the right to use images, screenshots, and project descriptions for their own portfolio and promotional channels; requests for embargo, anonymization, or NDA must be agreed before project start."
+            text: "The Provider reserves the right to include discrete references to their professional activity, for example with the phrase “Designed by Davide La Marca” in the footer or another non-intrusive location, and to use images, screenshots, and project descriptions for their portfolio and promotional channels. Any requests for embargo, anonymization, or NDA must be agreed upon prior to the project commencement."
           }
         ]
       },

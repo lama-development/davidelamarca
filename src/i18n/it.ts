@@ -157,6 +157,7 @@ export default (langPrefix = "") => ({
           quote: "Lavorare con te è stata un'esperienza molto positiva. Ho apprezzato la tua disponibilità, la professionalità e soprattutto la pazienza nel seguire ogni dettaglio. Mi è piaciuto il fatto che hai saputo ascoltare le mie esigenze e trasformarle in una pagina web funzionale ed esteticamente curata. Un aspetto che mi ha colpito particolarmente è stata la tua capacità di proporre soluzioni creative e pratiche che hanno reso il risultato finale ancora migliore di quanto immaginassi.",
           author: "Amy e Antonio",
           company: "Sorrento Boat Trips",
+          website: "https://sorrentoboattrips.com",
           role: "Fondatori"
         }
       ]
@@ -299,7 +300,7 @@ export default (langPrefix = "") => ({
     header: {
       badge: "Legale",
       title: "Termini di Servizio",
-      subtitle: "Ultimo aggiornamento: <code>2025-09-03</code>"
+      subtitle: "Ultimo aggiornamento: <code>2025-09-09</code>"
     },
     sections: [
       {
@@ -397,7 +398,7 @@ export default (langPrefix = "") => ({
           },
           {
             type: "paragraph",
-            text: "Il Fornitore si riserva il diritto di utilizzare immagini, screenshot e descrizioni del progetto per il proprio portfolio e canali promozionali; richieste di embargo, anonimizzazione o NDA devono essere concordate prima dell'avvio del progetto."
+            text: "Il Fornitore si riserva il diritto di inserire riferimenti discreti alla propria attività professionale, ad esempio mediante la dicitura “Designed by Davide La Marca” nel footer o in altra posizione non invasiva, e di utilizzare immagini, screenshot e descrizioni del progetto per il proprio portfolio e canali promozionali. Eventuali richieste di embargo, anonimizzazione o NDA devono essere concordate prima dell’avvio del progetto."
           }
         ]
       },

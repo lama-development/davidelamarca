@@ -9,9 +9,7 @@ const langPrefix = Astro.url.pathname.startsWith("/en") ? "/en" : "";
       <div class="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-12">
         <div class="flex flex-col items-center md:items-start">
           <a href={`${langPrefix}/`} class="mb-6 ml-1 flex items-center space-x-2">
-            <svg class="h-6 w-6 text-sky-500" viewBox="0 0 675 750" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M675 562.506L337.5 750L149.996 645.846V275.763L243.748 223.686L337.5 171.609L525.004 275.763V474.248L337.5 578.391L300.004 557.556V364.009L337.5 343.218L374.996 364.02V471.762L450 430.114V319.874L337.5 257.358L225 319.874V601.679L337.5 664.195L599.996 518.371V231.629L337.5 85.8046L75.0038 231.629V604.176L0 562.506V187.494L337.5 0L675 187.494V562.506Z"></path>
-            </svg>
+            <img src="/favicon.svg" alt="Logo" class="h-6 w-6" />
             <span class="text-base font-medium text-neutral-900 dark:text-neutral-100">{footer.brand}</span>
           </a>
           <div class="flex items-center space-x-3 md:self-start">

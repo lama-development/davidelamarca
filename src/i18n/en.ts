@@ -11,8 +11,8 @@ export default (langPrefix = "") => ({
   },
   home: {
     meta: {
-      title: "Davide La Marca - Websites & SEO",
-      description: "I build modern, fast, and SEO-optimized websites to grow your online presence."
+      title: "Davide La Marca - Websites & Design",
+      description: "I build modern, fast, and optimized websites to grow your online presence."
     },
     hero: {
       badge: "Freelance Web Developer",
@@ -67,11 +67,11 @@ export default (langPrefix = "") => ({
         },
         {
           question: "Do you offer maintenance services after launch?",
-          answer: `Yes, I offer a maintenance service to ensure your website remains secure, up-to-date, and performant over time. This includes security updates, regular backups, and technical support. <a href='${langPrefix}/contact' aria-label='Open contact page' class='text-sky-500 hover:underline '>Contact me</a> for more details.`
+          answer: `After delivery, I provide a warranty period during which I fix any technical issues or bugs that may arise in real-world use. This ensures your website runs smoothly. For more details, please refer to my <a href='${langPrefix}/terms' aria-label='Open Terms of Service' class='text-sky-500 hover:underline'>Terms of Service</a>.`
         },
         {
           question: "Will the website be optimized for search engines?",
-          answer: "All the websites I build follow basic SEO best practices. This includes semantic structure, image optimization, loading speed, and mobile compatibility."
+          answer: "All the websites I build follow essential SEO best practices to give your project a solid starting point: semantic structure, image optimization, loading speed, and mobile compatibility. This ensures your site is well-prepared from the beginning. However, I do not provide advanced SEO services or positioning strategies — for that, you would need to work with an SEO specialist."
         },
         {
           question: "Which platforms do you use to build websites?",

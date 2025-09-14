@@ -11,8 +11,8 @@ export default (langPrefix = "") => ({
   },
   home: {
     meta: {
-      title: "Davide La Marca - Siti Web & SEO",
-      description: "Sviluppo siti web moderni, veloci e ottimizzati SEO per far crescere la tua presenza online."
+      title: "Davide La Marca - Siti Web & Design",
+      description: "Sviluppo siti web moderni, veloci e ottimizzati per far crescere la tua presenza online."
     },
     hero: {
       badge: "Freelance Web Developer",
@@ -67,11 +67,11 @@ export default (langPrefix = "") => ({
         },
         {
           question: "Offri servizi di manutenzione dopo il lancio?",
-          answer: `Sì, offro un servizio di manutenzione per garantire che il tuo sito rimanga sicuro, aggiornato e performante nel tempo. Questo include aggiornamenti di sicurezza, backup regolari, e assistenza tecnica. <a href='${langPrefix}/contact' aria-label='Apri pagina contatti' class='text-sky-500 hover:underline '>Contattami</a> per maggiori dettagli.`
+            answer: "Dopo la consegna offro un periodo di garanzia durante il quale risolvo eventuali problemi tecnici o bug emersi nell’uso reale del sito. Questo ti permette di avere la sicurezza che tutto funzioni correttamente. Per maggiori dettagli consulta i miei <a href='/terms' aria-label='Apri Termini di Servizio' class='text-sky-500 hover:underline'>Termini di Servizio</a>."
         },
         {
           question: "Il sito sarà ottimizzato per i motori di ricerca?",
-          answer: "Tutti i siti che sviluppo seguono le migliori pratiche SEO di base. Questo include struttura semantica, ottimizzazione delle immagini, velocità di caricamento e compatibilità mobile."
+          answer: "Tutti i siti che sviluppo seguono le migliori pratiche SEO di base per garantirti un buon punto di partenza: struttura semantica, ottimizzazione delle immagini, velocità di caricamento e compatibilità mobile. Questo ti aiuta a partire con il piede giusto sui motori di ricerca. Tuttavia, non offro servizi di SEO avanzata o strategie di posizionamento: per attività specifiche di marketing e crescita organica è necessario affidarsi a uno specialista SEO."
         },
         {
           question: "Quali piattaforme usi per creare siti web?",

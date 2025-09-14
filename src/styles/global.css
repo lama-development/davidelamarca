@@ -15,6 +15,24 @@ body {
     sans-serif;
 }
 
+*,
+*::before,
+*::after {
+  transition: 
+    background-color 300ms ease-in-out,
+    border-color 300ms ease-in-out,
+    color 300ms ease-in-out,
+    fill 300ms ease-in-out,
+    stroke 300ms ease-in-out,
+    opacity 300ms ease-in-out,
+    box-shadow 300ms ease-in-out,
+    transform 300ms ease-in-out;
+}
+
+.preload * {
+  transition: none !important;
+}
+
 details summary::-webkit-details-marker {
   display: none;
 }

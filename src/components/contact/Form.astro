@@ -11,7 +11,7 @@ const langPrefix = Astro.url.pathname.startsWith("/en") ? "/en" : "";
         <!-- Honeypot field for spam protection -->
         <input type="checkbox" name="botcheck" class="hidden" style="display: none;" />
         <!-- Step 1: Basic Information -->
-        <div id="step-1" class="step-content hidden">
+        <div id="step-1" class="step-content">
           <div class="mb-10">
             <div class="mb-6 flex items-center space-x-4">
               <div class="flex h-12 w-12 items-center justify-center rounded-xl border border-sky-500/20 bg-sky-500/10">
@@ -51,7 +51,7 @@ const langPrefix = Astro.url.pathname.startsWith("/en") ? "/en" : "";
           </div>
         </div>
         <!-- Step 2: Terms  -->
-        <div id="step-2" class="step-content">
+        <div id="step-2" class="step-content hidden">
           <div class="mb-6 flex items-center space-x-4">
             <div class="flex h-12 w-12 items-center justify-center rounded-xl border border-sky-500/20 bg-sky-500/10">
               <svg class="h-6 w-6 text-sky-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">

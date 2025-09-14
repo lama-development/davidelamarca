@@ -3,11 +3,18 @@ document.addEventListener("DOMContentLoaded", function () {
   const themeIndicator = document.getElementById("theme-indicator");
   const html = document.documentElement;
 
+  // Add preload class to prevent transitions on initial load
+  html.classList.add("preload");
+
+  // Remove preload class after a brief delay to enable transitions
+  setTimeout(() => {
+    html.classList.remove("preload");
+  }, 100);
+
   // Get current theme from localStorage or default to 'system'
   let currentTheme = localStorage.getItem("theme") || "system";
 
-  // Apply theme on page load
-  applyTheme(currentTheme);
+  // Update UI to match the already-applied theme (theme was applied in head script)
   updateActiveButton(currentTheme);
 
   // Add click event listeners to theme buttons

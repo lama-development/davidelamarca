@@ -4,9 +4,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const chevronIcon = document.getElementById("chevron-icon");
   const overlay = document.getElementById("mobile-menu-overlay");
 
-  // Set active navigation link based on current page
-  setActiveNavLink();
-
   if (menuButton && mobileMenu && chevronIcon && overlay) {
     menuButton.addEventListener("click", function (e) {
       e.stopPropagation();
@@ -47,26 +44,3 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
-
-// Function to set active navigation link based on current page
-function setActiveNavLink() {
-  const currentPath = window.location.pathname;
-  const navLinks = document.querySelectorAll(".nav-link");
-  const mobileLinks = document.querySelectorAll("#mobile-menu a");
-
-  // Remove active classes from all links first
-  [...navLinks, ...mobileLinks].forEach((link) => {
-    link.classList.remove("bg-neutral-100", "dark:bg-neutral-900", "border", "border-neutral-200", "dark:border-neutral-800");
-  });
-
-  // Add active classes to current page links
-  [...navLinks, ...mobileLinks].forEach((link) => {
-    const href = link.getAttribute("href");
-    const normalizedHref = href.endsWith('/') ? href.slice(0, -1) : href;
-    const normalizedPath = currentPath.endsWith('/') && currentPath !== '/' ? currentPath.slice(0, -1) : currentPath;
-    
-    if (normalizedHref === normalizedPath || (normalizedPath === "/" && normalizedHref === "")) {
-      link.classList.add("bg-neutral-100", "dark:bg-neutral-900", "border", "border-neutral-200", "dark:border-neutral-800");
-    }
-  });
-}

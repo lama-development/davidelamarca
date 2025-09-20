@@ -59,15 +59,15 @@ export default (langPrefix = "") => ({
       questions: [
         {
           question: "How much does a professional website cost?",
-          answer: `The cost of a website depends on many factors: complexity, required features, timelines, and goals. Each project is evaluated individually based on your needs. <a href='${langPrefix}/contact' aria-label='Open contact page' class='text-sky-500 hover:underline '>Contact me</a> to receive a personalized quote.`
+          answer: `The cost of a website depends on many factors: complexity, required features, timelines, and goals. Each project is evaluated individually based on your needs. <a href='${langPrefix}/contact' aria-label='Open contact page' class='text-blue-500 hover:underline '>Contact me</a> to receive a personalized quote.`
         },
         {
           question: "How long does it take to build a website?",
-          answer: `Development time varies depending on the complexity of the project. A showcase website may take 3-4 weeks, while more complex projects with advanced features can take 2-3 months or more. I'll always provide you with a clear timeline at the start of the project. You can see examples of completed work in the <a href='${langPrefix}/projects' aria-label='Open projects page' class='text-sky-500 hover:underline '>Projects</a> page  .`
+          answer: `Development time varies depending on the complexity of the project. A showcase website may take 3-4 weeks, while more complex projects with advanced features can take 2-3 months or more. I'll always provide you with a clear timeline at the start of the project. You can see examples of completed work in the <a href='${langPrefix}/projects' aria-label='Open projects page' class='text-blue-500 hover:underline '>Projects</a> page.`
         },
         {
           question: "Do you offer maintenance services after launch?",
-          answer: `After delivery, I provide a warranty period during which I fix any technical issues or bugs that may arise in real-world use. This ensures your website runs smoothly. For more details, please refer to my <a href='${langPrefix}/terms' aria-label='Open Terms of Service' class='text-sky-500 hover:underline'>Terms of Service</a>.`
+          answer: `After delivery, I provide a warranty period during which I fix any technical issues or bugs that may arise in real-world use. This ensures your website runs smoothly. For more details, please refer to my <a href='${langPrefix}/terms' aria-label='Open Terms of Service' class='text-blue-500 hover:underline'>Terms of Service</a>.`
         },
         {
           question: "Will the website be optimized for search engines?",
@@ -75,7 +75,7 @@ export default (langPrefix = "") => ({
         },
         {
           question: "Which platforms do you use to build websites?",
-          answer: "I specialize in creating websites with <a href='https://squarespace.com' aria-label='Open Squarespace website' target='_blank' rel='noopener noreferrer' class='text-sky-500 hover:underline '>Squarespace</a> and <a href='https://framer.com' aria-label='Open Framer website' target='_blank' rel='noopener noreferrer' class='text-sky-500 hover:underline '>Framer</a>, both excellent for modern design and simple content management. I can also develop fully custom-coded websites for specific needs, though this requires more time and a higher budget."
+          answer: "I specialize in creating websites with <a href='https://squarespace.com' aria-label='Open Squarespace website' target='_blank' rel='noopener noreferrer' class='text-blue-500 hover:underline '>Squarespace</a> and <a href='https://framer.com' aria-label='Open Framer website' target='_blank' rel='noopener noreferrer' class='text-blue-500 hover:underline '>Framer</a>, both excellent for modern design and simple content management. I can also develop fully custom-coded websites for specific needs, though this requires more time and a higher budget."
         }
       ]
     },
@@ -126,26 +126,6 @@ export default (langPrefix = "") => ({
         link: "https://capricebleu.com",
         ariaLabel: "Website page with three women posing on a boat, Capri Island and calm sea in background, promoting exclusive tours."
       }
-      // {
-      //   id: "netwatch",
-      //   title: "NetWatch",
-      //   description: "lorem ipsum dolor sit amet.",
-      //   button: "View details",
-      //   image: "placeholder.png",
-      //   technologies: ["HTML", "CSS", "Javascript", "Python", "SQLite"],
-      //   link: "https://github.com/lama-development/netwatch",
-      //   ariaLabel: "lorem ipsum dolor sit amet"
-      // },
-      // {
-      //   id: "exotic-county-roleplay",
-      //   title: "Exotic County Roleplay",
-      //   description: "lorem ipsum dolor sit amet.",
-      //   button: "View details",
-      //   image: "placeholder.png",
-      //   technologies: ["Framer", "Design"],
-      //   link: "https://ecrp.framer.website",
-      //   ariaLabel: "lorem ipsum dolor sit amet"
-      // }
     ],
     testimonials: {
       badge: "Testimonials",
@@ -154,7 +134,7 @@ export default (langPrefix = "") => ({
       testimonialsList: [
         {
           id: "sorrento-boat-trips-testimonial",
-          quote: "Working with you has been a very positive experience. I appreciated your availability, professionalism, and especially your patience in following every detail. I liked how you listened to my needs and transformed them into a functional and aesthetically pleasing website. What particularly impressed me was your ability to propose creative and practical solutions that made the final result even better than I had imagined.",
+          quote: "Working with you has been a very positive experience. I appreciated your availability, professionalism, and especially your patience in following every detail. I liked how you listened to my needs and transformed them into a functional and aesthetically pleasing website. What particularly impressed me was your ability to propose creative and practical solutions that made the final result even better than I had imagined",
           author: "Amy and Antonio",
           company: "Sorrento Boat Trips",
           website: "https://sorrentoboattrips.com",
@@ -300,7 +280,7 @@ export default (langPrefix = "") => ({
     header: {
       badge: "Legal",
       title: "Terms of Service",
-      subtitle: "Last updated: <code>2025-09-09</code>"
+      subtitle: "Last updated: <code>2025-09-20</code>"
     },
     sections: [
       {
@@ -308,7 +288,7 @@ export default (langPrefix = "") => ({
         content : [
           {
             type: "paragraph",
-            text: "The term “Provider” refers to LA MARCA DAVIDE (sole proprietorship, VAT ID 02804090039). The term “Client” refers to the natural or legal person who submits a request through the form on the <a href='/en/contact' class='text-sky-500 hover:underline'>contact page</a> or accepts the written offer. These Terms govern the provision of website design, development, optimization, and maintenance services and related services (the “Services”). Submitting the form or continued use of the website <a href='https://davidelamarca.com/en' class='text-sky-500 hover:underline'>davidelamarca.com</a> constitutes full acceptance of these Terms. The Provider reserves the right to modify these Terms at any time; changes will take effect from the date of publication on the website. Continued use of the website or execution of new orders following the publication of changes constitutes tacit acceptance thereof. The date of the latest version is shown at the top of this document and is updated when changes are published."
+            text: `The term «Provider» refers to LA MARCA DAVIDE (sole proprietorship, VAT ID 02804090039). The term «Client» refers to the natural or legal person who submits a request through the form on the <a href='${langPrefix}/contact' class='text-blue-500 hover:underline'>contact page</a> or accepts the written offer. These Terms govern the provision of website design, development, optimization, and maintenance services and related services (the «Services»). Submitting the form or continued use of the website <a href='https://davidelamarca.com/en' class='text-blue-500 hover:underline'>davidelamarca.com</a> constitutes full acceptance of these Terms. The Provider reserves the right to modify these Terms at any time; changes will take effect from the date of publication on the website. Continued use of the website or execution of new orders following the publication of changes constitutes tacit acceptance thereof. The date of the latest version is shown at the top of this document and is updated when changes are published.`
           }
         ]
       },
@@ -317,7 +297,7 @@ export default (langPrefix = "") => ({
         content: [
           {
             type: "paragraph",
-            text: "Services are performed according to the agreed brief and specifications. Websites are typically built on SaaS platforms such as <a href='https://squarespace.com' aria-label='Open Squarespace website' target='_blank' rel='noopener noreferrer' class='text-sky-500 hover:underline '>Squarespace</a> or <a href='https://framer.com' aria-label='Open Framer website' target='_blank' rel='noopener noreferrer' class='text-sky-500 hover:underline '>Framer</a>; custom code development is possible exclusively for complex requirements and will be specified in the quote."
+            text: "Services are performed according to the agreed brief and specifications. Websites are typically built on SaaS platforms such as <a href='https://squarespace.com' aria-label='Open Squarespace website' target='_blank' rel='noopener noreferrer' class='text-blue-500 hover:underline '>Squarespace</a> or <a href='https://framer.com' aria-label='Open Framer website' target='_blank' rel='noopener noreferrer' class='text-blue-500 hover:underline '>Framer</a>; custom code development is possible exclusively for complex requirements and will be specified in the quote."
           },
           {
             type: "paragraph",
@@ -348,7 +328,7 @@ export default (langPrefix = "") => ({
         content: [
           {
             type: "paragraph",
-            text: "For projects built on SaaS platforms (e.g., <a href='https://squarespace.com' aria-label='Open Squarespace website' target='_blank' rel='noopener noreferrer' class='text-sky-500 hover:underline'>Squarespace</a>, <a href='https://framer.com' aria-label='Open Framer website' target='_blank' rel='noopener noreferrer' class='text-sky-500 hover:underline '>Framer</a> or similar) the Client is required to independently purchase the necessary plan/subscription on the chosen platform and grant the Provider access to the project with appropriate privileges (e.g., collaborator role, workspace access, or technical credentials) to enable the performance of activities. Part of the project's content or functionality may remain blocked or invisible until final payment; this limitation is intended to protect the ownership of the work and ensure fulfillment of contractual obligations, and cannot be interpreted as non-compliance, defect, or grounds for complaint against the Provider."
+            text: "For projects built on SaaS platforms (e.g., <a href='https://squarespace.com' aria-label='Open Squarespace website' target='_blank' rel='noopener noreferrer' class='text-blue-500 hover:underline'>Squarespace</a>, <a href='https://framer.com' aria-label='Open Framer website' target='_blank' rel='noopener noreferrer' class='text-blue-500 hover:underline '>Framer</a> or similar) the Client is required to independently purchase the necessary plan/subscription on the chosen platform and grant the Provider access to the project with appropriate privileges (e.g., collaborator role, workspace access, or technical credentials) to enable the performance of activities. Part of the project's content or functionality may remain blocked or invisible until final payment; this limitation is intended to protect the ownership of the work and ensure fulfillment of contractual obligations, and cannot be interpreted as non-compliance, defect, or grounds for complaint against the Provider."
           },
           {
             type: "paragraph",
@@ -398,7 +378,7 @@ export default (langPrefix = "") => ({
           },
           {
             type: "paragraph",
-            text: "The Provider reserves the right to include discrete references to their professional activity, for example with the phrase “Designed by Davide La Marca” in the footer or another non-intrusive location, and to use images, screenshots, and project descriptions for their portfolio and promotional channels. Any requests for embargo, anonymization, or NDA must be agreed upon prior to the project commencement."
+            text: "The Provider reserves the right to include discrete references to their professional activity, for example with the phrase «Designed by Davide La Marca» in the footer or another non-intrusive location, and to use images, screenshots, and project descriptions for their portfolio and promotional channels. Any requests for embargo, anonymization, or NDA must be agreed upon prior to the project commencement."
           }
         ]
       },
@@ -444,9 +424,8 @@ export default (langPrefix = "") => ({
             items: [
               "LA MARCA DAVIDE",
               "VAT ID: 02804090039",
-              "Website: <a href='https://davidelamarca.com/en' aria-label='Go to website' class='text-sky-500 hover:underline'>davidelamarca.com</a>",
-              "Email: <a href='mailto:info@davidelamarca.com' aria-label='Send email' class='text-sky-500 hover:underline'>info@davidelamarca.com</a>",
-              "PEC (Certified Email): <a href='mailto:davidelamarca@legalmail.it' aria-label='Send email' class='text-sky-500 hover:underline'>davidelamarca@legalmail.it</a>",
+              "Website: <a href='https://davidelamarca.com/en' aria-label='Go to website' class='text-blue-500 hover:underline'>davidelamarca.com</a>",
+              "Email: <a href='mailto:info@davidelamarca.com' aria-label='Send email' class='text-blue-500 hover:underline'>info@davidelamarca.com</a>"
             ]
           },
         ]
@@ -466,7 +445,7 @@ privacyPolicy: {
   header: {
     badge: "Legal",
     title: "Privacy Policy",
-    subtitle: "Last updated: <code>2025-09-08</code>"
+    subtitle: "Last updated: <code>2025-09-20</code>"
   },
   sections: [
     {
@@ -474,7 +453,7 @@ privacyPolicy: {
       content: [
         {
           type: "paragraph",
-          text: "This Privacy Policy describes how LA MARCA DAVIDE (hereinafter, the “Controller” or “we”) collects, processes, stores, and protects personal data through the website <a href='https://davidelamarca.com' aria-label='Go to website' class='text-sky-500 hover:underline'>davidelamarca.com</a> (hereinafter, the “Website”) in accordance with the EU Regulation 2016/679 (hereinafter, “GDPR”) and applicable national law. Using the Website implies acceptance of the terms in this Policy. If you do not accept them, please do not use the Website."
+          text: "This Privacy Policy describes how LA MARCA DAVIDE (hereinafter, the «Controller» or «we») collects, processes, stores, and protects personal data through the website <a href='https://davidelamarca.com' aria-label='Go to website' class='text-blue-500 hover:underline'>davidelamarca.com</a> (hereinafter, the «Website») in accordance with the EU Regulation 2016/679 (hereinafter, «GDPR») and applicable national law. Using the Website implies acceptance of the terms in this Policy. If you do not accept them, please do not use the Website."
         }
       ]
     },
@@ -486,14 +465,13 @@ privacyPolicy: {
           items: [
             "LA MARCA DAVIDE",
             "VAT: 02804090039",
-            "Website: <a href='https://davidelamarca.com' aria-label='Go to website' class='text-sky-500 hover:underline'>davidelamarca.com</a>",
-            "Email: <a href='mailto:info@davidelamarca.com' aria-label='Send email' class='text-sky-500 hover:underline'>info@davidelamarca.com</a>",
-            "PEC (Certified Email): <a href='mailto:davidelamarca@legalmail.it' aria-label='Send email' class='text-sky-500 hover:underline'>davidelamarca@legalmail.it</a>"
+            "Website: <a href='https://davidelamarca.com' aria-label='Go to website' class='text-blue-500 hover:underline'>davidelamarca.com</a>",
+            "Email: <a href='mailto:info@davidelamarca.com' aria-label='Send email' class='text-blue-500 hover:underline'>info@davidelamarca.com</a>"
           ]
         },
         {
           type: "paragraph",
-          text: "Project requests must be submitted exclusively via the dedicated form available at <a href='https://davidelamarca.com/contact' aria-label='Go to contact page' class='text-sky-500 hover:underline'>davidelamarca.com/contact</a>. For any questions regarding this Privacy Policy or the exercise of rights, please contact the above references. No Data Protection Officer (DPO) has been appointed."
+          text: `Project requests must be submitted exclusively via the dedicated form available at the <a href='${langPrefix}/contact' aria-label='Go to contact page' class='text-blue-500 hover:underline'>contact page</a>. For any questions regarding this Privacy Policy or the exercise of rights, please contact the above references. No Data Protection Officer (DPO) has been appointed.`
         }
       ]
     },
@@ -575,9 +553,9 @@ privacyPolicy: {
         {
           type: "list",
           items: [
-            "<a href='https://web3forms.com' aria-label='Open Web3Forms website' target='_blank' rel='noopener noreferrer' class='text-sky-500 hover:underline'>Web3Forms</a>: technical management of the contact form; submissions are forwarded via email to the Controller; Web3Forms states that it does not permanently store submissions and periodically deletes logs. See Web3Forms <a href='https://web3forms.com/privacy' aria-label='Open Web3Forms Privacy Policy' target='_blank' rel='noopener noreferrer' class='text-sky-500 hover:underline'>Privacy Policy</a>.",
-            "<a href='https://cloudflare.com' aria-label='Open Cloudflare website' target='_blank' rel='noopener noreferrer' class='text-sky-500 hover:underline'>Cloudflare</a>: protection services (WAF), CDN, partial hosting, and aggregate traffic analysis through <a href='https://cloudflare.com/web-analytics' aria-label='Open Cloudflare Web Analytics website' target='_blank' rel='noopener noreferrer' class='text-sky-500 hover:underline'>Cloudflare Web Analytics</a>, used in a way that does not employ personal tracking cookies. See Cloudflare <a href='https://cloudflare.com/privacypolicy' aria-label='Open Cloudflare Privacy Policy' target='_blank' rel='noopener noreferrer' class='text-sky-500 hover:underline'>Privacy Policy</a>.",
-            "<a href='https://zoho.com' aria-label='Open Zoho website' target='_blank' rel='noopener noreferrer' class='text-sky-500 hover:underline'>Zoho</a>: management of the professional email account where submissions are received. See Zoho <a href='https://zoho.com/privacy' aria-label='Open Zoho Privacy Policy' target='_blank' rel='noopener noreferrer' class='text-sky-500 hover:underline'>Privacy Policy</a>."
+            "<a href='https://web3forms.com' aria-label='Open Web3Forms website' target='_blank' rel='noopener noreferrer' class='text-blue-500 hover:underline'>Web3Forms</a>: technical management of the contact form; submissions are forwarded via email to the Controller; Web3Forms states that it does not permanently store submissions and periodically deletes logs. See Web3Forms <a href='https://web3forms.com/privacy' aria-label='Open Web3Forms Privacy Policy' target='_blank' rel='noopener noreferrer' class='text-blue-500 hover:underline'>Privacy Policy</a>.",
+            "<a href='https://cloudflare.com' aria-label='Open Cloudflare website' target='_blank' rel='noopener noreferrer' class='text-blue-500 hover:underline'>Cloudflare</a>: protection services (WAF), CDN, partial hosting, and aggregate traffic analysis through <a href='https://cloudflare.com/web-analytics' aria-label='Open Cloudflare Web Analytics website' target='_blank' rel='noopener noreferrer' class='text-blue-500 hover:underline'>Cloudflare Web Analytics</a>, used in a way that does not employ personal tracking cookies. See Cloudflare <a href='https://cloudflare.com/privacypolicy' aria-label='Open Cloudflare Privacy Policy' target='_blank' rel='noopener noreferrer' class='text-blue-500 hover:underline'>Privacy Policy</a>.",
+            "<a href='https://zoho.com' aria-label='Open Zoho website' target='_blank' rel='noopener noreferrer' class='text-blue-500 hover:underline'>Zoho</a>: management of the professional email account where submissions are received. See Zoho <a href='https://zoho.com/privacy' aria-label='Open Zoho Privacy Policy' target='_blank' rel='noopener noreferrer' class='text-blue-500 hover:underline'>Privacy Policy</a>."
           ]
         }
       ]
@@ -623,7 +601,7 @@ privacyPolicy: {
         {
           type: "list",
           items: [
-            "<a href='https://cloudflare.com/web-analytics' aria-label='Open Cloudflare Web Analytics website' target='_blank' rel='noopener noreferrer' class='text-sky-500 hover:underline'>Cloudflare Web Analytics</a>, a traffic analysis system that does not use personal tracking cookies and provides aggregated, non-identifiable data;",
+            "<a href='https://cloudflare.com/web-analytics' aria-label='Open Cloudflare Web Analytics website' target='_blank' rel='noopener noreferrer' class='text-blue-500 hover:underline'>Cloudflare Web Analytics</a>, a traffic analysis system that does not use personal tracking cookies and provides aggregated, non-identifiable data;",
             "Browser localStorage solely for saving the user's theme preference (light/dark mode)."
           ]
         },
@@ -660,7 +638,7 @@ privacyPolicy: {
         },
         {
           type: "paragraph",
-          text: "Such rights may be exercised by submitting a written request to <a href='mailto:info@davidelamarca.com' aria-label='Send email' class='text-sky-500 hover:underline'>info@davidelamarca.com</a> or PEC (Certified Email) <a href='mailto:davidelamarca@legalmail.it' aria-label='Send email' class='text-sky-500 hover:underline'>davidelamarca@legalmail.it</a>. Requests will be processed within the terms and conditions established by GDPR. The Controller may request reasonable information to verify the identity of the Data Subject if necessary to protect rights and security; except for exceptional cases, identity documents are not required for ordinary requests."
+          text: "Such rights may be exercised by submitting a written request to <a href='mailto:info@davidelamarca.com' aria-label='Send email' class='text-blue-500 hover:underline'>info@davidelamarca.com</a>. Requests will be processed within the terms and conditions established by GDPR. The Controller may request reasonable information to verify the identity of the Data Subject if necessary to protect rights and security; except for exceptional cases, identity documents are not required for ordinary requests."
         },
         {
           type: "paragraph",
@@ -686,7 +664,7 @@ privacyPolicy: {
         },
         {
           type: "paragraph",
-          text: "The Website is not directed at minors, and we do not knowingly collect personal data from individuals under 16 years of age. If we become aware of data from a minor under 16 without parental or guardian consent, we will take steps to delete such data. Minors or their parents/guardians may request deletion of data by contacting <a href='mailto:info@davidelamarca.com' aria-label='Send email' class='text-sky-500 hover:underline'>info@davidelamarca.com</a>."
+          text: "The Website is not directed at minors, and we do not knowingly collect personal data from individuals under 16 years of age. If we become aware of data from a minor under 16 without parental or guardian consent, we will take steps to delete such data. Minors or their parents/guardians may request deletion of data by contacting <a href='mailto:info@davidelamarca.com' aria-label='Send email' class='text-blue-500 hover:underline'>info@davidelamarca.com</a>."
         }
       ]
     },

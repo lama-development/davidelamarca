@@ -2,36 +2,31 @@
 const { testimonials } = Astro.props;
 ---
 
-<section class="border-b border-neutral-200 bg-neutral-100 px-6 py-24 dark:border-neutral-800 dark:bg-neutral-900">
+<section class="border-b border-neutral-200 bg-neutral-100 px-6 py-24 dark:dark:border-neutral-800 dark:bg-neutral-900">
   <div class="mx-auto max-w-7xl">
     <div class="mb-16 text-center">
-      <div class="mx-auto mb-6 inline-flex items-center gap-2 rounded-full border border-sky-500/20 bg-sky-500/10 px-3 py-1.5 text-xs font-medium whitespace-nowrap text-sky-500 sm:mb-8 sm:text-sm">
-        <span class="text-xs font-medium text-sky-500 sm:text-sm">{testimonials.badge}</span>
+      <div class="mx-auto mb-6 inline-flex items-center gap-2 rounded-full border border-blue-500/20 bg-blue-500/10 px-3 py-1.5 text-xs font-medium whitespace-nowrap text-blue-500 sm:mb-8 sm:text-sm">
+        <span class="text-xs font-medium text-blue-500 sm:text-sm">{testimonials.badge}</span>
       </div>
       <h2 class="mb-4 text-5xl leading-[0.8] font-bold tracking-tight text-neutral-900 dark:text-neutral-100">{testimonials.title}</h2>
       <p class="mx-auto max-w-xs text-base leading-[1.1] text-neutral-700 md:max-w-xl md:text-lg dark:text-neutral-300">{testimonials.subtitle}</p>
     </div>
     <!-- Carousel Container -->
     <div class="relative">
-      <div id="testimonials-carousel" class="overflow-hidden">
-        <div id="testimonials-track" class="flex transition-transform duration-500 ease-in-out">
+      <div id="testimonials-carousel" class="scrollbar-hide snap-x snap-mandatory overflow-x-auto">
+        <div id="testimonials-track" class="flex">
           {
             testimonials.testimonialsList.map((testimonial: any) => (
-              <div class="w-full flex-shrink-0 px-4">
-                <div class="mx-auto max-w-4xl">
-                  <div class="overflow-hidden rounded-3xl border border-neutral-200 bg-neutral-50 p-8 md:p-12 dark:border-neutral-800 dark:bg-neutral-950">
-                    <div class="mb-6 flex justify-start">
-                      <svg class="h-8 w-8 text-sky-500" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-10zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z" />
-                      </svg>
-                    </div>
-                    <blockquote class="mb-8 text-left text-sm leading-relaxed text-neutral-700 md:text-base lg:text-lg dark:text-neutral-300">"{testimonial.quote}"</blockquote>
+              <div class="w-full flex-shrink-0 snap-center px-4">
+                <div class="mx-auto max-w-3xl">
+                  <div class="overflow-hidden rounded-3xl border border-neutral-200 bg-neutral-50 p-8 md:p-12 dark:dark:border-neutral-800 dark:bg-neutral-950">
+                    <blockquote class="mb-8 text-left text-sm leading-relaxed text-neutral-700 md:text-base lg:text-lg dark:text-neutral-300">«{testimonial.quote}»</blockquote>
                     <div class="text-left">
                       <div class="mb-1 text-lg font-semibold text-neutral-900 dark:text-neutral-100">{testimonial.author}</div>
                       <div class="text-sm text-neutral-600 dark:text-neutral-400">
                         {testimonial.role} •{" "}
                         {testimonial.website ? (
-                          <a href={testimonial.website} target="_blank" rel="noopener noreferrer" class="transition-all duration-200 hover:underline">
+                          <a href={testimonial.website} target="_blank" rel="noopener noreferrer" class="hover:underline">
                             {testimonial.company}
                           </a>
                         ) : (
@@ -46,30 +41,12 @@ const { testimonials } = Astro.props;
           }
         </div>
       </div>
-      <!-- Navigation Arrows -->
-      {
-        testimonials.testimonialsList.length > 1 && (
-          <>
-            <button id="prev-testimonial" class="absolute top-1/2 left-4 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-neutral-200 bg-neutral-50 text-neutral-700 transition-colors duration-200 hover:cursor-pointer hover:bg-neutral-200 disabled:cursor-not-allowed disabled:opacity-50 dark:border-neutral-800 dark:bg-neutral-950 dark:text-neutral-200 dark:hover:bg-neutral-800" aria-label="Testimonial precedente">
-              <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-              </svg>
-            </button>
-
-            <button id="next-testimonial" class="absolute top-1/2 right-4 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-neutral-200 bg-neutral-50 text-neutral-700 transition-colors duration-200 hover:cursor-pointer hover:bg-neutral-200 disabled:cursor-not-allowed disabled:opacity-50 dark:border-neutral-800 dark:bg-neutral-950 dark:text-neutral-200 dark:hover:bg-neutral-800" aria-label="Testimonial successivo">
-              <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-              </svg>
-            </button>
-          </>
-        )
-      }
       <!-- Indicators -->
       {
         testimonials.testimonialsList.length > 1 && (
           <div class="mt-8 flex justify-center gap-2">
             {testimonials.testimonialsList.map((_: any, index: number) => (
-              <button class="testimonial-indicator h-2 w-2 rounded-full bg-neutral-300 transition-colors duration-200 hover:cursor-pointer dark:bg-neutral-700" data-index={index} aria-label={`Vai al testimonial ${index + 1}`} />
+              <button class="testimonial-indicator h-2 w-2 rounded-full bg-neutral-300 hover:cursor-pointer dark:bg-neutral-700" data-index={index} aria-label={`Vai al testimonial ${index + 1}`} />
             ))}
           </div>
         )

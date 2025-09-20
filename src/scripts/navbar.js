@@ -2,22 +2,20 @@ document.addEventListener("DOMContentLoaded", function () {
   const menuButton = document.getElementById("mobile-menu-button");
   const mobileMenu = document.getElementById("mobile-menu");
   const chevronIcon = document.getElementById("chevron-icon");
-  const overlay = document.getElementById("mobile-menu-overlay");
 
-  if (menuButton && mobileMenu && chevronIcon && overlay) {
+  if (menuButton && mobileMenu && chevronIcon) {
     menuButton.addEventListener("click", function (e) {
       e.stopPropagation();
       const isHidden = mobileMenu.classList.contains("hidden");
       mobileMenu.classList.toggle("hidden");
-      overlay.classList.toggle("hidden");
 
       // Rotate chevron and toggle active state based on menu state
       if (isHidden) {
         chevronIcon.style.transform = "rotate(180deg)";
-        menuButton.classList.add("bg-neutral-100", "dark:bg-neutral-900", "border", "border-neutral-200", "dark:border-neutral-800");
+        menuButton.classList.add("bg-neutral-100", "dark:bg-neutral-900", "border", "border-neutral-200", "dark:dark:border-neutral-800");
       } else {
         chevronIcon.style.transform = "rotate(0deg)";
-        menuButton.classList.remove("bg-neutral-100", "dark:bg-neutral-900", "border", "border-neutral-200", "dark:border-neutral-800");
+        menuButton.classList.remove("bg-neutral-100", "dark:bg-neutral-900", "border", "border-neutral-200", "dark:dark:border-neutral-800");
       }
     });
 
@@ -26,9 +24,8 @@ document.addEventListener("DOMContentLoaded", function () {
       const target = e.target;
       if (!mobileMenu.contains(target) && !menuButton.contains(target)) {
         mobileMenu.classList.add("hidden");
-        overlay.classList.add("hidden");
         chevronIcon.style.transform = "rotate(0deg)";
-        menuButton.classList.remove("bg-neutral-100", "dark:bg-neutral-900", "border", "border-neutral-200", "dark:border-neutral-800");
+        menuButton.classList.remove("bg-neutral-100", "dark:bg-neutral-900", "border", "border-neutral-200", "dark:dark:border-neutral-800");
       }
     });
 
@@ -37,9 +34,8 @@ document.addEventListener("DOMContentLoaded", function () {
     mobileLinks.forEach((link) => {
       link.addEventListener("click", function () {
         mobileMenu.classList.add("hidden");
-        overlay.classList.add("hidden");
         chevronIcon.style.transform = "rotate(0deg)";
-        menuButton.classList.remove("bg-neutral-100", "dark:bg-neutral-900", "border", "border-neutral-200", "dark:border-neutral-800");
+        menuButton.classList.remove("bg-neutral-100", "dark:bg-neutral-900", "border", "border-neutral-200", "dark:dark:border-neutral-800");
       });
     });
   }

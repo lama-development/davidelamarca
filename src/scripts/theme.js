@@ -47,12 +47,12 @@ document.addEventListener("DOMContentLoaded", function () {
     // Update button styles
     themeButtons.forEach((button) => {
       button.classList.remove("text-black", "dark:text-white");
-      button.classList.add("text-gray-600", "dark:text-gray-400");
+      button.classList.add("text-neutral-600", "dark:text-neutral-400");
     });
 
     const activeButton = document.getElementById(`theme-${theme}`);
     if (activeButton) {
-      activeButton.classList.remove("text-gray-600", "dark:text-gray-400");
+      activeButton.classList.remove("text-neutral-600", "dark:text-neutral-400");
       activeButton.classList.add("text-black", "dark:text-white");
 
       // Move the indicator to the active button

@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const fields = document.querySelectorAll("input, textarea");
     fields.forEach((field) => {
       field.classList.remove("border-red-600", "dark:border-red-400");
-      field.classList.add("border-neutral-200", "dark:border-neutral-800");
+      field.classList.add("border-neutral-200", "dark:dark:border-neutral-800");
     });
   }
 
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     if (field) {
-      field.classList.remove("border-neutral-200", "dark:border-neutral-800");
+      field.classList.remove("border-neutral-200", "dark:dark:border-neutral-800");
       field.classList.add("border-red-600", "dark:border-red-400");
     }
   }
@@ -48,10 +48,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (stepNumber <= currentStep) {
         // Active or completed step - blue dot
-        dot.className = "step-dot h-3 w-3 rounded-full bg-sky-500 transition-all duration-200";
+        dot.className = "step-dot h-3 w-3 rounded-full bg-blue-500 ";
       } else {
-        // Inactive step - gray dot
-        dot.className = "step-dot h-3 w-3 rounded-full bg-neutral-300 dark:bg-neutral-600 transition-all duration-200";
+        // Inactive step
+        dot.className = "step-dot h-3 w-3 rounded-full bg-neutral-300 dark:bg-neutral-600 ";
       }
     });
   }
@@ -78,14 +78,14 @@ document.addEventListener("DOMContentLoaded", function () {
       if (nextBtn) {
         // Transform to submit button with text
         nextBtn.innerHTML = submitText;
-        nextBtn.className = "cursor-pointer rounded-full bg-sky-500 px-6 py-3 font-medium text-white transition-colors hover:bg-sky-600";
+        nextBtn.className = "cursor-pointer rounded-full bg-blue-500 px-6 py-3 font-medium tracking-tight text-white hover:bg-blue-600 dark:text-black";
         nextBtn.type = "submit";
       }
     } else {
       if (nextBtn) {
         // Keep as arrow button
         nextBtn.innerHTML = '<svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>';
-        nextBtn.className = "cursor-pointer rounded-full bg-sky-500 p-3 text-white transition-colors hover:bg-sky-600";
+        nextBtn.className = "cursor-pointer rounded-full bg-blue-500 p-3 text-white hover:bg-blue-600 dark:text-black";
         nextBtn.type = "button";
       }
     }
@@ -202,19 +202,13 @@ document.addEventListener("DOMContentLoaded", function () {
     try {
       // Hide any previous error messages
       hideErrorMessage();
-      
+
       // Disable the submit button to prevent multiple submissions
       nextBtn.disabled = true;
-      nextBtn.innerHTML = "Submitting...";
+      nextBtn.innerHTML = "...";
 
       // Create FormData object from the form
       const formData = new FormData(form);
-      
-      // Log form data for debugging
-      console.log("Submitting form data:");
-      for (let [key, value] of formData.entries()) {
-        console.log(key, value);
-      }
 
       // Submit to Web3Forms
       const response = await fetch("https://api.web3forms.com/submit", {
@@ -222,11 +216,8 @@ document.addEventListener("DOMContentLoaded", function () {
         body: formData
       });
 
-      console.log("Response status:", response.status);
-      
       if (response.ok) {
         const result = await response.json();
-        console.log("Form submission successful:", result);
         // Success - show the success message
         showSuccessMessage();
       } else {
@@ -236,11 +227,11 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     } catch (error) {
       console.error("Error submitting form:", error);
-      
+
       // Re-enable the submit button
       nextBtn.disabled = false;
       nextBtn.innerHTML = submitText;
-      
+
       // Show the error message box
       showErrorMessage();
     }
@@ -249,27 +240,27 @@ document.addEventListener("DOMContentLoaded", function () {
   // Handle radio button selection styling
   function updateRadioStyles() {
     const radioInputs = document.querySelectorAll('input[type="radio"]');
-    
-    radioInputs.forEach(radio => {
-      radio.addEventListener('change', function() {
-        // Remove sky-500 border from all radio labels in the same group
+
+    radioInputs.forEach((radio) => {
+      radio.addEventListener("change", function () {
+        // Remove blue-500 border from all radio labels in the same group
         const groupName = this.name;
         const groupRadios = document.querySelectorAll(`input[name="${groupName}"]`);
-        
-        groupRadios.forEach(groupRadio => {
-          const label = groupRadio.closest('label');
+
+        groupRadios.forEach((groupRadio) => {
+          const label = groupRadio.closest("label");
           if (label) {
             // Reset to default border
-            label.classList.remove('border-sky-500');
-            label.classList.add('border-neutral-200', 'dark:border-neutral-800');
+            label.classList.remove("border-blue-500");
+            label.classList.add("border-neutral-200", "dark:dark:border-neutral-800");
           }
         });
-        
-        // Add sky-500 border to the selected radio's label
-        const selectedLabel = this.closest('label');
+
+        // Add blue-500 border to the selected radio's label
+        const selectedLabel = this.closest("label");
         if (selectedLabel && this.checked) {
-          selectedLabel.classList.remove('border-neutral-200', 'dark:border-neutral-800');
-          selectedLabel.classList.add('border-sky-500');
+          selectedLabel.classList.remove("border-neutral-200", "dark:dark:border-neutral-800");
+          selectedLabel.classList.add("border-blue-500");
         }
       });
     });

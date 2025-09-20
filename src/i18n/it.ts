@@ -59,15 +59,15 @@ export default (langPrefix = "") => ({
       questions: [
         {
           question: "Quanto costa un sito web professionale?",
-          answer: `Il costo di un sito web dipende da molti fattori: complessità, funzionalità richieste, tempistiche e obiettivi. Ogni progetto viene valutato individualmente in base alle tue esigenze. <a href='${langPrefix}/contact' aria-label='Apri pagina contatti' class='text-sky-500 hover:underline '>Contattami</a> per ricevere un preventivo personalizzato.`
+          answer: `Il costo di un sito web dipende da molti fattori: complessità, funzionalità richieste, tempistiche e obiettivi. Ogni progetto viene valutato individualmente in base alle tue esigenze. <a href='${langPrefix}/contact' aria-label='Apri pagina contatti' class='text-blue-500 hover:underline '>Contattami</a> per ricevere un preventivo personalizzato.`
         },
         {
           question: "Quanto tempo serve per realizzare un sito web?",
-          answer: `I tempi di realizzazione variano in base alla complessità del progetto. Un sito vetrina può richiedere 3-4 settimane, mentre progetti più complessi con funzionalità avanzate possono richiedere 2-3 mesi o più. Ti fornirò sempre una tempistica chiara all'inizio del progetto. Puoi vedere esempi di lavori già completati nella pagina <a href='${langPrefix}/projects' aria-label='Vai alla pagina progetti' class='text-sky-500 hover:underline '>Progetti</a>.`
+          answer: `I tempi di realizzazione variano in base alla complessità del progetto. Un sito vetrina può richiedere 3-4 settimane, mentre progetti più complessi con funzionalità avanzate possono richiedere 2-3 mesi o più. Ti fornirò sempre una tempistica chiara all'inizio del progetto. Puoi vedere esempi di lavori già completati nella pagina <a href='${langPrefix}/projects' aria-label='Vai alla pagina progetti' class='text-blue-500 hover:underline'>Progetti</a>.`
         },
         {
           question: "Offri servizi di manutenzione dopo il lancio?",
-            answer: "Dopo la consegna offro un periodo di garanzia durante il quale risolvo eventuali problemi tecnici o bug emersi nell’uso reale del sito. Questo ti permette di avere la sicurezza che tutto funzioni correttamente. Per maggiori dettagli consulta i miei <a href='/terms' aria-label='Apri Termini di Servizio' class='text-sky-500 hover:underline'>Termini di Servizio</a>."
+            answer: `Dopo la consegna offro un periodo di garanzia durante il quale risolvo eventuali problemi tecnici o bug emersi nell’uso reale del sito. Questo ti permette di avere la sicurezza che tutto funzioni correttamente. Per maggiori dettagli consulta i miei <a href='${langPrefix}/terms' aria-label='Apri Termini di Servizio' class='text-blue-500 hover:underline'>Termini di Servizio</a>.`
         },
         {
           question: "Il sito sarà ottimizzato per i motori di ricerca?",
@@ -75,7 +75,7 @@ export default (langPrefix = "") => ({
         },
         {
           question: "Quali piattaforme usi per creare siti web?",
-          answer: "Mi specializzo nella realizzazione di siti con <a href='https://squarespace.com' aria-label='Apri sito Squarespace' target='_blank' rel='noopener noreferrer' class='text-sky-500 hover:underline '>Squarespace</a> e <a href='https://framer.com' aria-label='Apri sito Framer' target='_blank' rel='noopener noreferrer' class='text-sky-500 hover:underline '>Framer</a>, entrambe ottime per design moderni e gestione contenuti semplice. Posso anche sviluppare siti completamente da codice per esigenze specifiche, ma questo richiede tempi e costi maggiori."
+          answer: "Mi specializzo nella realizzazione di siti con <a href='https://squarespace.com' aria-label='Apri sito Squarespace' target='_blank' rel='noopener noreferrer' class='text-blue-500 hover:underline '>Squarespace</a> e <a href='https://framer.com' aria-label='Apri sito Framer' target='_blank' rel='noopener noreferrer' class='text-blue-500 hover:underline '>Framer</a>, entrambe ottime per design moderni e gestione contenuti semplice. Posso anche sviluppare siti completamente da codice per esigenze specifiche, ma questo richiede tempi e costi maggiori."
         }
       ]
     },
@@ -126,26 +126,6 @@ export default (langPrefix = "") => ({
         link: "https://capricebleu.com",
         ariaLabel: "Pagina web con tre donne su una barca, l'isola di Capri sullo sfondo, che promuove tour esclusivi."
       }
-      // {
-      //   id: "netwatch",
-      //   title: "NetWatch",
-      //   description: "lorem ipsum dolor sit amet.",
-      //   button: "Vedi dettagli",
-      //   image: "placeholder.png",
-      //   technologies: ["HTML", "CSS", "Javascript", "Python", "SQLite"],
-      //   link: "https://github.com/lama-development/netwatch",
-      //   ariaLabel: "lorem ipsum dolor sit amet"
-      // },
-      // {
-      //   id: "exotic-county-roleplay",
-      //   title: "Exotic County Roleplay",
-      //   description: "lorem ipsum dolor sit amet.",
-      //   button: "Vedi dettagli",
-      //   image: "placeholder.png",
-      //   technologies: ["Framer", "Design"],
-      //   link: "https://ecrp.framer.website",
-      //   ariaLabel: "lorem ipsum dolor sit amet"
-      // }
     ],
     testimonials: {
       badge: "Testimonial",
@@ -154,7 +134,7 @@ export default (langPrefix = "") => ({
       testimonialsList: [
         {
           id: "sorrento-boat-trips-testimonial",
-          quote: "Lavorare con te è stata un'esperienza molto positiva. Ho apprezzato la tua disponibilità, la professionalità e soprattutto la pazienza nel seguire ogni dettaglio. Mi è piaciuto il fatto che hai saputo ascoltare le mie esigenze e trasformarle in una pagina web funzionale ed esteticamente curata. Un aspetto che mi ha colpito particolarmente è stata la tua capacità di proporre soluzioni creative e pratiche che hanno reso il risultato finale ancora migliore di quanto immaginassi.",
+          quote: "Lavorare con te è stata un'esperienza molto positiva. Ho apprezzato la tua disponibilità, la professionalità e soprattutto la pazienza nel seguire ogni dettaglio. Mi è piaciuto il fatto che hai saputo ascoltare le mie esigenze e trasformarle in una pagina web funzionale ed esteticamente curata. Un aspetto che mi ha colpito particolarmente è stata la tua capacità di proporre soluzioni creative e pratiche che hanno reso il risultato finale ancora migliore di quanto immaginassi",
           author: "Amy e Antonio",
           company: "Sorrento Boat Trips",
           website: "https://sorrentoboattrips.com",
@@ -300,7 +280,7 @@ export default (langPrefix = "") => ({
     header: {
       badge: "Legale",
       title: "Termini di Servizio",
-      subtitle: "Ultimo aggiornamento: <code>2025-09-09</code>"
+      subtitle: "Ultimo aggiornamento: <code>2025-09-20</code>"
     },
     sections: [
       {
@@ -308,7 +288,7 @@ export default (langPrefix = "") => ({
         content : [
           {
             type: "paragraph",
-            text: "Con “Fornitore” si intende LA MARCA DAVIDE (ditta individuale, P.IVA 02804090039). Con “Cliente” si intende la persona fisica o giuridica che inoltra richiesta tramite il form presente nella <a href='/contact' class='text-sky-500 hover:underline'>pagina di contatto</a> o accetta per iscritto l'offerta. I presenti Termini disciplinano la fornitura di servizi di progettazione, realizzazione, ottimizzazione e manutenzione di siti web e servizi connessi (i “Servizi”). L'invio del form o l'utilizzo continuato del sito <a href='https://davidelamarca.com' class='text-sky-500 hover:underline'>davidelamarca.com</a> costituiscono accettazione integrale dei presenti Termini. Il Fornitore si riserva il diritto di modificare i presenti Termini in qualsiasi momento; le modifiche entreranno in vigore dalla data di pubblicazione sul sito. L'uso continuato del sito o l'esecuzione di nuovi ordini successivi alla pubblicazione delle modifiche costituiscono accettazione tacita delle stesse. La data dell'ultima versione è riportata in testa al presente documento e viene aggiornata al momento della pubblicazione delle modifiche."
+            text: `Con «Fornitore» si intende LA MARCA DAVIDE (ditta individuale, P.IVA 02804090039). Con «Cliente» si intende la persona fisica o giuridica che inoltra richiesta tramite il form presente nella <a href='${langPrefix}/contact' class='text-blue-500 hover:underline'>pagina di contatto</a> o accetta per iscritto l'offerta. I presenti Termini disciplinano la fornitura di servizi di progettazione, realizzazione, ottimizzazione e manutenzione di siti web e servizi connessi (i «Servizi»). L'invio del form o l'utilizzo continuato del sito <a href='https://davidelamarca.com' class='text-blue-500 hover:underline'>davidelamarca.com</a> costituiscono accettazione integrale dei presenti Termini. Il Fornitore si riserva il diritto di modificare i presenti Termini in qualsiasi momento; le modifiche entreranno in vigore dalla data di pubblicazione sul sito. L'uso continuato del sito o l'esecuzione di nuovi ordini successivi alla pubblicazione delle modifiche costituiscono accettazione tacita delle stesse. La data dell'ultima versione è riportata in testa al presente documento e viene aggiornata al momento della pubblicazione delle modifiche.`
           }
         ]
       },
@@ -317,7 +297,7 @@ export default (langPrefix = "") => ({
         content: [
           {
             type: "paragraph",
-            text: "I Servizi sono eseguiti secondo il brief e le specifiche concordate. Di norma i siti vengono realizzati su piattaforme SaaS come <a href='https://squarespace.com' aria-label='Apri sito Squarespace' target='_blank' rel='noopener noreferrer' class='text-sky-500 hover:underline '>Squarespace</a> o <a href='https://framer.com' aria-label='Apri sito Framer' target='_blank' rel='noopener noreferrer' class='text-sky-500 hover:underline '>Framer</a>; lo sviluppo in codice è possibile esclusivamente per esigenze complesse e sarà specificato nell'offerta."
+            text: "I Servizi sono eseguiti secondo il brief e le specifiche concordate. Di norma i siti vengono realizzati su piattaforme SaaS come <a href='https://squarespace.com' aria-label='Apri sito Squarespace' target='_blank' rel='noopener noreferrer' class='text-blue-500 hover:underline '>Squarespace</a> o <a href='https://framer.com' aria-label='Apri sito Framer' target='_blank' rel='noopener noreferrer' class='text-blue-500 hover:underline '>Framer</a>; lo sviluppo in codice è possibile esclusivamente per esigenze complesse e sarà specificato nell'offerta."
           },
           {
             type: "paragraph",
@@ -348,7 +328,7 @@ export default (langPrefix = "") => ({
         content: [
           {
             type: "paragraph",
-            text: "Per i progetti realizzati su piattaforme SaaS (es. <a href='https://squarespace.com' aria-label='Apri sito Squarespace' target='_blank' rel='noopener noreferrer' class='text-sky-500 hover:underline'>Squarespace</a>, <a href='https://framer.com' aria-label='Apri sito Framer' target='_blank' rel='noopener noreferrer' class='text-sky-500 hover:underline '>Framer</a> o simili) il Cliente è tenuto ad acquistare autonomamente il piano/abbonamento necessario sulla piattaforma scelta e a concedere al Fornitore accesso al progetto con privilegi appropriati (es. ruolo di collaboratore, accesso a workspace o credenziali tecniche) in modo da permettere lo svolgimento delle attività. Parte dei contenuti o delle funzionalità del progetto potrà rimanere bloccata o non visibile fino al saldo; tale limitazione è finalizzata a tutelare la titolarità degli elaborati e a garantire l'adempimento degli obblighi contrattuali, e non può essere interpretata come inadempimento, difetto o motivo di reclamo nei confronti del Fornitore."
+            text: "Per i progetti realizzati su piattaforme SaaS (es. <a href='https://squarespace.com' aria-label='Apri sito Squarespace' target='_blank' rel='noopener noreferrer' class='text-blue-500 hover:underline'>Squarespace</a>, <a href='https://framer.com' aria-label='Apri sito Framer' target='_blank' rel='noopener noreferrer' class='text-blue-500 hover:underline '>Framer</a> o simili) il Cliente è tenuto ad acquistare autonomamente il piano/abbonamento necessario sulla piattaforma scelta e a concedere al Fornitore accesso al progetto con privilegi appropriati (es. ruolo di collaboratore, accesso a workspace o credenziali tecniche) in modo da permettere lo svolgimento delle attività. Parte dei contenuti o delle funzionalità del progetto potrà rimanere bloccata o non visibile fino al saldo; tale limitazione è finalizzata a tutelare la titolarità degli elaborati e a garantire l'adempimento degli obblighi contrattuali, e non può essere interpretata come inadempimento, difetto o motivo di reclamo nei confronti del Fornitore."
           },
           {
             type: "paragraph",
@@ -398,7 +378,7 @@ export default (langPrefix = "") => ({
           },
           {
             type: "paragraph",
-            text: "Il Fornitore si riserva il diritto di inserire riferimenti discreti alla propria attività professionale, ad esempio mediante la dicitura “Designed by Davide La Marca” nel footer o in altra posizione non invasiva, e di utilizzare immagini, screenshot e descrizioni del progetto per il proprio portfolio e canali promozionali. Eventuali richieste di embargo, anonimizzazione o NDA devono essere concordate prima dell’avvio del progetto."
+            text: "Il Fornitore si riserva il diritto di inserire riferimenti discreti alla propria attività professionale, ad esempio mediante la dicitura «Designed by Davide La Marca» nel footer o in altra posizione non invasiva, e di utilizzare immagini, screenshot e descrizioni del progetto per il proprio portfolio e canali promozionali. Eventuali richieste di embargo, anonimizzazione o NDA devono essere concordate prima dell’avvio del progetto."
           }
         ]
       },
@@ -444,9 +424,8 @@ export default (langPrefix = "") => ({
             items: [
               "LA MARCA DAVIDE",
               "P.IVA: 02804090039",
-              "Sito web: <a href='https://davidelamarca.com' aria-label='Vai al sito web' class='text-sky-500 hover:underline'>davidelamarca.com</a>",
-              "Email: <a href='mailto:info@davidelamarca.com' aria-label='Invia email' class='text-sky-500 hover:underline'>info@davidelamarca.com</a>",
-              "PEC: <a href='mailto:davidelamarca@legalmail.it' aria-label='Invia email' class='text-sky-500 hover:underline'>davidelamarca@legalmail.it</a>",
+              "Sito web: <a href='https://davidelamarca.com' aria-label='Vai al sito web' class='text-blue-500 hover:underline'>davidelamarca.com</a>",
+              "Email: <a href='mailto:info@davidelamarca.com' aria-label='Invia email' class='text-blue-500 hover:underline'>info@davidelamarca.com</a>"
             ]
           },
         ]
@@ -466,7 +445,7 @@ export default (langPrefix = "") => ({
     header: {
       badge: "Legale",
       title: "Privacy Policy",
-      subtitle: "Ultimo aggiornamento: <code>2025-09-08</code>"
+      subtitle: "Ultimo aggiornamento: <code>2025-09-20</code>"
     },
     sections: [
       {
@@ -474,7 +453,7 @@ export default (langPrefix = "") => ({
         content : [
           {
             type: "paragraph",
-            text: "La presente Informativa descrive le modalità di raccolta, trattamento, conservazione e protezione dei dati personali effettuati da LA MARCA DAVIDE (di seguito, il “Titolare” o “noi”) tramite il sito web <a href='https://davidelamarca.com' aria-label='Vai al sito web' class='text-sky-500 hover:underline'>davidelamarca.com</a>  (di seguito, il “Sito”) in conformità al Regolamento (UE) 2016/679 (di seguito, “GDPR”) e alla normativa nazionale applicabile. L'utilizzo del Sito comporta l'accettazione delle modalità indicate nella presente Informativa. In mancanza di accettazione, si invita a non utilizzare il Sito."
+            text: "La presente Informativa descrive le modalità di raccolta, trattamento, conservazione e protezione dei dati personali effettuati da LA MARCA DAVIDE (di seguito, il «Titolare» o «noi») tramite il sito web <a href='https://davidelamarca.com' aria-label='Vai al sito web' class='text-blue-500 hover:underline'>davidelamarca.com</a>  (di seguito, il «Sito») in conformità al Regolamento (UE) 2016/679 (di seguito, «GDPR») e alla normativa nazionale applicabile. L'utilizzo del Sito comporta l'accettazione delle modalità indicate nella presente Informativa. In mancanza di accettazione, si invita a non utilizzare il Sito."
           }
         ]
       },
@@ -486,14 +465,13 @@ export default (langPrefix = "") => ({
             items: [
               "LA MARCA DAVIDE",
               "P.IVA: 02804090039",
-              "Sito web: <a href='https://davidelamarca.com' aria-label='Vai al sito web' class='text-sky-500 hover:underline'>davidelamarca.com</a>",
-              "Email: <a href='mailto:info@davidelamarca.com' aria-label='Invia email' class='text-sky-500 hover:underline'>info@davidelamarca.com</a>",
-              "PEC: <a href='mailto:davidelamarca@legalmail.it' aria-label='Invia email' class='text-sky-500 hover:underline'>davidelamarca@legalmail.it</a>"
+              "Sito web: <a href='https://davidelamarca.com' aria-label='Vai al sito web' class='text-blue-500 hover:underline'>davidelamarca.com</a>",
+              "Email: <a href='mailto:info@davidelamarca.com' aria-label='Invia email' class='text-blue-500 hover:underline'>info@davidelamarca.com</a>"
             ]
           },
           {
             type: "paragraph",
-            text: "Per richieste di progetto deve essere utilizzato esclusivamente il form dedicato disponibile nella pagina <a href='https://davidelamarca.com/contact' aria-label='Vai alla pagina contatti' class='text-sky-500 hover:underline'>davidelamarca.com/contact</a>. Per qualsiasi questione relativa alla presente Informativa o all'esercizio dei diritti spettanti, contattare i riferimenti sopra indicati. Non è stato nominato un Data Protection Officer (DPO)."
+            text: `Per richieste di progetto deve essere utilizzato esclusivamente il form dedicato disponibile nella <a <a href='${langPrefix}/contact' aria-label='Vai alla pagina contatti' class='text-blue-500 hover:underline'>pagina di contatto</a>. Per qualsiasi questione relativa alla presente Informativa o all'esercizio dei diritti spettanti, contattare i riferimenti sopra indicati. Non è stato nominato un Data Protection Officer (DPO).`
           }
         ]
       },
@@ -575,9 +553,9 @@ export default (langPrefix = "") => ({
           {
             type: "list", 
             items: [
-              "<a href='https://web3forms.com' aria-label='Apri sito Web3Forms' target='_blank' rel='noopener noreferrer' class='text-sky-500 hover:underline '>Web3Forms</a>: gestione tecnica del form di contatto; le submission vengono inoltrate via email al Titolare; Web3Forms dichiara di non conservare permanentemente le submission e di cancellare i log periodicamente. Consultare la <a href='https://web3forms.com/privacy' aria-label='Apri privacy policy di Web3Forms' target='_blank' rel='noopener noreferrer' class='text-sky-500 hover:underline '>Privacy Policy</a> di Web3Forms.",
-              "<a href='https://cloudflare.com' aria-label='Apri sito Cloudflare' target='_blank' rel='noopener noreferrer' class='text-sky-500 hover:underline '>Cloudflare</a>: servizi di protezione (WAF), CDN, hosting parziale e analisi aggregata del traffico tramite <a href='https://cloudflare.com/web-analytics' aria-label='Apri sito Cloudflare Web Analytics' target='_blank' rel='noopener noreferrer' class='text-sky-500 hover:underline '>Cloudflare Web Analytics</a>, impiegato in modalità che non utilizza cookie identificativi personali. Consultare la <a href='https://cloudflare.com/privacypolicy' aria-label='Apri privacy policy di Cloudflare' target='_blank' rel='noopener noreferrer' class='text-sky-500 hover:underline '>Privacy Policy</a> di Cloudflare.",
-              "<a href='https://zoho.com' aria-label='Apri sito Zoho' target='_blank' rel='noopener noreferrer' class='text-sky-500 hover:underline '>Zoho</a>: gestione della casella email professionale dove vengono recapitate le submission. Consultare la <a href='https://zoho.com/privacy' aria-label='Apri privacy policy di Zoho' target='_blank' rel='noopener noreferrer' class='text-sky-500 hover:underline '>Privacy Policy</a> di Zoho."
+              "<a href='https://web3forms.com' aria-label='Apri sito Web3Forms' target='_blank' rel='noopener noreferrer' class='text-blue-500 hover:underline '>Web3Forms</a>: gestione tecnica del form di contatto; le submission vengono inoltrate via email al Titolare; Web3Forms dichiara di non conservare permanentemente le submission e di cancellare i log periodicamente. Consultare la <a href='https://web3forms.com/privacy' aria-label='Apri privacy policy di Web3Forms' target='_blank' rel='noopener noreferrer' class='text-blue-500 hover:underline '>Privacy Policy</a> di Web3Forms.",
+              "<a href='https://cloudflare.com' aria-label='Apri sito Cloudflare' target='_blank' rel='noopener noreferrer' class='text-blue-500 hover:underline '>Cloudflare</a>: servizi di protezione (WAF), CDN, hosting parziale e analisi aggregata del traffico tramite <a href='https://cloudflare.com/web-analytics' aria-label='Apri sito Cloudflare Web Analytics' target='_blank' rel='noopener noreferrer' class='text-blue-500 hover:underline '>Cloudflare Web Analytics</a>, impiegato in modalità che non utilizza cookie identificativi personali. Consultare la <a href='https://cloudflare.com/privacypolicy' aria-label='Apri privacy policy di Cloudflare' target='_blank' rel='noopener noreferrer' class='text-blue-500 hover:underline '>Privacy Policy</a> di Cloudflare.",
+              "<a href='https://zoho.com' aria-label='Apri sito Zoho' target='_blank' rel='noopener noreferrer' class='text-blue-500 hover:underline '>Zoho</a>: gestione della casella email professionale dove vengono recapitate le submission. Consultare la <a href='https://zoho.com/privacy' aria-label='Apri privacy policy di Zoho' target='_blank' rel='noopener noreferrer' class='text-blue-500 hover:underline '>Privacy Policy</a> di Zoho."
             ]
           }
         ]
@@ -623,7 +601,7 @@ export default (langPrefix = "") => ({
           {
             type: "list",
             items: [
-              "<a href='https://cloudflare.com/web-analytics' aria-label='Apri sito Cloudflare Web Analytics' target='_blank' rel='noopener noreferrer' class='text-sky-500 hover:underline '>Cloudflare Web Analytics</a>, sistema di analisi del traffico che non utilizza cookie di tracciamento personale e restituisce dati aggregati e non identificativi;",
+              "<a href='https://cloudflare.com/web-analytics' aria-label='Apri sito Cloudflare Web Analytics' target='_blank' rel='noopener noreferrer' class='text-blue-500 hover:underline '>Cloudflare Web Analytics</a>, sistema di analisi del traffico che non utilizza cookie di tracciamento personale e restituisce dati aggregati e non identificativi;",
               "localStorage del browser per la sola memorizzazione della preferenza relativa al tema grafico (chiaro/scuro)."
             ]
           },
@@ -660,7 +638,7 @@ export default (langPrefix = "") => ({
           },
           {
             type: "paragraph",
-            text: "L'esercizio di tali diritti può essere effettuato mediante richiesta scritta indirizzata a <a href='mailto:info@davidelamarca.com' aria-label='Invia email' class='text-sky-500 hover:underline'>info@davidelamarca.com</a> o PEC <a href='mailto:davidelamarca@legalmail.it' aria-label='Invia email' class='text-sky-500 hover:underline'>davidelamarca@legalmail.it</a>. Le richieste saranno evase nei termini e secondo le modalità previste dal GDPR. Il Titolare potrà richiedere informazioni ragionevoli per verificare l'identità dell'Interessato qualora ciò sia necessario per tutelare i diritti e la sicurezza; salvo casi eccezionali, non è richiesto l'invio di documenti di identità per le richieste ordinarie."
+            text: "L'esercizio di tali diritti può essere effettuato mediante richiesta scritta indirizzata a <a href='mailto:info@davidelamarca.com' aria-label='Invia email' class='text-blue-500 hover:underline'>info@davidelamarca.com</a>. Le richieste saranno evase nei termini e secondo le modalità previste dal GDPR. Il Titolare potrà richiedere informazioni ragionevoli per verificare l'identità dell'Interessato qualora ciò sia necessario per tutelare i diritti e la sicurezza; salvo casi eccezionali, non è richiesto l'invio di documenti di identità per le richieste ordinarie."
           },
           {
             type: "paragraph",
@@ -686,7 +664,7 @@ export default (langPrefix = "") => ({
           },
           {
             type: "paragraph",
-            text: "Il Sito non è rivolto a minori e non raccogliamo consapevolmente dati personali di minori di 16 anni. Qualora venissimo a conoscenza di dati di un minore di 16 anni senza il consenso dei genitori o del tutore, adotteremo misure per cancellare tali dati. Gli interessati o i loro genitori/tutori possono richiedere la cancellazione dei dati contattando <a href='mailto:info@davidelamarca.com' aria-label='Invia email' class='text-sky-500 hover:underline'>info@davidelamarca.com</a>."
+            text: "Il Sito non è rivolto a minori e non raccogliamo consapevolmente dati personali di minori di 16 anni. Qualora venissimo a conoscenza di dati di un minore di 16 anni senza il consenso dei genitori o del tutore, adotteremo misure per cancellare tali dati. Gli interessati o i loro genitori/tutori possono richiedere la cancellazione dei dati contattando <a href='mailto:info@davidelamarca.com' aria-label='Invia email' class='text-blue-500 hover:underline'>info@davidelamarca.com</a>."
           }
         ]
       },

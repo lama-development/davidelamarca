@@ -19,22 +19,28 @@ body {
 *::before,
 *::after {
   transition: 
-    background-color 300ms ease-in-out,
-    border-color 300ms ease-in-out,
-    color 300ms ease-in-out,
-    fill 300ms ease-in-out,
-    stroke 300ms ease-in-out,
-    opacity 300ms ease-in-out,
-    box-shadow 300ms ease-in-out,
-    transform 300ms ease-in-out;
+    background-color 200ms ease-in-out,
+    border-color 200ms ease-in-out,
+    color 200ms ease-in-out,
+    fill 200ms ease-in-out,
+    opacity 200ms ease-in-out,
+    transform 200ms ease-in-out;
+}
+
+details summary::-webkit-details-marker {
+  display: none;
 }
 
 .preload * {
   transition: none !important;
 }
 
-details summary::-webkit-details-marker {
-  display: none;
+.scrollbar-hide {
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; 
 }
 
 #mobile-menu {

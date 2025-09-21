@@ -101,7 +101,7 @@ export default (langPrefix = "") => ({
         title: "Sorrento Boat Trips",
         description: "Sito web moderno per un'agenzia di tour privati a Sorrento, con sistema di prenotazione online integrato tramite FareHarbor.",
         button: "Vai al sito",
-        image: "sorrento-boat-trips.png",
+        image: "sorrento-boat-trips.webp",
         technologies: ["Squarespace", "SEO", "Fareharbor"],
         link: "https://sorrentoboattrips.com",
         ariaLabel: "Pagina web con contatti di Sorrento Boat Trips e foto di due persone sorridenti in barca al sole."
@@ -111,7 +111,7 @@ export default (langPrefix = "") => ({
         title: "SkillBridge",
         description: "Web app completa che connette freelancer e aziende: post di lavoro, ricerca avanzata, chat in tempo reale e profili personalizzati.",
         button: "Vai al progetto",
-        image: "skillbridge.png",
+        image: "skillbridge.webp",
         technologies: ["HTML", "CSS", "Javascript", "SQLite"],
         link: "https://github.com/lama-development/skillbridge",
         ariaLabel: "Schermata digitale di smartphone con app per cercare lavoro, profili e opportunità."
@@ -121,7 +121,7 @@ export default (langPrefix = "") => ({
         title: "Caprice Bleu",
         description: "Sito web elegante per un'agenzia che offre esperienze e tour privati in barca di lusso, con design raffinato e ottimizzazione SEO.",
         button: "Vai al sito",
-        image: "caprice-bleu.png",
+        image: "caprice-bleu.webp",
         technologies: ["Squarespace", "SEO"],
         link: "https://capricebleu.com",
         ariaLabel: "Pagina web con tre donne su una barca, l'isola di Capri sullo sfondo, che promuove tour esclusivi."

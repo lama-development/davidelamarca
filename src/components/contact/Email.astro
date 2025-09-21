@@ -4,12 +4,12 @@ const { email } = Astro.props;
 
 <section class="w-full bg-neutral-50 px-6 py-16 pb-20 md:py-24 dark:dark:border-neutral-800 dark:bg-neutral-950">
   <div class="mx-auto max-w-3xl">
-    <div class="relative overflow-hidden rounded-3xl border border-neutral-200 bg-neutral-100 p-8 md:p-16 lg:p-20 dark:dark:border-neutral-800 dark:bg-neutral-900">
+    <div class="relative overflow-hidden rounded-4xl border border-neutral-200 bg-neutral-100 p-8 md:p-16 lg:p-20 dark:dark:border-neutral-800 dark:bg-neutral-900">
       <div class="relative text-center">
         <h2 class="mb-6 text-3xl leading-[0.8] font-bold tracking-tight text-neutral-900 sm:text-5xl dark:text-neutral-100">{email.title}</h2>
         <p class="mx-auto mb-6 max-w-xs text-base leading-[1.1] text-neutral-700 md:max-w-xl md:text-lg dark:text-neutral-300">{email.description}</p>
         <a href="mailto:info@davidelamarca.com" class="inline-flex items-center gap-2 text-blue-500 hover:underline" aria-label={email.aria.email}>
-          <span class="text-xl font-medium">info@davidelamarca.com</span>
+          <span class="text-lg font-medium md:text-xl">info@davidelamarca.com</span>
           <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
           </svg>

@@ -27,6 +27,11 @@ body {
     transform 200ms ease-in-out;
 }
 
+*:focus-visible {
+  border-color: var(--color-blue-500) !important;
+  outline: 2px solid var(--color-blue-500) !important;
+}
+
 details summary::-webkit-details-marker {
   display: none;
 }

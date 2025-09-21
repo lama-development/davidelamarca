@@ -4,12 +4,20 @@ const langPrefix = Astro.url.pathname.startsWith("/en") ? "/en" : "";
 ---
 
 <footer id="footer" class="bg-neutral-50 dark:bg-neutral-950">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+  <div class="mx-auto max-w-7xl px-8">
     <div class="py-8 md:py-12">
       <div class="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-12">
         <div class="flex flex-col items-center md:items-start">
           <a href={`${langPrefix}/`} class="mb-6 ml-1 flex items-center space-x-2">
-            <img src="/favicon.svg" alt="Logo" class="h-6 w-6" />
+            <svg class="h-6 w-6" viewBox="0 0 540 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style="stop-color:#119CFC;stop-opacity:1"></stop>
+                  <stop offset="100%" style="stop-color:#1655E7;stop-opacity:1"></stop>
+                </linearGradient>
+              </defs>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M540 450.004L270 600L119.997 516.677V220.61L194.999 178.949L270 137.287L420.003 220.61V379.399L270 462.713L240.003 446.044V291.207L270 274.575L299.997 291.216V377.41L360 344.091V255.9L270 205.886L180 255.9V481.343L270 531.356L479.997 414.697V185.303L270 68.6437L60.003 185.303V483.341L0 450.004V149.996L270 0L540 149.996V450.004Z" fill="url(#logoGradient)"></path>
+            </svg>
             <span class="text-base font-medium text-neutral-900 dark:text-neutral-100">{footer.brand}</span>
           </a>
           <div class="flex items-center space-x-3 md:self-start">

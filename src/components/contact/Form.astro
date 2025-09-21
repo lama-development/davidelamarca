@@ -5,7 +5,7 @@ const langPrefix = Astro.url.pathname.startsWith("/en") ? "/en" : "";
 
 <section class="m:py-12 w-full border-b border-neutral-200 bg-neutral-50 px-6 py-20 pb-24 dark:dark:border-neutral-800 dark:bg-neutral-950">
   <div class="mx-auto max-w-4xl">
-    <div id="multi-step-form" class="rounded-2xl border border-neutral-200 bg-neutral-100 p-6 sm:p-8 md:p-10 dark:dark:border-neutral-800 dark:bg-neutral-900">
+    <div id="multi-step-form" class="rounded-4xl border border-neutral-200 bg-neutral-100 p-6 sm:p-8 md:p-10 dark:dark:border-neutral-800 dark:bg-neutral-900">
       <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" data-step-text={form.stepText} data-submit-text={form.navigation.submit}>
         <input type="hidden" name="access_key" value="39963035-52c1-42cd-b65b-1ea51ff01cc3" />
         <!-- Honeypot field for spam protection -->
@@ -14,7 +14,7 @@ const langPrefix = Astro.url.pathname.startsWith("/en") ? "/en" : "";
         <div id="step-1" class="step-content">
           <div class="mb-10">
             <div class="mb-6 flex items-center space-x-4">
-              <div class="flex h-12 w-12 items-center justify-center rounded-xl border border-blue-500/20 bg-blue-500/10">
+              <div class="flex h-12 w-12 items-center justify-center rounded-2xl border border-blue-500/20 bg-blue-500/10">
                 <svg class="h-6 w-6 text-blue-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M20 6v12a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2z"></path><path d="M10 16h6"></path><path d="M13 11m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path><path d="M4 8h3"></path><path d="M4 12h3"></path><path d="M4 16h3"></path>
                 </svg>
@@ -28,32 +28,32 @@ const langPrefix = Astro.url.pathname.startsWith("/en") ? "/en" : "";
           <div class="grid gap-6 md:grid-cols-2">
             <div>
               <label for="name" class="mb-2 block text-sm font-medium text-neutral-800 dark:text-neutral-200">{form.contacts.name.label}</label>
-              <input type="text" id="name" name="name" autocomplete="name" required placeholder={form.contacts.name.placeholder} class="w-full rounded-lg border border-neutral-200 bg-neutral-50 px-4 py-3 text-neutral-900 placeholder-neutral-400 dark:dark:border-neutral-800 dark:bg-neutral-800 dark:bg-neutral-950 dark:text-neutral-100" />
+              <input type="text" id="name" name="name" autocomplete="name" required placeholder={form.contacts.name.placeholder} class="w-full rounded-lg border border-neutral-200 bg-neutral-50 px-4 py-3 text-neutral-900 placeholder-neutral-400 focus:border-blue-500 focus:outline focus:outline-blue-500 dark:dark:border-neutral-800 dark:bg-neutral-800 dark:bg-neutral-950 dark:text-neutral-100" />
               <div class="error-message mt-1 hidden text-sm text-red-600 dark:text-red-400" data-field="name">
                 {form.validation.required}
               </div>
             </div>
             <div>
               <label for="email" class="mb-2 block text-sm font-medium text-neutral-800 dark:text-neutral-200">{form.contacts.email.label}</label>
-              <input type="email" id="email" name="email" autocomplete="email" required placeholder={form.contacts.email.placeholder} class="w-full rounded-lg border border-neutral-200 bg-neutral-50 px-4 py-3 text-neutral-900 placeholder-neutral-400 dark:dark:border-neutral-800 dark:bg-neutral-800 dark:bg-neutral-950 dark:text-neutral-100" />
+              <input type="email" id="email" name="email" autocomplete="email" required placeholder={form.contacts.email.placeholder} class="w-full rounded-lg border border-neutral-200 bg-neutral-50 px-4 py-3 text-neutral-900 placeholder-neutral-400 focus:border-blue-500 focus:outline focus:outline-blue-500 dark:dark:border-neutral-800 dark:bg-neutral-800 dark:bg-neutral-950 dark:text-neutral-100" />
               <div class="error-message mt-1 hidden text-sm text-red-600 dark:text-red-400" data-field="email">
                 {form.validation.email}
               </div>
             </div>
             <div>
               <label for="company" class="mb-2 block text-sm font-medium text-neutral-800 dark:text-neutral-200">{form.contacts.company.label}</label>
-              <input type="text" id="company" name="company" autocomplete="organization" placeholder={form.contacts.company.placeholder} class="w-full rounded-lg border border-neutral-200 bg-neutral-50 px-4 py-3 text-neutral-900 placeholder-neutral-400 dark:dark:border-neutral-800 dark:bg-neutral-800 dark:bg-neutral-950 dark:text-neutral-100" />
+              <input type="text" id="company" name="company" autocomplete="organization" placeholder={form.contacts.company.placeholder} class="w-full rounded-lg border border-neutral-200 bg-neutral-50 px-4 py-3 text-neutral-900 placeholder-neutral-400 focus:border-blue-500 focus:outline focus:outline-blue-500 dark:dark:border-neutral-800 dark:bg-neutral-800 dark:bg-neutral-950 dark:text-neutral-100" />
             </div>
             <div>
               <label for="phone" class="mb-2 block text-sm font-medium text-neutral-800 dark:text-neutral-200">{form.contacts.phone.label}</label>
-              <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder={form.contacts.phone.placeholder} class="w-full rounded-lg border border-neutral-200 bg-neutral-50 px-4 py-3 text-neutral-900 placeholder-neutral-400 dark:dark:border-neutral-800 dark:bg-neutral-800 dark:bg-neutral-950 dark:text-neutral-100" />
+              <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder={form.contacts.phone.placeholder} class="w-full rounded-lg border border-neutral-200 bg-neutral-50 px-4 py-3 text-neutral-900 placeholder-neutral-400 focus:border-blue-500 focus:outline focus:outline-blue-500 dark:dark:border-neutral-800 dark:bg-neutral-800 dark:bg-neutral-950 dark:text-neutral-100" />
             </div>
           </div>
         </div>
         <!-- Step 2: Terms  -->
         <div id="step-2" class="step-content hidden">
           <div class="mb-6 flex items-center space-x-4">
-            <div class="flex h-12 w-12 items-center justify-center rounded-xl border border-blue-500/20 bg-blue-500/10">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl border border-blue-500/20 bg-blue-500/10">
               <svg class="h-6 w-6 text-blue-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2"></path><path d="M9 3m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v0a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z"></path>
               </svg>
@@ -68,7 +68,7 @@ const langPrefix = Astro.url.pathname.startsWith("/en") ? "/en" : "";
           </div>
           <div class="mb-8 rounded-lg border border-blue-500/20 bg-blue-500/10 p-6">
             <label for="accept-rules" class="flex cursor-pointer items-start space-x-4">
-              <input type="checkbox" id="accept-rules" required class="mt-1 h-5 w-5 cursor-pointer" />
+              <input type="checkbox" id="accept-rules" required class="mt-1 h-5 w-5 cursor-pointer focus:border-blue-500 focus:outline focus:outline-blue-500" />
               <div class="flex-1">
                 <span class="block font-medium text-neutral-900 dark:text-neutral-100">{form.rules.accept}</span>
                 <span class="mt-1 block text-sm text-neutral-600 dark:text-neutral-400">
@@ -86,7 +86,7 @@ const langPrefix = Astro.url.pathname.startsWith("/en") ? "/en" : "";
         <div id="step-3" class="step-content hidden">
           <div class="mb-10">
             <div class="mb-6 flex items-center space-x-4">
-              <div class="flex h-12 w-12 items-center justify-center rounded-xl border border-blue-500/20 bg-blue-500/10">
+              <div class="flex h-12 w-12 items-center justify-center rounded-2xl border border-blue-500/20 bg-blue-500/10">
                 <svg class="h-6 w-6 text-blue-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2"></path><path d="M9 3m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v0a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z"></path><path d="M9 17v-5"></path><path d="M12 17v-1"></path><path d="M15 17v-3"></path>
                 </svg>
@@ -152,7 +152,7 @@ const langPrefix = Astro.url.pathname.startsWith("/en") ? "/en" : "";
         <div id="step-4" class="step-content hidden">
           <div class="mb-10">
             <div class="mb-6 flex items-center space-x-4">
-              <div class="flex h-12 w-12 items-center justify-center rounded-xl border border-blue-500/20 bg-blue-500/10">
+              <div class="flex h-12 w-12 items-center justify-center rounded-2xl border border-blue-500/20 bg-blue-500/10">
                 <svg class="h-6 w-6 text-blue-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1"></path><path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415z"></path><path d="M16 5l3 3"></path>
                 </svg>
@@ -166,14 +166,14 @@ const langPrefix = Astro.url.pathname.startsWith("/en") ? "/en" : "";
           <div class="space-y-6">
             <div>
               <label for="message" class="mb-2 block text-sm font-medium text-neutral-800 dark:text-neutral-200">{form.details.message.label}</label>
-              <textarea id="message" name="message" required rows="6" placeholder={form.details.message.placeholder} class="w-full resize-none rounded-lg border border-neutral-200 bg-neutral-50 px-4 py-3 text-neutral-900 placeholder-neutral-500 dark:dark:border-neutral-800 dark:bg-neutral-950 dark:text-neutral-100 dark:placeholder-neutral-400"></textarea>
+              <textarea id="message" name="message" required rows="6" placeholder={form.details.message.placeholder} class="w-full resize-none rounded-lg border border-neutral-200 bg-neutral-50 px-4 py-3 text-neutral-900 placeholder-neutral-500 focus:border-blue-500 focus:outline focus:outline-blue-500 dark:dark:border-neutral-800 dark:bg-neutral-950 dark:text-neutral-100 dark:placeholder-neutral-400"></textarea>
               <div class="error-message mt-1 hidden text-sm text-red-600 dark:text-red-400" data-field="message">
                 {form.validation.required}
               </div>
             </div>
             <div>
               <label for="inspiration" class="mb-2 block text-sm font-medium text-neutral-800 dark:text-neutral-200">{form.details.inspiration.label}</label>
-              <textarea id="inspiration" name="inspiration" rows="3" placeholder={form.details.inspiration.placeholder} class="w-full resize-none rounded-lg border border-neutral-200 bg-neutral-50 px-4 py-3 text-neutral-900 placeholder-neutral-500 dark:dark:border-neutral-800 dark:bg-neutral-950 dark:text-neutral-100 dark:placeholder-neutral-400"></textarea>
+              <textarea id="inspiration" name="inspiration" rows="3" placeholder={form.details.inspiration.placeholder} class="w-full resize-none rounded-lg border border-neutral-200 bg-neutral-50 px-4 py-3 text-neutral-900 placeholder-neutral-500 focus:border-blue-500 focus:outline focus:outline-blue-500 dark:dark:border-neutral-800 dark:bg-neutral-950 dark:text-neutral-100 dark:placeholder-neutral-400"></textarea>
             </div>
             <div>
               <label for="branding-0" class="mb-3 block text-sm font-medium text-neutral-800 dark:text-neutral-200">{form.details.hasBranding.label}</label>

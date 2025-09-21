@@ -33,7 +33,7 @@ const displayProjects = isHomePage ? projectCard.slice(0, 3) : projectCard;
     <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
       {
         displayProjects.map((project: any) => (
-          <div class="overflow-hidden rounded-3xl border border-neutral-200 bg-neutral-100 dark:dark:border-neutral-800 dark:bg-neutral-900">
+          <div class="overflow-hidden rounded-4xl border border-neutral-200 bg-neutral-100 dark:dark:border-neutral-800 dark:bg-neutral-900">
             <div class="flex aspect-video items-center justify-center overflow-hidden border-b border-neutral-200 bg-neutral-200 dark:dark:border-neutral-800 dark:bg-neutral-800">
               <a href={project.link} aria-label={project.ariaLabel} target="_blank" rel="noopener" class="block h-full w-full">
                 <Image src={getImage(project.image)} alt={project.ariaLabel} class="h-full w-full object-cover" width={1200} height={675} sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" loading={isHomePage ? "lazy" : "eager"} format="webp" quality={100} />

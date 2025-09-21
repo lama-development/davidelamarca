@@ -14,8 +14,8 @@ const { services } = Astro.props;
     <div class="flex flex-wrap justify-center gap-8">
       {
         services.servicesList.map((service) => (
-          <div class="max-w-md min-w-[280px] flex-1 basis-full rounded-xl border border-neutral-200 bg-neutral-50 p-8 md:basis-[calc(50%-1rem)] lg:basis-[calc(33.33%-1.5rem)] dark:dark:border-neutral-800 dark:bg-neutral-950">
-            <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-xl border border-blue-500/20 bg-blue-500/10">
+          <div class="max-w-md min-w-[280px] flex-1 basis-full rounded-4xl border border-neutral-200 bg-neutral-50 p-8 md:basis-[calc(50%-1rem)] lg:basis-[calc(33.33%-1.5rem)] dark:dark:border-neutral-800 dark:bg-neutral-950">
+            <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl border border-blue-500/20 bg-blue-500/10">
               <svg class="h-7 w-7 text-blue-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                 <path d={service.icon} />

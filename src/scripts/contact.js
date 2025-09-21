@@ -266,7 +266,16 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  // Focus on the first input (name field) when the page loads
+  function focusFirstInput() {
+    const nameInput = document.getElementById("name");
+    if (nameInput) {
+      nameInput.focus();
+    }
+  }
+
   // Initialize the form
   showStep(currentStep);
   updateRadioStyles();
+  focusFirstInput();
 });

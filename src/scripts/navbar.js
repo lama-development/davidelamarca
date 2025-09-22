@@ -1,3 +1,5 @@
+import { triggerHaptic } from "tactus";
+
 document.addEventListener("DOMContentLoaded", function () {
   const menuButton = document.getElementById("mobile-menu-button");
   const mobileMenu = document.getElementById("mobile-menu");
@@ -6,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (menuButton && mobileMenu && chevronIcon) {
     menuButton.addEventListener("click", function (e) {
       e.stopPropagation();
+      triggerHaptic();
       const isHidden = mobileMenu.classList.contains("hidden");
       mobileMenu.classList.toggle("hidden");
 

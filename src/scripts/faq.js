@@ -1,3 +1,5 @@
+import { triggerHaptic } from "tactus";
+
 document.addEventListener("DOMContentLoaded", function () {
   const faqSection = document.querySelector("#faq");
   if (!faqSection) return;
@@ -12,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
     item.addEventListener("click", function (e) {
       if (e.target.tagName.toLowerCase() === "summary" || e.target.closest("summary")) {
         e.preventDefault();
+        triggerHaptic();
         toggleFaq(item, content);
       }
     });

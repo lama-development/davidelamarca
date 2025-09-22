@@ -1,3 +1,5 @@
+import { triggerHaptic } from "tactus";
+
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("contact-form");
   const steps = document.querySelectorAll(".step-content");
@@ -140,9 +142,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Next button click handler
   nextBtn.addEventListener("click", function (e) {
+    triggerHaptic();
     if (currentStep < totalSteps) {
       e.preventDefault();
-
       if (validateStep(currentStep)) {
         currentStep++;
         showStep(currentStep);
@@ -150,9 +152,7 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
       // Handle form submission
       e.preventDefault();
-
       if (validateStep(currentStep)) {
-        // Actually submit the form to Web3Forms
         submitForm();
       }
     }
@@ -161,6 +161,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Previous button click handler
   prevBtn.addEventListener("click", function () {
     if (currentStep > 1) {
+      triggerHaptic();
       currentStep--;
       showStep(currentStep);
     }

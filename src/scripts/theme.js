@@ -1,3 +1,5 @@
+import { triggerHaptic } from "tactus";
+
 document.addEventListener("DOMContentLoaded", function () {
   const themeButtons = document.querySelectorAll(".theme-btn");
   const themeIndicator = document.getElementById("theme-indicator");
@@ -21,6 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
   themeButtons.forEach((button) => {
     button.addEventListener("click", function () {
       const theme = this.id.replace("theme-", "");
+      triggerHaptic();
       currentTheme = theme;
       localStorage.setItem("theme", theme);
       applyTheme(theme);

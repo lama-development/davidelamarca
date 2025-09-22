@@ -1,4 +1,3 @@
-// Testimonials Snap Scroll Carousel Script
 document.addEventListener("DOMContentLoaded", function () {
   const carousel = document.getElementById("testimonials-carousel");
   const track = document.getElementById("testimonials-track");

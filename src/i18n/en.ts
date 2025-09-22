@@ -265,7 +265,7 @@ export default (langPrefix = "") => ({
     },
     email: {
       badge: "Email",
-      title: "Searching for an Email?",
+      title: "Looking for email?",
       description: "You can contact me directly via email for general information. For project requests, however, use the form above.",
       aria: {
         email: "Send email"

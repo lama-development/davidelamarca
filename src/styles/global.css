@@ -9,7 +9,7 @@ body {
   margin: 0;
   padding: 0;
   font-family:
-    "DM Sans",
+    "Geist",
     system-ui,
     -apple-system,
     sans-serif;
@@ -47,6 +47,27 @@ details summary::-webkit-details-marker {
 
 .scrollbar-hide::-webkit-scrollbar {
   display: none; 
+}
+
+.header-hero {
+  font-size: clamp(3rem, 7vw, 8rem);
+  line-height: 0.8;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.header-banner {
+  font-size: clamp(2.75rem, 6vw, 5rem);
+  line-height: 0.8;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.header-section {
+  font-size: clamp(2.5rem, 5vw, 3rem);
+  line-height: 0.8;
+  font-weight: 600;
+  letter-spacing: -0.03em;
 }
 
 #mobile-menu {

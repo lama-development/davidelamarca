@@ -20,7 +20,7 @@ interface Section {
       {
         privacy.sections?.map((section: Section) => (
           <div class="prose prose-neutral dark:prose-invert max-w-none">
-            <h2 class="mb-3 text-xl leading-[1.0] font-bold tracking-tight text-neutral-900 dark:text-neutral-100">{section.title}</h2>
+            <h2 class="mb-3 text-xl leading-[1.0] font-semibold tracking-tight text-neutral-900 dark:text-neutral-100">{section.title}</h2>
             <div class="space-y-3">
               {section.content.map((block: ContentBlock) => {
                 if (block.type === "paragraph") {

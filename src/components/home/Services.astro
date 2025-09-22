@@ -8,7 +8,7 @@ const { services } = Astro.props;
       <div class="mx-auto mb-6 inline-flex items-center gap-2 rounded-full border border-blue-500/20 bg-blue-500/10 px-3 py-1.5 text-xs font-medium whitespace-nowrap sm:mb-8 sm:text-sm">
         <span class="text-xs font-medium text-blue-500 sm:text-sm">{services.badge}</span>
       </div>
-      <h2 class="mb-4 text-5xl leading-[0.8] font-bold tracking-tight text-neutral-900 dark:text-neutral-100">{services.title}</h2>
+      <h2 class="header-section mb-4 text-neutral-900 dark:text-neutral-100">{services.title}</h2>
       <p class="mx-auto max-w-xs text-base leading-[1.1] text-neutral-700 md:max-w-xl md:text-lg dark:text-neutral-300">{services.subtitle}</p>
     </div>
     <div class="flex flex-wrap justify-center gap-8">
@@ -21,7 +21,7 @@ const { services } = Astro.props;
                 <path d={service.icon} />
               </svg>
             </div>
-            <h3 class="mb-3 text-xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100">{service.title}</h3>
+            <h3 class="mb-3 text-xl font-semibold tracking-tight text-neutral-900 dark:text-neutral-100">{service.title}</h3>
             <p class="text-base tracking-tight text-neutral-700 dark:text-neutral-400">{service.description}</p>
           </div>
         ))

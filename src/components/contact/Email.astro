@@ -6,7 +6,7 @@ const { email } = Astro.props;
   <div class="mx-auto max-w-3xl">
     <div class="relative overflow-hidden rounded-4xl border border-neutral-200 bg-neutral-100 p-8 md:p-16 lg:p-20 dark:dark:border-neutral-800 dark:bg-neutral-900">
       <div class="relative text-center">
-        <h2 class="mb-6 text-3xl leading-[0.8] font-bold tracking-tight text-neutral-900 sm:text-5xl dark:text-neutral-100">{email.title}</h2>
+        <h2 class="mb-6 text-3xl leading-[0.8] font-semibold tracking-tight text-neutral-900 sm:text-5xl dark:text-neutral-100">{email.title}</h2>
         <p class="mx-auto mb-6 max-w-xs text-base leading-[1.1] text-neutral-700 md:max-w-xl md:text-lg dark:text-neutral-300">{email.description}</p>
         <a href="mailto:info@davidelamarca.com" class="inline-flex items-center gap-2 text-blue-500 hover:underline" aria-label={email.aria.email}>
           <span class="text-lg font-medium md:text-xl">info@davidelamarca.com</span>

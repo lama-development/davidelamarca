@@ -9,7 +9,7 @@ const langPrefix = Astro.url.pathname.startsWith("/en") ? "/en" : "";
       <div class="h-1.5 w-1.5 animate-pulse rounded-full bg-blue-500 sm:h-2 sm:w-2"></div>
       <span class="text-xs font-medium text-blue-500 sm:text-sm">{hero.badge}</span>
     </div>
-    <h1 class="mb-8 text-6xl leading-[0.8] font-bold tracking-tight text-neutral-900 sm:text-7xl md:text-8xl lg:text-9xl xl:text-[10rem] dark:text-neutral-100" style="font-size: clamp(3.75rem, 8vw, 10rem);">
+    <h1 class="header-hero mb-8 text-neutral-900 dark:text-neutral-100">
       <span class="block">{hero.title1}</span>
       <span class="block">{hero.title2}</span>
     </h1>

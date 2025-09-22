@@ -8,7 +8,7 @@ const langPrefix = Astro.url.pathname.startsWith("/en") ? "/en" : "";
     <div class="mx-auto mb-6 inline-flex items-center gap-2 rounded-full border border-blue-500/20 bg-blue-500/10 px-3 py-1.5 text-xs font-medium whitespace-nowrap text-blue-500 sm:mb-8 sm:text-sm">
       <span class="text-xs font-medium text-blue-500 sm:text-sm">404</span>
     </div>
-    <h1 class="mb-8 text-5xl leading-[0.8] font-bold tracking-tight text-neutral-900 sm:text-7xl dark:text-neutral-100" style="font-size: clamp(3rem, 6vw, 4.5rem);">
+    <h1 class="header-section mb-8 text-neutral-900 dark:text-neutral-100">
       <span class="block">{pageNotFound.title}</span>
     </h1>
     <p class="mx-auto mb-8 max-w-xs text-base leading-[1.1] text-neutral-700 md:max-w-lg md:text-lg dark:text-neutral-300">{pageNotFound.subtitle}</p>

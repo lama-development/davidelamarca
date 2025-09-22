@@ -1,10 +1,11 @@
 import { triggerHaptic } from "tactus";
 
 document.addEventListener("DOMContentLoaded", function () {
-  const heroCTA = document.querySelector('a[class*="bg-blue-500"]');
-  const bannerCTA = document.querySelector('a[class*="bg-neutral-50"][href*="/contact"]');
+  // Select all primary CTAs
+  const primaryCTAs = document.querySelectorAll('a[class*="px-6"][class*="py-3"][class*="text-lg"][class*="font-semibold"]');
 
-  [heroCTA, bannerCTA].forEach((button) => {
+  // Add haptic feedback to all primary CTAs
+  primaryCTAs.forEach((button) => {
     if (button) {
       button.addEventListener(
         "click",

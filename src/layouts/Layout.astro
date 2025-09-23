@@ -2,15 +2,17 @@
 import "../styles/global.css";
 import Navbar from "../components/common/Navbar.astro";
 import Footer from "../components/common/Footer.astro";
-const { t, meta } = Astro.props;
+const { t, meta } = Astro.props; // meta passed per-page (title/description)
 const url = new URL(Astro.request.url);
 let pathname = url.pathname.endsWith("/") ? url.pathname : url.pathname + "/";
-const baseUrl = "https://davidelamarca.com";
-const canonical = baseUrl + pathname;
+const BASE_URL = "https://davidelamarca.com";
+const canonical = BASE_URL + pathname.replace(/\/+$/, "/");
+// Build alternate links (it as default root, en under /en)
+const rootPath = pathname.replace(/^\/en/, "");
 const altLinks = [
-  { lang: "it", href: baseUrl + pathname.replace(/^\/en/, "") },
-  { lang: "en", href: baseUrl + (pathname.startsWith("/en") ? pathname : "/en" + pathname) },
-  { lang: "x-default", href: baseUrl + pathname.replace(/^\/en/, "") }
+  { lang: "it", href: BASE_URL + rootPath },
+  { lang: "en", href: BASE_URL + (pathname.startsWith("/en") ? pathname : "/en" + rootPath) },
+  { lang: "x-default", href: BASE_URL + rootPath }
 ];
 ---
 
@@ -31,6 +33,16 @@ const altLinks = [
     <meta name="description" content={meta.description} />
     <link rel="canonical" href={canonical} />
     {altLinks.map((link) => <link rel="alternate" href={link.href} hreflang={link.lang} />)}
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="Davide La Marca" />
+    <meta property="og:title" content={meta.title} />
+    <meta property="og:description" content={meta.description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:type" content="website" />
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={meta.title} />
+    <meta name="twitter:description" content={meta.description} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet" />
@@ -50,10 +62,9 @@ const altLinks = [
     <Navbar navbar={t.navbar} />
     <slot />
     <Footer footer={t.footer} />
+    <script src="../scripts/theme.js"></script>
+    <script src="../scripts/navbar.js"></script>
+    <script src="../scripts/language.js"></script>
+    <script src="../scripts/haptics.js"></script>
   </body>
 </html>
-
-<script src="../scripts/theme.js"></script>
-<script src="../scripts/navbar.js"></script>
-<script src="../scripts/language.js"></script>
-<script src="../scripts/haptics.js"></script>

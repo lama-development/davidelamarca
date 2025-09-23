@@ -18,7 +18,7 @@ export default defineConfig({
   i18n: {
     defaultLocale: DEFAULT_LOCALE,
     locales: SUPPORTED_LOCALES,
-    routing: { prefixDefaultLocale: false } // Keep default locale at root
+    routing: { prefixDefaultLocale: false }
   },
   integrations: [
     sitemap({

@@ -1,11 +1,16 @@
 ---
 const { form } = Astro.props;
 const langPrefix = Astro.url.pathname.startsWith("/en") ? "/en" : "";
+
+// Reusable utility class groups
+const baseField = "w-full rounded-lg border border-neutral-200 bg-neutral-50 px-4 py-3 text-neutral-900 placeholder-neutral-400 focus:border-blue-500 focus:outline focus:outline-blue-500 dark:border-neutral-800 dark:bg-neutral-950 dark:text-neutral-100";
+const radioCard = "flex cursor-pointer items-center space-x-3 rounded-lg border border-neutral-200 bg-neutral-50 p-3 hover:bg-neutral-200 focus-within:ring-2 focus-within:ring-blue-500 dark:border-neutral-800 dark:bg-neutral-950 dark:hover:bg-neutral-800";
+const radioInput = "h-4 w-4 border-neutral-200 text-blue-600 focus:ring-blue-500 dark:border-neutral-800";
 ---
 
-<section class="m:py-12 w-full border-b border-neutral-200 bg-neutral-50 px-6 py-20 pb-24 dark:dark:border-neutral-800 dark:bg-neutral-950">
+<section class="m:py-12 w-full border-b border-neutral-200 bg-neutral-50 px-6 py-20 pb-24 dark:border-neutral-800 dark:bg-neutral-950">
   <div class="mx-auto max-w-4xl">
-    <div id="multi-step-form" class="rounded-4xl border border-neutral-200 bg-neutral-100 p-6 sm:p-8 md:p-10 dark:dark:border-neutral-800 dark:bg-neutral-900">
+    <div id="multi-step-form" class="rounded-4xl border border-neutral-200 bg-neutral-100 p-6 sm:p-8 md:p-10 dark:border-neutral-800 dark:bg-neutral-900">
       <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" data-step-text={form.stepText} data-submit-text={form.navigation.submit}>
         <input type="hidden" name="access_key" value="39963035-52c1-42cd-b65b-1ea51ff01cc3" />
         <!-- Honeypot field for spam protection -->
@@ -28,25 +33,25 @@ const langPrefix = Astro.url.pathname.startsWith("/en") ? "/en" : "";
           <div class="grid gap-6 md:grid-cols-2">
             <div>
               <label for="name" class="mb-2 block text-sm font-medium text-neutral-800 dark:text-neutral-200">{form.contacts.name.label}</label>
-              <input type="text" id="name" name="name" autocomplete="name" required placeholder={form.contacts.name.placeholder} class="w-full rounded-lg border border-neutral-200 bg-neutral-50 px-4 py-3 text-neutral-900 placeholder-neutral-400 focus:border-blue-500 focus:outline focus:outline-blue-500 dark:dark:border-neutral-800 dark:bg-neutral-800 dark:bg-neutral-950 dark:text-neutral-100" />
+              <input type="text" id="name" name="name" autocomplete="name" required placeholder={form.contacts.name.placeholder} class={baseField} />
               <div class="error-message mt-1 hidden text-sm text-red-600 dark:text-red-400" data-field="name">
                 {form.validation.required}
               </div>
             </div>
             <div>
               <label for="email" class="mb-2 block text-sm font-medium text-neutral-800 dark:text-neutral-200">{form.contacts.email.label}</label>
-              <input type="email" id="email" name="email" autocomplete="email" required placeholder={form.contacts.email.placeholder} class="w-full rounded-lg border border-neutral-200 bg-neutral-50 px-4 py-3 text-neutral-900 placeholder-neutral-400 focus:border-blue-500 focus:outline focus:outline-blue-500 dark:dark:border-neutral-800 dark:bg-neutral-800 dark:bg-neutral-950 dark:text-neutral-100" />
+              <input type="email" id="email" name="email" autocomplete="email" required placeholder={form.contacts.email.placeholder} class={baseField} />
               <div class="error-message mt-1 hidden text-sm text-red-600 dark:text-red-400" data-field="email">
                 {form.validation.email}
               </div>
             </div>
             <div>
               <label for="company" class="mb-2 block text-sm font-medium text-neutral-800 dark:text-neutral-200">{form.contacts.company.label}</label>
-              <input type="text" id="company" name="company" autocomplete="organization" placeholder={form.contacts.company.placeholder} class="w-full rounded-lg border border-neutral-200 bg-neutral-50 px-4 py-3 text-neutral-900 placeholder-neutral-400 focus:border-blue-500 focus:outline focus:outline-blue-500 dark:dark:border-neutral-800 dark:bg-neutral-800 dark:bg-neutral-950 dark:text-neutral-100" />
+              <input type="text" id="company" name="company" autocomplete="organization" placeholder={form.contacts.company.placeholder} class={baseField} />
             </div>
             <div>
               <label for="phone" class="mb-2 block text-sm font-medium text-neutral-800 dark:text-neutral-200">{form.contacts.phone.label}</label>
-              <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder={form.contacts.phone.placeholder} class="w-full rounded-lg border border-neutral-200 bg-neutral-50 px-4 py-3 text-neutral-900 placeholder-neutral-400 focus:border-blue-500 focus:outline focus:outline-blue-500 dark:dark:border-neutral-800 dark:bg-neutral-800 dark:bg-neutral-950 dark:text-neutral-100" />
+              <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder={form.contacts.phone.placeholder} class={baseField} />
             </div>
           </div>
         </div>
@@ -64,7 +69,7 @@ const langPrefix = Astro.url.pathname.startsWith("/en") ? "/en" : "";
             </div>
           </div>
           <div class="mb-8 space-y-3">
-            {form.rules.rulesList.map((rule) => <div class="w-full rounded-lg border border-neutral-200 bg-neutral-50 p-4 text-base font-medium text-neutral-700 dark:dark:border-neutral-800 dark:bg-neutral-950 dark:text-neutral-300">{rule}</div>)}
+            {form.rules.rulesList.map((rule) => <div class="w-full rounded-lg border border-neutral-200 bg-neutral-50 p-4 text-base font-medium text-neutral-700 dark:border-neutral-800 dark:bg-neutral-950 dark:text-neutral-300">{rule}</div>)}
           </div>
           <div class="mb-8 rounded-lg border border-blue-500/20 bg-blue-500/10 p-6">
             <label for="accept-rules" class="flex cursor-pointer items-start space-x-4">
@@ -103,8 +108,8 @@ const langPrefix = Astro.url.pathname.startsWith("/en") ? "/en" : "";
               <div class="grid gap-3 sm:grid-cols-2">
                 {
                   form.project.projectType.options.map((option, index) => (
-                    <label for={`projectType-${index}`} class="flex cursor-pointer items-center space-x-3 rounded-lg border border-neutral-200 bg-neutral-50 p-3 hover:bg-neutral-200 dark:dark:border-neutral-800 dark:bg-neutral-950 dark:hover:bg-neutral-800">
-                      <input type="radio" id={`projectType-${index}`} name="projectType" value={option} required class="h-4 w-4 border-neutral-200 dark:dark:border-neutral-800" />
+                    <label for={`projectType-${index}`} class={radioCard}>
+                      <input type="radio" id={`projectType-${index}`} name="projectType" value={option} required class={radioInput} />
                       <span class="text-neutral-800 dark:text-neutral-200">{option}</span>
                     </label>
                   ))
@@ -119,8 +124,8 @@ const langPrefix = Astro.url.pathname.startsWith("/en") ? "/en" : "";
               <div class="grid gap-3 sm:grid-cols-2">
                 {
                   form.project.budget.options.map((option, index) => (
-                    <label for={`budget-${index}`} class="flex cursor-pointer items-center space-x-3 rounded-lg border border-neutral-200 bg-neutral-50 p-3 hover:bg-neutral-200 dark:dark:border-neutral-800 dark:bg-neutral-950 dark:hover:bg-neutral-800">
-                      <input type="radio" id={`budget-${index}`} name="budget" value={option} required class="h-4 w-4 border-neutral-200 dark:dark:border-neutral-800" />
+                    <label for={`budget-${index}`} class={radioCard}>
+                      <input type="radio" id={`budget-${index}`} name="budget" value={option} required class={radioInput} />
                       <span class="text-neutral-800 dark:text-neutral-200">{option}</span>
                     </label>
                   ))
@@ -135,8 +140,8 @@ const langPrefix = Astro.url.pathname.startsWith("/en") ? "/en" : "";
               <div class="grid gap-3 sm:grid-cols-2">
                 {
                   form.project.timeline.options.map((option, index) => (
-                    <label for={`timeline-${index}`} class="flex cursor-pointer items-center space-x-3 rounded-lg border border-neutral-200 bg-neutral-50 p-3 hover:bg-neutral-200 dark:dark:border-neutral-800 dark:bg-neutral-950 dark:hover:bg-neutral-800">
-                      <input type="radio" id={`timeline-${index}`} name="timeline" value={option} required class="h-4 w-4 border-neutral-200 dark:dark:border-neutral-800" />
+                    <label for={`timeline-${index}`} class={radioCard}>
+                      <input type="radio" id={`timeline-${index}`} name="timeline" value={option} required class={radioInput} />
                       <span class="text-neutral-800 dark:text-neutral-200">{option}</span>
                     </label>
                   ))
@@ -166,22 +171,22 @@ const langPrefix = Astro.url.pathname.startsWith("/en") ? "/en" : "";
           <div class="space-y-6">
             <div>
               <label for="message" class="mb-2 block text-sm font-medium text-neutral-800 dark:text-neutral-200">{form.details.message.label}</label>
-              <textarea id="message" name="message" required rows="6" placeholder={form.details.message.placeholder} class="w-full resize-none rounded-lg border border-neutral-200 bg-neutral-50 px-4 py-3 text-neutral-900 placeholder-neutral-500 focus:border-blue-500 focus:outline focus:outline-blue-500 dark:dark:border-neutral-800 dark:bg-neutral-950 dark:text-neutral-100 dark:placeholder-neutral-400"></textarea>
+              <textarea id="message" name="message" required rows="6" placeholder={form.details.message.placeholder} class={`${baseField} resize-none placeholder-neutral-500 dark:placeholder-neutral-400`}></textarea>
               <div class="error-message mt-1 hidden text-sm text-red-600 dark:text-red-400" data-field="message">
                 {form.validation.required}
               </div>
             </div>
             <div>
               <label for="inspiration" class="mb-2 block text-sm font-medium text-neutral-800 dark:text-neutral-200">{form.details.inspiration.label}</label>
-              <textarea id="inspiration" name="inspiration" rows="3" placeholder={form.details.inspiration.placeholder} class="w-full resize-none rounded-lg border border-neutral-200 bg-neutral-50 px-4 py-3 text-neutral-900 placeholder-neutral-500 focus:border-blue-500 focus:outline focus:outline-blue-500 dark:dark:border-neutral-800 dark:bg-neutral-950 dark:text-neutral-100 dark:placeholder-neutral-400"></textarea>
+              <textarea id="inspiration" name="inspiration" rows="3" placeholder={form.details.inspiration.placeholder} class={`${baseField} resize-none placeholder-neutral-500 dark:placeholder-neutral-400`}></textarea>
             </div>
             <div>
               <label for="branding-0" class="mb-3 block text-sm font-medium text-neutral-800 dark:text-neutral-200">{form.details.hasBranding.label}</label>
               <div class="grid gap-3 sm:grid-cols-1">
                 {
                   form.details.hasBranding.options.map((option, index) => (
-                    <label for={`branding-${index}`} class="flex cursor-pointer items-center space-x-3 rounded-lg border border-neutral-200 bg-neutral-50 p-3 hover:bg-neutral-200 dark:dark:border-neutral-800 dark:bg-neutral-950 dark:hover:bg-neutral-800">
-                      <input id={`branding-${index}`} type="radio" name="hasBranding" value={option} required class="h-4 w-4 border-neutral-200 dark:dark:border-neutral-800" />
+                    <label for={`branding-${index}`} class={radioCard}>
+                      <input id={`branding-${index}`} type="radio" name="hasBranding" value={option} required class={radioInput} />
                       <span class="text-neutral-800 dark:text-neutral-200">{option}</span>
                     </label>
                   ))
@@ -223,7 +228,7 @@ const langPrefix = Astro.url.pathname.startsWith("/en") ? "/en" : "";
         </div>
         <!-- Navigation Buttons -->
         <div id="form-navigation" class="mt-12 flex items-center justify-between">
-          <button type="button" id="prev-btn" class="cursor-pointer rounded-full border border-neutral-200 bg-white p-3 text-neutral-700 hover:bg-neutral-50 disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:bg-white dark:dark:border-neutral-800 dark:bg-neutral-800 dark:text-neutral-300 dark:hover:bg-neutral-700 dark:disabled:hover:bg-neutral-800" aria-label={form.aria.prev} disabled>
+          <button type="button" id="prev-btn" class="cursor-pointer rounded-full border border-neutral-200 bg-white p-3 text-neutral-700 hover:bg-neutral-50 disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:bg-white dark:border-neutral-800 dark:bg-neutral-800 dark:text-neutral-300 dark:hover:bg-neutral-700 dark:disabled:hover:bg-neutral-800" aria-label={form.aria.prev} disabled>
             <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
             </svg>

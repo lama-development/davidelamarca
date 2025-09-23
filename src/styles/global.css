@@ -32,6 +32,14 @@ body {
   outline: 2px solid var(--color-blue-500) !important;
 }
 
+/* FAQ chevron rotation refinement */
+.faq-chevron {
+  transition: transform 220ms ease-in-out;
+}
+.faq-chevron-rotated {
+  transform: rotate(180deg);
+}
+
 details summary::-webkit-details-marker {
   display: none;
 }

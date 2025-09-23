@@ -1,142 +1,88 @@
-document.addEventListener("DOMContentLoaded", function () {
-  // Language dropdown functionality
-  const langMenuButton = document.getElementById("lang-menu-button");
-  const langDropdown = document.getElementById("lang-dropdown");
-  const langChevronIcon = document.getElementById("lang-chevron-icon");
-  const langMenuItems = document.querySelectorAll("#lang-dropdown [role='menuitem']");
+document.addEventListener("DOMContentLoaded", () => {
+  const btn = document.getElementById("lang-menu-button");
+  const dropdown = document.getElementById("lang-dropdown");
+  const chevron = document.getElementById("lang-chevron-icon");
+  const items = dropdown ? dropdown.querySelectorAll("[role='menuitem']") : [];
+  if (!(btn && dropdown && chevron)) return;
 
-  let currentFocusIndex = -1;
+  let focusIndex = -1;
+  const setChevron = (deg) => (chevron.style.transform = `rotate(${deg}deg)`);
+  const expanded = () => btn.getAttribute("aria-expanded") === "true";
 
-  // Function to open dropdown
-  function openDropdown() {
-    langMenuButton.setAttribute("aria-expanded", "true");
-    langDropdown?.classList.remove("hidden");
-    currentFocusIndex = -1;
-
-    // Rotate chevron icon
-    if (langChevronIcon) {
-      langChevronIcon.style.transform = "rotate(180deg)";
-    }
-
-    // Focus first menu item after a short delay to ensure dropdown is visible
-    setTimeout(() => {
-      if (langMenuItems.length > 0) {
-        currentFocusIndex = 0;
-        langMenuItems[0].focus();
-      }
-    }, 50);
-  }
-
-  // Function to close dropdown
-  function closeDropdown(returnFocusToButton = true) {
-    langMenuButton.setAttribute("aria-expanded", "false");
-    langDropdown?.classList.add("hidden");
-    currentFocusIndex = -1;
-
-    // Reset chevron rotation
-    if (langChevronIcon) {
-      langChevronIcon.style.transform = "rotate(0deg)";
-    }
-
-    // Return focus to button if requested
-    if (returnFocusToButton) {
-      langMenuButton.focus();
+  function open(first = true) {
+    btn.setAttribute("aria-expanded", "true");
+    dropdown.classList.remove("hidden");
+    focusIndex = -1;
+    setChevron(180);
+    const isCoarse = window.matchMedia("(pointer: coarse)").matches;
+    if (first && items.length && !isCoarse) {
+      setTimeout(() => {
+        focusIndex = 0;
+        items[0].focus();
+      }, 40);
     }
   }
-
-  // Function to move focus within dropdown
-  function moveFocus(direction) {
-    if (langMenuItems.length === 0) return;
-
-    if (direction === "down") {
-      currentFocusIndex = (currentFocusIndex + 1) % langMenuItems.length;
-    } else if (direction === "up") {
-      currentFocusIndex = currentFocusIndex <= 0 ? langMenuItems.length - 1 : currentFocusIndex - 1;
-    }
-
-    langMenuItems[currentFocusIndex].focus();
+  function close(returnFocus = true) {
+    btn.setAttribute("aria-expanded", "false");
+    dropdown.classList.add("hidden");
+    focusIndex = -1;
+    setChevron(0);
+    if (returnFocus) btn.focus();
   }
 
-  // Toggle dropdown visibility when button is clicked
-  langMenuButton?.addEventListener("click", () => {
-    const expanded = langMenuButton.getAttribute("aria-expanded") === "true";
-    if (expanded) {
-      closeDropdown();
-    } else {
-      openDropdown();
-    }
-  });
+  function move(dir) {
+    if (!items.length) return;
+    focusIndex = dir === "down" ? (focusIndex + 1) % items.length : focusIndex <= 0 ? items.length - 1 : focusIndex - 1;
+    items[focusIndex].focus();
+  }
 
-  // Handle keyboard navigation on menu button
-  langMenuButton?.addEventListener("keydown", (event) => {
-    switch (event.key) {
-      case "Enter":
-      case " ":
-      case "ArrowDown":
-        event.preventDefault();
-        openDropdown();
-        break;
-      case "ArrowUp":
-        event.preventDefault();
-        openDropdown();
-        // Focus last item when opening with ArrowUp
+  btn.addEventListener("click", () => (expanded() ? close() : open()));
+  btn.addEventListener("keydown", (e) => {
+    if (["Enter", " ", "ArrowDown"].includes(e.key)) {
+      e.preventDefault();
+      open(true);
+    } else if (e.key === "ArrowUp") {
+      e.preventDefault();
+      const isCoarse = window.matchMedia("(pointer: coarse)").matches;
+      open(false);
+      if (!isCoarse) {
         setTimeout(() => {
-          if (langMenuItems.length > 0) {
-            currentFocusIndex = langMenuItems.length - 1;
-            langMenuItems[currentFocusIndex].focus();
+          if (items.length) {
+            focusIndex = items.length - 1;
+            items[focusIndex].focus();
           }
-        }, 50);
-        break;
-      case "Escape":
-        closeDropdown();
-        break;
-    }
+        }, 40);
+      }
+    } else if (e.key === "Escape") close();
   });
 
-  // Handle keyboard navigation within dropdown
-  langMenuItems.forEach((item, index) => {
-    item.addEventListener("keydown", (event) => {
-      switch (event.key) {
-        case "ArrowDown":
-          event.preventDefault();
-          moveFocus("down");
-          break;
-        case "ArrowUp":
-          event.preventDefault();
-          moveFocus("up");
-          break;
-        case "Escape":
-          event.preventDefault();
-          closeDropdown();
-          break;
-        case "Tab":
-          // Allow normal tab behavior but close dropdown
-          closeDropdown(false);
-          break;
-        case "Enter":
-        case " ":
-          // Let the link handle the navigation
-          break;
+  items.forEach((item, i) => {
+    item.addEventListener("focus", () => {
+      focusIndex = i;
+    });
+    item.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowDown") {
+        e.preventDefault();
+        move("down");
+      } else if (e.key === "ArrowUp") {
+        e.preventDefault();
+        move("up");
+      } else if (e.key === "Escape") {
+        e.preventDefault();
+        close();
+      } else if (e.key === "Tab") {
+        close(false);
       }
     });
-
-    // Update currentFocusIndex when items receive focus
-    item.addEventListener("focus", () => {
-      currentFocusIndex = index;
-    });
   });
 
-  // Close dropdown when clicking outside
-  document.addEventListener("click", (event) => {
-    if (langMenuButton && !langMenuButton.contains(event.target) && langDropdown && !langDropdown.contains(event.target)) {
-      closeDropdown(false);
-    }
+  function outside(target) {
+    return !btn.contains(target) && !dropdown.contains(target);
+  }
+  document.addEventListener("click", (e) => {
+    if (expanded() && outside(e.target)) close(false);
   });
-
-  // Close dropdown when focusing outside (for better accessibility)
-  document.addEventListener("focusin", (event) => {
-    if (langMenuButton && !langMenuButton.contains(event.target) && langDropdown && !langDropdown.contains(event.target)) {
-      closeDropdown(false);
-    }
+  document.addEventListener("focusin", (e) => {
+    if (expanded() && outside(e.target)) close(false);
   });
 });

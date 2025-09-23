@@ -1,78 +1,55 @@
 import { triggerHaptic } from "tactus";
 
-document.addEventListener("DOMContentLoaded", function () {
-  const themeButtons = document.querySelectorAll(".theme-btn");
-  const themeIndicator = document.getElementById("theme-indicator");
+document.addEventListener("DOMContentLoaded", () => {
+  const buttons = document.querySelectorAll(".theme-btn");
+  const indicator = document.getElementById("theme-indicator");
   const html = document.documentElement;
+  const DARK_QUERY = "(prefers-color-scheme: dark)";
+  const WIDTH = 32; // pixel width of each toggle button
 
-  // Add preload class to prevent transitions on initial load
   html.classList.add("preload");
+  setTimeout(() => html.classList.remove("preload"), 100);
 
-  // Remove preload class after a brief delay to enable transitions
-  setTimeout(() => {
-    html.classList.remove("preload");
-  }, 100);
+  let current = localStorage.getItem("theme") || "system";
+  updateActive(current);
 
-  // Get current theme from localStorage or default to 'system'
-  let currentTheme = localStorage.getItem("theme") || "system";
-
-  // Update UI to match the already-applied theme (theme was applied in head script)
-  updateActiveButton(currentTheme);
-
-  // Add click event listeners to theme buttons
-  themeButtons.forEach((button) => {
-    button.addEventListener("click", function () {
-      const theme = this.id.replace("theme-", "");
+  buttons.forEach((btn) => {
+    btn.addEventListener("click", function () {
+      const next = this.id.replace("theme-", "");
       triggerHaptic();
-      currentTheme = theme;
-      localStorage.setItem("theme", theme);
-      applyTheme(theme);
-      updateActiveButton(theme);
+      current = next;
+      localStorage.setItem("theme", next);
+      apply(next);
+      updateActive(next);
     });
   });
 
-  // Listen for system theme changes
-  window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", function () {
-    if (currentTheme === "system") {
-      applyTheme("system");
-    }
+  window.matchMedia(DARK_QUERY).addEventListener("change", () => {
+    if (current === "system") apply("system");
   });
 
-  function applyTheme(theme) {
-    if (theme === "dark" || (theme === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
-      html.classList.add("dark");
-    } else {
-      html.classList.remove("dark");
-    }
+  function prefersDark() {
+    return window.matchMedia(DARK_QUERY).matches;
+  }
+  function apply(theme) {
+    theme === "dark" || (theme === "system" && prefersDark()) ? html.classList.add("dark") : html.classList.remove("dark");
   }
 
-  function updateActiveButton(theme) {
-    // Update button styles
-    themeButtons.forEach((button) => {
-      button.classList.remove("text-black", "dark:text-white");
-      button.classList.add("text-neutral-600", "dark:text-neutral-400");
+  function updateActive(theme) {
+    buttons.forEach((b) => {
+      b.classList.remove("text-black", "dark:text-white");
+      b.classList.add("text-neutral-600", "dark:text-neutral-400");
     });
-
-    const activeButton = document.getElementById(`theme-${theme}`);
-    if (activeButton) {
-      activeButton.classList.remove("text-neutral-600", "dark:text-neutral-400");
-      activeButton.classList.add("text-black", "dark:text-white");
-
-      // Move the indicator to the active button
-      moveIndicator(activeButton);
-    }
+    const active = document.getElementById(`theme-${theme}`);
+    if (!active) return;
+    active.classList.remove("text-neutral-600", "dark:text-neutral-400");
+    active.classList.add("text-black", "dark:text-white");
+    moveIndicator(active);
   }
-
-  function moveIndicator(activeButton) {
-    if (!themeIndicator || !activeButton) return;
-
-    // Get the index of the active button (0 = system, 1 = light, 2 = dark)
-    const buttons = Array.from(themeButtons);
-    const buttonIndex = buttons.indexOf(activeButton);
-    const buttonWidth = 32;
-    const offset = buttonIndex * buttonWidth;
-
-    // Move the indicator
-    themeIndicator.style.transform = `translateX(${offset}px)`;
+  function moveIndicator(active) {
+    if (!indicator) return;
+    const idx = Array.from(buttons).indexOf(active);
+    indicator.style.transform = `translateX(${idx * WIDTH}px)`;
   }
+  apply(current);
 });

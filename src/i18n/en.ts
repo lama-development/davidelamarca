@@ -189,14 +189,14 @@ export default (langPrefix = "") => ({
         subtitle: "Tell me about your project",
         projectType: {
           label: "What type of project do you have in mind?",
-          options: ["New website", "Redesign existing site", "E-commerce", "Web app", "SEO & optimization", "Other"]
+          options: ["New website", "Redesign existing site", "E-commerce", "Other"]
         },
         budget: {
           label: "What's your indicative budget?",
           options: ["< 1000€", "1000€ - 2000€", "2000€ - 3000€", "Over 3000€"]
         },
         timeline: {
-          label: "What's yoour desired timeline?",
+          label: "What's your desired timeline?",
           options: ["Urgent (surcharges apply)", "Flexible"]
         }
       },

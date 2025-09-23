@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const stepNumber = index + 1;
 
       if (stepNumber <= currentStep) {
-        // Active or completed step - blue dot
+        // Active or completed step
         dot.className = "step-dot h-3 w-3 rounded-full bg-blue-500 ";
       } else {
         // Inactive step

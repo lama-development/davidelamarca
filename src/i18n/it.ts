@@ -88,7 +88,7 @@ export default (langPrefix = "") => ({
   projects: {
     meta: {
       title: "Progetti - Davide La Marca",
-      subtitle: "Esplora il mio portfolio di progetti di sviluppo web inclusi siti moderni, piattaforme e-commerce e applicazioni web."
+      description: "Esplora il mio portfolio di progetti di sviluppo web inclusi siti moderni, piattaforme e-commerce e applicazioni web."
     },
     header: {
       badge: "Portfolio",
@@ -189,14 +189,14 @@ export default (langPrefix = "") => ({
         subtitle: "Raccontami del progetto",
         projectType: {
           label: "Che tipo di progetto hai in mente?",
-          options: ["Nuovo sito web", "Redesign di un sito esistente", "E-commerce", "Web app", "SEO e ottimizzazione", "Altro"]
+          options: ["Nuovo sito web", "Redesign di un sito esistente", "E-commerce", "Altro"]
         },
         budget: {
           label: "Qual è il budget?",
           options: ["< 1000€", "1000€ - 2000€", "2000€ - 3000€", "Oltre 3000€"]
         },
         timeline: {
-          label: "Qiali sono le tempistiche desiderate?",
+          label: "Quali sono le tempistiche desiderate?",
           options: ["Urgente (si applicano maggiorazioni)", "Flessibili"]
         }
       },

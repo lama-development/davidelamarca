@@ -1,3 +1,3 @@
 module.exports = {
-  content: ["./src/**/*.{js,astro,css}"]
+  content: ["./src/**/*.{astro,html,js,ts,jsx,tsx,md,mdx}", "./public/**/*.html"]
 };

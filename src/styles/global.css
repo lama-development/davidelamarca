@@ -15,16 +15,13 @@ body {
     sans-serif;
 }
 
-*,
-*::before,
-*::after {
-  transition: 
-    background-color 200ms ease-in-out,
-    border-color 200ms ease-in-out,
-    color 200ms ease-in-out,
-    fill 200ms ease-in-out,
-    opacity 200ms ease-in-out,
-    transform 200ms ease-in-out;
+*, *::before, *::after {
+  transition: background-color 200ms ease, border-color 200ms ease, color 200ms ease, opacity 200ms ease, transform 200ms ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+  html { scroll-behavior: auto; }
 }
 
 *:focus-visible {
@@ -32,7 +29,6 @@ body {
   outline: 2px solid var(--color-blue-500) !important;
 }
 
-/* FAQ chevron rotation refinement */
 .faq-chevron {
   transition: transform 220ms ease-in-out;
 }
@@ -78,12 +74,10 @@ details summary::-webkit-details-marker {
   letter-spacing: -0.03em;
 }
 
-#mobile-menu {
-  animation: popupIn 0.1s ease-out;
-}
-
+#mobile-menu,
 #lang-dropdown {
-  animation: popupIn 0.1s ease-out;
+  animation: popupIn 0.12s ease-out;
+  will-change: transform, opacity;
 }
 
 @keyframes popupIn {

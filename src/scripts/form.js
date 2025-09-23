@@ -9,19 +9,35 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!form || !nextBtn || !prevBtn) return;
 
   let currentStep = 1;
+  let maxStepReached = 1;
   const totalSteps = 4;
   const submitText = form.getAttribute("data-submit-text") || "Submit";
+  const originalNextText = nextBtn.getAttribute("data-next-text") || nextBtn.textContent?.trim() || "Next";
 
   const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  const BORDER_DEFAULT_REMOVALS = ["border-red-600", "dark:border-red-400"]; // remove these when clearing
-  const BORDER_DEFAULT_ADDS = ["border-neutral-200", "dark:border-neutral-800"]; // add these when clearing
 
   function hideAllErrors() {
     document.querySelectorAll(".error-message").forEach((el) => el.classList.add("hidden"));
-    document.querySelectorAll("input, textarea").forEach((field) => {
-      field.classList.remove(...BORDER_DEFAULT_REMOVALS);
-      field.classList.add(...BORDER_DEFAULT_ADDS);
-    });
+  }
+
+  function hideError(fieldName) {
+    const errorEl = document.querySelector(`[data-field="${fieldName}"]`);
+    if (errorEl) errorEl.classList.add("hidden");
+  }
+
+  function fieldIsValid(input) {
+    const value = input.value?.trim?.() || "";
+    if (input.type === "checkbox") return input.checked; // required attribute implies must be checked
+    if (input.type === "radio") {
+      // At least one in group checked
+      const container = input.closest(".step-content") || document;
+      return !!container.querySelector(`input[name="${input.name}"]:checked`);
+    }
+    if (input.type === "email") {
+      if (!value) return false;
+      return EMAIL_REGEX.test(value);
+    }
+    return !!value;
   }
 
   function showError(fieldName, customMessage) {
@@ -31,16 +47,13 @@ document.addEventListener("DOMContentLoaded", () => {
       errorEl.classList.remove("hidden");
       if (customMessage) errorEl.textContent = customMessage;
     }
-    if (field) {
-      field.classList.remove(...BORDER_DEFAULT_ADDS);
-      field.classList.add(...BORDER_DEFAULT_REMOVALS);
-    }
   }
 
   function updateStepDots() {
     stepDots.forEach((dot, idx) => {
       const active = idx + 1 <= currentStep;
       dot.className = `step-dot h-3 w-3 rounded-full ${active ? "bg-blue-500" : "bg-neutral-300 dark:bg-neutral-600"}`;
+      dot.style.cursor = idx + 1 <= maxStepReached ? "pointer" : "not-allowed";
     });
   }
 
@@ -51,8 +64,8 @@ document.addEventListener("DOMContentLoaded", () => {
       nextBtn.className = "cursor-pointer rounded-full bg-blue-500 px-6 py-3 font-medium tracking-tight text-white hover:bg-blue-600 dark:text-black";
       nextBtn.type = "submit";
     } else {
-      nextBtn.innerHTML = '<svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>';
-      nextBtn.className = "cursor-pointer rounded-full bg-blue-500 p-3 text-white hover:bg-blue-600 dark:text-black";
+      nextBtn.textContent = originalNextText;
+      nextBtn.className = "cursor-pointer rounded-full bg-blue-500 px-6 py-3 font-medium tracking-tight text-white hover:bg-blue-600 dark:text-black";
       nextBtn.type = "button";
     }
   }
@@ -60,7 +73,14 @@ document.addEventListener("DOMContentLoaded", () => {
   function showStep(step) {
     hideAllErrors();
     steps.forEach((el, idx) => el.classList.toggle("hidden", idx + 1 !== step));
-    prevBtn.disabled = step === 1;
+    // Toggle previous button availability
+    const isFirst = step === 1;
+    prevBtn.disabled = isFirst;
+    if (isFirst) {
+      prevBtn.classList.add("invisible");
+    } else {
+      prevBtn.classList.remove("invisible");
+    }
     renderNextButton(step === totalSteps);
     updateStepDots();
   }
@@ -150,6 +170,41 @@ document.addEventListener("DOMContentLoaded", () => {
           selected.classList.remove("border-neutral-200", "dark:border-neutral-800");
           selected.classList.add("border-blue-500");
         }
+        // Real-time hide error for radio groups
+        if (fieldIsValid(this)) hideError(this.name);
+      });
+    });
+  }
+
+  function attachRealtimeValidation() {
+    const allRequired = form.querySelectorAll("[required]");
+    allRequired.forEach((input) => {
+      const evt = input.type === "checkbox" || input.type === "radio" ? "change" : "input";
+      input.addEventListener(evt, () => {
+        if (fieldIsValid(input)) {
+          hideError(input.name || input.id);
+        }
+      });
+      // Additional blur validation for showing error early (optional)
+      input.addEventListener("blur", () => {
+        if (!fieldIsValid(input)) {
+          // mimic validateStep single-field behavior
+          if (input.type === "email" && input.value) {
+            if (!EMAIL_REGEX.test(input.value)) {
+              showError(input.name, document.querySelector('[data-field="email"]')?.textContent || "Please enter a valid email");
+              return;
+            }
+          }
+          if (input.type === "radio") {
+            if (!fieldIsValid(input)) showError(input.name);
+            return;
+          }
+          if (input.type === "checkbox") {
+            if (!input.checked) showError(input.id || input.name);
+            return;
+          }
+          if (!input.value.trim()) showError(input.name);
+        }
       });
     });
   }
@@ -160,6 +215,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (currentStep < totalSteps) {
       if (validateStep(currentStep)) {
         currentStep++;
+        if (currentStep > maxStepReached) maxStepReached = currentStep;
         showStep(currentStep);
       }
     } else if (validateStep(currentStep)) {
@@ -174,7 +230,39 @@ document.addEventListener("DOMContentLoaded", () => {
     showStep(currentStep);
   });
 
+  // Allow Enter key to advance/submit (except inside textarea to allow new lines)
+  form.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+      const target = e.target;
+      if (target && target.tagName === "TEXTAREA") return; // allow newline in textarea
+      e.preventDefault();
+      if (currentStep < totalSteps) {
+        if (validateStep(currentStep)) {
+          currentStep++;
+          if (currentStep > maxStepReached) maxStepReached = currentStep;
+          showStep(currentStep);
+        }
+      } else if (validateStep(currentStep)) {
+        submitForm();
+      }
+    }
+  });
+
+  // Clickable step dots (cannot jump ahead of maxStepReached)
+  stepDots.forEach((dot, idx) => {
+    const stepIndex = idx + 1;
+    dot.addEventListener("click", () => {
+      if (stepIndex <= maxStepReached) {
+        currentStep = stepIndex;
+        showStep(currentStep);
+      } else {
+        triggerHaptic();
+      }
+    });
+  });
+
   document.getElementById("name")?.focus();
   initRadioStyles();
+  attachRealtimeValidation();
   showStep(currentStep);
 });

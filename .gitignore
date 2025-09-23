@@ -7,6 +7,15 @@ dist/
 # dependencies
 node_modules/
 
+# hosting / deployment platforms
+.vercel/
+.netlify/
+/.output/
+
+# debug / profiling
+coverage/
+*.lcov
+
 # logs
 npm-debug.log*
 yarn-debug.log*

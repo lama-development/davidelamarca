@@ -1,0 +1,11 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import PageNotFound from "../../components/common/PageNotFound.astro";
+import en from "../../i18n/en";
+
+const t = en("/en");
+---
+
+<Layout t={t} meta={t.pageNotFound.meta}>
+  <PageNotFound pageNotFound={t.pageNotFound} />
+</Layout>

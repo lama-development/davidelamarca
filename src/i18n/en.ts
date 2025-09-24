@@ -433,7 +433,7 @@ export default (langPrefix = "") => ({
     ],
     questions: {
       title: "Questions?",
-      description: "For any questions regarding the terms of service, you can contact me at the address ",
+      description: "For any questions regarding the terms, you can contact me at the address ",
       ariaLabel: "Send email"
     }
   }, 
@@ -680,7 +680,7 @@ privacyPolicy: {
   ],
     questions: {
       title: "Questions?",
-      description: "For any questions regarding the privacy policy, you can contact me at the address ",
+      description: "For any questions regarding the terms, you can contact me at the address ",
       ariaLabel: "Send email"
     }
   },

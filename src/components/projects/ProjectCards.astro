@@ -17,7 +17,7 @@ const getImage = (imageName: string) => {
 const displayProjects = isHomePage ? projectCard.slice(0, 3) : projectCard;
 ---
 
-<section id="projects" class="border-b border-neutral-200 bg-neutral-50 px-6 py-20 dark:dark:border-neutral-800 dark:bg-neutral-950">
+<section id="projects" class="border-b border-neutral-200 bg-neutral-50 px-6 py-20 dark:border-neutral-800 dark:bg-neutral-950">
   <div class="mx-auto max-w-7xl">
     {
       isHomePage && (
@@ -33,8 +33,8 @@ const displayProjects = isHomePage ? projectCard.slice(0, 3) : projectCard;
     <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
       {
         displayProjects.map((project: any) => (
-          <div class="overflow-hidden rounded-4xl border border-neutral-200 bg-neutral-100 dark:dark:border-neutral-800 dark:bg-neutral-900">
-            <div class="flex aspect-video items-center justify-center overflow-hidden border-b border-neutral-200 bg-neutral-200 dark:dark:border-neutral-800 dark:bg-neutral-800">
+          <div class="overflow-hidden rounded-4xl border border-neutral-200 bg-neutral-100 dark:border-neutral-800 dark:bg-neutral-900">
+            <div class="flex aspect-video items-center justify-center overflow-hidden border-b border-neutral-200 bg-neutral-200 dark:border-neutral-800 dark:bg-neutral-800">
               <a href={project.link} aria-label={project.ariaLabel} target="_blank" rel="noopener" class="block h-full w-full">
                 <Image src={getImage(project.image)} alt={project.ariaLabel} class="h-full w-full object-cover" width={1200} height={675} sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" loading={isHomePage ? "lazy" : "eager"} format="webp" quality={100} />
               </a>
@@ -50,7 +50,7 @@ const displayProjects = isHomePage ? projectCard.slice(0, 3) : projectCard;
                 ))}
               </div>
               <div>
-                <a href={project.link} target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-neutral-50 px-6 py-3 text-sm font-medium text-neutral-700 hover:bg-neutral-200 dark:dark:border-neutral-800 dark:bg-neutral-950 dark:text-neutral-200 dark:hover:bg-neutral-800">
+                <a href={project.link} target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-neutral-50 px-6 py-3 text-sm font-medium text-neutral-700 hover:bg-neutral-200 dark:border-neutral-800 dark:bg-neutral-950 dark:text-neutral-200 dark:hover:bg-neutral-800">
                   {project.button}
                   <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />

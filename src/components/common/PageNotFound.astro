@@ -3,7 +3,7 @@ const { pageNotFound } = Astro.props;
 const langPrefix = Astro.url.pathname.startsWith("/en") ? "/en" : "";
 ---
 
-<section id="pageNotFound" class="relative flex min-h-screen w-full items-center justify-center border-b border-neutral-200 bg-neutral-100 px-6 dark:dark:border-neutral-800 dark:bg-neutral-900">
+<section id="pageNotFound" class="relative flex min-h-screen w-full items-center justify-center border-b border-neutral-200 bg-neutral-100 px-6 dark:border-neutral-800 dark:bg-neutral-900">
   <div class="relative z-10 mx-auto max-w-7xl text-center">
     <div class="mx-auto mb-6 inline-flex items-center gap-2 rounded-full border border-blue-500/20 bg-blue-500/10 px-3 py-1.5 text-xs font-medium whitespace-nowrap text-blue-500 sm:mb-8 sm:text-sm">
       <span class="text-xs font-medium text-blue-500 sm:text-sm">404</span>

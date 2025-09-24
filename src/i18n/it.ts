@@ -433,7 +433,7 @@ export default (langPrefix = "") => ({
     ],
     questions: {
       title: "Domande?",
-      description: "Per qualsiasi domanda riguardo ai termini di servizio, puoi contattarmi all'indirizzo ",
+      description: "Per qualsiasi domanda riguardo ai termini, puoi contattarmi all'indirizzo ",
       ariaLabel: "Invia email"
     }
   },
@@ -680,7 +680,7 @@ export default (langPrefix = "") => ({
     ],
     questions: {
       title: "Domande?",
-      description: "Per qualsiasi domanda riguardo ai termini di servizio, puoi contattarmi all'indirizzo ",
+      description: "Per qualsiasi domanda riguardo ai termini, puoi contattarmi all'indirizzo ",
       ariaLabel: "Invia email"
     }
   },

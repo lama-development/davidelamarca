@@ -5,6 +5,7 @@ export default (langPrefix = "") => ({
     page1: "Home",
     page2: "Progetti",
     page3: "Contattami",
+    skipToContent: "Salta al contenuto",
     aria: {
       menu: "Apri o chiudi menu"
     }

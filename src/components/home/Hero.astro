@@ -23,10 +23,19 @@ const langPrefix = Astro.url.pathname.startsWith("/en") ? "/en" : "";
       </a>
     </div>
   </div>
-  <div class="absolute bottom-6 left-1/2 z-10 -translate-x-1/2 transform animate-bounce">
+  <!-- Bouncing scroll indicator (default) -->
+  <div class="scroll-indicator-bounce absolute bottom-6 left-1/2 z-10 -translate-x-1/2 transform animate-bounce">
     <a href="#services" aria-label={hero.aria.scroll} class="cursor-pointer">
       <svg class="h-6 w-6 text-neutral-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+      </svg>
+    </a>
+  </div>
+  <!-- Static scroll indicator (reduced motion) -->
+  <div class="scroll-indicator-static absolute bottom-6 left-1/2 z-10 hidden -translate-x-1/2 transform">
+    <a href="#services" aria-label={hero.aria.scroll} class="cursor-pointer">
+      <svg class="h-6 w-6 text-neutral-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
       </svg>
     </a>
   </div>

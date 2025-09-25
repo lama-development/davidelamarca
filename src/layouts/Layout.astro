@@ -45,7 +45,7 @@ const altLinks = [
     <meta name="twitter:description" content={meta.description} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <script is:inline>
       (function () {
         const theme = localStorage.getItem("theme") || "system";
@@ -60,7 +60,9 @@ const altLinks = [
   </head>
   <body class="bg-neutral-50 dark:bg-neutral-950">
     <Navbar navbar={t.navbar} />
-    <slot />
+    <main id="main-content">
+      <slot />
+    </main>
     <Footer footer={t.footer} />
     <script src="../scripts/theme.js"></script>
     <script src="../scripts/navbar.js"></script>

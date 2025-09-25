@@ -22,6 +22,8 @@ body {
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition: none !important; animation: none !important; }
   html { scroll-behavior: auto; }
+  .scroll-indicator-bounce { display: none !important; }
+  .scroll-indicator-static { display: block !important; }
 }
 
 *:focus-visible {

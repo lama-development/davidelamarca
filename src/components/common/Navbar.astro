@@ -10,6 +10,11 @@ function isLinkActive(href: string): boolean {
 const activeClasses = "bg-neutral-100 dark:bg-neutral-950 border border-neutral-200 dark:border-neutral-800";
 ---
 
+<!-- Skip to content link (visually hidden until focused) -->
+<a href="#main-content" class="fixed -left-[9999px] h-px w-px overflow-hidden focus:top-0 focus:left-1/2 focus:z-[100] focus:h-auto focus:w-auto focus:-translate-x-1/2 focus:overflow-visible focus:rounded-b-md focus:bg-blue-500 focus:px-4 focus:py-2 focus:text-white focus:no-underline">
+  {navbar.skipToContent}
+</a>
+
 <nav id="navbar" class="fixed top-0 right-0 left-0 z-50 h-12 border-b border-neutral-200 bg-white md:h-16 dark:border-neutral-800 dark:bg-black">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     <div class="flex h-12 items-center justify-between md:h-16">

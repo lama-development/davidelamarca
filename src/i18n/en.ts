@@ -5,6 +5,7 @@ export default (langPrefix = "") => ({
     page1: "Home",
     page2: "Projects",
     page3: "Contact",
+    skipToContent: "Skip to content",
     aria: {
       menu: "Toggle menu"
     }
@@ -453,7 +454,7 @@ privacyPolicy: {
       content: [
         {
           type: "paragraph",
-          text: "This Privacy Policy describes how LA MARCA DAVIDE (hereinafter, the «Controller» or «we») collects, processes, stores, and protects personal data through the website <a href='https://davidelamarca.com' aria-label='Go to website' class='text-blue-500 hover:underline'>davidelamarca.com</a> (hereinafter, the «Website») in accordance with the EU Regulation 2016/679 (hereinafter, «GDPR») and applicable national law. Using the Website implies acceptance of the terms in this Policy. If you do not accept them, please do not use the Website."
+          text: "This Privacy Policy describes how LA MARCA DAVIDE (hereinafter, the «Controller» or «we») collects, processes, stores, and protects personal data through the website <a href='https://davidelamarca.com/en' aria-label='Go to website' class='text-blue-500 hover:underline'>davidelamarca.com</a> (hereinafter, the «Website») in accordance with the EU Regulation 2016/679 (hereinafter, «GDPR») and applicable national law. Using the Website implies acceptance of the terms in this Policy. If you do not accept them, please do not use the Website."
         }
       ]
     },
@@ -465,7 +466,7 @@ privacyPolicy: {
           items: [
             "LA MARCA DAVIDE",
             "VAT: 02804090039",
-            "Website: <a href='https://davidelamarca.com' aria-label='Go to website' class='text-blue-500 hover:underline'>davidelamarca.com</a>",
+            "Website: <a href='https://davidelamarca.com/en' aria-label='Go to website' class='text-blue-500 hover:underline'>davidelamarca.com</a>",
             "Email: <a href='mailto:info@davidelamarca.com' aria-label='Send email' class='text-blue-500 hover:underline'>info@davidelamarca.com</a>"
           ]
         },

@@ -5,9 +5,9 @@ const langPrefix = Astro.url.pathname.startsWith("/en") ? "/en" : "";
 
 <section id="hero" class="relative flex min-h-screen w-full items-center justify-center border-b border-neutral-200 bg-neutral-50 px-6 dark:border-neutral-800 dark:bg-neutral-950">
   <div class="relative z-10 mx-auto max-w-7xl text-center">
-    <div class="mx-auto mb-6 inline-flex items-center gap-2 rounded-full border border-blue-500/20 bg-blue-500/10 px-3 py-1.5 whitespace-nowrap text-blue-500 sm:mb-8">
-      <div class="h-1.5 w-1.5 animate-pulse rounded-full bg-blue-500 sm:h-2 sm:w-2"></div>
-      <span class="text-xs font-medium text-blue-500 sm:text-sm">{hero.badge}</span>
+    <div class="mx-auto mb-6 inline-flex items-center gap-2 rounded-full border border-blue-500/20 bg-blue-50 px-3 py-1.5 whitespace-nowrap sm:mb-8 dark:bg-blue-950">
+      <div class="h-1.5 w-1.5 animate-pulse rounded-full bg-blue-600 sm:h-2 sm:w-2 dark:bg-blue-400"></div>
+      <span class="text-xs font-medium text-blue-600 sm:text-sm dark:text-blue-400">{hero.badge}</span>
     </div>
     <h1 class="header-hero mb-8 text-neutral-900 dark:text-neutral-100">
       <span class="block">{hero.title1}</span>

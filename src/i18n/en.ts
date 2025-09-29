@@ -103,7 +103,6 @@ export default (langPrefix = "") => ({
         description: "Modern website for a private boat tour agency in Sorrento, featuring an online booking system integrated with FareHarbor.",
         button: "Go to website",
         image: "sorrento-boat-trips.webp",
-        technologies: ["Squarespace", "SEO", "Fareharbor"],
         link: "https://sorrentoboattrips.com",
         ariaLabel: "Website page with Sorrento Boat Trips contact details and two people smiling on a sunny boat ride."
       },
@@ -113,7 +112,6 @@ export default (langPrefix = "") => ({
         description: "Fully functional web app connecting freelancers and companies: job posts, advanced search, real-time chat, and customizable profiles.",
         button: "Go to project",
         image: "skillbridge.webp",
-        technologies: ["HTML", "CSS", "Javascript", "SQLite"],
         link: "https://github.com/lama-development/skillbridge",
         ariaLabel: "Digital display of smartphone screens showing a job search app with profiles, accounts, and opportunities."
       },
@@ -123,7 +121,6 @@ export default (langPrefix = "") => ({
         description: "Elegant website for an agency offering luxury private boat experiences and tours, featuring refined design and SEO optimization.",
         button: "Go to website",
         image: "caprice-bleu.webp",
-        technologies: ["Squarespace", "SEO"],
         link: "https://capricebleu.com",
         ariaLabel: "Website page with three women posing on a boat, Capri Island and calm sea in background, promoting exclusive tours."
       }

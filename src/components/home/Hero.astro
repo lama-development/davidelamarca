@@ -13,9 +13,9 @@ const langPrefix = Astro.url.pathname.startsWith("/en") ? "/en" : "";
       <span class="block">{hero.title1}</span>
       <span class="block">{hero.title2}</span>
     </h1>
-    <p class="mx-auto mb-12 max-w-xs text-base leading-[1.1] text-neutral-700 md:max-w-xl md:text-lg dark:text-neutral-300">{hero.subtitle}</p>
+    <p class="mx-auto mb-12 max-w-xs text-base leading-[1.1] text-neutral-700 md:max-w-lg md:text-lg dark:text-neutral-300">{hero.subtitle}</p>
     <div class="mb-16">
-      <a href={`${langPrefix}/contact`} class="inline-flex items-center gap-1 rounded-full bg-blue-500 px-6 py-3 text-lg font-semibold tracking-tight text-white hover:bg-blue-600 dark:text-black">
+      <a href={`${langPrefix}/contact`} class="inline-flex items-center gap-1 rounded-full bg-blue-600 px-6 py-3 text-lg font-semibold tracking-tight text-white hover:bg-blue-500 dark:bg-blue-500 dark:text-black dark:hover:bg-blue-600">
         {hero.button}
         <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>

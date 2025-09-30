@@ -61,11 +61,11 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!nextBtn) return;
     if (isFinal) {
       nextBtn.innerHTML = submitText;
-      nextBtn.className = "cursor-pointer rounded-full bg-blue-500 px-6 py-3 font-medium tracking-tight text-white hover:bg-blue-600 dark:text-black";
+      nextBtn.className = "cursor-pointer rounded-full bg-blue-600 px-6 py-3 font-semibold tracking-tight text-white hover:bg-blue-500 dark:bg-blue-500 dark:text-black dark:hover:bg-blue-600";
       nextBtn.type = "submit";
     } else {
       nextBtn.textContent = originalNextText;
-      nextBtn.className = "cursor-pointer rounded-full bg-blue-500 px-6 py-3 font-medium tracking-tight text-white hover:bg-blue-600 dark:text-black";
+      nextBtn.className = "cursor-pointer rounded-full bg-blue-600 px-6 py-3 font-semibold tracking-tight text-white hover:bg-blue-500 dark:bg-blue-500 dark:text-black dark:hover:bg-blue-600";
       nextBtn.type = "button";
     }
   }

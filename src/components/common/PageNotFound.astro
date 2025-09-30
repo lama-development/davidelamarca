@@ -13,7 +13,7 @@ const langPrefix = Astro.url.pathname.startsWith("/en") ? "/en" : "";
     </h1>
     <p class="mx-auto mb-8 max-w-xs text-base leading-[1.1] text-neutral-700 md:max-w-lg md:text-lg dark:text-neutral-300">{pageNotFound.subtitle}</p>
     <div class="mb-16">
-      <a href={`${langPrefix}/`} class="inline-flex items-center rounded-full bg-blue-500 px-6 py-3 text-lg font-semibold tracking-tight text-white hover:bg-blue-600 dark:text-black">
+      <a href={`${langPrefix}/`} class="inline-flex items-center rounded-full bg-blue-600 px-6 py-3 text-lg font-semibold tracking-tight text-white hover:bg-blue-600 dark:bg-blue-500 dark:text-black">
         {pageNotFound.button}
       </a>
     </div>

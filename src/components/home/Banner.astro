@@ -5,14 +5,14 @@ const langPrefix = Astro.url.pathname.startsWith("/en") ? "/en" : "";
 
 <section id="banner" class="bg-neutral-50 px-6 py-20 md:py-32 dark:bg-neutral-950">
   <div class="mx-auto max-w-4xl">
-    <div class="relative overflow-hidden rounded-4xl bg-blue-500 p-8 md:p-16 lg:p-20">
+    <div class="relative overflow-hidden rounded-4xl bg-blue-600 p-8 md:p-16 lg:p-20 dark:bg-blue-500">
       <div class="relative text-left md:text-center">
         <h2 class="header-banner mb-6 text-white md:mb-10 dark:text-black">
           <span class="block">{banner.title}</span>
         </h2>
         <p class="mb-12 max-w-xs text-base leading-[1.1] text-white/90 md:mx-auto md:max-w-xl md:text-lg dark:text-black/80">{banner.subtitle}</p>
         <div class="flex justify-start md:justify-center">
-          <a href={`${langPrefix}/contact`} class="group inline-flex items-center gap-1 rounded-full bg-neutral-50 px-6 py-3 text-lg font-semibold tracking-tight text-blue-500 hover:bg-neutral-100 dark:bg-neutral-950 dark:hover:bg-neutral-900">
+          <a href={`${langPrefix}/contact`} class="group inline-flex items-center gap-1 rounded-full bg-neutral-50 px-6 py-3 text-lg font-semibold tracking-tight text-blue-600 hover:bg-neutral-100 dark:bg-neutral-950 dark:text-blue-500 dark:hover:bg-neutral-900">
             {banner.button}
             <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>

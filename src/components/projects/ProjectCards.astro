@@ -40,9 +40,7 @@ const displayProjects = isHomePage ? projectCard.slice(0, 3) : projectCard;
               </a>
             </div>
             <div class="p-6">
-              <div class="mb-3 flex flex-wrap items-center gap-3">
-                <h3 class="text-xl font-medium tracking-tight text-neutral-900 dark:text-neutral-100">{project.title}</h3>
-              </div>
+              <div class="mb-3 flex flex-wrap items-center gap-3">{isHomePage ? <h3 class="text-xl font-medium tracking-tight text-neutral-900 dark:text-neutral-100">{project.title}</h3> : <h2 class="text-xl font-medium tracking-tight text-neutral-900 dark:text-neutral-100">{project.title}</h2>}</div>
               <p class="mb-6 text-base tracking-tight text-neutral-700 dark:text-neutral-400">{project.description}</p>
               <div>
                 <a href={project.link} target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-neutral-50 px-6 py-3 text-sm font-medium text-neutral-700 hover:bg-neutral-200 dark:border-neutral-800 dark:bg-neutral-950 dark:text-neutral-200 dark:hover:bg-neutral-800">

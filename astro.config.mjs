@@ -12,7 +12,6 @@ const LOCALE_MAP = { it: "it-IT", en: "en-US" };
 
 export default defineConfig({
   site: "https://davidelamarca.com",
-  trailingSlash: "never",
   compressHTML: true,
   build: {
     inlineStylesheets: "auto"

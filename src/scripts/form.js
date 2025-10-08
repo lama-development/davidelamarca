@@ -179,14 +179,21 @@ document.addEventListener("DOMContentLoaded", () => {
   function attachRealtimeValidation() {
     const allRequired = form.querySelectorAll("[required]");
     allRequired.forEach((input) => {
+      // Track if user has interacted with this field
+      let hasInteracted = false;
+
       const evt = input.type === "checkbox" || input.type === "radio" ? "change" : "input";
       input.addEventListener(evt, () => {
+        hasInteracted = true;
         if (fieldIsValid(input)) {
           hideError(input.name || input.id);
         }
       });
       // Additional blur validation for showing error early (optional)
       input.addEventListener("blur", () => {
+        // Only show errors on blur if the user has actually interacted with the field
+        if (!hasInteracted) return;
+
         if (!fieldIsValid(input)) {
           // mimic validateStep single-field behavior
           if (input.type === "email" && input.value) {

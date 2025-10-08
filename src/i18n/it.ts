@@ -68,7 +68,7 @@ export default (langPrefix = "") => ({
         },
         {
           question: "Offri servizi di manutenzione dopo il lancio?",
-            answer: `Dopo la consegna offro un periodo di garanzia durante il quale risolvo eventuali problemi tecnici o bug emersi nell’uso reale del sito. Questo ti permette di avere la sicurezza che tutto funzioni correttamente. Per maggiori dettagli consulta i miei <a href='${langPrefix}/terms' aria-label='Apri Termini di Servizio' class='text-blue-600 dark:text-blue-500 underline'>Termini di Servizio</a>.`
+          answer: `Dopo la consegna offro un periodo di garanzia durante il quale risolvo eventuali problemi tecnici o bug emersi nell’uso reale del sito. Questo ti permette di avere la sicurezza che tutto funzioni correttamente. Per maggiori dettagli consulta i miei <a href='${langPrefix}/terms' aria-label='Apri Termini di Servizio' class='text-blue-600 dark:text-blue-500 underline'>Termini di Servizio</a>.`
         },
         {
           question: "Il sito sarà ottimizzato per i motori di ricerca?",
@@ -136,7 +136,8 @@ export default (langPrefix = "") => ({
           author: "Amy e Antonio",
           company: "Sorrento Boat Trips",
           website: "https://sorrentoboattrips.com",
-          role: "Fondatori"
+          role: "Fondatori",
+          icon: "M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Z"
         }
       ]
     }
@@ -144,7 +145,7 @@ export default (langPrefix = "") => ({
   contact: {
     meta: {
       title: "Contattami - Davide La Marca",
-      description:  "Raccontami il tuo progetto e scopri come possiamo collaborare per realizzarlo al meglio."
+      description: "Raccontami il tuo progetto e scopri come possiamo collaborare per realizzarlo al meglio."
     },
     header: {
       badge: "Form",
@@ -242,22 +243,22 @@ export default (langPrefix = "") => ({
         {
           title: "Qualità prima di tutto",
           description: "Ogni riga di codice realizzata con attenzione ai dettagli e best practices.",
-          icon: "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+          icon: "M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z"
         },
         {
           title: "Comunicazione chiara",
           description: "Aggiornamenti trasparenti e dialogo aperto durante tutto il progetto.",
-          icon: "M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+          icon: "M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 0 1-2.555-.337A5.972 5.972 0 0 1 5.41 20.97a5.969 5.969 0 0 1-.474-.065 4.48 4.48 0 0 0 .978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25Z"
         },
         {
           title: "Apprendimento continuo",
           description: "Sempre aggiornato con le ultime tecnologie per soluzioni moderne.",
-          icon: "M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+          icon: "M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25"
         },
         {
           title: "Successo del cliente",
           description: "Il tuo successo è il mio successo. Impegnato a fornire risultati concreti.",
-          icon: "M13 10V3L4 14h7v7l9-11h-7z"
+          icon: "M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z"
         }
       ]
     },
@@ -283,7 +284,7 @@ export default (langPrefix = "") => ({
     sections: [
       {
         title: "Introduzione",
-        content : [
+        content: [
           {
             type: "paragraph",
             text: `Con «Fornitore» si intende LA MARCA DAVIDE (ditta individuale, P.IVA 02804090039). Con «Cliente» si intende la persona fisica o giuridica che inoltra richiesta tramite il form presente nella <a href='${langPrefix}/contact' class='text-blue-600 dark:text-blue-500 underline'>pagina di contatto</a> o accetta per iscritto l'offerta. I presenti Termini disciplinano la fornitura di servizi di progettazione, realizzazione, ottimizzazione e manutenzione di siti web e servizi connessi (i «Servizi»). L'invio del form o l'utilizzo continuato del sito <a href='https://davidelamarca.com' class='text-blue-600 dark:text-blue-500 underline'>davidelamarca.com</a> costituiscono accettazione integrale dei presenti Termini. Il Fornitore si riserva il diritto di modificare i presenti Termini in qualsiasi momento; le modifiche entreranno in vigore dalla data di pubblicazione sul sito. L'uso continuato del sito o l'esecuzione di nuovi ordini successivi alla pubblicazione delle modifiche costituiscono accettazione tacita delle stesse. La data dell'ultima versione è riportata in testa al presente documento e viene aggiornata al momento della pubblicazione delle modifiche.`
@@ -307,7 +308,7 @@ export default (langPrefix = "") => ({
         title: "2. Obblighi del Cliente, materiali forniti e responsabilità sui contenuti",
         content: [
           {
-            type: "paragraph", 
+            type: "paragraph",
             text: "Il Cliente si impegna a fornire in tempi utili e nei formati richiesti testi, immagini, loghi, video, licenze e ogni altro materiale necessario alla realizzazione del sito. Il Cliente garantisce di essere titolare dei diritti o di avere il diritto di utilizzo del materiale fornito e manleva il Fornitore da qualsiasi pretesa, costo o responsabilità derivante da violazioni di copyright, marchi o altri diritti di terzi connesse al materiale fornito. Il Fornitore non è responsabile per usi impropri o illeciti di materiale fornito dal Cliente. Qualsiasi materiale fornito oltre i termini concordati che comporti ritardi non rende il Fornitore responsabile per lo slittamento delle milestone."
           }
         ]
@@ -342,11 +343,8 @@ export default (langPrefix = "") => ({
             text: "Le modalità di pagamento dipendono dal tipo di progetto e dall'importo totale: la soluzione definitiva sarà indicata nell'offerta che accompagnerà il preventivo. I compensi sono quelli indicati nell'offerta e sono IVA esclusa. Il pagamento avviene esclusivamente tramite bonifico bancario alle coordinate comunicate dal Fornitore. Modalità di pagamento tipiche:"
           },
           {
-            type: "list", 
-            items: [
-              "Opzione A (3 tranche): acconto 40% all'avvio, tranche intermedia 40%, saldo 20% alla consegna;",
-              "Opzione B (2 tranche): acconto 50% all'avvio e saldo 50% alla consegna.",
-            ]
+            type: "list",
+            items: ["Opzione A (3 tranche): acconto 40% all'avvio, tranche intermedia 40%, saldo 20% alla consegna;", "Opzione B (2 tranche): acconto 50% all'avvio e saldo 50% alla consegna."]
           },
           {
             type: "paragraph",
@@ -388,12 +386,8 @@ export default (langPrefix = "") => ({
             text: "Il Fornitore si riserva il diritto di interrompere unilateralmente la collaborazione e recedere dal contratto in caso di:"
           },
           {
-            type: "list", 
-            items: [
-              "Mancato rispetto delle condizioni economiche o contrattuali da parte del Cliente;",
-              "Comportamenti del Cliente lesivi della professionalità o dignità del Fornitore;",
-              "Comunicazioni o condotte del Cliente manifestamente inappropriate, moleste, aggressive, manipolative o offensivi nei confronti del Fornitore.",
-            ]
+            type: "list",
+            items: ["Mancato rispetto delle condizioni economiche o contrattuali da parte del Cliente;", "Comportamenti del Cliente lesivi della professionalità o dignità del Fornitore;", "Comunicazioni o condotte del Cliente manifestamente inappropriate, moleste, aggressive, manipolative o offensivi nei confronti del Fornitore."]
           },
           {
             type: "paragraph",
@@ -418,16 +412,11 @@ export default (langPrefix = "") => ({
         title: "Informazioni di contatto",
         content: [
           {
-            type: "list", 
-            items: [
-              "LA MARCA DAVIDE",
-              "P.IVA: 02804090039",
-              "Sito web: <a href='https://davidelamarca.com' aria-label='Vai al sito web' class='text-blue-600 dark:text-blue-500 underline'>davidelamarca.com</a>",
-              "Email: <a href='mailto:info@davidelamarca.com' aria-label='Invia email' class='text-blue-600 dark:text-blue-500 underline'>info@davidelamarca.com</a>"
-            ]
-          },
+            type: "list",
+            items: ["LA MARCA DAVIDE", "P.IVA: 02804090039", "Sito web: <a href='https://davidelamarca.com' aria-label='Vai al sito web' class='text-blue-600 dark:text-blue-500 underline'>davidelamarca.com</a>", "Email: <a href='mailto:info@davidelamarca.com' aria-label='Invia email' class='text-blue-600 dark:text-blue-500 underline'>info@davidelamarca.com</a>"]
+          }
         ]
-      },
+      }
     ],
     questions: {
       title: "Domande?",
@@ -448,7 +437,7 @@ export default (langPrefix = "") => ({
     sections: [
       {
         title: "Premessa",
-        content : [
+        content: [
           {
             type: "paragraph",
             text: "La presente Informativa descrive le modalità di raccolta, trattamento, conservazione e protezione dei dati personali effettuati da LA MARCA DAVIDE (di seguito, il «Titolare» o «noi») tramite il sito web <a href='https://davidelamarca.com' aria-label='Vai al sito web' class='text-blue-600 dark:text-blue-500 underline'>davidelamarca.com</a>  (di seguito, il «Sito») in conformità al Regolamento (UE) 2016/679 (di seguito, «GDPR») e alla normativa nazionale applicabile. L'utilizzo del Sito comporta l'accettazione delle modalità indicate nella presente Informativa. In mancanza di accettazione, si invita a non utilizzare il Sito."
@@ -459,13 +448,8 @@ export default (langPrefix = "") => ({
         title: "1. Titolare del trattamento dei dati",
         content: [
           {
-            type: "list", 
-            items: [
-              "LA MARCA DAVIDE",
-              "P.IVA: 02804090039",
-              "Sito web: <a href='https://davidelamarca.com' aria-label='Vai al sito web' class='text-blue-600 dark:text-blue-500 underline'>davidelamarca.com</a>",
-              "Email: <a href='mailto:info@davidelamarca.com' aria-label='Invia email' class='text-blue-600 dark:text-blue-500 underline'>info@davidelamarca.com</a>"
-            ]
+            type: "list",
+            items: ["LA MARCA DAVIDE", "P.IVA: 02804090039", "Sito web: <a href='https://davidelamarca.com' aria-label='Vai al sito web' class='text-blue-600 dark:text-blue-500 underline'>davidelamarca.com</a>", "Email: <a href='mailto:info@davidelamarca.com' aria-label='Invia email' class='text-blue-600 dark:text-blue-500 underline'>info@davidelamarca.com</a>"]
           },
           {
             type: "paragraph",
@@ -481,15 +465,8 @@ export default (langPrefix = "") => ({
             text: "Ai fini della presente Informativa si intendono per:"
           },
           {
-            type: "list", 
-            items: [
-              "Dati personali: qualsiasi informazione riguardante una persona fisica identificata o identificabile;",
-              "Interessato/Utente: la persona fisica cui si riferiscono i Dati personali;",
-              "Trattamento: qualsiasi operazione o complesso di operazioni effettuate sui Dati personali;",
-              "Titolare del trattamento: la persona fisica o giuridica che determina le finalità e i mezzi del trattamento;",
-              "Responsabile del trattamento: la persona fisica o giuridica che tratta i dati per conto del Titolare;",
-              "Tracker/Cookie/localStorage: strumenti che consentono la memorizzazione di informazioni sul dispositivo dell'Utente."
-            ]
+            type: "list",
+            items: ["Dati personali: qualsiasi informazione riguardante una persona fisica identificata o identificabile;", "Interessato/Utente: la persona fisica cui si riferiscono i Dati personali;", "Trattamento: qualsiasi operazione o complesso di operazioni effettuate sui Dati personali;", "Titolare del trattamento: la persona fisica o giuridica che determina le finalità e i mezzi del trattamento;", "Responsabile del trattamento: la persona fisica o giuridica che tratta i dati per conto del Titolare;", "Tracker/Cookie/localStorage: strumenti che consentono la memorizzazione di informazioni sul dispositivo dell'Utente."]
           }
         ]
       },
@@ -497,11 +474,8 @@ export default (langPrefix = "") => ({
         title: "3. Tipologie di dati trattati",
         content: [
           {
-            type: "list", 
-            items: [
-              "Dati forniti volontariamente dall'Utente (tramite form): nome e cognome (obbligatori); indirizzo email (obbligatorio); nome azienda (opzionale); numero di telefono (opzionale); informazioni e specifiche del progetto (es. budget, tipologia, link di riferimento).",
-              "Dati raccolti automaticamente (Usage Data): dati tecnici di navigazione e di comunicazione (indirizzo IP, tipo di dispositivo e browser, pagine visitate, URI richieste, tempi di risposta, codice di stato HTTP, ecc.); log di sistema e diagnostica.",
-            ]
+            type: "list",
+            items: ["Dati forniti volontariamente dall'Utente (tramite form): nome e cognome (obbligatori); indirizzo email (obbligatorio); nome azienda (opzionale); numero di telefono (opzionale); informazioni e specifiche del progetto (es. budget, tipologia, link di riferimento).", "Dati raccolti automaticamente (Usage Data): dati tecnici di navigazione e di comunicazione (indirizzo IP, tipo di dispositivo e browser, pagine visitate, URI richieste, tempi di risposta, codice di stato HTTP, ecc.); log di sistema e diagnostica."]
           },
           {
             type: "paragraph",
@@ -517,19 +491,13 @@ export default (langPrefix = "") => ({
             text: "I Dati personali sono trattati per le seguenti finalità e con le corrispondenti basi giuridiche:"
           },
           {
-            type: "list", 
-            items: [
-              "Gestione delle richieste pervenute tramite il form di contatto - finalità: valutazione ed eventuale risposta a richieste di preventivo o informazione; base giuridica: misure precontrattuali richieste dall'Interessato (art. 6, par. 1, lett. b GDPR) e, ove applicabile, legittimo interesse ad entrare in contatto per opportunità di collaborazione (art. 6, par. 1, lett. f GDPR).",
-              "Esecuzione e gestione del rapporto contrattuale - finalità: esecuzione del contratto e adempimenti connessi; base giuridica: esecuzione del contratto (art. 6, par. 1, lett. b GDPR).",
-              "Conservazione a fini contabili e fiscali - finalità: ottemperanza a obblighi di legge; base giuridica: adempimento di obblighi legali (art. 6, par. 1, lett. c GDPR).",
-              "Garanzia della sicurezza e prevenzione di abusi - finalità: protezione del Sito e degli interessi del Titolare; base giuridica: interesse legittimo del Titolare (art. 6, par. 1, lett. f GDPR).",
-              "Analisi statistica aggregata del traffico - finalità: analisi dell'uso del Sito in forma anonima e non invasiva; base giuridica: interesse legittimo del Titolare (art. 6, par. 1, lett. f GDPR)."
-            ]
+            type: "list",
+            items: ["Gestione delle richieste pervenute tramite il form di contatto - finalità: valutazione ed eventuale risposta a richieste di preventivo o informazione; base giuridica: misure precontrattuali richieste dall'Interessato (art. 6, par. 1, lett. b GDPR) e, ove applicabile, legittimo interesse ad entrare in contatto per opportunità di collaborazione (art. 6, par. 1, lett. f GDPR).", "Esecuzione e gestione del rapporto contrattuale - finalità: esecuzione del contratto e adempimenti connessi; base giuridica: esecuzione del contratto (art. 6, par. 1, lett. b GDPR).", "Conservazione a fini contabili e fiscali - finalità: ottemperanza a obblighi di legge; base giuridica: adempimento di obblighi legali (art. 6, par. 1, lett. c GDPR).", "Garanzia della sicurezza e prevenzione di abusi - finalità: protezione del Sito e degli interessi del Titolare; base giuridica: interesse legittimo del Titolare (art. 6, par. 1, lett. f GDPR).", "Analisi statistica aggregata del traffico - finalità: analisi dell'uso del Sito in forma anonima e non invasiva; base giuridica: interesse legittimo del Titolare (art. 6, par. 1, lett. f GDPR)."]
           },
           {
             type: "paragraph",
             text: "I Dati non saranno oggetto di profilazione automatica né venduti o comunicati a terzi per finalità commerciali."
-          },
+          }
         ]
       },
       {
@@ -549,12 +517,8 @@ export default (langPrefix = "") => ({
             text: "Per lo svolgimento delle attività connesse alle finalità sopra descritte, il Titolare si avvale dei seguenti fornitori e servizi terzi (con indicazione sintetica del ruolo):"
           },
           {
-            type: "list", 
-            items: [
-              "<a href='https://web3forms.com' aria-label='Apri sito Web3Forms' target='_blank' rel='noopener noreferrer' class='text-blue-600 dark:text-blue-500 underline '>Web3Forms</a>: gestione tecnica del form di contatto; le submission vengono inoltrate via email al Titolare; Web3Forms dichiara di non conservare permanentemente le submission e di cancellare i log periodicamente. Consultare la <a href='https://web3forms.com/privacy' aria-label='Apri privacy policy di Web3Forms' target='_blank' rel='noopener noreferrer' class='text-blue-600 dark:text-blue-500 underline '>Privacy Policy</a> di Web3Forms.",
-              "<a href='https://cloudflare.com' aria-label='Apri sito Cloudflare' target='_blank' rel='noopener noreferrer' class='text-blue-600 dark:text-blue-500 underline '>Cloudflare</a>: servizi di protezione (WAF), CDN, hosting parziale e analisi aggregata del traffico tramite <a href='https://cloudflare.com/web-analytics' aria-label='Apri sito Cloudflare Web Analytics' target='_blank' rel='noopener noreferrer' class='text-blue-600 dark:text-blue-500 underline '>Cloudflare Web Analytics</a>, impiegato in modalità che non utilizza cookie identificativi personali. Consultare la <a href='https://cloudflare.com/privacypolicy' aria-label='Apri privacy policy di Cloudflare' target='_blank' rel='noopener noreferrer' class='text-blue-600 dark:text-blue-500 underline '>Privacy Policy</a> di Cloudflare.",
-              "<a href='https://zoho.com' aria-label='Apri sito Zoho' target='_blank' rel='noopener noreferrer' class='text-blue-600 dark:text-blue-500 underline '>Zoho</a>: gestione della casella email professionale dove vengono recapitate le submission. Consultare la <a href='https://zoho.com/privacy' aria-label='Apri privacy policy di Zoho' target='_blank' rel='noopener noreferrer' class='text-blue-600 dark:text-blue-500 underline '>Privacy Policy</a> di Zoho."
-            ]
+            type: "list",
+            items: ["<a href='https://web3forms.com' aria-label='Apri sito Web3Forms' target='_blank' rel='noopener noreferrer' class='text-blue-600 dark:text-blue-500 underline '>Web3Forms</a>: gestione tecnica del form di contatto; le submission vengono inoltrate via email al Titolare; Web3Forms dichiara di non conservare permanentemente le submission e di cancellare i log periodicamente. Consultare la <a href='https://web3forms.com/privacy' aria-label='Apri privacy policy di Web3Forms' target='_blank' rel='noopener noreferrer' class='text-blue-600 dark:text-blue-500 underline '>Privacy Policy</a> di Web3Forms.", "<a href='https://cloudflare.com' aria-label='Apri sito Cloudflare' target='_blank' rel='noopener noreferrer' class='text-blue-600 dark:text-blue-500 underline '>Cloudflare</a>: servizi di protezione (WAF), CDN, hosting parziale e analisi aggregata del traffico tramite <a href='https://cloudflare.com/web-analytics' aria-label='Apri sito Cloudflare Web Analytics' target='_blank' rel='noopener noreferrer' class='text-blue-600 dark:text-blue-500 underline '>Cloudflare Web Analytics</a>, impiegato in modalità che non utilizza cookie identificativi personali. Consultare la <a href='https://cloudflare.com/privacypolicy' aria-label='Apri privacy policy di Cloudflare' target='_blank' rel='noopener noreferrer' class='text-blue-600 dark:text-blue-500 underline '>Privacy Policy</a> di Cloudflare.", "<a href='https://zoho.com' aria-label='Apri sito Zoho' target='_blank' rel='noopener noreferrer' class='text-blue-600 dark:text-blue-500 underline '>Zoho</a>: gestione della casella email professionale dove vengono recapitate le submission. Consultare la <a href='https://zoho.com/privacy' aria-label='Apri privacy policy di Zoho' target='_blank' rel='noopener noreferrer' class='text-blue-600 dark:text-blue-500 underline '>Privacy Policy</a> di Zoho."]
           }
         ]
       },
@@ -564,7 +528,7 @@ export default (langPrefix = "") => ({
           {
             type: "paragraph",
             text: "I servizi indicati nel presente documento possono comportare trasferimenti di Dati verso Paesi terzi. Qualora si verifichino trasferimenti di Dati al di fuori dell'Unione Europea, il Titolare adotta adeguate garanzie (quali clausole contrattuali standard approvate dalla Commissione europea, SCC, o altre garanzie riconosciute) per assicurare un livello di protezione sostanzialmente equivalente a quello garantito dal GDPR. Su richiesta è possibile ottenere copia delle garanzie adottate."
-          },
+          }
         ]
       },
       {
@@ -575,18 +539,13 @@ export default (langPrefix = "") => ({
             text: "I Dati personali saranno conservati per il tempo necessario a conseguire le finalità per le quali sono stati raccolti e, in ogni caso, nei limiti e per i termini previsti dalla normativa applicabile:"
           },
           {
-            type: "list", 
-            items: [
-              "Dati inviati tramite form (lead non convertiti): conservazione per finalità di gestione della richiesta e follow-up per un periodo non superiore a 12 mesi dall'ultima interazione, salvo consenso dell'Interessato a una durata maggiore o obblighi legali contrastanti.",
-              "Dati relativi a contratti/progetti: conservazione per tutta la durata del rapporto contrattuale e successivamente per il periodo necessario all'adempimento di obblighi legali e fiscali.",
-              "Log di sistema e dati per sicurezza: conservazione per un periodo necessario alla finalità di sicurezza e diagnostica, di norma non superiore a 12 mesi, salvo esigenze investigative o obblighi di legge.",
-              "Dati statistici anonimizzati: conservati in forma aggregata e non identificativa per periodi indefiniti."
-            ]
+            type: "list",
+            items: ["Dati inviati tramite form (lead non convertiti): conservazione per finalità di gestione della richiesta e follow-up per un periodo non superiore a 12 mesi dall'ultima interazione, salvo consenso dell'Interessato a una durata maggiore o obblighi legali contrastanti.", "Dati relativi a contratti/progetti: conservazione per tutta la durata del rapporto contrattuale e successivamente per il periodo necessario all'adempimento di obblighi legali e fiscali.", "Log di sistema e dati per sicurezza: conservazione per un periodo necessario alla finalità di sicurezza e diagnostica, di norma non superiore a 12 mesi, salvo esigenze investigative o obblighi di legge.", "Dati statistici anonimizzati: conservati in forma aggregata e non identificativa per periodi indefiniti."]
           },
           {
             type: "paragraph",
             text: "Decorso il periodo di conservazione i Dati saranno cancellati o resi anonimi in modo irreversibile."
-          },
+          }
         ]
       },
       {
@@ -598,15 +557,12 @@ export default (langPrefix = "") => ({
           },
           {
             type: "list",
-            items: [
-              "<a href='https://cloudflare.com/web-analytics' aria-label='Apri sito Cloudflare Web Analytics' target='_blank' rel='noopener noreferrer' class='text-blue-600 dark:text-blue-500 underline '>Cloudflare Web Analytics</a>, sistema di analisi del traffico che non utilizza cookie di tracciamento personale e restituisce dati aggregati e non identificativi;",
-              "localStorage del browser per la sola memorizzazione della preferenza relativa al tema grafico (chiaro/scuro)."
-            ]
+            items: ["<a href='https://cloudflare.com/web-analytics' aria-label='Apri sito Cloudflare Web Analytics' target='_blank' rel='noopener noreferrer' class='text-blue-600 dark:text-blue-500 underline '>Cloudflare Web Analytics</a>, sistema di analisi del traffico che non utilizza cookie di tracciamento personale e restituisce dati aggregati e non identificativi;", "localStorage del browser per la sola memorizzazione della preferenza relativa al tema grafico (chiaro/scuro)."]
           },
           {
             type: "paragraph",
             text: "Non sono utilizzati altri strumenti di profilazione o monitoraggio di terze parti. Qualora in futuro venissero introdotti cookie o tracker aggiuntivi, sarà fornita specifica informativa e, ove previsto dalla normativa, il consenso sarà richiesto prima dell'attivazione."
-          },
+          }
         ]
       },
       {
@@ -615,7 +571,7 @@ export default (langPrefix = "") => ({
           {
             type: "paragraph",
             text: "Il Titolare adotta misure tecniche e organizzative adeguate per tutelare i Dati personali contro distruzione, perdita, modifica, divulgazione non autorizzata o accesso non autorizzato. Tra le misure: uso di protocolli sicuri (HTTPS), firewall e protezioni fornite da Cloudflare, controllo degli accessi e backup. In caso di violazione di sicurezza che possa comportare un rischio per i diritti e le libertà degli Interessati, il Titolare adotterà le misure di notifica previste dal GDPR, compresa, ove dovuto, la comunicazione all'Autorità di controllo e, se necessario, agli Interessati."
-          },
+          }
         ]
       },
       {
@@ -624,7 +580,7 @@ export default (langPrefix = "") => ({
           {
             type: "paragraph",
             text: "I Dati possono essere comunicati esclusivamente ai soggetti necessari per le finalità sopra indicate (fornitori di servizi, consulenti, autorità competenti ove richiesto dalla legge). I Dati non sono oggetto di diffusione né di cessione a terzi per finalità commerciali."
-          },
+          }
         ]
       },
       {
@@ -641,7 +597,7 @@ export default (langPrefix = "") => ({
           {
             type: "paragraph",
             text: "In caso di contestazione relativa al trattamento dei propri Dati, l'Interessato ha altresì il diritto di proporre reclamo all'Autorità Garante per la protezione dei dati personali."
-          },
+          }
         ]
       },
       {
@@ -650,7 +606,7 @@ export default (langPrefix = "") => ({
           {
             type: "paragraph",
             text: "Le richieste inerenti i diritti possono essere formulate gratuitamente. Qualora la richiesta sia manifestamente infondata o eccessiva, il Titolare potrà addebitare un contributo spese ragionevole o rifiutare di agire, conformemente al GDPR. Successivamente all'esercizio dei diritti, il Titolare informerà gli eventuali destinatari cui i Dati sono stati comunicati qualora ciò sia necessario e non comporti sforzi sproporzionati."
-          },
+          }
         ]
       },
       {
@@ -672,9 +628,9 @@ export default (langPrefix = "") => ({
           {
             type: "paragraph",
             text: "Il Titolare si riserva il diritto di modificare o aggiornare la presente Informativa. Eventuali variazioni sostanziali saranno rese note mediante pubblicazione della nuova versione su questa pagina con l'indicazione della data di aggiornamento. Si consiglia agli utenti di consultare periodicamente la presente pagina per verificare eventuali modifiche."
-          },
+          }
         ]
-      }   
+      }
     ],
     questions: {
       title: "Domande?",

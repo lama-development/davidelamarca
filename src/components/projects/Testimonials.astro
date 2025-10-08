@@ -21,17 +21,24 @@ const { testimonials } = Astro.props;
                 <div class="mx-auto max-w-3xl">
                   <div class="overflow-hidden rounded-4xl border border-neutral-200 bg-neutral-50 p-8 md:p-12 dark:border-neutral-800 dark:bg-neutral-950">
                     <blockquote class="mb-8 text-left text-sm leading-relaxed text-neutral-700 md:text-base lg:text-lg dark:text-neutral-300">«{testimonial.quote}»</blockquote>
-                    <div class="text-left">
-                      <div class="mb-1 text-lg font-semibold text-neutral-900 dark:text-neutral-100">{testimonial.author}</div>
-                      <div class="text-sm text-neutral-600 dark:text-neutral-400">
-                        {testimonial.role} •{" "}
-                        {testimonial.website ? (
-                          <a href={testimonial.website} target="_blank" rel="noopener noreferrer" class="hover:underline">
-                            {testimonial.company}
-                          </a>
-                        ) : (
-                          testimonial.company
-                        )}
+                    <div class="flex items-center gap-4 text-left">
+                      <div class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full border border-blue-500/20 bg-blue-500/10">
+                        <svg class="h-6 w-6 text-blue-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path d={testimonial.icon} />
+                        </svg>
+                      </div>
+                      <div>
+                        <div class="mb-1 text-lg font-semibold text-neutral-900 dark:text-neutral-100">{testimonial.author}</div>
+                        <div class="text-sm text-neutral-600 dark:text-neutral-400">
+                          {testimonial.role} •{" "}
+                          {testimonial.website ? (
+                            <a href={testimonial.website} target="_blank" rel="noopener noreferrer" class="hover:underline">
+                              {testimonial.company}
+                            </a>
+                          ) : (
+                            testimonial.company
+                          )}
+                        </div>
                       </div>
                     </div>
                   </div>

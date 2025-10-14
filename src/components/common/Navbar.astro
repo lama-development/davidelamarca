@@ -7,10 +7,11 @@ function isLinkActive(href: string): boolean {
   const normalizedHref = href.endsWith("/") ? href.slice(0, -1) : href;
   return normalizedHref === normalizedPath || (normalizedPath === "/" && normalizedHref === "");
 }
-const activeClasses = "bg-neutral-100 dark:bg-neutral-950 border border-neutral-200 dark:border-neutral-800";
+const activeClasses = "bg-neutral-100 dark:bg-neutral-950 border-neutral-200 dark:border-neutral-800";
+const inactiveClasses = "border-transparent";
 ---
 
-<!-- Skip to content link (visually hidden until focused) -->
+<!-- Skip to content (visually hidden until focused) -->
 <a href="#main-content" class="fixed -left-[9999px] h-px w-px overflow-hidden focus:top-0 focus:left-1/2 focus:z-[100] focus:h-auto focus:w-auto focus:-translate-x-1/2 focus:overflow-visible focus:rounded-b-md focus:bg-blue-500 focus:px-4 focus:py-2 focus:text-white focus:no-underline">
   {navbar.skipToContent}
 </a>
@@ -31,30 +32,42 @@ const activeClasses = "bg-neutral-100 dark:bg-neutral-950 border border-neutral-
         <span class="text-base font-medium text-neutral-900 dark:text-neutral-100">{navbar.brand}</span>
       </a>
       <div class="hidden items-center space-x-1 md:flex">
-        <a href={`${langPrefix}/`} class={`nav-link rounded-full px-4 py-2 text-base font-normal text-neutral-900 hover:bg-neutral-200 dark:text-neutral-100 dark:hover:bg-neutral-800 ${isLinkActive(`${langPrefix}/`) && activeClasses}`}>{navbar.page1}</a>
-        <a href={`${langPrefix}/projects`} class={`nav-link rounded-full px-4 py-2 text-base font-normal text-neutral-900 hover:bg-neutral-200 dark:text-neutral-100 dark:hover:bg-neutral-800 ${isLinkActive(`${langPrefix}/projects`) && activeClasses}`}>{navbar.page2}</a>
-        <a href={`${langPrefix}/contact`} class={`nav-link rounded-full px-4 py-2 text-base font-normal text-neutral-900 hover:bg-neutral-200 dark:text-neutral-100 dark:hover:bg-neutral-800 ${isLinkActive(`${langPrefix}/contact`) && activeClasses}`}>{navbar.page3}</a>
+        <a href={`${langPrefix}/`} class={`nav-link rounded-full border px-4 py-2 text-base font-normal text-neutral-900 hover:bg-neutral-200 dark:text-neutral-100 dark:hover:bg-neutral-800 ${isLinkActive(`${langPrefix}/`) ? activeClasses : inactiveClasses}`}>{navbar.page1}</a>
+        <a href={`${langPrefix}/projects`} class={`nav-link rounded-full border px-4 py-2 text-base font-normal text-neutral-900 hover:bg-neutral-200 dark:text-neutral-100 dark:hover:bg-neutral-800 ${isLinkActive(`${langPrefix}/projects`) ? activeClasses : inactiveClasses}`}>{navbar.page2}</a>
+        <a href={`${langPrefix}/contact`} class={`nav-link rounded-full border px-4 py-2 text-base font-normal text-neutral-900 hover:bg-neutral-200 dark:text-neutral-100 dark:hover:bg-neutral-800 ${isLinkActive(`${langPrefix}/contact`) ? activeClasses : inactiveClasses}`}>{navbar.page3}</a>
+        <button id="theme-toggle-desktop" aria-label={navbar.aria.theme} class="theme-toggle-btn rounded-full p-2 text-neutral-900 hover:bg-neutral-200 dark:text-neutral-100 dark:hover:bg-neutral-800">
+          <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+            <path class="sun-icon" stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+            <path class="moon-icon" stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+          </svg>
+        </button>
       </div>
-      <div class="md:hidden">
-        <button id="mobile-menu-button" aria-label={navbar.aria.menu} class="mobile-menu-btn cursor-pointer rounded-full p-2 text-neutral-900 hover:bg-neutral-200 dark:text-neutral-100 dark:hover:bg-neutral-800">
+      <div class="flex items-center space-x-2 md:hidden">
+        <button id="theme-toggle-mobile" aria-label={navbar.aria.theme} class="theme-toggle-btn rounded-full border border-transparent p-2 text-neutral-900 hover:bg-neutral-200 dark:text-neutral-100 dark:hover:bg-neutral-800">
+          <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+            <path class="sun-icon" stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+            <path class="moon-icon" stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+          </svg>
+        </button>
+        <button id="mobile-menu-button" aria-label={navbar.aria.menu} class="mobile-menu-btn cursor-pointer rounded-full border border-transparent p-2 text-neutral-900 hover:bg-neutral-200 dark:text-neutral-100 dark:hover:bg-neutral-800">
           <svg id="chevron-icon" class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
           </svg>
         </button>
         <div id="mobile-menu" class="absolute top-14 right-4 z-50 hidden w-48 rounded-3xl border border-neutral-200 bg-white py-1 md:top-18 dark:border-neutral-800 dark:bg-black">
-          <a href={`${langPrefix}/`} class={`mx-2 my-1 flex items-center space-x-2 rounded-full px-3 py-2 text-sm font-medium text-neutral-900  hover:bg-neutral-200 dark:text-neutral-100 dark:hover:bg-neutral-800 ${isLinkActive(`${langPrefix}/`) && activeClasses}`}>
+          <a href={`${langPrefix}/`} class={`mx-2 my-1 flex items-center space-x-2 rounded-full border px-3 py-2 text-sm font-medium text-neutral-900 hover:bg-neutral-200 dark:text-neutral-100 dark:hover:bg-neutral-800 ${isLinkActive(`${langPrefix}/`) ? activeClasses : inactiveClasses}`}>
             <svg class="h-4 w-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
             </svg>
             <span>{navbar.page1}</span>
           </a>
-          <a href={`${langPrefix}/projects`} class={`mx-2 my-1 flex items-center space-x-2 rounded-full px-3 py-2 text-sm font-medium text-neutral-900  hover:bg-neutral-200 dark:text-neutral-100 dark:hover:bg-neutral-800 ${isLinkActive(`${langPrefix}/projects`) && activeClasses}`}>
+          <a href={`${langPrefix}/projects`} class={`mx-2 my-1 flex items-center space-x-2 rounded-full border px-3 py-2 text-sm font-medium text-neutral-900 hover:bg-neutral-200 dark:text-neutral-100 dark:hover:bg-neutral-800 ${isLinkActive(`${langPrefix}/projects`) ? activeClasses : inactiveClasses}`}>
             <svg class="h-4 w-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
             </svg>
             <span>{navbar.page2}</span>
           </a>
-          <a href={`${langPrefix}/contact`} class={`mx-2 my-1 flex items-center space-x-2 rounded-full px-3 py-2 text-sm font-medium text-neutral-900  hover:bg-neutral-200 dark:text-neutral-100 dark:hover:bg-neutral-800 ${isLinkActive(`${langPrefix}/contact`) && activeClasses}`}>
+          <a href={`${langPrefix}/contact`} class={`mx-2 my-1 flex items-center space-x-2 rounded-full border px-3 py-2 text-sm font-medium text-neutral-900 hover:bg-neutral-200 dark:text-neutral-100 dark:hover:bg-neutral-800 ${isLinkActive(`${langPrefix}/contact`) ? activeClasses : inactiveClasses}`}>
             <svg class="h-4 w-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
             </svg>

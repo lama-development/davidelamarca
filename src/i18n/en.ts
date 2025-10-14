@@ -7,7 +7,8 @@ export default (langPrefix = "") => ({
     page3: "Contact",
     skipToContent: "Skip to content",
     aria: {
-      menu: "Toggle menu"
+      menu: "Toggle menu",
+      theme: "Toggle theme"
     }
   },
   home: {
@@ -133,10 +134,9 @@ export default (langPrefix = "") => ({
         {
           id: "sorrento-boat-trips",
           quote: "Working with you has been a very positive experience. I appreciated your availability, professionalism, and especially your patience in following every detail. I liked how you listened to my needs and transformed them into a functional and aesthetically pleasing website. What particularly impressed me was your ability to propose creative and practical solutions that made the final result even better than I had imagined",
-          author: "Amy and Antonio",
+          author: "Amy & Antonio",
           company: "Sorrento Boat Trips",
           website: "https://sorrentoboattrips.com",
-          role: "Founders",
           icon: "M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Z"
         }
       ]

@@ -46,6 +46,35 @@ details summary::-webkit-details-marker {
   transition: none !important;
 }
 
+.theme-toggle-btn {
+  position: relative;
+}
+
+.theme-toggle-btn svg {
+  display: block;
+}
+
+.theme-toggle-btn .sun-icon {
+  opacity: 1;
+}
+
+.theme-toggle-btn .moon-icon {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.dark .theme-toggle-btn .sun-icon {
+  opacity: 0;
+}
+
+.dark .theme-toggle-btn .moon-icon {
+  opacity: 1;
+}
+
 .scrollbar-hide {
   -ms-overflow-style: none; 
   scrollbar-width: none; 

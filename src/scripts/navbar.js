@@ -46,7 +46,8 @@ document.addEventListener("DOMContentLoaded", () => {
     triggerHaptic();
     menu.classList.remove("hidden");
     chevron.style.transform = "rotate(180deg)";
-    btn.classList.add("bg-neutral-100", "dark:bg-neutral-900", "border", "border-neutral-200", "dark:border-neutral-800");
+    btn.classList.remove("border-transparent");
+    btn.classList.add("bg-neutral-100", "dark:bg-neutral-900", "border-neutral-200", "dark:border-neutral-800");
     btn.setAttribute("aria-expanded", "true");
     lastFocus = document.activeElement;
     document.addEventListener("keydown", trapKey, true);
@@ -60,7 +61,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!open) return;
     menu.classList.add("hidden");
     chevron.style.transform = "rotate(0deg)";
-    btn.classList.remove("bg-neutral-100", "dark:bg-neutral-900", "border", "border-neutral-200", "dark:border-neutral-800");
+    btn.classList.add("border-transparent");
+    btn.classList.remove("bg-neutral-100", "dark:bg-neutral-900", "border-neutral-200", "dark:border-neutral-800");
     btn.setAttribute("aria-expanded", "false");
     document.removeEventListener("keydown", trapKey, true);
     btn.focus();

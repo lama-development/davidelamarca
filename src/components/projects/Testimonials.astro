@@ -28,9 +28,8 @@ const { testimonials } = Astro.props;
                         </svg>
                       </div>
                       <div>
-                        <div class="mb-1 text-lg font-semibold text-neutral-900 dark:text-neutral-100">{testimonial.author}</div>
+                        <div class="text-lg font-semibold text-neutral-900 dark:text-neutral-100">{testimonial.author}</div>
                         <div class="text-sm text-neutral-600 dark:text-neutral-400">
-                          {testimonial.role} •{" "}
                           {testimonial.website ? (
                             <a href={testimonial.website} target="_blank" rel="noopener noreferrer" class="hover:underline">
                               {testimonial.company}

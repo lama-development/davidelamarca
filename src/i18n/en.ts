@@ -122,7 +122,7 @@ export default (langPrefix = "") => ({
         description: "Elegant website for an agency offering luxury private boat experiences and tours, featuring refined design and SEO optimization.",
         button: "Go to website",
         image: "caprice-bleu.webp",
-        link: "https://capricebleu.com",
+        link: "https://wedge-raspberry-z64w.squarespace.com",
         ariaLabel: "Website page with three women posing on a boat, Capri Island and calm sea in background, promoting exclusive tours."
       }
     ],

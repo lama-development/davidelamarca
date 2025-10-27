@@ -122,7 +122,7 @@ export default (langPrefix = "") => ({
         description: "Sito web elegante per un'agenzia che offre esperienze e tour privati in barca di lusso, con design raffinato e ottimizzazione SEO.",
         button: "Vai al sito",
         image: "caprice-bleu.webp",
-        link: "https://capricebleu.com",
+        link: "https://wedge-raspberry-z64w.squarespace.com",
         ariaLabel: "Pagina web con tre donne su una barca, l'isola di Capri sullo sfondo, che promuove tour esclusivi."
       }
     ],

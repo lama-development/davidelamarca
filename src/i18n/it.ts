@@ -99,6 +99,15 @@ export default (langPrefix = "") => ({
     },
     ProjectCards: [
       {
+        id: "adcompound",
+        title: "A.D. Compound S.p.A.",
+        description: "Sito web ottimizzato per un'azienda leader europea nella produzione di compound in polipropilene riciclato.",
+        button: "Vai al sito",
+        image: "adcompound.webp",
+        link: "https://adcompound.pages.dev",
+        ariaLabel: "Pagina web hero di A.D. Compound con foto di un mondo sostenibile e natura."
+      },
+      {
         id: "sorrento-boat-trips",
         title: "Sorrento Boat Trips",
         description: "Sito web moderno per un'agenzia di tour privati a Sorrento, con sistema di prenotazione online integrato tramite FareHarbor.",

@@ -99,6 +99,15 @@ export default (langPrefix = "") => ({
     },
     ProjectCards: [
       {
+        id: "adcompound",
+        title: "A.D. Compound S.p.A.",
+        description: "Optimized website for a leading European company in recycled polypropylene compound production.",
+        button: "Go to website",
+        image: "adcompound.webp",
+        link: "https://adcompound.pages.dev",
+        ariaLabel: "Hero web page of A.D. Compound featuring a sustainable world and nature."
+      },
+      {
         id: "sorrento-boat-trips",
         title: "Sorrento Boat Trips",
         description: "Modern website for a private boat tour agency in Sorrento, featuring an online booking system integrated with FareHarbor.",

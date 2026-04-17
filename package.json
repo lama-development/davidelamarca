@@ -27,9 +27,9 @@
   },
   "dependencies": {
     "@astrojs/prefetch": "^0.4.1",
-    "@astrojs/sitemap": "^3.6.0",
+    "@astrojs/sitemap": "^3.7.2",
     "@tailwindcss/vite": "^4.1.10",
-    "astro": "^5.15.3",
+    "astro": "^6.1.7",
     "tactus": "^0.0.3",
     "tailwindcss": "^4.1.10"
   },
@@ -38,5 +38,8 @@
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-tailwindcss": "^0.7.1",
     "terser": "^5.44.0"
+  },
+  "overrides": {
+    "vite": "^7"
   }
 }

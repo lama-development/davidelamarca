@@ -1,0 +1,23 @@
+---
+import type { HTMLAttributes } from "astro/types";
+
+type Variant = "primary" | "secondary" | "destructive";
+
+interface Props extends HTMLAttributes<"button"> {
+  variant?: Variant;
+  href?: string;
+}
+
+const { variant = "primary", class: className, href, type = "button", ...attributes } = Astro.props;
+const Element = href ? "a" : "button";
+
+const variants: Record<Variant, string> = {
+  primary: "bg-accent text-label hover:brightness-90",
+  secondary: "border border-outline bg-surface text-title hover:bg-card",
+  destructive: "bg-error text-label hover:brightness-90"
+};
+---
+
+<Element href={href} type={href ? undefined : type} class:list={["inline-flex min-h-11.5 cursor-pointer items-center justify-center rounded-full px-6 py-2.5 font-medium transition-[filter,background-color] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 motion-reduce:transition-none", variants[variant], className]} {...attributes}>
+  <slot />
+</Element>

@@ -1,0 +1,18 @@
+---
+import logoLight from "@assets/icons/brand/logo-light.avif?url";
+import logoDark from "@assets/icons/brand/logo-dark.avif?url";
+import type { NavigationContent } from "@i18n/types";
+
+interface Props {
+  navbar: NavigationContent;
+  onImage?: boolean;
+}
+
+const { navbar, onImage = false } = Astro.props;
+---
+
+<a href={navbar.homeHref} aria-label={navbar.aria.home} class:list={["inline-flex items-center gap-1.5 whitespace-nowrap text-sm font-medium tracking-[-0.7px] focus-visible:outline-2 focus-visible:outline-offset-4 min-[381px]:text-base md:gap-2.5 md:text-[17px] lg:text-xl", !onImage && "text-title focus-visible:outline-accent"]}>
+  <img src={logoLight} alt="" width="32" height="32" class="hidden size-6.5 object-contain min-[381px]:block lg:size-7.5 dark:hidden" />
+  <img src={logoDark} alt="" width="32" height="32" class="hidden size-6.5 object-contain lg:size-7.5 min-[381px]:dark:block" />
+  <span>{navbar.brand}</span>
+</a>

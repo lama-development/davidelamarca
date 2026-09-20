@@ -1,0 +1,43 @@
+---
+import type { PreferencesContent } from "@i18n/types";
+import { Icon } from "astro-icon/components";
+
+interface Props {
+  id: string;
+  lang: string;
+  content: PreferencesContent;
+}
+
+const { id, lang, content } = Astro.props;
+---
+
+<div aria-label={content.title} role="group" class="flex flex-wrap items-center justify-between gap-x-4 gap-y-4 sm:gap-x-10">
+  <nav aria-label={content.languageLabel} class="flex flex-wrap items-center gap-x-5">
+    <span class="hidden text-xs text-subtitle sm:block">{content.languageLabel}</span>
+    {content.languages.map(({ value, label, href }) => (
+      <a href={href} lang={value} hreflang={value} aria-current={lang === value ? "page" : undefined} class:list={["inline-flex min-h-11 items-center text-xs underline-offset-8 transition-colors hover:text-title focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent motion-reduce:transition-none", lang === value ? "text-title underline decoration-accent" : "text-subtitle"]}>
+        {label}
+      </a>
+    ))}
+  </nav>
+
+  <fieldset class="min-w-0 border-0 p-0">
+    <legend class="sr-only">{content.appearanceLabel}</legend>
+    <div class="flex items-center gap-4">
+      <span aria-hidden="true" class="hidden text-xs text-subtitle sm:block">
+        {content.appearanceLabel}
+      </span>
+      <div class="flex items-center bg-card rounded-full border border-outline p-0.5">
+        {content.themes.map(({ value, label }) => (
+          <label title={label} class="relative cursor-pointer">
+            <input type="radio" name={`${id}-theme`} value={value} checked={value === "system"} data-theme-choice class="peer sr-only" />
+            <span class="grid size-11 place-items-center rounded-full text-subtitle transition-colors hover:text-title peer-checked:bg-surface peer-checked:text-title peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-accent motion-reduce:transition-none">
+              <Icon name={`ui/${value === "light" ? "sun" : value === "dark" ? "moon" : "system"}`} class="size-5" />
+              <span class="sr-only">{label}</span>
+            </span>
+          </label>
+        ))}
+      </div>
+    </div>
+  </fieldset>
+</div>

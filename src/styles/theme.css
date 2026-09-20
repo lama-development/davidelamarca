@@ -1,0 +1,80 @@
+/* Theme colors */
+@theme inline {
+  --font-sans: "Google Sans Flex", Arial, sans-serif;
+  --font-serif: "Times New Roman", Times, serif;
+  --color-page: var(--theme-page);
+  --color-card: var(--theme-card);
+  --color-surface: var(--theme-surface);
+  --color-outline: var(--theme-outline);
+  --color-label: var(--theme-label);
+  --color-title: var(--theme-title);
+  --color-subtitle: var(--theme-subtitle);
+  --color-accent: var(--theme-accent);
+  --color-overlay: var(--theme-overlay);
+  --color-error: var(--theme-error);
+  --color-warning: var(--theme-warning);
+}
+
+/* Light mode */
+:root {
+  color-scheme: light;
+  --theme-page: #f4f5f6;
+  --theme-card: #fff;
+  --theme-surface: #eceef1;
+  --theme-outline: #e8e9eb;
+  --theme-label: #fff;
+  --theme-title: #202026;
+  --theme-subtitle: #5b6068;
+  --theme-accent: #0071eb;
+  --theme-overlay: #00000050;
+  --theme-error: #c62828;
+  --theme-warning: #9a5700;
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+  --theme-page: #f4f5f6;
+  --theme-card: #fff;
+  --theme-surface: #eceef1;
+  --theme-outline: #e8e9eb;
+  --theme-label: #fff;
+  --theme-title: #202026;
+  --theme-subtitle: #5b6068;
+  --theme-accent: #0071eb;
+  --theme-overlay: #00000050;
+  --theme-error: #c62828;
+  --theme-warning: #9a5700;
+}
+
+/* Dark theme */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    color-scheme: dark;
+    --theme-page: #141314;
+    --theme-card: #1c1b1d;
+    --theme-surface: #0e0e0f;
+    --theme-outline: #232325;
+    --theme-label: #000;
+    --theme-title: #f2f2f6;
+    --theme-subtitle: #a1a1a6;
+    --theme-accent: #0071eb;
+    --theme-overlay: #00000050;
+    --theme-error: #ff2e2e;
+    --theme-warning: #fbbf24;
+  }
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+  --theme-page: #141314;
+  --theme-card: #1c1b1d;
+  --theme-surface: #0e0e0f;
+  --theme-outline: #232325;
+  --theme-label: #000;
+  --theme-title: #f2f2f6;
+  --theme-subtitle: #a1a1a6;
+  --theme-accent: #0071eb;
+  --theme-overlay: #00000050;
+  --theme-error: #ff2e2e;
+  --theme-warning: #fbbf24;
+}

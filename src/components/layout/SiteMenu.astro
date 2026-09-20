@@ -1,0 +1,38 @@
+---
+import Brand from "@components/layout/Brand.astro";
+import NavigationLinks from "@components/layout/NavigationLinks.astro";
+import PreferencesPanel from "@components/layout/PreferencesPanel.astro";
+import type { NavigationContent, PreferencesContent } from "@i18n/types";
+import { Icon } from "astro-icon/components";
+
+interface Props {
+  navbar: NavigationContent;
+  lang: string;
+  preferences: PreferencesContent;
+}
+
+const { navbar, lang, preferences } = Astro.props;
+---
+
+<dialog id="site-menu" aria-label={navbar.aria.navigation} class="group/menu fixed inset-0 m-0 h-dvh max-h-none w-full max-w-none overflow-y-auto overscroll-contain border-0 bg-page p-0 font-sans text-title opacity-0 transition-[opacity,display,overlay] duration-300 ease-out transition-discrete open:opacity-100 starting:open:opacity-0 backdrop:bg-overlay motion-reduce:transition-none">
+  <div class="mx-auto flex min-h-full w-full max-w-7xl flex-col px-5 pt-5 pb-[max(20px,env(safe-area-inset-bottom))] md:px-6 md:pt-6 lg:px-12 lg:pt-7 lg:pb-8 min-[1800px]:px-[4vw]">
+    <div class="flex shrink-0 items-center justify-between gap-6">
+      <Brand navbar={navbar} />
+      <form method="dialog">
+        <button autofocus type="submit" aria-label={preferences.closeLabel} class="group grid size-11 cursor-pointer place-items-center focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">
+          <Icon name="ui/close" class="size-6 transition-transform duration-300 group-hover:rotate-90 motion-reduce:transition-none" />
+        </button>
+      </form>
+    </div>
+
+    <div class="grid min-w-0 flex-1 content-center py-12 sm:py-16 lg:py-12">
+      <nav aria-label={navbar.aria.navigation}>
+        <NavigationLinks links={navbar.links} homeHref={navbar.homeHref} />
+      </nav>
+    </div>
+
+    <footer class="shrink-0 border-t border-outline pt-5 sm:pt-6">
+      <PreferencesPanel id="menu" lang={lang} content={preferences} />
+    </footer>
+  </div>
+</dialog>

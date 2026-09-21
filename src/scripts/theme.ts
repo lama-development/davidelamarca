@@ -1,4 +1,4 @@
-type Theme = "light" | "dark" | "system";
+import type { Theme } from "@i18n/types";
 
 const root = document.documentElement;
 const controls = document.querySelectorAll<HTMLInputElement>("[data-theme-choice]");
@@ -15,7 +15,6 @@ const readTheme = (): Theme => {
 const applyTheme = (theme: Theme) => {
   if (theme === "system") delete root.dataset.theme;
   else root.dataset.theme = theme;
-
   controls.forEach((control) => {
     control.checked = control.value === theme;
   });
@@ -26,7 +25,6 @@ applyTheme(readTheme());
 controls.forEach((control) => {
   control.addEventListener("change", () => {
     if (!control.checked) return;
-
     const theme = control.value as Theme;
     try {
       if (theme === "system") localStorage.removeItem("theme");

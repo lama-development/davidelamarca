@@ -1,0 +1,262 @@
+:root {
+  --switcher-duration: 250ms;
+  --switcher-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --switcher-indicator-bg: var(--color-surface);
+  --button-duration: 200ms;
+  --interaction-ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --button-press-scale: 0.96;
+  --navigation-duration: 200ms;
+  --navigation-distance: 0.5rem;
+  --background-duration: 500ms;
+  --modal-open-dur: 250ms;
+  --modal-close-dur: 150ms;
+  --modal-scale: 0.96;
+  --modal-scale-close: 0.96;
+  --modal-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --stagger-dur: 500ms;
+  --stagger-distance: 12px;
+  --stagger-delay: 40ms;
+  --stagger-blur: 3px;
+  --stagger-ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.t-button {
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  transition:
+    background-color var(--button-duration) var(--interaction-ease),
+    scale var(--button-duration) var(--interaction-ease);
+}
+
+.t-button[data-variant="destructive"] {
+  --button-hover-bg: color-mix(in oklab, var(--color-destructive), black 12%);
+}
+
+@media (hover: hover) {
+  .t-button:not(:disabled):hover {
+    background-color: var(--button-hover-bg, var(--color-outline));
+  }
+}
+
+.t-button:not(:disabled):active {
+  scale: var(--button-press-scale);
+}
+
+.t-button:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 4px;
+}
+
+.t-button:disabled {
+  cursor: not-allowed;
+}
+
+.t-switcher {
+  position: relative;
+  isolation: isolate;
+}
+
+.t-switcher-option {
+  position: relative;
+  z-index: 1;
+  color: var(--color-subtitle);
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  transition: color var(--switcher-duration) var(--switcher-ease);
+}
+
+.t-switcher-option:is([aria-current="page"], :has(:checked)) {
+  color: var(--color-title);
+}
+
+/* Keep the selected state visible before initialization and without JavaScript. */
+.t-switcher:not([data-switcher-ready]) > .t-switcher-option:is([aria-current="page"], :has(:checked)) {
+  background: var(--switcher-indicator-bg);
+}
+
+@media (hover: hover) {
+  .t-switcher-option:hover {
+    color: var(--color-title);
+  }
+}
+
+.t-switcher-option:is(:focus-visible, :has(:focus-visible)) {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.switcher-indicator {
+  position: absolute;
+  top: 0.125rem;
+  left: 0;
+  height: calc(100% - 0.25rem);
+  width: 0;
+  background: var(--switcher-indicator-bg);
+  border-radius: 48px;
+  transform: translateX(0);
+  transition:
+    transform var(--switcher-duration) var(--switcher-ease),
+    width var(--switcher-duration) var(--switcher-ease);
+  will-change: transform, width;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.t-switcher:not([data-switcher-ready]) > .switcher-indicator {
+  visibility: hidden;
+}
+
+.t-switcher[data-switcher-positioning] > .switcher-indicator {
+  transition: none;
+}
+
+.t-modal {
+  transform-origin: center;
+  transform: scale(var(--modal-scale));
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    transform var(--modal-open-dur) var(--modal-ease),
+    opacity var(--modal-open-dur) var(--modal-ease);
+  will-change: transform, opacity;
+}
+.t-modal.is-open {
+  transform: scale(1);
+  opacity: 1;
+  pointer-events: auto;
+}
+.t-modal.is-closing {
+  transform: scale(var(--modal-scale-close));
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    transform var(--modal-close-dur) var(--modal-ease),
+    opacity var(--modal-close-dur) var(--modal-ease);
+}
+
+.t-stagger-line {
+  display: block;
+  opacity: 0;
+  transform: translateY(var(--stagger-distance));
+  filter: blur(var(--stagger-blur));
+  transition:
+    opacity var(--stagger-dur) var(--stagger-ease),
+    transform var(--stagger-dur) var(--stagger-ease),
+    filter var(--stagger-dur) var(--stagger-ease);
+  will-change: transform, opacity, filter;
+  transition-delay: calc(var(--stagger-delay) * var(--stagger-index, 0));
+}
+
+.t-stagger.is-shown .t-stagger-line {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+.t-navigation-label {
+  transition:
+    color var(--navigation-duration) var(--interaction-ease),
+    translate var(--navigation-duration) var(--interaction-ease);
+}
+
+.t-navigation-icon {
+  rotate: -45deg;
+  transition:
+    rotate var(--navigation-duration) var(--interaction-ease),
+    color var(--navigation-duration) var(--interaction-ease);
+}
+
+.t-navigation-link:focus-visible .t-navigation-label {
+  color: var(--color-title);
+  translate: var(--navigation-distance) 0;
+}
+
+.t-navigation-link:focus-visible .t-navigation-icon {
+  color: var(--color-title);
+  rotate: 0deg;
+}
+
+@media (hover: hover) {
+  .t-navigation-link:hover .t-navigation-label {
+    color: var(--color-title);
+    translate: var(--navigation-distance) 0;
+  }
+
+  .t-navigation-link:hover .t-navigation-icon {
+    color: var(--color-title);
+    rotate: 0deg;
+  }
+}
+
+.t-background {
+  transition: opacity var(--background-duration) var(--interaction-ease);
+}
+
+.landing-enter-title {
+  --enter-delay: 160ms;
+}
+
+.landing-enter-description {
+  --enter-delay: 240ms;
+}
+
+.landing-enter-action {
+  --enter-delay: 400ms;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @view-transition {
+    navigation: auto;
+  }
+
+  .landing-enter {
+    animation: landing-enter 700ms var(--stagger-ease) both;
+    animation-delay: var(--enter-delay, 0ms);
+  }
+
+  @keyframes landing-enter {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .t-navigation-label,
+  .t-navigation-icon,
+  .t-background {
+    transition: none;
+  }
+
+  .switcher-indicator,
+  .t-switcher-option {
+    transition: none !important;
+  }
+
+  .t-button {
+    --button-press-scale: 1;
+    transition: none;
+  }
+
+  .t-modal {
+    transition: none !important;
+    --modal-scale: 1;
+    --modal-scale-close: 1;
+  }
+  .t-stagger-line {
+    transition: none !important;
+    transform: none;
+    filter: none;
+  }
+}

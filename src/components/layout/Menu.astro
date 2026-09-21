@@ -1,0 +1,41 @@
+---
+import Button from "@components/ui/Button.astro";
+import Brand from "@components/layout/Brand.astro";
+import NavigationLinks from "@components/layout/NavigationLinks.astro";
+import Preferences from "@components/layout/Preferences.astro";
+import type { Language, NavigationContent, PreferencesContent } from "@i18n/types";
+import { Icon } from "astro-icon/components";
+
+interface Props {
+  navigation: NavigationContent;
+  lang: Language;
+  preferences: PreferencesContent;
+}
+
+const { navigation, lang, preferences } = Astro.props;
+---
+
+<dialog id="site-menu" aria-label={navigation.aria.navigation} class="t-modal fixed inset-0 backdrop:bg-overlay m-auto h-[calc(100dvh-1.5rem)] max-h-none w-[calc(100%-1.5rem)] max-w-7xl overflow-y-auto overscroll-contain rounded-3xl border-0 bg-page p-0 font-sans text-title shadow-2xl sm:h-[calc(100dvh-2rem)] sm:w-[calc(100%-2rem)] sm:rounded-4xl">
+  <div class="flex min-h-full rounded-3xl sm:rounded-4xl flex-col p-5 sm:p-7 lg:px-11 lg:py-8 border border-outline">
+    <div class="flex shrink-0 items-center justify-between gap-4">
+      <Brand homeHref={navigation.homeHref} label={navigation.aria.home} />
+      <form method="dialog">
+        <Button autofocus type="submit" variant="secondary" iconOnly class="max-sm:size-11" aria-label={navigation.closeLabel}>
+          <Icon name="ui/close" aria-hidden="true" class="size-5" />
+        </Button>
+      </form>
+    </div>
+    <div class="grid flex-1 content-center py-10 sm:py-14">
+      <nav aria-label={navigation.aria.navigation} class="mx-auto w-full min-w-0">
+        <NavigationLinks links={navigation.links} homeHref={navigation.homeHref} />
+      </nav>
+    </div>
+    <footer class="shrink-0 pt-5 pb-[env(safe-area-inset-bottom)]">
+      <Preferences id="menu" lang={lang} content={preferences} />
+    </footer>
+  </div>
+</dialog>
+
+<script>
+  import "@scripts/menu";
+</script>

@@ -1,0 +1,54 @@
+---
+import type { Language, PreferencesContent } from "@i18n/types";
+import { languages } from "@i18n/shared";
+import { Icon } from "astro-icon/components";
+
+interface Props {
+  id: string;
+  lang: Language;
+  content: PreferencesContent;
+}
+
+const { id, lang, content } = Astro.props;
+---
+
+<div aria-label={content.title} role="group" class="flex flex-wrap items-center justify-between gap-x-2 gap-y-4 sm:gap-x-10">
+  <div class="flex items-center gap-4">
+    <span aria-hidden="true" class="hidden text-xs text-subtitle sm:block">
+      {content.languageLabel}
+    </span>
+    <nav aria-label={content.languageLabel} data-switcher class="t-switcher inline-flex shrink-0 items-center rounded-full border border-outline bg-card p-0.5">
+      <span class="switcher-indicator" aria-hidden="true"></span>
+      {languages.map(({ value, label, href }) => (
+        <a href={href} lang={value} hreflang={value} aria-label={`${value.toUpperCase()} - ${label}`} title={label} aria-current={lang === value ? "page" : undefined} class="t-switcher-option inline-flex min-h-11 min-w-11 items-center justify-center rounded-full px-3 text-xs font-medium tracking-wide">
+          {value.toUpperCase()}
+        </a>
+      ))}
+    </nav>
+  </div>
+  <fieldset class="min-w-0 border-0 p-0">
+    <legend class="sr-only">{content.appearanceLabel}</legend>
+    <div class="flex items-center gap-4">
+      <span aria-hidden="true" class="hidden text-xs text-subtitle sm:block">
+        {content.appearanceLabel}
+      </span>
+      <div data-switcher class="t-switcher flex items-center bg-card rounded-full border border-outline p-0.5">
+        <span class="switcher-indicator" aria-hidden="true"></span>
+        {content.themes.map(({ value, label }) => (
+          <label title={label} class="t-switcher-option rounded-full">
+            <input type="radio" name={`${id}-theme`} value={value} checked={value === "system"} data-theme-choice class="sr-only" />
+            <span class="grid size-11 place-items-center rounded-full">
+              <Icon name={`ui/${value === "light" ? "sun" : value === "dark" ? "moon" : "system"}`} class="size-5" />
+              <span class="sr-only">{label}</span>
+            </span>
+          </label>
+        ))}
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+<script>
+  import "@scripts/theme";
+  import "@scripts/switchers";
+</script>

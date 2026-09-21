@@ -1,25 +1,6 @@
 ---
-import { Image } from "astro:assets";
-import landingDark from "@assets/images/landing-dark.avif";
-import landingLight from "@assets/images/landing-light.avif";
-import Layout from "@layouts/Layout.astro";
+import Home from "@components/home/Home.astro";
 import it from "@i18n/locales/it";
-import SiteHeader from "@components/layout/SiteHeader.astro";
-import Hero from "@components/sections/Hero.astro";
-
-const { navbar, hero, lang, preferences } = it;
-const projectsHref = navbar.links[1]?.href ?? navbar.homeHref;
 ---
 
-<Layout title={it.meta.title} description={it.meta.description} appName={it.meta.appName} lang={it.lang}>
-  <div class="relative isolate mx-auto grid h-svh min-h-svh w-full max-w-7xl grid-rows-[minmax(100px,1fr)_auto] bg-page font-sans text-[#fff8ed]">
-    <div class="pointer-events-none relative min-h-0 w-full overflow-hidden rounded-[28px] bg-[#083977]" aria-hidden="true">
-      <Image src={landingLight} alt="" widths={[640, 1280, 1774]} sizes="(min-width: 1280px) 1280px, 100vw" format="avif" quality={90} loading="eager" fetchpriority="high" class="block size-full object-cover object-center dark:hidden" />
-      <Image src={landingDark} alt="" widths={[640, 1280, 1774]} sizes="(min-width: 1280px) 1280px, 100vw" format="avif" quality={90} loading="eager" fetchpriority="high" class="hidden size-full object-cover object-center dark:block" />
-    </div>
-    <SiteHeader navbar={navbar} lang={lang} preferences={preferences} />
-    <main class="relative text-title">
-      <Hero content={hero} ctaHref={projectsHref} />
-    </main>
-  </div>
-</Layout>
+<Home content={it} />

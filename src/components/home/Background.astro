@@ -1,0 +1,16 @@
+---
+import { Image } from "astro:assets";
+import landingDark from "@assets/images/landing-dark.avif";
+import landingLight from "@assets/images/landing-light.avif";
+
+const landscapes = [
+  { src: landingLight, className: "dark:opacity-0", fetchpriority: "high" },
+  { src: landingDark, className: "opacity-0 dark:opacity-100", fetchpriority: undefined }
+] as const;
+---
+
+<div aria-hidden="true" class="pointer-events-none absolute inset-0 overflow-hidden">
+  {landscapes.map(({ src, className, fetchpriority }) => (
+    <Image src={src} alt="" widths={[640, 1280, 1774]} sizes="(min-width: 1680px) 1656px, 100vw" format="avif" quality={90} loading="eager" fetchpriority={fetchpriority} class:list={["t-background absolute inset-0 size-full object-cover object-[50%_35%]", className]} />
+  ))}
+</div>

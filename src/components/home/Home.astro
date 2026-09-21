@@ -1,0 +1,23 @@
+---
+import Background from "@components/home/Background.astro";
+import Hero from "@components/home/Hero.astro";
+import Header from "@components/layout/Header.astro";
+import Layout from "@layouts/Layout.astro";
+import type { PageContent } from "@i18n/types";
+
+interface Props {
+  content: PageContent;
+}
+
+const { lang, meta, navigation, hero, preferences, skipToContent } = Astro.props.content;
+---
+
+<Layout lang={lang} meta={meta} skipToContent={skipToContent}>
+  <div class="relative isolate min-h-svh w-full overflow-hidden text-white">
+    <Background />
+    <Header navigation={navigation} lang={lang} preferences={preferences} />
+    <main id="main-content" tabindex="-1" class="relative z-1 flex min-h-svh justify-center pt-[clamp(8rem,15svh,10rem)] sm:pt-[clamp(6.5rem,11svh,9rem)]">
+      <Hero content={hero} />
+    </main>
+  </div>
+</Layout>

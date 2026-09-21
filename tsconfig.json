@@ -5,11 +5,9 @@
   "compilerOptions": {
     "paths": {
       "@assets/*": ["./src/assets/*"],
-      "@public/*": ["./src/public/*"],
       "@components/*": ["./src/components/*"],
       "@i18n/*": ["./src/i18n/*"],
       "@layouts/*": ["./src/layouts/*"],
-      "@pages/*": ["./src/pages/*"],
       "@scripts/*": ["./src/scripts/*"],
       "@styles/*": ["./src/styles/*"]
     }

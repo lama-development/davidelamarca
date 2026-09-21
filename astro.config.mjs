@@ -5,24 +5,7 @@ import icon from "astro-icon";
 
 export default defineConfig({
   site: "https://davidelamarca.com",
-  integrations: [
-    icon({
-      iconDir: "src/assets/icons",
-      include: {
-        brand: ["*"],
-        flags: ["*"],
-        ui: ["*"]
-      }
-    }),
-    {
-      name: "theme-controls",
-      hooks: {
-        "astro:config:setup": ({ injectScript }) => {
-          injectScript("page", 'import "@scripts/theme"; import "@scripts/menu";');
-        }
-      }
-    }
-  ],
+  integrations: [icon({ iconDir: "src/assets/icons" })],
   vite: {
     plugins: [tailwindcss()]
   }

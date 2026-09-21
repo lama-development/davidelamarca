@@ -1,23 +1,22 @@
 ---
 import type { HTMLAttributes } from "astro/types";
 
-type Variant = "primary" | "secondary" | "destructive";
+type Props = {
+  variant?: "translucent" | "primary" | "secondary" | "destructive";
+  iconOnly?: boolean;
+} & ((HTMLAttributes<"button"> & { href?: never }) | (Omit<HTMLAttributes<"a">, "type"> & { href: string; type?: never }));
 
-interface Props extends HTMLAttributes<"button"> {
-  variant?: Variant;
-  href?: string;
-}
+const { variant = "translucent", iconOnly = false, class: className, href, type, ...attributes } = Astro.props;
+const Element = href === undefined ? "button" : "a";
 
-const { variant = "primary", class: className, href, type = "button", ...attributes } = Astro.props;
-const Element = href ? "a" : "button";
-
-const variants: Record<Variant, string> = {
-  primary: "bg-accent text-label hover:brightness-90",
-  secondary: "border border-outline bg-surface text-title hover:bg-card",
-  destructive: "bg-error text-label hover:brightness-90"
+const variants = {
+  translucent: "bg-card/80 text-title",
+  primary: "bg-accent text-label",
+  secondary: "border border-outline bg-card text-title",
+  destructive: "bg-destructive text-white"
 };
 ---
 
-<Element href={href} type={href ? undefined : type} class:list={["inline-flex min-h-11.5 cursor-pointer items-center justify-center rounded-full px-6 py-2.5 font-medium transition-[filter,background-color] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 motion-reduce:transition-none", variants[variant], className]} {...attributes}>
+<Element href={href} type={Element === "button" ? (type ?? "button") : type} data-variant={variant} class:list={["t-button inline-flex shrink-0 items-center justify-center rounded-full text-sm", iconOnly ? "size-12" : "min-h-12 gap-3 px-5", variants[variant], className]} {...attributes}>
   <slot />
 </Element>

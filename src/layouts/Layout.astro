@@ -1,32 +1,49 @@
 ---
 import "@styles/global.css";
+import { appName } from "@i18n/shared";
+import type { PageContent } from "@i18n/types";
 
-interface Props {
-  title: string;
-  description: string;
-  appName: string;
-  lang: string;
-}
+type Props = Pick<PageContent, "lang" | "meta" | "skipToContent">;
 
-const { title, description, appName, lang } = Astro.props;
+const {
+  meta: { title, description },
+  lang,
+  skipToContent
+} = Astro.props;
 ---
 
 <!doctype html>
-<html lang={lang} class="scroll-smooth has-[dialog[open]]:overflow-hidden motion-reduce:scroll-auto">
+<html lang={lang} class="has-[dialog[open]]:overflow-hidden">
   <head>
+    <!-- Page title -->
+    <title>{title}</title>
+    <!-- Meta -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
     <meta name="apple-mobile-web-app-title" content={appName} />
+    <!-- Favicons -->
     <link rel="icon" type="image/png" sizes="96x96" href="/favicons/favicon-96x96.png" />
     <link rel="icon" type="image/svg+xml" href="/favicons/favicon.svg" />
     <link rel="shortcut icon" href="/favicons/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
     <link rel="manifest" href="/favicons/site.webmanifest" />
-    <title>{title}</title>
+    <!-- Fonts -->
+    <link rel="preload" href="/fonts/google-sans-flex.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/instrument-serif-italic.woff2" as="font" type="font/woff2" crossorigin />
+    <!-- Theme script -->
+    <script is:inline>
+      try {
+        const theme = localStorage.getItem("theme");
+        if (theme === "light" || theme === "dark") document.documentElement.dataset.theme = theme;
+      } catch {}
+    </script>
     <slot name="head" />
   </head>
-  <body class="m-0 min-h-screen bg-page p-0 font-sans">
+  <body class="m-0 min-h-screen bg-page p-0 font-sans antialiased">
+    <a href="#main-content" class="sr-only fixed top-5 left-5 z-50 rounded-full bg-title px-6 py-3 text-page focus:not-sr-only focus:outline-2 focus:outline-offset-4 focus:outline-accent">
+      {skipToContent}
+    </a>
     <slot />
   </body>
 </html>

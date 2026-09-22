@@ -1,5 +1,5 @@
 ---
-import Button from "@components/ui/Button.astro";
+import IconButton from "@components/ui/IconButton.astro";
 import type { HeroContent } from "@i18n/types";
 import { Icon } from "astro-icon/components";
 
@@ -20,7 +20,7 @@ const { content } = Astro.props;
       <p class="text-[clamp(1rem,1.35vw,1.25rem)] leading-tight text-pretty text-white/80">{content.description}</p>
     </div>
   </div>
-  <Button href={content.cta.href} aria-label={content.cta.label} iconOnly class="landing-enter landing-enter-action fixed inset-x-0 bottom-6 z-10 mx-auto max-sm:size-11 sm:bottom-10">
+  <IconButton href={content.cta.href} aria-label={content.cta.label} class="landing-enter landing-enter-action fixed inset-x-0 bottom-6 z-10 mx-auto max-sm:size-11 sm:bottom-10">
     <Icon name="ui/arrow-right" aria-hidden="true" class="size-5 rotate-90 text-subtitle" />
-  </Button>
+  </IconButton>
 </section>

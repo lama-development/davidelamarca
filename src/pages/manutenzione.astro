@@ -1,0 +1,22 @@
+---
+import Layout from "@layouts/Layout.astro";
+import SocialLinks from "@components/ui/SocialLinks.astro";
+import it from "@i18n/locales/it";
+---
+
+<Layout
+  lang="it"
+  meta={{
+    title: "Manutenzione - Davide La Marca",
+    description: "Il sito è temporaneamente in manutenzione. Torneremo online a breve."
+  }}
+  skipToContent="Vai al contenuto"
+>
+  <main id="main-content" class="flex min-h-svh items-center bg-page justify-center px-6 text-center">
+    <div class="max-w-xl">
+      <h1 class="m-0 font-serif text-[clamp(3.25rem,15vw,4rem)] leading-[0.98] font-normal tracking-tighter text-white sm:text-[clamp(3.25rem,8vw,7rem)]">Manutenzione</h1>
+      <p class="mt-5 mb-0 text-balance text-[clamp(1rem,1.35vw,1.25rem)] leading-tight font-normal text-white/80">Stiamo lavorando per migliorare l'esperienza. Torneremo online a breve.</p>
+      <SocialLinks links={it.socialLinks} class="mt-8" iconButtonClass="focus-visible:outline-white" />
+    </div>
+  </main>
+</Layout>

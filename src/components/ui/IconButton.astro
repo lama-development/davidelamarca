@@ -1,0 +1,14 @@
+---
+import type { HTMLAttributes } from "astro/types";
+
+type Props = {
+  "aria-label": string;
+} & ((HTMLAttributes<"button"> & { href?: never }) | (Omit<HTMLAttributes<"a">, "type"> & { href: string; type?: never }));
+
+const { class: className, href, type, ...attributes } = Astro.props;
+const Element = href === undefined ? "button" : "a";
+---
+
+<Element href={href} type={Element === "button" ? (type ?? "button") : type} class:list={["inline-flex size-12 shrink-0 cursor-pointer touch-manipulation select-none items-center justify-center rounded-full bg-card/80 text-sm text-title outline-offset-4 [-webkit-tap-highlight-color:transparent] enabled:hover:bg-outline hover:[&:any-link]:bg-outline focus-visible:outline-2 focus-visible:outline-accent disabled:cursor-not-allowed disabled:opacity-50 motion-safe:transition-[background-color,scale] motion-safe:duration-200 motion-safe:ease-in-out motion-safe:enabled:active:scale-[0.96] motion-safe:[&:any-link:active]:scale-[0.96] forced-colors:outline forced-colors:outline-[ButtonText]", className]} {...attributes}>
+  <slot />
+</Element>

@@ -2,21 +2,25 @@
 import type { HTMLAttributes } from "astro/types";
 
 type Props = {
-  variant?: "translucent" | "primary" | "secondary" | "destructive";
-  iconOnly?: boolean;
+  variant?: "primary" | "secondary" | "destructive";
 } & ((HTMLAttributes<"button"> & { href?: never }) | (Omit<HTMLAttributes<"a">, "type"> & { href: string; type?: never }));
 
-const { variant = "translucent", iconOnly = false, class: className, href, type, ...attributes } = Astro.props;
+const { variant = "primary", class: className, href, type, ...attributes } = Astro.props;
 const Element = href === undefined ? "button" : "a";
 
 const variants = {
-  translucent: "bg-card/80 text-title",
-  primary: "bg-accent text-label",
-  secondary: "border border-outline bg-card text-title",
-  destructive: "bg-destructive text-white"
+  primary: "text-white [--button-color:var(--color-accent)]",
+  secondary: "text-title [--button-color:var(--color-card)]",
+  destructive: "text-white [--button-color:var(--color-destructive)] dark:[--button-color:color-mix(in_oklab,var(--color-destructive),black_20%)]"
 };
+
+const layerMotion = "motion-safe:transition-transform motion-safe:duration-600 motion-safe:ease-[cubic-bezier(.3,.7,.4,1)] motion-safe:group-hover/button:duration-250 motion-safe:group-hover/button:ease-[cubic-bezier(.3,.7,.4,1.5)] motion-safe:group-active/button:duration-[34ms]";
 ---
 
-<Element href={href} type={Element === "button" ? (type ?? "button") : type} data-variant={variant} class:list={["t-button inline-flex shrink-0 items-center justify-center rounded-full text-sm", iconOnly ? "size-12" : "min-h-12 gap-3 px-5", variants[variant], className]} {...attributes}>
-  <slot />
+<Element href={href} type={Element === "button" ? (type ?? "button") : type} data-variant={variant} class:list={["group/button relative isolate inline-flex shrink-0 cursor-pointer touch-manipulation select-none rounded-full border-0 bg-transparent p-0 text-sm font-medium outline-offset-8 [-webkit-tap-highlight-color:transparent] enabled:hover:brightness-110 hover:[&:any-link]:brightness-110 focus-visible:outline-2 focus-visible:outline-accent disabled:cursor-not-allowed disabled:opacity-50 motion-safe:transition-[filter] motion-safe:duration-250 forced-colors:outline forced-colors:outline-[ButtonText]", variants[variant], className]} {...attributes}>
+  <span aria-hidden="true" class:list={["pointer-events-none absolute inset-0 translate-y-0.5 rounded-full bg-black/25 motion-safe:group-not-disabled/button:group-hover/button:translate-y-1 motion-safe:group-not-disabled/button:group-active/button:translate-y-px forced-colors:hidden", layerMotion]}></span>
+  <span aria-hidden="true" class="pointer-events-none absolute inset-0 rounded-full bg-[linear-gradient(to_left,color-mix(in_oklab,var(--button-color),black_55%)_0%,color-mix(in_oklab,var(--button-color),black_25%)_8%,color-mix(in_oklab,var(--button-color),black_25%)_92%,color-mix(in_oklab,var(--button-color),black_55%)_100%)] forced-colors:hidden"></span>
+  <span class:list={["relative inline-flex min-h-12 w-full -translate-y-1 items-center justify-center gap-3 rounded-full bg-(--button-color) px-7 py-3 motion-safe:group-not-disabled/button:group-hover/button:-translate-y-1.5 motion-safe:group-not-disabled/button:group-active/button:-translate-y-0.5 sm:px-10", layerMotion]}>
+    <slot />
+  </span>
 </Element>

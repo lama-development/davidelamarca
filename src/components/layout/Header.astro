@@ -1,5 +1,5 @@
 ---
-import Button from "@components/ui/Button.astro";
+import IconButton from "@components/ui/IconButton.astro";
 import Brand from "@components/layout/Brand.astro";
 import Menu from "@components/layout/Menu.astro";
 import type { Language, NavigationContent, PreferencesContent } from "@i18n/types";
@@ -16,9 +16,9 @@ const { navigation, lang, preferences } = Astro.props;
 
 <header class="absolute inset-x-0 top-0 z-2 mx-auto flex w-full max-w-7xl items-center justify-between gap-4 p-5 sm:p-7 lg:px-11 lg:py-8">
   <Brand homeHref={navigation.homeHref} label={navigation.aria.home} onImage />
-  <Button type="button" iconOnly class="max-sm:size-11" data-menu-trigger aria-label={navigation.menuLabel} aria-controls="site-menu" aria-expanded="false" aria-haspopup="dialog">
+  <IconButton type="button" class="max-sm:size-11" data-menu-trigger aria-label={navigation.menuLabel} aria-controls="site-menu" aria-expanded="false" aria-haspopup="dialog">
     <Icon name="ui/menu" aria-hidden="true" class="size-5 text-subtitle" />
-  </Button>
+  </IconButton>
 </header>
 
 <Menu navigation={navigation} lang={lang} preferences={preferences} />

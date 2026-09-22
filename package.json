@@ -5,7 +5,7 @@
   "homepage": "https://davidelamarca.com",
   "author": "lama-development",
   "type": "module",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "private": "true",
   "scripts": {
     "dev": "astro dev --host 0.0.0.0",
@@ -21,10 +21,13 @@
   "devDependencies": {
     "prettier": "^3.9.6",
     "prettier-plugin-astro": "^1.0.0",
-    "prettier-plugin-tailwindcss": "^0.8.1"
+    "prettier-plugin-tailwindcss": "^0.8.1",
+    "wrangler": "^4.136.1"
   },
   "allowScripts": {
     "esbuild@0.28.2": true,
-    "fsevents@2.3.3": true
+    "fsevents@2.3.3": true,
+    "esbuild@0.28.1": true,
+    "workerd@1.20260921.1": true
   }
 }

@@ -2,9 +2,7 @@
   --switcher-duration: 250ms;
   --switcher-ease: cubic-bezier(0.22, 1, 0.36, 1);
   --switcher-indicator-bg: var(--color-surface);
-  --button-duration: 200ms;
   --interaction-ease: cubic-bezier(0.4, 0, 0.2, 1);
-  --button-press-scale: 0.96;
   --navigation-duration: 200ms;
   --navigation-distance: 0.5rem;
   --background-duration: 500ms;
@@ -18,38 +16,6 @@
   --stagger-delay: 40ms;
   --stagger-blur: 3px;
   --stagger-ease: cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.t-button {
-  cursor: pointer;
-  touch-action: manipulation;
-  -webkit-tap-highlight-color: transparent;
-  transition:
-    background-color var(--button-duration) var(--interaction-ease),
-    scale var(--button-duration) var(--interaction-ease);
-}
-
-.t-button[data-variant="destructive"] {
-  --button-hover-bg: color-mix(in oklab, var(--color-destructive), black 12%);
-}
-
-@media (hover: hover) {
-  .t-button:not(:disabled):hover {
-    background-color: var(--button-hover-bg, var(--color-outline));
-  }
-}
-
-.t-button:not(:disabled):active {
-  scale: var(--button-press-scale);
-}
-
-.t-button:focus-visible {
-  outline: 2px solid var(--color-accent);
-  outline-offset: 4px;
-}
-
-.t-button:disabled {
-  cursor: not-allowed;
 }
 
 .t-switcher {
@@ -242,11 +208,6 @@
   .switcher-indicator,
   .t-switcher-option {
     transition: none !important;
-  }
-
-  .t-button {
-    --button-press-scale: 1;
-    transition: none;
   }
 
   .t-modal {

@@ -8,6 +8,10 @@ export interface NavigationLink {
   readonly href: string;
 }
 
+export interface SocialLink extends NavigationLink {
+  readonly icon: `social/${string}`;
+}
+
 export interface NavigationContent {
   readonly menuLabel: string;
   readonly closeLabel: string;
@@ -37,6 +41,7 @@ export interface PageContent {
     readonly description: string;
   };
   readonly skipToContent: string;
+  readonly socialLinks: ReadonlyArray<SocialLink>;
   readonly navigation: NavigationContent;
   readonly hero: HeroContent;
   readonly preferences: PreferencesContent;

@@ -9,7 +9,7 @@ const landscapes = [
 ] as const;
 ---
 
-<div aria-hidden="true" class="pointer-events-none absolute inset-0 overflow-hidden">
+<div aria-hidden="true" class="pointer-events-none absolute bg-accent inset-0 overflow-hidden">
   {landscapes.map(({ src, className, fetchpriority }) => (
     <Image src={src} alt="" widths={[640, 1280, 1774]} sizes="(min-width: 1680px) 1656px, 100vw" format="avif" quality={90} loading="eager" fetchpriority={fetchpriority} class:list={["t-background absolute inset-0 size-full object-cover object-[50%_35%]", className]} />
   ))}

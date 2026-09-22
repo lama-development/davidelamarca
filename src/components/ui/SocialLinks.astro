@@ -1,0 +1,35 @@
+---
+import type { ComponentProps, HTMLAttributes } from "astro/types";
+import { Icon } from "astro-icon/components";
+import IconButton from "@components/ui/IconButton.astro";
+import type { SocialLink } from "@i18n/types";
+
+interface Props extends HTMLAttributes<"ul"> {
+  links: ReadonlyArray<SocialLink>;
+  iconButtonClass?: string;
+}
+
+const { links, iconButtonClass, class: className, ...attributes } = Astro.props;
+const icons = import.meta.glob("/src/assets/icons/social/*.svg");
+const visibleLinks = links.filter(({ href, icon }) => href.trim() && `/src/assets/icons/${icon}.svg` in icons);
+const tooltipPrefix = `social-tooltip-${crypto.randomUUID()}`;
+---
+
+{visibleLinks.length > 0 && (
+  <ul role="list" class:list={["m-0 flex flex-wrap items-center justify-center gap-3 p-0", className]} {...attributes}>
+    {visibleLinks.map(({ href, icon, label }, index) => (
+      <li class="flex" data-social-tooltip>
+        <IconButton href={href} target={/^https?:\/\//i.test(href) ? "_blank" : undefined} rel={/^https?:\/\//i.test(href) ? "noopener noreferrer" : undefined} aria-label={label} aria-labelledby={`${tooltipPrefix}-${index}`} data-tooltip-trigger class:list={["max-sm:size-11", iconButtonClass]}>
+          <Icon name={icon as ComponentProps<typeof Icon>["name"]} is:inline aria-hidden="true" class="size-5" />
+        </IconButton>
+        <span id={`${tooltipPrefix}-${index}`} role="tooltip" popover="hint" class="fixed inset-auto top-(--tooltip-top) left-(--tooltip-left) m-0 max-w-[calc(100vw-1rem)] overflow-visible rounded-xl border-0 bg-title px-3 py-2 text-center font-sans text-sm leading-none font-medium text-page shadow-[0_2px_6px_#00000014,0_8px_24px_#0000001a] opacity-0 after:pointer-events-none after:absolute after:-bottom-0.75 after:left-(--tooltip-arrow-left) after:size-1.5 after:-translate-x-1/2 after:rotate-45 after:bg-inherit data-[side=bottom]:after:-top-0.75 data-[side=bottom]:after:bottom-auto motion-safe:transition-[opacity,display,overlay] motion-safe:transition-discrete motion-safe:duration-50 motion-safe:ease-out [&:popover-open]:opacity-100 motion-safe:[&:popover-open]:duration-150 starting:[&:popover-open]:opacity-0 forced-colors:outline forced-colors:outline-[CanvasText]">
+          {label}
+        </span>
+      </li>
+    ))}
+  </ul>
+)}
+
+<script>
+  import "@scripts/social-tooltips";
+</script>

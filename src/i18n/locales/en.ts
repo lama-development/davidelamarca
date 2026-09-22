@@ -7,6 +7,13 @@ const en = {
     description: "I'm Davide La Marca. I design and build bespoke websites that look great and are easy to use."
   },
   skipToContent: "Skip to content",
+  socialLinks: [
+    { label: "LinkedIn", icon: "social/linkedin", href: "https://linkedin.com/in/davide-la-marca-178241254" },
+    { label: "GitHub", icon: "social/github", href: "https://github.com/lama-development" },
+    { label: "Discord", icon: "social/discord", href: "https://discord.com/users/546748662361882634" },
+    { label: "Hello CV", icon: "social/hello-cv", href: "https://hello.cv/davide-1" },
+    { label: "Email", icon: "social/email", href: "mailto:info@davidelamarca.com" }
+  ],
   preferences: {
     title: "Preferences",
     languageLabel: "Language",

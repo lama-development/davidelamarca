@@ -1,5 +1,5 @@
 ---
-import Button from "@components/ui/Button.astro";
+import IconButton from "@components/ui/IconButton.astro";
 import Brand from "@components/layout/Brand.astro";
 import NavigationLinks from "@components/layout/NavigationLinks.astro";
 import Preferences from "@components/layout/Preferences.astro";
@@ -20,9 +20,9 @@ const { navigation, lang, preferences } = Astro.props;
     <div class="flex shrink-0 items-center justify-between gap-4">
       <Brand homeHref={navigation.homeHref} label={navigation.aria.home} />
       <form method="dialog">
-        <Button autofocus type="submit" variant="secondary" iconOnly class="max-sm:size-11" aria-label={navigation.closeLabel}>
+        <IconButton autofocus type="submit" class="max-sm:size-11" aria-label={navigation.closeLabel}>
           <Icon name="ui/close" aria-hidden="true" class="size-5" />
-        </Button>
+        </IconButton>
       </form>
     </div>
     <div class="grid flex-1 content-center py-10 sm:py-14">
